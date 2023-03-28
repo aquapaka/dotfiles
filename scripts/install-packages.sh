@@ -19,5 +19,6 @@ sudo pacman -S \
 	pipewire-pulse \
 	gnome-keyring \
 	libsecret \
-	maim
+	maim \
+	btop
 
