@@ -6,6 +6,7 @@ sudo pacman -S \
 	bspwm \
 	sxhkd \
 	picom \
+	neofetch \
 	feh \
 	alacritty \
 	rofi \
