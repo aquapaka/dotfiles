@@ -32,6 +32,14 @@ XF86AudioMute
 super + alt + w
 	$HOME/.config/bspwm/RandomWall
 
+# Screen capture
+Print
+	maim -s | xclip -selection clipboard -t image/png
+
+# Screen capture and save to download
+shift + Print
+	maim -s ~/Downloads/$(date +%s).png
+
 #
 # bspwm hotkeys
 #

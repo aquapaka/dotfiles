@@ -18,5 +18,6 @@ sudo pacman -S \
 	pipewire \
 	pipewire-pulse \
 	gnome-keyring \
-	libsecret
+	libsecret \
+	maim
 
