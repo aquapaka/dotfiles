@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+
+# Author 	 -  z0mbi3
+# Source 	 -  https://github.com/gh0stzk/dotfiles
+# Maintainer -  z0mbi3.zk@protonmail.com
+# Modified by aquapaka
+
+RICE_NAME_FILE="$HOME/.config/bspwm/rice.cfg"
+rofi_command="rofi -theme $HOME/.config/bspwm/selectors/RiceSelector.rasi"
+
+# Options
+meimei="󰔿 Meimei"
+emilia="󰔿 Emilia"
+jan="󰔿 Jan"
+aline="󰔿 Aline"
+isabel="󰔿 Isabel"
+andrea="󰔿 Andrea"
+cynthia="󰔿 Cynthia"
+silvia="󰔿 Silvia"
+melissa="󰔿 Melissa"
+pamela="󰔿 Pamela"
+cristina="󰔿 Cristina"
+karla="󰔿 Karla"
+z0mbi3="󰔿 z0mbi3"
+
+options="$meimei\n$emilia\n$jan\n$aline\n$isabel\n$andrea\n$cynthia\n$silvia\n$melissa\n$pamela\n$cristina\n$karla\n$z0mbi3"
+chosen="$(printf "$options" | $rofi_command -dmenu)"
+	case $chosen in
+			
+			$meimei)
+				cat <<< "meimei" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$emilia)
+				cat <<< "emilia" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$jan)
+				cat <<< "jan" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$aline)
+				cat <<< "aline" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$isabel)
+				cat <<< "isabel" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$andrea)
+				cat <<< "andrea" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$cynthia)
+				cat <<< "cynthia" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$silvia)
+				cat <<< "silvia" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$melissa)
+				cat <<< "melissa" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$pamela)
+				cat <<< "pamela" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$cristina)
+				cat <<< "cristina" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$karla)
+				cat <<< "karla" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;
+			$z0mbi3)
+				cat <<< "z0mbi3" > ${RICE_NAME_FILE}
+				bspc wm -r
+				;;				
+		esac
+	
