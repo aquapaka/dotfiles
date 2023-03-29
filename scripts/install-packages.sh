@@ -20,6 +20,7 @@ sudo pacman -S \
 	gnome-keyring \
 	libsecret \
 	maim \
+	xclip \
 	btop \
 	nethack
 

@@ -38,7 +38,7 @@ Print
 
 # Screen capture and save to download
 shift + Print
-	maim -s ~/Downloads/$(date +%s).png
+	maim -s ~/screenshots/$(date +%s).png
 
 #
 # bspwm hotkeys
