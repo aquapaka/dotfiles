@@ -20,5 +20,6 @@ sudo pacman -S \
 	gnome-keyring \
 	libsecret \
 	maim \
-	btop
+	btop \
+	nethack
 
