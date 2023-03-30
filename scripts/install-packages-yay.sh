@@ -5,5 +5,6 @@ yay -S \
 	visual-studio-code-bin \
 	zork1 \
 	phc-intel-dkms-stable \
-	phc-intel-scripts
+	phc-intel-scripts \
+	phc-intel-systemd
 
