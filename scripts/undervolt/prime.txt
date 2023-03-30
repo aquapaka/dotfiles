@@ -1,0 +1,7 @@
+V24OptionsConverted=1
+WorkPreference=0
+V30OptionsConverted=1
+WGUID_version=2
+
+[PrimeNet]
+Debug=0

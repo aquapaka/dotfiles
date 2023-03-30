@@ -1,0 +1,9 @@
+[Thu Mar 30 17:05:38 2023]
+FATAL ERROR: Rounding was 0.498046875, expected less than 0.4
+Hardware failure detected running 384K FFT size, consult stress.txt file.
+[Thu Mar 30 17:05:42 2023]
+FATAL ERROR: Resulting sum was 1.171817245616811e+16, expected: 1.486272504117081e+16
+Hardware failure detected running 384K FFT size, consult stress.txt file.
+[Thu Mar 30 17:11:02 2023]
+FATAL ERROR: Rounding was 0.498046875, expected less than 0.4
+Hardware failure detected running 384K FFT size, consult stress.txt file.

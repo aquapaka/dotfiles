@@ -1,0 +1,6 @@
+OldCpuSpeed=2195
+NewCpuSpeedCount=0
+NewCpuSpeed=0
+WorkerThreads=1
+CoresPerTest=2
+ComputerGUID=4d5101e89484da9040785d0f6b2e770e
