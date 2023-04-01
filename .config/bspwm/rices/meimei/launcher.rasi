@@ -19,7 +19,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    font:                        "TerminessTTF Nerd Font Mono Bold 10";
+    font:                        "Cozette bold 8";
     font-weight:				 bold;
     background:                  #070219F0;
     background-alt:              #070219E0;
@@ -35,13 +35,13 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       500px;
-    height:                      39%;
+    height:                      36%;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
-    border-radius:               6px;
+    border-radius:               0px;
     cursor:                      "default";
     background-color:            @background;
 }
@@ -69,7 +69,7 @@ inputbar {
     spacing:                     10px;
     padding:                     40px 40px 45px;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/assets/rs.webp", width);
+    background-image:            url("~/.config/bspwm/rices/meimei/walls/retrogaming_by_jeloisthename_d5vby9e-fullview.jpg", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
