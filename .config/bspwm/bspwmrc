@@ -223,6 +223,6 @@ bspc config focus_follows_pointer         true
 
 ReloadTerms
 launch sxhkd
-launch picom
+launch picom --config $HOME/.config/bspwm/rices/$RICE_NAME/picom.conf
 ~/.fehbg &
 xsetroot -cursor_name left_ptr
