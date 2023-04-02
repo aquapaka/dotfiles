@@ -221,9 +221,8 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer         true
 
-# Reload zshrc
 ReloadTerms
 launch sxhkd
-#launch picom
+launch picom
 ~/.fehbg &
 xsetroot -cursor_name left_ptr
