@@ -22,5 +22,6 @@ sudo pacman -S \
 	maim \
 	xclip \
 	btop \
-	nethack
+	nethack \
+	fprintd
 
