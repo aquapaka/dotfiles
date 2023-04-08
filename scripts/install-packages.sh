@@ -23,5 +23,5 @@ sudo pacman -S \
 	xclip \
 	btop \
 	nethack \
-	fprintd
+	papirus-icon-theme
 
