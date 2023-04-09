@@ -23,5 +23,8 @@ sudo pacman -S \
 	xclip \
 	btop \
 	nethack \
-	papirus-icon-theme
+	papirus-icon-theme \
+	usbutils \
+	bluez \
+	bluez-utils
 
