@@ -21,17 +21,6 @@ setopt MENU_COMPLETE       # Automatically highlight first element of completion
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
 
-# Waiting dots
-
-expand-or-complete-with-dots() {
-  echo -n "\e[31m…\e[0m"
-  zle expand-or-complete
-  zle redisplay
-}
-zle -N expand-or-complete-with-dots
-bindkey "^I" expand-or-complete-with-dots
-
-
 # Plugins
 source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -67,11 +56,6 @@ if [[ "$TERM" == (Eterm*|alacritty*|termite*|gnome*|konsole*|kterm*|putty*|rxvt*
 fi
 
 ######## Alias ########
-
-alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias mantenimiento="yay -Sc && sudo pacman -Scc"
-alias purga="sudo pacman -Rns $(pacman -Qtdq) ; sudo fstrim -av"
-alias update="yay -Syu"
 
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
