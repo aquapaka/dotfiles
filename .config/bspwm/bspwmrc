@@ -194,7 +194,6 @@ bspc rule -a Code desktop='^4' follow=on focus=on
 
 # apps open in entertainment [5] workspaces
 bspc rule -a Spotify desktop='^5' follow=on focus=on
-bspc rule -a Nestopia desktop='^5' follow=on focus=on
 
 # apps open in Communication [6] workspaces
 bspc rule -a discord desktop='^6' follow=on focus=on
