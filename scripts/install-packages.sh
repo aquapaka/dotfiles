@@ -26,5 +26,7 @@ sudo pacman -S \
 	papirus-icon-theme \
 	usbutils \
 	bluez \
-	bluez-utils
+	bluez-utils \
+	retroarch \
+	libretro-nestopia
 
