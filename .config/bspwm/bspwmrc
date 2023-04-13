@@ -225,5 +225,5 @@ ReloadTerms
 launch sxhkd
 launch picom --config $HOME/.config/bspwm/rices/$RICE_NAME/picom.conf
 ~/.fehbg &
-xinput --set-prop 11 'libinput Accel Speed' 0
+xinput --set-prop 'TPPS/2 IBM TrackPoint' 'libinput Accel Speed' 0
 xsetroot -cursor_name left_ptr
