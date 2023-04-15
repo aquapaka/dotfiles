@@ -181,7 +181,7 @@ case $RICE_NAME in
 bspc rule -r *:*
 
 # apps open in terminal [1] workspaces
-bspc rule -a Alacritty desktop='^1' follow=on focus=on
+bspc rule -a Alacritty desktop='^1' follow=on focus=on state=pseudo_tiled
 
 # apps open in web [2] workspaces
 bspc rule -a Google-chrome desktop='^2' follow=on focus=on
