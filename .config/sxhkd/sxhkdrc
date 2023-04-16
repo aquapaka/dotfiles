@@ -20,7 +20,7 @@ super + Escape
 
 # Media keys
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 $(if [ $(pactl get-sink-volume 0 | head -n1 | cut -d/ -f2 | tr -d ' %') -ge 125 ]; then echo 125%; else echo +12.5%; fi;)
+	pactl set-sink-volume 0 $(if [ $(pactl get-sink-volume 0 | head -n1 | cut -d/ -f2 | tr -d ' %') -ge 100 ]; then echo 100%; else echo +12.5%; fi;)
 
 XF86AudioLowerVolume
 	pactl set-sink-volume 0 -12.5%
@@ -145,3 +145,6 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+super + End
+	shutdown now
