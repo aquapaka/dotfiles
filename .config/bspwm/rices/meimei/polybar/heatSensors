@@ -63,12 +63,12 @@ elif [[ "$deg_no_format" -le 70 ]]
 
 
 # from 70°C to 85°C print -> 
-elif [[ "$deg_no_format" -le 85 ]]
+elif [[ "$deg_no_format" -le 90	 ]]
 	then
 		echo "%{F#f2ed00} %{F#f2ed00}$deg"
 
 # from 85°C to +... print ->  
-elif [[ "$deg_no_format" -gt 85 ]] 
+elif [[ "$deg_no_format" -gt 90 ]] 
 	then
 		# the  ' -n "%{F#FF0008}"  ' -> red font as 85°C to +... is the default warn temperature
 		echo -n "%{F#f4155a} %{F#f4155a}$deg"
