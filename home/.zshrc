@@ -59,5 +59,6 @@ fi
 
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
+alias update='sudo pacman -Syu --noconfirm'
 
 ~/.local/bin/colorscript -r
