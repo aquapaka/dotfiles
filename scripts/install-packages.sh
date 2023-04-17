@@ -28,5 +28,6 @@ sudo pacman -S \
 	bluez \
 	bluez-utils \
 	retroarch \
-	libretro-nestopia
+	libretro-nestopia \
+	powertop
 
