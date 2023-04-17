@@ -59,7 +59,7 @@ if [[ "$deg_no_format" -le 40 ]]
 # from 40°C to 70°C print -> 
 elif [[ "$deg_no_format" -le 70 ]] 
 	then
-		echo "%{F#f2ed00} %{F#27fbfe}$deg"
+		echo "%{F#f2ed00} %{F#FBC02D}$deg"
 
 
 # from 70°C to 85°C print -> 
