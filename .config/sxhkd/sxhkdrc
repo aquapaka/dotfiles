@@ -20,10 +20,10 @@ super + Escape
 
 # Media keys
 XF86AudioRaiseVolume
-	pactl set-sink-volume 0 $(if [ $(pactl get-sink-volume 0 | head -n1 | cut -d/ -f2 | tr -d ' %') -ge 100 ]; then echo 100%; else echo +20%; fi;)
+	pactl set-sink-volume 0 $(if [ $(pactl get-sink-volume 0 | head -n1 | cut -d/ -f2 | tr -d ' %') -ge 100 ]; then echo 100%; else echo +12.5%; fi;)
 
 XF86AudioLowerVolume
-	pactl set-sink-volume 0 -20%
+	pactl set-sink-volume 0 -12.5%
 
 XF86AudioMute
 	pactl set-sink-mute 0 toggle
