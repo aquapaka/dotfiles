@@ -12,6 +12,7 @@ sudo pacman -S \
 	rofi \
 	polybar \
 	thunar \
+	tumbler \
 	zsh \
 	zsh-completions \
 	lsd \
