@@ -3,4 +3,6 @@
 # Author: aquapaka
 # Email: aqua.tamlong@gmail.com
 
-sudo pacman -S noto-fonts-emoji
+sudo pacman -S noto-fonts-emoji;
+
+yay -S inter-font
