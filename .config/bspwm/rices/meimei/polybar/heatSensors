@@ -54,7 +54,7 @@ if [[ "$deg_no_format" -le 70 ]]
 	then
 		# the ' %{T3} ' -> pass font type to polybar config file 
 		# the selected font type is number 3, which is (font-3 = "Iosevka:style=bold:"size=12;3" )
-		echo "%{F#f2ed00} %{F#27fbfe}$deg"
+		echo "%{F#00c9fe} %{F#27fbfe}$deg"
 
 # from 40°C to 70°C print -> 
 elif [[ "$deg_no_format" -le 80 ]] 
@@ -65,7 +65,7 @@ elif [[ "$deg_no_format" -le 80 ]]
 # from 70°C to 85°C print -> 
 elif [[ "$deg_no_format" -le 90	 ]]
 	then
-		echo "%{F#db330a} %{F#f2ed00}$deg"
+		echo "%{F#ff7400} %{F#ff7400}$deg"
 
 # from 85°C to +... print ->  
 elif [[ "$deg_no_format" -gt 90 ]] 
