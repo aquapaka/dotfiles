@@ -17,18 +17,16 @@ sudo pacman -S \
 	zsh-completions \
 	lsd \
 	pipewire \
-	pipewire-pulse \
+	pipewire-audio \
 	gnome-keyring \
 	libsecret \
 	maim \
 	xclip \
 	btop \
-	nethack \
 	papirus-icon-theme \
 	usbutils \
 	bluez \
 	bluez-utils \
 	retroarch \
 	libretro-nestopia \
-	powertop
 
