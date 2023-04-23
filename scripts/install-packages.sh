@@ -1,6 +1,7 @@
 #!/bin/bash
 #
 sudo pacman -S \
+	xf86-video-intel \
 	xorg \
 	xorg-xinit \
 	bspwm \
@@ -17,7 +18,7 @@ sudo pacman -S \
 	zsh-completions \
 	lsd \
 	pipewire \
-	pipewire-audio \
+	pipewire-pulse \
 	gnome-keyring \
 	libsecret \
 	maim \
@@ -27,6 +28,4 @@ sudo pacman -S \
 	usbutils \
 	bluez \
 	bluez-utils \
-	retroarch \
-	libretro-nestopia \
-
+	linux-headers 

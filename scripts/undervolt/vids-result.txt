@@ -1,0 +1,2 @@
+Set vids in /etc/default/phc-intel
+47 29 2 1 0

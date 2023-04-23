@@ -5,4 +5,7 @@
 
 sudo pacman -S noto-fonts-emoji;
 
-yay -S inter-font
+yay -S inter-font \
+	ttf-jetbrains-mono \
+	cozette-otb \
+	cozette-ttf
