@@ -37,143 +37,7 @@ case $RICE_NAME in
 		  SetBspwmConf 0 0 0 0 "#1A1B26" "#9ece6a" "#0A9CF5" "#FBC02D"
 		  launch polybar -q main -c ${POLY_DIR}/config.ini
 		  launch dunst -config ${bspdir}/dunstrc-dark 
-		  ;;
-		  
-		emilia)
-		  SetBspwmConf "$BSPWM_BORDER" 60 5 "#414868" "#c0caf5" "#bb9af7" "#7aa2f7" 5 5 "$BSPWM_GAP"
-		  launch polybar -q emi-bar -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark 
-		  
-		  ;;
-			
-		jan)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 60 5 "#4C3A6D" "#4C3A6D" "#785DA5" "#070219" 5 5 "$BSPWM_GAP"
-		  
-		  killeww
-		  launch polybar -q main -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		    
-		aline)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 55 5 "#ca9ee6" "#ca9ee6" "#8CAAEE" "#E78284" 5 5 "$BSPWM_GAP"
-		  
-		  killeww
-		  launch polybar -q aline-bar -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-light
-		  
-		  ;;
-		  
-		isabel)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 5 45 "#b8bfe5" "#b8bfe5" "#7560d3" "#81ae5f" 5 5 "$BSPWM_GAP" 
-		  
-		  killeww
-		  launch polybar -q isa-bar -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		  
-		cynthia)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 50 50 "#543f66" "#543f66" "#465b80" "#3f5273" 5 5 "$BSPWM_GAP"
-		  
-		  killeww
-		  launch polybar -q cyn-bar -c ${POLY_DIR}/config.ini
-		  polybar -q cyn-bar2 -c ${POLY_DIR}/config.ini &
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		  
-		silvia)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 50 5 "#d3869b" "#d3869b" "#fbf1c7" "#b8bb26" 5 5 "$BSPWM_GAP"
-
-		  killeww
-		  launch polybar -q cata-bar -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		
-		melissa)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 42 40 "#e5e9f0" "#e5e9f0" "#4c566a" "#bf616a" 5 5 "$BSPWM_GAP"
-
-		  killeww
-		  launch polybar -q mel-bar -c ${POLY_DIR}/config.ini
-		  polybar -q mel2-bar -c ${POLY_DIR}/config.ini &
-		  launch dunst -config ${bspdir}/dunstrc-dark 
-		  
-		  ;;
-		  
-		pamela)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 60 5 "#C574DD" "#C574DD" "#8897F4" "#FF4971" 5 5 "$BSPWM_GAP"
-		  
-		  killeww
-		  launch polybar -q pam1 -c ${POLY_DIR}/config.ini
-		  polybar -q pam2 -c ${POLY_DIR}/config.ini &
-		  polybar -q pam3 -c ${POLY_DIR}/config.ini &
-		  polybar -q pam4 -c ${POLY_DIR}/config.ini &
-		  polybar -q pam5 -c ${POLY_DIR}/config.ini &
-		  polybar -q pam6 -c ${POLY_DIR}/config.ini &
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		  
-		cristina)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 10 60 "#9bced7" "#9bced7" "#c3a5e6" "#c3a5e6" 5 5 "$BSPWM_GAP"
-		  
-		  killeww
-		  launch polybar -q cristina-bar -c ${POLY_DIR}/config.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		  
-		z0mbi3)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 5 5 "#3d414f" "#3d414f" "#3d414f" "#90ceaa" 80 5 "$BSPWM_GAP"
-		  
-		  # Kill any running instances of bspc to prevent multiple
-		  # instances of "workspaces" script in eww rices to run at once
-		  killall -9 picom bspc
-		  
-		  launch eww -c $HOME/.config/bspwm/rices/z0mbi3/bar open bar
-		  launch polybar -q tray -c ~/.config/bspwm/rices/z0mbi3/bar/polybar_tray.ini
-		  launch dunst -config ${bspdir}/dunstrc-dark
-		  
-		  ;;
-		  
-		  karla)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 65 5 "#ff004a" "#ff004a" "#0864f1" "#b93fe0" 5 5 "$BSPWM_GAP"
-		 
-		  kill -9 picom
-		  launch eww -c $HOME/.config/bspwm/rices/karla/bar open bar
-		  launch polybar -q karla-bar -c ${POLY_DIR}/config.ini
-		  polybar -q karla-bar2 -c ${POLY_DIR}/config.ini &
-		  launch dunst -config ${bspdir}/dunstrc-light
-		  
-		  ;;
-		  
-		andrea)
-		
-		  SetBspwmConf "$BSPWM_BORDER" 60 5 "#161616" "#161616" "#605692" "#67d4f1" 5 5 "$BSPWM_GAP"
-		  
-		  killall -9 picom polybar
-		  launch dunst -config ${bspdir}/dunstrc-light
-		  launch eww -c $HOME/.config/bspwm/rices/$RICE_NAME/arin --restart open-many \
-		   search \
-		   apps \
-		   weather \
-		   music \
-		   system
-		  
-		  ;;
-		  
+		  ;;	  
 	esac
 
 # ----- Window rules ----- #
@@ -188,6 +52,7 @@ bspc rule -a Google-chrome desktop='^2' follow=on focus=on
 
 # apps open in files [3] workspaces
 bspc rule -a Thunar desktop='^3' follow=on focus=on
+bspc rule -a feh desktop='^3' follow=on focus=on state=floating
 
 # apps open in code [4] workspaces
 bspc rule -a Code desktop='^4' follow=on focus=on
@@ -216,7 +81,7 @@ bspc monitor -d I II III IV V VI VII VIII
 bspc config border_width         1
 bspc config window_gap           8
 
-bspc config split_ratio          0.6
+bspc config split_ratio          0.5
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config focus_follows_pointer         true
