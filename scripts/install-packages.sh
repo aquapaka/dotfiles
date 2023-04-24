@@ -12,8 +12,7 @@ sudo pacman -S \
 	alacritty \
 	rofi \
 	polybar \
-	thunar \
-	tumbler \
+	ranger \
 	zsh \
 	zsh-completions \
 	lsd \
@@ -28,4 +27,6 @@ sudo pacman -S \
 	usbutils \
 	bluez \
 	bluez-utils \
-	linux-headers 
+	linux-headers \
+	telegram-desktop \
+	intel-ucode
