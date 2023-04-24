@@ -64,6 +64,7 @@ bspc rule -a Spotify desktop='^5' follow=on focus=on
 bspc rule -a discord desktop='^6' follow=on focus=on
 bspc rule -a TelegramDesktop desktop='^6' follow=on focus=on
 bspc rule -a Caprine desktop='^6' follow=on focus=on
+bspc rule -a instagram-nativefier-51e18f desktop='^6' follow=on focus=on
 
 # apps open in settings [7] workspaces
 bspc rule -a Xfce4-about desktop='^7' follow=on focus=on
