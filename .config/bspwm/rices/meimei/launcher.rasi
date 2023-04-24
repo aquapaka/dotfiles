@@ -9,7 +9,7 @@ configuration {
 	application-fallback-icon: 	"Adwaita";
     show-icons:                 true;
 	drun-display-format:        "{name}";
-	disable-history:            true;
+	disable-history:            false;
 	sidebar-mode: 				false;
 }
 
@@ -65,7 +65,7 @@ inputbar {
     spacing:                     10px;
     padding:                     40px 40px 45px;
     background-color:            transparent;
-    background-image:            url("~/.config/bspwm/rices/meimei/walls/retrogaming_by_jeloisthename_d5vby9e-fullview.jpg", width);
+    background-image:            url("~/.config/bspwm/rices/meimei/walls/mirian-legs.png", width);
     text-color:                  @foreground;
     orientation:                 horizontal;
     children:                    [ "textbox-prompt-colon", "entry" ];
