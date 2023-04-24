@@ -15,7 +15,7 @@ alt + space
 	$HOME/.config/bspwm/selectors/RiceSelector
 	
 # make sxhkd reload its configuration files:
-super + Escape
+super + S + R
 	pkill -USR1 -x sxhkd
 
 # Media keys
@@ -39,6 +39,10 @@ Print
 # Screen capture and save to download
 shift + Print
 	maim -s ~/Screenshots/screenshot_$(date +%s).png
+
+# Open system power panel
+super + Escape
+	$HOME/.config/bspwm/powermenu/powermenu.sh
 
 #
 # bspwm hotkeys
@@ -145,6 +149,4 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-super + End
-	shutdown now
+	
