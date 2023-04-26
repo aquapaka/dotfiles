@@ -13,6 +13,10 @@ sudo pacman -S \
 	rofi \
 	polybar \
 	ranger \
+	ueberzug \
+	mediainfo \
+	perl-image-exiftool \
+	hightlight \
 	zsh \
 	zsh-completions \
 	lsd \
