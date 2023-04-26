@@ -33,4 +33,6 @@ sudo pacman -S \
 	bluez-utils \
 	linux-headers \
 	telegram-desktop \
-	intel-ucode
+	intel-ucode \
+	ibus \
+	ibus-unikey
