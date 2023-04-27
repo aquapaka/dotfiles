@@ -22,6 +22,9 @@ sudo pacman -S \
 	lsd \
 	pipewire \
 	pipewire-pulse \
+	pipewire-alsa \
+	pipewire-jack \
+	pipewire-v4l2 \
 	gnome-keyring \
 	libsecret \
 	maim \
