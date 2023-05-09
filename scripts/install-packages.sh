@@ -38,4 +38,5 @@ sudo pacman -S \
 	telegram-desktop \
 	intel-ucode \
 	ibus \
-	ibus-unikey
+	ibus-unikey \
+	tlp
