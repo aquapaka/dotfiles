@@ -41,7 +41,6 @@ focus_borders:
 bar:
   height: "32px"
   position: "top"
-  always_on_top: true
   opacity: 1.0
   background: "#20242cc4"
   foreground: "#ffffff"
@@ -57,14 +56,14 @@ bar:
       focused_workspace_background: "#ffffff33"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
+    - type: "system tray"
+      margin: "0 8px"
+      padding: "4px 0"
 
   components_center:
     - type: "window title"
 
   components_right:
-    - type: "system tray"
-      margin: "0 8px"
-      padding: "2px 0"
 
     - type: "tiling direction"
       label_horizontal: "⮂"
