@@ -42,7 +42,7 @@
     {
         "defaults": 
         {
-            "colorScheme": "One Half Dark"
+            "colorScheme": "Monokai Pro"
         },
         "list": 
         [
@@ -130,6 +130,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#2D2A2E",
+            "black": "#0C0C0D",
+            "blue": "#65ABDA",
+            "brightBlack": "#767676",
+            "brightBlue": "#AFDFFF",
+            "brightCyan": "#A3DAE1",
+            "brightGreen": "#C3D5AF",
+            "brightPurple": "#B491B0",
+            "brightRed": "#F791A8",
+            "brightWhite": "#FAFAFA",
+            "brightYellow": "#F7DEB6",
+            "cursorColor": "#F75E84",
+            "cyan": "#74D5E1",
+            "foreground": "#F2F2F2",
+            "green": "#A4D572",
+            "name": "Monokai Pro",
+            "purple": "#986497",
+            "red": "#F75E84",
+            "selectionBackground": "#434144",
+            "white": "#CCCCCC",
+            "yellow": "#F7D163"
         },
         {
             "background": "#282C34",
