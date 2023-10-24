@@ -31,7 +31,7 @@
     ],
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+    "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
     "newTabMenu": 
     [
         {
@@ -40,20 +40,28 @@
     ],
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "colorScheme": "One Half Dark"
+        },
         "list": 
         [
             {
-                "adjustIndistinguishableColors": "indexed",
-                "colorScheme": "One Half Dark",
-                "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+                "adjustIndistinguishableColors": "never",
+                "colorScheme": 
+                {
+                    "light": "One Half Dark"
+                },
                 "cursorShape": "vintage",
-                "experimental.retroTerminalEffect": false,
+                "elevate": true,
+                "font": 
+                {
+                    "face": "CaskaydiaCove Nerd Font Mono"
+                },
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "intenseTextStyle": "all",
-                "name": "Windows PowerShell",
-                "useAcrylic": false
+                "name": "Windows PowerShell"
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
@@ -72,16 +80,6 @@
                 "hidden": false,
                 "name": "Git Bash",
                 "source": "Git"
-            },
-            {
-                "colorScheme": "One Half Dark",
-                "cursorShape": "filledBox",
-                "elevate": true,
-                "guid": "{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
-                "hidden": false,
-                "intenseTextStyle": "all",
-                "name": "Arch",
-                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
@@ -318,5 +316,7 @@
             "yellow": "#808000"
         }
     ],
-    "themes": []
+    "startOnUserLogin": true,
+    "themes": [],
+    "useAcrylicInTabRow": false
 }

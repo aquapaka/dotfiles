@@ -10,7 +10,7 @@ general:
   toggle_workspace_on_refocus: true
 
   # Whether to show floating windows as always on top.
-  show_floating_on_top: false
+  show_floating_on_top: true
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
@@ -18,7 +18,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "unchanged"
+  window_animations: "false"
 
 gaps:
   # Gap between adjacent windows.
@@ -32,7 +32,7 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#0BBED8"
+    color: "#FF6188"
 
   inactive:
     enabled: false
@@ -42,88 +42,94 @@ bar:
   height: "32px"
   position: "top"
   opacity: 1.0
-  background: "#20242cc4"
+  background: "#221f22"
   foreground: "#ffffff"
-  font_family: "Cascadia Mono"
+  font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13px"
   padding: "4px 8px"
   offset_x: "8px"
   offset_y: "8px"
   border_radius: "8px"
+  component_separator:
+    label: "  "
   components_left:
     - type: "workspaces"
       margin: "0 8px"
-      focused_workspace_background: "#ffffff33"
-      displayed_workspace_background: "#00000033"
+      focused_workspace_background: "#FF6188"
+      focused_workspace_foreground: "#221f22"
+      displayed_workspace_background: "#2d2a2e"
       default_workspace_background: "transparent"
-    - type: "system tray"
+
+    - type: "cpu"
+      label: "<attr fs='25' fg='#FF6188'></attr> {percent_usage}%"
       margin: "0 8px"
-      padding: "4px 0"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "memory"
+      label: "<attr fs='24' fg='#A9DC76'></attr> {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "gpu"
+      label: "<attr fs='32' fg='#AB9DF2'>󰾲</attr> {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "volume"
+      label_low: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_medium: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_high: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_mute: "<attr fs='30' fg='#FF6188'>󰝟</attr>"
+      margin: "0 8px"
+
+    - type: "battery"
+      label_draining: "<attr fg='#FFD866'>󰁽</attr> {battery_level}%"
+      label_power_saver: "<attr fs='25' fg='#FFD866'></attr> {battery_level}% (power saver)"
+      label_charging: "<attr fg='#FFD866'>󱐋</attr> {battery_level}%"
+      margin: "0 8px"
 
   components_center:
     - type: "window title"
 
   components_right:
 
-    - type: "tiling direction"
-      label_horizontal: "⮂"
-      label_vertical: "⮁"
-      background: "#ffffff33"
-      margin: "0 8px"
-      padding: "4px 4px"
+    # - type: "tiling direction"
+    #   label_horizontal: "⮂"
+    #   label_vertical: "⮁"
+    #   background: "#ffffff33"
+    #   margin: "0 8px"
+    #   padding: "4px 4px"
 
-    - type: "binding mode"
-      background: "#ffffff33"
+    - type: "system tray"
       margin: "0 8px"
+      padding: "4px 0"
+      label_expand_text: ""
+      label_collapse_text: ""
 
-    - type: "cpu"
-      label: "CPU {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "memory"
-      label: "RAM {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "gpu"
-      label: "GPU {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "volume"
-      label_low: "🔊{volume_level}%"
-      label_medium: "🔊{volume_level}%"
-      label_high: "🔊{volume_level}%"
-      label_mute: "🔊{volume_level}%"
-      margin: "0 8px"
-
-    - type: "battery"
-      label_draining: "{battery_level}% remaining"
-      label_power_saver: "{battery_level}% (power saver)"
-      label_charging: "{battery_level}% (charging)"
-      margin: "0 8px"
+    # - type: "binding mode"
+    #   background: "#ffffff33"
+    #   margin: "0 8px"
 
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "dddd, dd/MM/yyyy  HH:mm"
+      time_formatting: "dddd, dd/MM/yyyy HH:mm"
       margin: "0 8px"
 
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
-    # display_name: "----"
+    # display_name: "1"
 
     # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
     # as shown in the Windows display settings (eg. 1, 2, 3...).
     # bind_to_monitor: 1
 
     # Optionally prevent workspace from being deactivated when empty.
-    # keep_alive: false
+    # keep_alive: true
 
   - name: "2"
   - name: "3"
@@ -167,23 +173,23 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   - command: "focus left"
-    bindings: ["Alt+H", "Alt+Left"]
+    bindings: ["Alt+H"]
   - command: "focus right"
-    bindings: ["Alt+L", "Alt+Right"]
+    bindings: ["Alt+L"]
   - command: "focus up"
-    bindings: ["Alt+K", "Alt+Up"]
+    bindings: ["Alt+K"]
   - command: "focus down"
-    bindings: ["Alt+J", "Alt+Down"]
+    bindings: ["Alt+J"]
 
   # Move focused window in a given direction.
   - command: "move left"
-    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+    bindings: ["Alt+Shift+H"]
   - command: "move right"
-    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+    bindings: ["Alt+Shift+L"]
   - command: "move up"
-    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+    bindings: ["Alt+Shift+K"]
   - command: "move down"
-    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+    bindings: ["Alt+Shift+J"]
 
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"

@@ -1,14 +1,15 @@
 {
 	"dismissedMessages" : 
 	[
-		"setAsDefault"
+		"setAsDefault",
+		"closeOnExitInfo"
 	],
 	"generatedProfiles" : 
 	[
 		"{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-		"{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
 		"{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
+		"{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
 		"{51855cb2-8cce-5362-8f54-464b92b32386}"
 	],
-	"settingsHash" : "5a71dc04a19bf2fb-01da06a6cc730aa8"
+	"settingsHash" : "dfeec952ef9635d5-01da06b75c245c20"
 }
