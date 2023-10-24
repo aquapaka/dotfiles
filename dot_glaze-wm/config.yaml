@@ -22,60 +22,110 @@ general:
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "20px"
+  inner_gap: "8px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "20px"
+  outer_gap: "8px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#0000ff"
+    color: "#0BBED8"
 
   inactive:
     enabled: false
     color: "#ff0000"
 
 bar:
-  height: "30px"
+  height: "32px"
   position: "top"
+  always_on_top: true
   opacity: 1.0
   background: "#20242cc4"
   foreground: "#ffffff"
-  font_family: "Segoe UI"
+  font_family: "Cascadia Mono"
   font_size: "13px"
-  padding: "4px 6px"
-  offset_x: "0"
-  offset_y: "0"
-  border_radius: "0"
+  padding: "4px 8px"
+  offset_x: "8px"
+  offset_y: "8px"
+  border_radius: "8px"
   components_left:
     - type: "workspaces"
+      margin: "0 8px"
       focused_workspace_background: "#ffffff33"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
+
   components_center:
     - type: "window title"
+
   components_right:
     - type: "system tray"
+      margin: "0 8px"
+      padding: "2px 0"
+
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
       background: "#ffffff33"
-      margin: "0 4px"
-      padding: "0 8px"
+      margin: "0 8px"
+      padding: "4px 4px"
+
     - type: "binding mode"
       background: "#ffffff33"
-      margin: "0 4px 0 0"
-      padding: "0 8px"
+      margin: "0 8px"
+
+    - type: "cpu"
+      label: "CPU {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "memory"
+      label: "RAM {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "gpu"
+      label: "GPU {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "volume"
+      label_low: "🔊{volume_level}%"
+      label_medium: "🔊{volume_level}%"
+      label_high: "🔊{volume_level}%"
+      label_mute: "🔊{volume_level}%"
+      margin: "0 8px"
+
+    - type: "battery"
+      label_draining: "{battery_level}% remaining"
+      label_power_saver: "{battery_level}% (power saver)"
+      label_charging: "{battery_level}% (charging)"
+      margin: "0 8px"
+
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "hh:mm tt  ddd MMM d"
+      time_formatting: "dddd, dd/MM/yyyy  HH:mm"
+      margin: "0 8px"
 
 workspaces:
   - name: "1"
+    # Optional override for the workspace label in the bar. Does not need to be unique.
+    # display_name: "----"
+
+    # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
+    # as shown in the Windows display settings (eg. 1, 2, 3...).
+    # bind_to_monitor: 1
+
+    # Optionally prevent workspace from being deactivated when empty.
+    # keep_alive: false
+
   - name: "2"
   - name: "3"
   - name: "4"
@@ -148,16 +198,16 @@ keybindings:
 
   # As an alternative to the resize keybindings above, resize mode enables resizing via
   # HJKL or arrow keys. The binding mode is defined above with the name "resize".
-  - command: "binding mode resize"
-    binding: "Alt+R"
+  # - command: "binding mode resize"
+  #   binding: "Alt+R"
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
   - command: "tiling direction toggle"
-    binding: "Alt+V"
+    binding: "Alt+T"
 
   # Change focus between floating / tiling windows.
   - command: "focus mode toggle"
-    binding: "Alt+Space"
+    binding: "Alt+F"
 
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
@@ -165,19 +215,19 @@ keybindings:
 
   # Change the focused window to be maximized / unmaximized.
   - command: "toggle maximized"
-    binding: "Alt+X"
+    binding: "Alt+M"
 
   # Minimize focused window.
-  - command: "set minimized"
-    binding: "Alt+M"
+  # - command: "set minimized"
+  #   binding: "Alt+M"
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+Shift+Q"
+    binding: "Alt+Shift+X"
 
   # Kill GlazeWM process safely.
   - command: "exit wm"
-    binding: "Alt+Shift+E"
+    binding: "Alt+Ctrl+Shift+X"
 
   # Re-evaluate configuration file.
   - command: "reload config"
@@ -185,18 +235,18 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec cmd"
+  - command: "exec wt"
     binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
-  - command: "focus workspace recent"
-    binding: "Alt+Y"
+  # - command: "focus workspace recent"
+  #   binding: "Alt+Y"
 
   # Focus the next/previous workspace defined in `workspaces` config.
-  - command: "focus workspace next"
-    binding: "Alt+T"
-  - command: "focus workspace prev"
-    binding: "Alt+Shift+T"
+  # - command: "focus workspace next"
+  #   binding: "Alt+T"
+  # - command: "focus workspace prev"
+  #   binding: "Alt+Shift+T"
 
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace 1"
@@ -219,14 +269,14 @@ keybindings:
     binding: "Alt+9"
 
   # Move focused workspace to a monitor in a given direction.
-  - command: "move workspace left"
-    binding: "Alt+A"
-  - command: "move workspace right"
-    binding: "Alt+F"
-  - command: "move workspace up"
-    binding: "Alt+D"
-  - command: "move workspace down"
-    binding: "Alt+S"
+  # - command: "move workspace left"
+  #   binding: "Alt+A"
+  # - command: "move workspace right"
+  #   binding: "Alt+F"
+  # - command: "move workspace up"
+  #   binding: "Alt+D"
+  # - command: "move workspace down"
+  #   binding: "Alt+S"
 
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move to workspace 1", "focus workspace 1"]
