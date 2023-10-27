@@ -3,14 +3,14 @@ general:
   focus_follows_cursor: false
 
   # Whether to jump the cursor between windows focused by the WM.
-  cursor_follow_focus: false
+  cursor_follow_focus: true
 
   # Whether to switch back and forth between the previously focused workspace
   # when focusing the current workspace.
-  toggle_workspace_on_refocus: true
+  toggle_workspace_on_refocus: false
 
   # Whether to show floating windows as always on top.
-  show_floating_on_top: true
+  show_floating_on_top: false
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
@@ -41,7 +41,7 @@ focus_borders:
 bar:
   height: "32px"
   position: "top"
-  opacity: 1.0
+  opacity: 1
   background: "#221f22"
   foreground: "#ffffff"
   font_family: "CaskaydiaCove Nerd Font Mono"
@@ -103,11 +103,11 @@ bar:
     #   margin: "0 8px"
     #   padding: "4px 4px"
 
-    - type: "system tray"
-      margin: "0 8px"
-      padding: "4px 0"
-      label_expand_text: ""
-      label_collapse_text: ""
+    # - type: "system tray"
+    #   margin: "0 8px"
+    #   padding: "4px 0"
+    #   label_expand_text: " < "
+    #   label_collapse_text: " > "
 
     # - type: "binding mode"
     #   background: "#ffffff33"
@@ -116,7 +116,7 @@ bar:
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "dddd, dd/MM/yyyy HH:mm"
+      time_formatting: " HH:mm dddd, dd/MM/yyyy"
       margin: "0 8px"
 
 workspaces:
@@ -143,8 +143,8 @@ workspaces:
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
-  - command: "ignore"
-    match_process_name: "/Taskmgr|ScreenClippingHost/"
+  # - command: "ignore"
+  #   match_process_name: "/Taskmgr|ScreenClippingHost/"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
@@ -228,7 +228,7 @@ keybindings:
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+Shift+X"
+    binding: "Alt+X"
 
   # Kill GlazeWM process safely.
   - command: "exit wm"

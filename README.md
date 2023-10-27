@@ -14,4 +14,8 @@ scoop install CascadiaCode-NF-Propo
 
 ```
 scoop install starship
+scoop install pwsh
+scoop install winfetch
+scoop install btop-lhm
+scoop install vcredist2022
 ```

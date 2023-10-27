@@ -1,3 +1,5 @@
 [user]
 	email = aqua.tamlong@gmail.com
 	name = aquapaka
+[credential]
+	credentialStore = dpapi

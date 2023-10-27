@@ -32,6 +32,8 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "focusFollowMouse": true,
+    "launchMode": "focus",
     "newTabMenu": 
     [
         {
@@ -42,7 +44,8 @@
     {
         "defaults": 
         {
-            "colorScheme": "Monokai Pro"
+            "colorScheme": "Monokai Pro",
+            "useAtlasEngine": true
         },
         "list": 
         [
@@ -53,7 +56,6 @@
                     "light": "One Half Dark"
                 },
                 "cursorShape": "vintage",
-                "elevate": true,
                 "font": 
                 {
                     "face": "CaskaydiaCove Nerd Font Mono"
@@ -353,7 +355,10 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": true,
+    "startOnUserLogin": false,
+    "tabSwitcherMode": "inOrder",
+    "tabWidthMode": "equal",
+    "theme": "dark",
     "themes": [],
     "useAcrylicInTabRow": false
 }
