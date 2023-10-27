@@ -131,26 +131,26 @@ workspaces:
     # bind_to_monitor: 1
 
     # Optionally prevent workspace from being deactivated when empty.
-    keep_alive: true
+    # keep_alive: true
 
   - name: "2"
     display_name: ""
-    keep_alive: true
+    # keep_alive: true
   - name: "3"
     display_name: "󱃖"
-    keep_alive: true
+    # keep_alive: true
   - name: "4"
     display_name: "󱧶"
-    keep_alive: true
+    # keep_alive: true
   - name: "5"
     display_name: "󰙯"
-    keep_alive: true
+    # keep_alive: true
   - name: "6"
     display_name: ""
-    keep_alive: true
+    # keep_alive: true
   - name: "7"
     display_name: ""
-    keep_alive: true
+    # keep_alive: true
   - name: "8"
     display_name: ""
     # keep_alive: true
@@ -172,21 +172,57 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
 
+  # Terminal workspace
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    match_process_name: "WindowsTerminal"
+
+  # Browser workspace
+  # Command to run. Use `commands` to specify an array of commands to run in sequence.
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    # Process name to match exactly.
+    match_process_name: "chrome"
+    # Window title to match exactly.
+    # match_title: "/.*/"
+    # Class name to match exactly.
+    # match_class_name: "Chrome_WidgetWin_1"
+
+  # Code workspace
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    match_process_name: "Code"
+
+  # Folder and files workspace
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    match_process_name: "explorer"
+
+  # Discord workspace
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    match_process_name: "Discord"
+
+  # Settings workspace
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    match_process_name: "Taskmgr"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    match_title: "Settings"
+
+  # Others workspace
+  - commands: ["move to workspace 7"]
+    match_process_name: "GoogleDriveFS"
+
 binding_modes:
-  - name: "resize"
-    keybindings:
+  # - name: "resize"
+  #   keybindings:
       # Resize focused window by a percentage or pixel amount.
-      - command: "resize width -2%"
-        bindings: ["H", "Left"]
-      - command: "resize width +2%"
-        bindings: ["L", "Right"]
-      - command: "resize height +2%"
-        bindings: ["K", "Up"]
-      - command: "resize height -2%"
-        bindings: ["J", "Down"]
+      # - command: "resize width -2%"
+      #   bindings: ["H", "Left"]
+      # - command: "resize width +2%"
+      #   bindings: ["L", "Right"]
+      # - command: "resize height +2%"
+      #   bindings: ["K", "Up"]
+      # - command: "resize height -2%"
+      #   bindings: ["J", "Down"]
       # Press enter/escape to return to default keybindings.
-      - command: "binding mode none"
-        bindings: ["Escape", "Enter"]
+      # - command: "binding mode none"
+      #   bindings: ["Escape", "Enter"]
 
 keybindings:
   # Shift focus in a given direction.
@@ -226,15 +262,15 @@ keybindings:
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
   - command: "tiling direction toggle"
-    binding: "Alt+T"
+    binding: "Alt+D"
 
   # Change focus between floating / tiling windows.
   - command: "focus mode toggle"
-    binding: "Alt+F"
+    binding: "Alt+Shift+F"
 
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
-    binding: "Alt+Shift+Space"
+    binding: "Alt+F"
 
   # Change the focused window to be maximized / unmaximized.
   - command: "toggle maximized"
@@ -242,15 +278,15 @@ keybindings:
 
   # Minimize focused window.
   # - command: "set minimized"
-  #   binding: "Alt+M"
+  #   binding: "Alt+N"
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+X"
+    binding: "Alt+W"
 
   # Kill GlazeWM process safely.
   - command: "exit wm"
-    binding: "Alt+Ctrl+Shift+X"
+    binding: "Alt+Ctrl+Shift+W"
 
   # Re-evaluate configuration file.
   - command: "reload config"
