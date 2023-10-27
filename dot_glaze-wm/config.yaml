@@ -55,9 +55,11 @@ bar:
   components_left:
     - type: "workspaces"
       margin: "0 8px"
-      focused_workspace_background: "#FF6188"
-      focused_workspace_foreground: "#221f22"
-      displayed_workspace_background: "#2d2a2e"
+      padding: "0"
+      font_size: "21"
+      focused_workspace_background: "transparent"
+      focused_workspace_foreground: "#FF6188"
+      displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
 
     - type: "cpu"
@@ -122,23 +124,39 @@ bar:
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
-    # display_name: "1"
+    display_name: ""
 
     # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
     # as shown in the Windows display settings (eg. 1, 2, 3...).
     # bind_to_monitor: 1
 
     # Optionally prevent workspace from being deactivated when empty.
-    # keep_alive: true
+    keep_alive: true
 
   - name: "2"
+    display_name: ""
+    keep_alive: true
   - name: "3"
+    display_name: "󱃖"
+    keep_alive: true
   - name: "4"
+    display_name: "󱧶"
+    keep_alive: true
   - name: "5"
+    display_name: "󰙯"
+    keep_alive: true
   - name: "6"
+    display_name: ""
+    keep_alive: true
   - name: "7"
+    display_name: ""
+    keep_alive: true
   - name: "8"
+    display_name: ""
+    # keep_alive: true
   - name: "9"
+    display_name: ""
+    # keep_alive: true
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
