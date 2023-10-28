@@ -1,13 +1,13 @@
 format = """
-[](#9A348E)\
+[](#b2435f)\
 $os\
 $username\
-[](bg:#DA627D fg:#9A348E)\
+[](bg:#af6947 fg:#b2435f)\
 $directory\
-[](fg:#DA627D bg:#FCA17D)\
+[](fg:#af6947 bg:#aa9044)\
 $git_branch\
 $git_status\
-[](fg:#FCA17D bg:#86BBD8)\
+[](fg:#aa9044 bg:#6e8f4c)\
 $c\
 $elixir\
 $elm\
@@ -20,11 +20,11 @@ $nodejs\
 $nim\
 $rust\
 $scala\
-[](fg:#86BBD8 bg:#06969A)\
+[](fg:#6e8f4c bg:#50939b)\
 $docker_context\
-[](fg:#06969A bg:#33658A)\
+[](fg:#50939b bg:#746ba5)\
 $time\
-[ ](fg:#33658A)\
+[ ](fg:#746ba5)\
 """
 
 # Disable the blank line at the start of the prompt
@@ -34,19 +34,19 @@ $time\
 # and use the os module below
 [username]
 show_always = true
-style_user = "bg:#9A348E"
-style_root = "bg:#9A348E"
+style_user = "bg:#b2435f"
+style_root = "bg:#b2435f"
 format = '[ aquapaka ]($style)'
 disabled = false
 
 # An alternative to the username module which displays a symbol that
 # represents the current operating system
 [os]
-style = "bg:#9A348E"
+style = "bg:#b2435f"
 disabled = true # Disabled by default
 
 [directory]
-style = "bg:#DA627D"
+style = "bg:#af6947"
 format = "[ $path ]($style)"
 truncation_length = 3
 truncation_symbol = "…/"
@@ -71,7 +71,7 @@ format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
 symbol = " "
-style = "bg:#06969A"
+style = "bg:#50939b"
 format = '[ $symbol $context ]($style) $path'
 
 [elixir]
@@ -86,11 +86,11 @@ format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
 symbol = ""
-style = "bg:#FCA17D"
+style = "bg:#aa9044"
 format = '[ $symbol $branch ]($style)'
 
 [git_status]
-style = "bg:#FCA17D"
+style = "bg:#aa9044"
 format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
@@ -140,5 +140,5 @@ format = '[ $symbol ($version) ]($style)'
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#33658A"
+style = "bg:#746ba5"
 format = '[ ♥ $time ]($style)'

@@ -1,19 +1,19 @@
 # ===== WINFETCH CONFIGURATION =====
 
-# $image = "~/winfetch.png"
+$image = "~/.config/winfetch/custom_image.png"
 # $noimage = $true
 
 # Display image using ASCII characters
 # $ascii = $true
 
 # Set the version of Windows to derive the logo from.
-# $logo = "Windows 10"
+# $logo = "Windows 11"
 
 # Specify width for image/logo
-# $imgwidth = 24
+$imgwidth = 32
 
 # Specify minimum alpha value for image pixels to be visible
-# $alphathreshold = 50
+# $alphathreshold = 100
 
 # Custom ASCII Art
 # This should be an array of strings, with positive
@@ -39,12 +39,12 @@
 # $all = $true
 
 # Add a custom info line
-# function info_custom_time {
-#     return @{
-#         title = "Time"
-#         content = (Get-Date)
-#     }
-# }
+function info_custom_time {
+    return @{
+        title = "Time"
+        content = (Get-Date)
+    }
+}
 
 # Configure which disks are shown
 # $ShowDisks = @("C:", "D:")
@@ -54,6 +54,7 @@
 # Configure which package managers are shown
 # disabling unused ones will improve speed
 # $ShowPkgs = @("winget", "scoop", "choco")
+$ShowPkgs = @("scoop")
 
 # Use the following option to specify custom package managers.
 # Create a function with that name as suffix, and which returns
@@ -71,10 +72,10 @@
 # 'bar' is for bar only.
 # 'textbar' is for text + bar.
 # 'bartext' is for bar + text.
-# $cpustyle = 'bar'
-# $memorystyle = 'textbar'
-# $diskstyle = 'bartext'
-# $batterystyle = 'bartext'
+$cpustyle = 'textbar'
+$memorystyle = 'textbar'
+$diskstyle = 'textbar'
+$batterystyle = 'textbar'
 
 
 # Remove the '#' from any of the lines in
@@ -86,7 +87,7 @@
     "os"
     "computer"
     "kernel"
-    "motherboard"
+    # "motherboard"
     # "custom_time"  # use custom info line
     "uptime"
     # "ps_pkgs"  # takes some time
@@ -96,11 +97,11 @@
     "terminal"
     # "theme"
     "cpu"
-    "gpu"
-    # "cpu_usage"
+    # "gpu"
+    "cpu_usage"
     "memory"
     "disk"
-    # "battery"
+    "battery"
     # "locale"
     # "weather"
     # "local_ip"
