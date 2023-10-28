@@ -1,5 +1,7 @@
 # Dotfiles for windows
 
+<img src="screenshots/desktop.png" />
+
 ## Install packages
 
 ### Fonts
