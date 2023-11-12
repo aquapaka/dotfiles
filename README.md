@@ -1,6 +1,7 @@
 # Dotfiles for windows
 
-<img src="screenshots/desktop.png" />
+<img src="screenshots/desktop-arcade-1.png" />
+<img src="screenshots/desktop-arcade.png" />
 
 ## Install packages
 
