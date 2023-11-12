@@ -57,6 +57,7 @@
             },
             "historySize": 10000,
             "intenseTextStyle": "all",
+            "opacity": 80,
             "padding": "16",
             "scrollbarState": "hidden",
             "useAtlasEngine": true
@@ -120,13 +121,13 @@
             "brightRed": "#FB007A",
             "brightWhite": "#D4D4D4",
             "brightYellow": "#F3DF3A",
-            "cursorColor": "#F40E48",
+            "cursorColor": "#F41A60",
             "cyan": "#00E6FF",
             "foreground": "#C0CAF5",
             "green": "#00FF64",
             "name": "Arcade",
             "purple": "#E200F4",
-            "red": "#F40E48",
+            "red": "#F41A60",
             "selectionBackground": "#FFFFFF",
             "white": "#F7F7F7",
             "yellow": "#F2ED00"

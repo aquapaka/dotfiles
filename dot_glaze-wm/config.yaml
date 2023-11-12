@@ -18,21 +18,21 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "false"
+  window_animations: "unchanged"
 
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "8px"
+  inner_gap: "16px"
 
   # Gap between windows and the screen edge.
-  outer_gap: "8px"
+  outer_gap: "16px"
 
 # Highlight active/inactive windows with a colored border.
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#FF6188"
+    color: "#0092FE"
 
   inactive:
     enabled: false
@@ -42,55 +42,57 @@ bar:
   height: "32px"
   position: "top"
   opacity: 1
-  background: "#221f22"
-  foreground: "#ffffff"
+  background: "#0A032480"
+  foreground: "#C0CAF5"
   font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13px"
   padding: "4px 8px"
-  offset_x: "8px"
-  offset_y: "8px"
+  offset_x: "16px"
+  offset_y: "16px"
   border_radius: "8px"
+  border_width: "1px"
+  border_color: "#0092FE"
   component_separator:
     label: "  "
   components_left:
     - type: "workspaces"
       margin: "0 8px"
       padding: "0"
-      font_size: "21"
+      font_size: "18"
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#FF6188"
+      focused_workspace_foreground: "#0092FE"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
 
     - type: "cpu"
-      label: "<attr fs='25' fg='#FF6188'></attr> {percent_usage}%"
+      label: "<attr fs='25' fg='#F41A60'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "<attr fs='24' fg='#A9DC76'></attr> {percent_usage}%"
+      label: "<attr fs='24' fg='#00FF64'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "gpu"
-      label: "<attr fs='32' fg='#AB9DF2'>󰾲</attr> {percent_usage}%"
+      label: "<attr fs='32' fg='#A6E22E'>󰾲</attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "volume"
-      label_low: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
-      label_medium: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
-      label_high: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
-      label_mute: "<attr fs='30' fg='#FF6188'>󰝟</attr>"
+      label_low: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
+      label_medium: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
+      label_high: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
+      label_mute: "<attr fs='30' fg='#0092FE'>󰝟</attr>"
       margin: "0 8px"
 
     - type: "battery"
-      label_draining: "<attr fg='#FFD866'>󰁽</attr> {battery_level}%"
-      label_power_saver: "<attr fs='25' fg='#FFD866'></attr> {battery_level}% (power saver)"
-      label_charging: "<attr fg='#FFD866'>󱐋</attr> {battery_level}%"
+      label_draining: "<attr fg='#F2ED00'>󰁽</attr> {battery_level}%"
+      label_power_saver: "<attr fs='25' fg='#A6E22E'></attr> {battery_level}% (power saver)"
+      label_charging: "<attr fg='#F2ED00'>󱐋</attr> {battery_level}%"
       margin: "0 8px"
 
   components_center:
@@ -98,18 +100,18 @@ bar:
 
   components_right:
 
-    # - type: "tiling direction"
-    #   label_horizontal: "⮂"
-    #   label_vertical: "⮁"
-    #   background: "#ffffff33"
-    #   margin: "0 8px"
-    #   padding: "4px 4px"
+    - type: "tiling direction"
+      label_horizontal: "<attr fs='18'>⮂</attr>"
+      label_vertical: "<attr fs='18'>⮁</attr>"
+      # background: "#ffffff33"
+      margin: "0 8px"
+      # padding: "4px 4px"
 
-    # - type: "system tray"
-    #   margin: "0 8px"
-    #   padding: "4px 0"
-    #   label_expand_text: " < "
-    #   label_collapse_text: " > "
+    - type: "system tray"
+      margin: "0 8px"
+      padding: "3px 0"
+      label_expand_text: ""
+      label_collapse_text: ""
 
     # - type: "binding mode"
     #   background: "#ffffff33"
