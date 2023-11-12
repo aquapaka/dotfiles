@@ -3,11 +3,11 @@ general:
   focus_follows_cursor: false
 
   # Whether to jump the cursor between windows focused by the WM.
-  cursor_follow_focus: false
+  cursor_follow_focus: true
 
   # Whether to switch back and forth between the previously focused workspace
   # when focusing the current workspace.
-  toggle_workspace_on_refocus: true
+  toggle_workspace_on_refocus: false
 
   # Whether to show floating windows as always on top.
   show_floating_on_top: false
@@ -18,7 +18,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "unchanged"
+  window_animations: "false"
 
 gaps:
   # Gap between adjacent windows.
@@ -32,7 +32,7 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#0BBED8"
+    color: "#FF6188"
 
   inactive:
     enabled: false
@@ -41,105 +41,128 @@ focus_borders:
 bar:
   height: "32px"
   position: "top"
-  always_on_top: true
-  opacity: 1.0
-  background: "#20242cc4"
+  opacity: 1
+  background: "#221f22"
   foreground: "#ffffff"
-  font_family: "Cascadia Mono"
+  font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13px"
   padding: "4px 8px"
   offset_x: "8px"
   offset_y: "8px"
   border_radius: "8px"
+  component_separator:
+    label: "  "
   components_left:
     - type: "workspaces"
       margin: "0 8px"
-      focused_workspace_background: "#ffffff33"
+      padding: "0"
+      font_size: "21"
+      focused_workspace_background: "transparent"
+      focused_workspace_foreground: "#FF6188"
       displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
 
-  components_center:
-    - type: "window title"
-
-  components_right:
-    - type: "system tray"
-      margin: "0 8px"
-      padding: "2px 0"
-
-    - type: "tiling direction"
-      label_horizontal: "⮂"
-      label_vertical: "⮁"
-      background: "#ffffff33"
-      margin: "0 8px"
-      padding: "4px 4px"
-
-    - type: "binding mode"
-      background: "#ffffff33"
-      margin: "0 8px"
-
     - type: "cpu"
-      label: "CPU {percent_usage}%"
+      label: "<attr fs='25' fg='#FF6188'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "RAM {percent_usage}%"
+      label: "<attr fs='24' fg='#A9DC76'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "gpu"
-      label: "GPU {percent_usage}%"
+      label: "<attr fs='32' fg='#AB9DF2'>󰾲</attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "volume"
-      label_low: "🔊{volume_level}%"
-      label_medium: "🔊{volume_level}%"
-      label_high: "🔊{volume_level}%"
-      label_mute: "🔊{volume_level}%"
+      label_low: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_medium: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_high: "<attr fs='30' fg='#78DCE8'></attr> {volume_level}%"
+      label_mute: "<attr fs='30' fg='#FF6188'>󰝟</attr>"
       margin: "0 8px"
 
     - type: "battery"
-      label_draining: "{battery_level}% remaining"
-      label_power_saver: "{battery_level}% (power saver)"
-      label_charging: "{battery_level}% (charging)"
+      label_draining: "<attr fg='#FFD866'>󰁽</attr> {battery_level}%"
+      label_power_saver: "<attr fs='25' fg='#FFD866'></attr> {battery_level}% (power saver)"
+      label_charging: "<attr fg='#FFD866'>󱐋</attr> {battery_level}%"
       margin: "0 8px"
+
+  components_center:
+    - type: "window title"
+
+  components_right:
+
+    # - type: "tiling direction"
+    #   label_horizontal: "⮂"
+    #   label_vertical: "⮁"
+    #   background: "#ffffff33"
+    #   margin: "0 8px"
+    #   padding: "4px 4px"
+
+    # - type: "system tray"
+    #   margin: "0 8px"
+    #   padding: "4px 0"
+    #   label_expand_text: " < "
+    #   label_collapse_text: " > "
+
+    # - type: "binding mode"
+    #   background: "#ffffff33"
+    #   margin: "0 8px"
 
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
-      time_formatting: "dddd, dd/MM/yyyy  HH:mm"
+      time_formatting: " HH:mm dddd, dd/MM/yyyy"
       margin: "0 8px"
 
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
-    # display_name: "----"
+    display_name: ""
 
     # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
     # as shown in the Windows display settings (eg. 1, 2, 3...).
     # bind_to_monitor: 1
 
     # Optionally prevent workspace from being deactivated when empty.
-    # keep_alive: false
+    # keep_alive: true
 
   - name: "2"
+    display_name: ""
+    # keep_alive: true
   - name: "3"
+    display_name: "󱃖"
+    # keep_alive: true
   - name: "4"
+    display_name: "󱧶"
+    # keep_alive: true
   - name: "5"
+    display_name: "󰙯"
+    # keep_alive: true
   - name: "6"
+    display_name: ""
+    # keep_alive: true
   - name: "7"
+    display_name: ""
+    # keep_alive: true
   - name: "8"
+    display_name: ""
+    # keep_alive: true
   - name: "9"
+    display_name: ""
+    # keep_alive: true
 
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
-  - command: "ignore"
-    match_process_name: "/Taskmgr|ScreenClippingHost/"
+  # - command: "ignore"
+  #   match_process_name: "/Taskmgr|ScreenClippingHost/"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
@@ -149,42 +172,78 @@ window_rules:
   - command: "resize borders 0px -7px -7px -7px"
     match_process_name: "steam"
 
+  # Terminal workspace
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    match_process_name: "WindowsTerminal"
+
+  # Browser workspace
+  # Command to run. Use `commands` to specify an array of commands to run in sequence.
+  - commands: ["move to workspace 2", "focus workspace 2"]
+    # Process name to match exactly.
+    match_process_name: "chrome"
+    # Window title to match exactly.
+    # match_title: "/.*/"
+    # Class name to match exactly.
+    # match_class_name: "Chrome_WidgetWin_1"
+
+  # Code workspace
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    match_process_name: "Code"
+
+  # Folder and files workspace
+  - commands: ["move to workspace 4", "focus workspace 4"]
+    match_process_name: "explorer"
+
+  # Discord workspace
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    match_process_name: "Discord"
+
+  # Settings workspace
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    match_process_name: "Taskmgr"
+  - commands: ["move to workspace 6", "focus workspace 6"]
+    match_title: "Settings"
+
+  # Others workspace
+  - commands: ["move to workspace 7"]
+    match_process_name: "GoogleDriveFS"
+
 binding_modes:
-  - name: "resize"
-    keybindings:
+  # - name: "resize"
+  #   keybindings:
       # Resize focused window by a percentage or pixel amount.
-      - command: "resize width -2%"
-        bindings: ["H", "Left"]
-      - command: "resize width +2%"
-        bindings: ["L", "Right"]
-      - command: "resize height +2%"
-        bindings: ["K", "Up"]
-      - command: "resize height -2%"
-        bindings: ["J", "Down"]
+      # - command: "resize width -2%"
+      #   bindings: ["H", "Left"]
+      # - command: "resize width +2%"
+      #   bindings: ["L", "Right"]
+      # - command: "resize height +2%"
+      #   bindings: ["K", "Up"]
+      # - command: "resize height -2%"
+      #   bindings: ["J", "Down"]
       # Press enter/escape to return to default keybindings.
-      - command: "binding mode none"
-        bindings: ["Escape", "Enter"]
+      # - command: "binding mode none"
+      #   bindings: ["Escape", "Enter"]
 
 keybindings:
   # Shift focus in a given direction.
   - command: "focus left"
-    bindings: ["Alt+H", "Alt+Left"]
+    bindings: ["Alt+H"]
   - command: "focus right"
-    bindings: ["Alt+L", "Alt+Right"]
+    bindings: ["Alt+L"]
   - command: "focus up"
-    bindings: ["Alt+K", "Alt+Up"]
+    bindings: ["Alt+K"]
   - command: "focus down"
-    bindings: ["Alt+J", "Alt+Down"]
+    bindings: ["Alt+J"]
 
   # Move focused window in a given direction.
   - command: "move left"
-    bindings: ["Alt+Shift+H", "Alt+Shift+Left"]
+    bindings: ["Alt+Shift+H"]
   - command: "move right"
-    bindings: ["Alt+Shift+L", "Alt+Shift+Right"]
+    bindings: ["Alt+Shift+L"]
   - command: "move up"
-    bindings: ["Alt+Shift+K", "Alt+Shift+Up"]
+    bindings: ["Alt+Shift+K"]
   - command: "move down"
-    bindings: ["Alt+Shift+J", "Alt+Shift+Down"]
+    bindings: ["Alt+Shift+J"]
 
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -2%"
@@ -203,15 +262,15 @@ keybindings:
 
   # Change tiling direction. This determines where new tiling windows will be inserted.
   - command: "tiling direction toggle"
-    binding: "Alt+T"
+    binding: "Alt+D"
 
   # Change focus between floating / tiling windows.
   - command: "focus mode toggle"
-    binding: "Alt+F"
+    binding: "Alt+Shift+F"
 
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
-    binding: "Alt+Shift+Space"
+    binding: "Alt+F"
 
   # Change the focused window to be maximized / unmaximized.
   - command: "toggle maximized"
@@ -219,15 +278,15 @@ keybindings:
 
   # Minimize focused window.
   # - command: "set minimized"
-  #   binding: "Alt+M"
+  #   binding: "Alt+N"
 
   # Close focused window.
   - command: "close"
-    binding: "Alt+Shift+X"
+    binding: "Alt+W"
 
   # Kill GlazeWM process safely.
   - command: "exit wm"
-    binding: "Alt+Ctrl+Shift+X"
+    binding: "Alt+Ctrl+Shift+W"
 
   # Re-evaluate configuration file.
   - command: "reload config"
