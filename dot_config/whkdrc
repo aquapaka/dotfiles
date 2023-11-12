@@ -2,13 +2,15 @@
 
 # Reload whkd configuration
 # alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-alt + o                 : taskkill /f /im whkd.exe && Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o         : komorebic reload-configuration
+ctrl + alt + shift + r  : Stop-process -Name whk; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+# ctrl + alt + shift + k  : komorebic reload-configuration
+ctrl + alt + shift + k  : Stop-process -Name komorebi; komorebic start -c "$Env:USERPROFILE\\.config\\komorebi\\komorebi.json" --whkd
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
 # alt + f                 : if ($wshell.AppActivate('Firefox') -eq $False) { start firefox }
 # alt + b                 : if ($wshell.AppActivate('Chrome') -eq $False) { start chrome }
+# alt + enter                 : if ($wshell.AppActivate('wt') -eq $False) { start wt }
 
 # Focus windows
 alt + h                 : komorebic focus left
