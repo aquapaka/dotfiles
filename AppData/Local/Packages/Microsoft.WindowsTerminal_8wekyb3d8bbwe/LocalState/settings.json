@@ -33,6 +33,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "experimental.rendering.software": false,
     "focusFollowMouse": true,
     "launchMode": "focus",
     "newTabMenu": 
@@ -54,7 +55,7 @@
                 "face": "CaskaydiaCove Nerd Font Mono"
             },
             "intenseTextStyle": "all",
-            "opacity": 75,
+            "opacity": 90,
             "useAcrylic": true,
             "useAtlasEngine": true
         },
@@ -106,7 +107,10 @@
                 "hidden": false,
                 "intenseTextStyle": "all",
                 "name": "PowerShell",
-                "source": "Windows.Terminal.PowershellCore"
+                "scrollbarState": "hidden",
+                "source": "Windows.Terminal.PowershellCore",
+                "useAcrylic": false,
+                "useAtlasEngine": true
             }
         ]
     },
@@ -161,24 +165,24 @@
         {
             "background": "#2D2A2E",
             "black": "#0A0A0A",
-            "blue": "#5385F0",
+            "blue": "#67A5FF",
             "brightBlack": "#262626",
-            "brightBlue": "#8DB3F0",
-            "brightCyan": "#A9DAE1",
-            "brightGreen": "#C0DCAE",
-            "brightPurple": "#C9C3FF",
-            "brightRed": "#FFAFC3",
+            "brightBlue": "#67A5FF",
+            "brightCyan": "#84F2FF",
+            "brightGreen": "#C4FF89",
+            "brightPurple": "#B4A5FF",
+            "brightRed": "#FF6188",
             "brightWhite": "#FFFFFF",
-            "brightYellow": "#F7DEB6",
+            "brightYellow": "#FFD866",
             "cursorColor": "#FF6188",
             "cyan": "#78DCE8",
-            "foreground": "#F2F2F2",
+            "foreground": "#FFFFFF",
             "green": "#A9DC76",
             "name": "Monokai Pro",
             "purple": "#AB9DF2",
             "red": "#FF6188",
-            "selectionBackground": "#434144",
-            "white": "#C9C9C9",
+            "selectionBackground": "#4B494D",
+            "white": "#E6E6E6",
             "yellow": "#FFD866"
         },
         {

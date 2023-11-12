@@ -13,6 +13,9 @@ scoop install CascadiaCode-NF-Propo
 ### Uncatorize
 
 ```
+scoop bucket add extras
+scoop install whkd
+scoop install komorebi
 scoop install starship
 scoop install pwsh
 scoop install winfetch

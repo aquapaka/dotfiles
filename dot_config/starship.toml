@@ -66,7 +66,7 @@ truncation_symbol = "…/"
 
 [c]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [docker_context]
@@ -76,12 +76,12 @@ format = '[ $symbol $context ]($style) $path'
 
 [elixir]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [elm]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [git_branch]
@@ -95,46 +95,46 @@ format = '[$all_status$ahead_behind ]($style)'
 
 [golang]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [gradle]
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [haskell]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [java]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [julia]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [nim]
 symbol = "󰆥 "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [scala]
 symbol = " "
-style = "bg:#86BBD8"
+style = "bg:#6e8f4c"
 format = '[ $symbol ($version) ]($style)'
 
 [time]

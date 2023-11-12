@@ -97,7 +97,7 @@ $batterystyle = 'textbar'
     "terminal"
     # "theme"
     "cpu"
-    # "gpu"
+    "gpu"
     "cpu_usage"
     "memory"
     "disk"
