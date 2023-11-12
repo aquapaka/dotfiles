@@ -10,7 +10,7 @@ general:
   toggle_workspace_on_refocus: false
 
   # Whether to show floating windows as always on top.
-  show_floating_on_top: false
+  show_floating_on_top: true
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
@@ -18,7 +18,7 @@ general:
   # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
   # window transition animations (on minimize, close, etc). Set to 'unchanged'
   # to make no setting changes.
-  window_animations: "unchanged"
+  window_animations: "false"
 
 gaps:
   # Gap between adjacent windows.
@@ -42,7 +42,7 @@ bar:
   height: "32px"
   position: "top"
   opacity: 1
-  background: "#0A032480"
+  background: "#0A0324CC"
   foreground: "#C0CAF5"
   font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13px"
