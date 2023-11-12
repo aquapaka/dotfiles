@@ -1,144 +1,251 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Use custom format
 format = """
-[](#b2435f)\
-$os\
 $username\
-[](bg:#af6947 fg:#b2435f)\
+$hostname\
+$localip\
+$shlvl\
+$singularity\
+$kubernetes\
 $directory\
-[](fg:#af6947 bg:#aa9044)\
+$vcsh\
+$fossil_branch\
 $git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
 $git_status\
-[](fg:#aa9044 bg:#6e8f4c)\
+$hg_branch\
+$pijul_channel\
+$docker_context\
+$package\
 $c\
+$cmake\
+$cobol\
+$daml\
+$dart\
+$deno\
+$dotnet\
 $elixir\
 $elm\
+$erlang\
+$fennel\
 $golang\
-$gradle\
+$guix_shell\
 $haskell\
+$haxe\
+$helm\
 $java\
 $julia\
-$nodejs\
+$kotlin\
+$gradle\
+$lua\
 $nim\
+$nodejs\
+$ocaml\
+$opa\
+$perl\
+$php\
+$pulumi\
+$purescript\
+$python\
+$raku\
+$rlang\
+$red\
+$ruby\
 $rust\
 $scala\
-[](fg:#6e8f4c bg:#50939b)\
-$docker_context\
-[](fg:#50939b bg:#746ba5)\
+$solidity\
+$swift\
+$terraform\
+$vlang\
+$vagrant\
+$zig\
+$buf\
+$nix_shell\
+$conda\
+$meson\
+$spack\
+$memory_usage\
+$aws\
+$gcloud\
+$openstack\
+$azure\
+$env_var\
+$crystal\
+$custom\
+$sudo\
+$cmd_duration\
+$jobs\
+$battery\
 $time\
-[ ](fg:#746ba5)\
-"""
+$status\
+$os\
+$container\
+$shell\
+$character"""
 
-# Disable the blank line at the start of the prompt
-# add_newline = false
-
-# You can also replace your username with a neat symbol like   or disable this
-# and use the os module below
 [username]
-show_always = true
-style_user = "bg:#b2435f"
-style_root = "bg:#b2435f"
-format = '[ aquapaka ]($style)'
+style_user = 'cyan bold'
+style_root = 'cyan bold'
+format = '[aquapaka@AquariusX1]($style) '
 disabled = false
-
-# An alternative to the username module which displays a symbol that
-# represents the current operating system
-[os]
-style = "bg:#b2435f"
-disabled = true # Disabled by default
+show_always = true
 
 [directory]
-style = "bg:#af6947"
-format = "[ $path ]($style)"
-truncation_length = 3
-truncation_symbol = "…/"
+format = '[$path]($style)[$read_only]($read_only_style) '
+style = 'yellow'
+read_only = " 󰌾"
+truncation_length = 8
+truncation_symbol = '…/'
 
-# Here is how you can shorten some long paths by text replacement
-# similar to mapped_locations in Oh My Posh:
-[directory.substitutions]
-"Documents" = "󰈙 "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
-# Keep in mind that the order matters. For example:
-# "Important Documents" = " 󰈙 "
-# will not be replaced, because "Documents" was already substituted before.
-# So either put "Important Documents" before "Documents" or use the substituted version:
-# "Important 󰈙 " = " 󰈙 "
-
-[c]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[docker_context]
-symbol = " "
-style = "bg:#50939b"
-format = '[ $symbol $context ]($style) $path'
-
-[elixir]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[elm]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[git_branch]
-symbol = ""
-style = "bg:#aa9044"
-format = '[ $symbol $branch ]($style)'
-
-[git_status]
-style = "bg:#aa9044"
-format = '[$all_status$ahead_behind ]($style)'
-
-[golang]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[gradle]
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[haskell]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[java]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[julia]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nodejs]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[nim]
-symbol = "󰆥 "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[rust]
-symbol = ""
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
-
-[scala]
-symbol = " "
-style = "bg:#86BBD8"
-format = '[ $symbol ($version) ]($style)'
+[status]
+format = '$symbol '
+symbol = '[🞬](red)'
+success_symbol = '[](green)'
+not_executable_symbol = '[󰂭](red)'
+not_found_symbol = '[🞫](red)'
+sigint_symbol = '[󰜺](red)'
+signal_symbol = '[󱐋](yellow)'
+disabled = false
 
 [time]
 disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#746ba5"
-format = '[ ♥ $time ]($style)'
+format = '[$time]($style) '
+style = 'black'
+time_format = '%R'
+
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[c]
+symbol = " "
+
+[conda]
+symbol = " "
+
+[dart]
+symbol = " "
+
+[docker_context]
+symbol = " "
+
+[elixir]
+symbol = " "
+
+[elm]
+symbol = " "
+
+[fossil_branch]
+symbol = " "
+
+[git_branch]
+symbol = " "
+
+[golang]
+symbol = " "
+
+[guix_shell]
+symbol = " "
+
+[haskell]
+symbol = " "
+
+[haxe]
+symbol = " "
+
+[hg_branch]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[julia]
+symbol = " "
+
+[lua]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[meson]
+symbol = "󰔷 "
+
+[nim]
+symbol = "󰆥 "
+
+[nix_shell]
+symbol = " "
+
+[nodejs]
+symbol = " "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+[package]
+symbol = "󰏗 "
+
+[pijul_channel]
+symbol = " "
+
+[python]
+symbol = " "
+
+[rlang]
+symbol = "󰟔 "
+
+[ruby]
+symbol = " "
+
+[rust]
+symbol = " "
+
+[scala]
+symbol = " "

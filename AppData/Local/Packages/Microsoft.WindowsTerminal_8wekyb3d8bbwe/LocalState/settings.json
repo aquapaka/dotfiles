@@ -45,17 +45,20 @@
     {
         "defaults": 
         {
-            "adjustIndistinguishableColors": "indexed",
-            "colorScheme": "Monokai Pro",
-            "cursorShape": "vintage",
+            "adjustIndistinguishableColors": "never",
+            "antialiasingMode": "grayscale",
+            "closeOnExit": "never",
+            "colorScheme": "Arcade",
+            "cursorShape": "filledBox",
             "elevate": true,
             "font": 
             {
                 "face": "CaskaydiaCove Nerd Font Mono"
             },
+            "historySize": 10000,
             "intenseTextStyle": "all",
-            "opacity": 75,
-            "useAcrylic": true,
+            "padding": "16",
+            "scrollbarState": "hidden",
             "useAtlasEngine": true
         },
         "list": 
@@ -95,16 +98,9 @@
                 "source": "Git"
             },
             {
-                "adjustIndistinguishableColors": "indexed",
-                "cursorShape": "vintage",
                 "elevate": true,
-                "font": 
-                {
-                    "face": "CaskaydiaCove Nerd Font Mono"
-                },
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
-                "intenseTextStyle": "all",
                 "name": "PowerShell",
                 "source": "Windows.Terminal.PowershellCore"
             }
@@ -112,6 +108,29 @@
     },
     "schemes": 
     [
+        {
+            "background": "#0A0324",
+            "black": "#636685",
+            "blue": "#0092FE",
+            "brightBlack": "#74779C",
+            "brightBlue": "#48B0FE",
+            "brightCyan": "#68EDFF",
+            "brightGreen": "#A6E22E",
+            "brightPurple": "#926BCA",
+            "brightRed": "#FB007A",
+            "brightWhite": "#D4D4D4",
+            "brightYellow": "#F3DF3A",
+            "cursorColor": "#F40E48",
+            "cyan": "#00E6FF",
+            "foreground": "#C0CAF5",
+            "green": "#00FF64",
+            "name": "Arcade",
+            "purple": "#E200F4",
+            "red": "#F40E48",
+            "selectionBackground": "#FFFFFF",
+            "white": "#F7F7F7",
+            "yellow": "#F2ED00"
+        },
         {
             "background": "#0C0C0C",
             "black": "#0C0C0C",
