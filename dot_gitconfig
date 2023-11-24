@@ -3,3 +3,5 @@
 	name = aquapaka
 [credential]
 	credentialStore = dpapi
+[safe]
+	directory = C:/Users/aquapaka/Development/tiemnghiemtuk-svelte

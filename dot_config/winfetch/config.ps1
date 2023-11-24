@@ -88,7 +88,7 @@ $batterystyle = 'textbar'
     "computer"
     "kernel"
     # "motherboard"
-    # "custom_time"  # use custom info line
+    "custom_time"  # use custom info line
     "uptime"
     # "ps_pkgs"  # takes some time
     "pkgs"
@@ -97,7 +97,7 @@ $batterystyle = 'textbar'
     "terminal"
     # "theme"
     "cpu"
-    # "gpu"
+    "gpu"
     "cpu_usage"
     "memory"
     "disk"

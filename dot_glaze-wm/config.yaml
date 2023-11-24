@@ -148,16 +148,16 @@ workspaces:
     display_name: "󰙯"
     # keep_alive: true
   - name: "6"
-    display_name: ""
+    display_name: ""
     # keep_alive: true
   - name: "7"
-    display_name: ""
+    display_name: "󰊴"
     # keep_alive: true
   - name: "8"
-    display_name: ""
+    display_name: ""
     # keep_alive: true
   - name: "9"
-    display_name: ""
+    display_name: ""
     # keep_alive: true
 
 window_rules:
@@ -169,10 +169,6 @@ window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
     match_class_name: "#32770"
-
-  # Some applications (eg. Steam) have borders that extend past the normal border size.
-  - command: "resize borders 0px -7px -7px -7px"
-    match_process_name: "steam"
 
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]
@@ -197,17 +193,38 @@ window_rules:
     match_process_name: "explorer"
 
   # Discord workspace
-  - commands: ["move to workspace 5", "focus workspace 5"]
+  - commands: ["move to workspace 5"]
     match_process_name: "Discord"
 
-  # Settings workspace
+  # Graphic design & video editing workspace
+  - commands: ["move to workspace 6", "resize borders 0px -7px -7px -7px", "focus workspace 6"]
+    match_process_name: "Photoshop"
+  - commands: ["move to workspace 6", "resize borders 0px -7px -7px -7px", "focus workspace 6"]
+    match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
-    match_process_name: "Taskmgr"
-  - commands: ["move to workspace 6", "focus workspace 6"]
-    match_title: "Settings"
+    match_process_name: "Resolve"
 
-  # Others workspace
-  - commands: ["move to workspace 7"]
+  # Games workspace
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "VALORANT"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "VALORANT-Win64-Shipping"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "eldenring"
+    # Some applications (eg. Steam) have borders that extend past the normal border size.
+  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
+    match_process_name: "steam"
+
+  # Settings workspace
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    match_process_name: "Taskmgr"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    match_title: "Settings"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    match_process_name: "CommercialVantage"
+
+  # GG Drive workspace
+  - commands: ["move to workspace 9"]
     match_process_name: "GoogleDriveFS"
 
 binding_modes:
