@@ -61,7 +61,6 @@ bar:
       font_size: "18"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#0092FE"
-      displayed_workspace_background: "#00000033"
       default_workspace_background: "transparent"
 
     - type: "cpu"
@@ -107,11 +106,11 @@ bar:
       margin: "0 8px"
       # padding: "4px 4px"
 
-    - type: "system tray"
-      margin: "0 8px"
-      padding: "3px 0"
-      label_expand_text: ""
-      label_collapse_text: ""
+    # - type: "system tray"
+    #   margin: "0 8px"
+    #   padding: "3px 0"
+    #   label_expand_text: ""
+    #   label_collapse_text: ""
 
     # - type: "binding mode"
     #   background: "#ffffff33"
@@ -226,6 +225,8 @@ window_rules:
   # GG Drive workspace
   - commands: ["move to workspace 9"]
     match_process_name: "GoogleDriveFS"
+  - commands: ["move to workspace 9"]
+    match_process_name: "vsthost"
 
 binding_modes:
   # - name: "resize"
