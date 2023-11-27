@@ -210,9 +210,13 @@ window_rules:
     match_process_name: "VALORANT-Win64-Shipping"
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "eldenring"
-    # Some applications (eg. Steam) have borders that extend past the normal border size.
+  # Some applications (eg. Steam) have borders that extend past the normal border size.
   - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
     match_process_name: "steam"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "java"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "javaw"
 
   # Settings workspace
   - commands: ["move to workspace 8", "focus workspace 8"]
