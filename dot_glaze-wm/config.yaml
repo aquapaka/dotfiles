@@ -215,6 +215,8 @@ window_rules:
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
     match_process_name: "steam"
+  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
+    match_process_name: "steamwebhelper"
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "java"
   - commands: ["move to workspace 7", "focus workspace 7"]
@@ -228,11 +230,13 @@ window_rules:
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "CommercialVantage"
 
-  # GG Drive workspace
+  # Others workspace
   - commands: ["move to workspace 9"]
     match_process_name: "GoogleDriveFS"
   - commands: ["move to workspace 9"]
     match_process_name: "vsthost"
+  - commands: ["move to workspace 9"]
+    match_process_name: "Mechvibes"
 
 binding_modes:
   # - name: "resize"
