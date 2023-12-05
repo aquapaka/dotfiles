@@ -32,25 +32,25 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#0092FE"
+    color: "#fb4934"
 
   inactive:
     enabled: false
     color: "#ff0000"
 
 bar:
-  height: "32px"
+  height: "42px"
   position: "top"
   opacity: 1
-  background: "#0A0324CC"
-  foreground: "#C0CAF5"
+  background: "#1d2021"
+  foreground: "#ebdbb2"
   font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13px"
-  padding: "4px 8px"
+  padding: "6px 8px"
   offset_x: "16px"
   offset_y: "16px"
-  border_radius: "8px"
-  border_width: "1px"
+  border_radius: "0px"
+  border_width: "0px"
   border_color: "#0092FE"
   component_separator:
     label: "  "
@@ -58,50 +58,49 @@ bar:
     - type: "workspaces"
       margin: "0 8px"
       padding: "0"
-      font_size: "18"
+      font_size: "21"
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#0092FE"
+      focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
-
-    - type: "cpu"
-      label: "<attr fs='25' fg='#F41A60'></attr> {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "memory"
-      label: "<attr fs='24' fg='#00FF64'></attr> {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "gpu"
-      label: "<attr fs='32' fg='#A6E22E'>󰾲</attr> {percent_usage}%"
-      margin: "0 8px"
-      # How often this counter is refreshed.
-      refresh_interval_ms: 1000
-
-    - type: "volume"
-      label_low: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
-      label_medium: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
-      label_high: "<attr fs='30' fg='#0092FE'></attr> {volume_level}%"
-      label_mute: "<attr fs='30' fg='#0092FE'>󰝟</attr>"
-      margin: "0 8px"
-
-    - type: "battery"
-      label_draining: "<attr fg='#F2ED00'>󰁽</attr> {battery_level}%"
-      label_power_saver: "<attr fs='25' fg='#A6E22E'></attr> {battery_level}% (power saver)"
-      label_charging: "<attr fg='#F2ED00'>󱐋</attr> {battery_level}%"
-      margin: "0 8px"
 
   components_center:
     - type: "window title"
 
   components_right:
+    - type: "cpu"
+      label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "memory"
+      label: "<attr fs='23' fg='#b8bb26'></attr> {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 2000
+
+    - type: "gpu"
+      label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%"
+      margin: "0 8px"
+      # How often this counter is refreshed.
+      refresh_interval_ms: 1000
+
+    - type: "volume"
+      label_low: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
+      label_medium: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
+      label_high: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
+      label_mute: "<attr fs='30' fg='#83a598'>󰝟</attr>"
+      margin: "0 8px"
+
+    - type: "battery"
+      label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%"
+      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}% (power saver)"
+      label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%"
+      margin: "0 8px"
 
     - type: "tiling direction"
-      label_horizontal: "<attr fs='18'>⮂</attr>"
-      label_vertical: "<attr fs='18'>⮁</attr>"
+      label_horizontal: "<attr fs='15'>⮂</attr>"
+      label_vertical: "<attr fs='15'>⮁</attr>"
       # background: "#ffffff33"
       margin: "0 8px"
       # padding: "4px 4px"
@@ -196,9 +195,19 @@ window_rules:
     match_process_name: "Discord"
 
   # Graphic design & video editing workspace
-  - commands: ["move to workspace 6", "resize borders 0px -7px -7px -7px", "focus workspace 6"]
+  - commands:
+      [
+        "move to workspace 6",
+        "resize borders 0px -7px -7px -7px",
+        "focus workspace 6",
+      ]
     match_process_name: "Photoshop"
-  - commands: ["move to workspace 6", "resize borders 0px -7px -7px -7px", "focus workspace 6"]
+  - commands:
+      [
+        "move to workspace 6",
+        "resize borders 0px -7px -7px -7px",
+        "focus workspace 6",
+      ]
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Resolve"
@@ -213,9 +222,19 @@ window_rules:
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "RiotClientUx"
   # Some applications (eg. Steam) have borders that extend past the normal border size.
-  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
+  - commands:
+      [
+        "move to workspace 7",
+        "resize borders 0px -7px -7px -7px",
+        "focus workspace 7",
+      ]
     match_process_name: "steam"
-  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px", "focus workspace 7"]
+  - commands:
+      [
+        "move to workspace 7",
+        "resize borders 0px -7px -7px -7px",
+        "focus workspace 7",
+      ]
     match_process_name: "steamwebhelper"
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "java"
@@ -241,18 +260,18 @@ window_rules:
 binding_modes:
   # - name: "resize"
   #   keybindings:
-      # Resize focused window by a percentage or pixel amount.
-      # - command: "resize width -2%"
-      #   bindings: ["H", "Left"]
-      # - command: "resize width +2%"
-      #   bindings: ["L", "Right"]
-      # - command: "resize height +2%"
-      #   bindings: ["K", "Up"]
-      # - command: "resize height -2%"
-      #   bindings: ["J", "Down"]
-      # Press enter/escape to return to default keybindings.
-      # - command: "binding mode none"
-      #   bindings: ["Escape", "Enter"]
+  # Resize focused window by a percentage or pixel amount.
+  # - command: "resize width -2%"
+  #   bindings: ["H", "Left"]
+  # - command: "resize width +2%"
+  #   bindings: ["L", "Right"]
+  # - command: "resize height +2%"
+  #   bindings: ["K", "Up"]
+  # - command: "resize height -2%"
+  #   bindings: ["J", "Down"]
+  # Press enter/escape to return to default keybindings.
+  # - command: "binding mode none"
+  #   bindings: ["Escape", "Enter"]
 
 keybindings:
   # Shift focus in a given direction.

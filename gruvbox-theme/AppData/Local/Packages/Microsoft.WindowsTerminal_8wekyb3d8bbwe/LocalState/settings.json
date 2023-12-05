@@ -48,7 +48,7 @@
             "adjustIndistinguishableColors": "never",
             "antialiasingMode": "grayscale",
             "closeOnExit": "never",
-            "colorScheme": "Arcade",
+            "colorScheme": "Gruvbox",
             "cursorShape": "filledBox",
             "elevate": true,
             "font": 
@@ -57,7 +57,7 @@
             },
             "historySize": 10000,
             "intenseTextStyle": "all",
-            "opacity": 80,
+            "opacity": 90,
             "padding": "16",
             "scrollbarState": "hidden",
             "useAtlasEngine": true
@@ -82,6 +82,10 @@
             },
             {
                 "commandline": "%SystemRoot%\\System32\\cmd.exe",
+                "font": 
+                {
+                    "face": "CaskaydiaCove Nerd Font Mono"
+                },
                 "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
                 "hidden": false,
                 "name": "Command Prompt"
@@ -177,6 +181,29 @@
             "selectionBackground": "#FFFFFF",
             "white": "#CCCCCC",
             "yellow": "#C19C00"
+        },
+        {
+            "background": "#1D2021",
+            "black": "#928374",
+            "blue": "#458588",
+            "brightBlack": "#928374",
+            "brightBlue": "#83A598",
+            "brightCyan": "#8EC07C",
+            "brightGreen": "#B8BB26",
+            "brightPurple": "#D3869B",
+            "brightRed": "#FB4934",
+            "brightWhite": "#EBDBB2",
+            "brightYellow": "#FABD2F",
+            "cursorColor": "#FB4934",
+            "cyan": "#689D6A",
+            "foreground": "#EBDBB2",
+            "green": "#98971A",
+            "name": "Gruvbox",
+            "purple": "#B16286",
+            "red": "#CC241D",
+            "selectionBackground": "#A89984",
+            "white": "#A89984",
+            "yellow": "#D79921"
         },
         {
             "background": "#2D2A2E",
