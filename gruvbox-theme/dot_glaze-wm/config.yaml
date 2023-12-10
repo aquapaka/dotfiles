@@ -94,7 +94,7 @@ bar:
 
     - type: "battery"
       label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%"
-      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}% (power saver)"
+      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%"
       label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%"
       margin: "0 8px"
 
@@ -221,6 +221,10 @@ window_rules:
     match_process_name: "eldenring"
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "RiotClientUx"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "LeagueClientUx"
+  - commands: ["move to workspace 7", "focus workspace 7"]
+    match_process_name: "League of Legend"
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - commands:
       [
