@@ -44,6 +44,8 @@ scoop install btop-lhm
 
 ```
 scoop install vscode
+scoop install powertoys
+scoop install blender
 scoop install glazewm
 scoop install vcredist2022
 ```
