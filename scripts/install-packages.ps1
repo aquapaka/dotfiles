@@ -1,0 +1,7 @@
+winget install -e --id Microsoft.PowerShell;
+winget install -e --id twpayne.chezmoi;
+winget install -e --id lars-berger.GlazeWM;
+winget install -e --id Starship.Starship;
+winget install -e --id Microsoft.PowerToys;
+winget install -e --id -i Microsoft.VisualStudioCode;
+winget install -e --id -i BlenderFoundation.Blender
