@@ -57,7 +57,7 @@
             },
             "historySize": 10000,
             "intenseTextStyle": "all",
-            "opacity": 90,
+            "opacity": 95,
             "padding": "16",
             "scrollbarState": "hidden",
             "useAtlasEngine": true
