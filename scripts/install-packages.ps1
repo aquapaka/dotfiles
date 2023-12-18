@@ -4,4 +4,7 @@ winget install -e --id lars-berger.GlazeWM;
 winget install -e --id Starship.Starship;
 winget install -e --id Microsoft.PowerToys;
 winget install -e --id -i Microsoft.VisualStudioCode;
-winget install -e --id -i BlenderFoundation.Blender
+winget install -e --id -i BlenderFoundation.Blender;
+winget install -e --id Discord.Discord;
+winget install -e --id Google.Chrome;
+winget install -e --id Google.Drive;
