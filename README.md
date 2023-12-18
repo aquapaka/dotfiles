@@ -1,11 +1,13 @@
-# Dotfiles for windows
+# Dotfiles
 
-My dotfiles
+My dotfiles for windows 11
 
 - Terminal: Windows Terminal
 - Shell: PowerShell
 - Prompt: Starship
 - WM/Bar: GlazeWM
+- Package manager: Winget
+- Dotfiles managed using Chezmoi
 
 ## Themes
 
@@ -21,31 +23,9 @@ My dotfiles
 
 ## Install packages
 
-### Fonts
+Run **install-packages.ps1** script
 
-```
-scoop bucket add nerd-fonts
-scoop install CascadiaCode-NF-Mono
-scoop install CascadiaCode-NF-Propo
-```
+## Others
 
-### Main
-
-```
-scoop install chezmoi
-scoop install 7zip
-scoop install starship
-scoop install pwsh
-scoop install winfetch
-scoop install btop-lhm
-```
-
-### Extras
-
-```
-scoop install vscode
-scoop install powertoys
-scoop install blender
-scoop install glazewm
-scoop install vcredist2022
-```
+- Font need to be download and install: <a href="https://www.nerdfonts.com/font-downloads">CaskaydiaCove Nerd Font</a>
+- Enable automatically hide the taskbar
