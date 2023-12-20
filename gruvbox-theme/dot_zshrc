@@ -1,0 +1,48 @@
+# Created by newuser for 5.9
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000
+bindkey -v
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+zstyle :compinstall filename '/c/Users/aquapaka/.zshrc'
+
+autoload -Uz compinit
+compinit
+# End of lines added by compinstall
+
+# Prompt theme
+setopt PROMPT_SUBST
+PROMPT='%F{cyan}%f%b %F{cyan}%n@%m%f%b %F{yellow}%~ %(?.%F{green}.%F{red})%f%b %F{green} %f%b '
+
+setopt autocd              # change directory just by typing its name
+setopt promptsubst         # enable command substitution in prompt
+setopt MENU_COMPLETE       # Automatically highlight first element of completion menu
+setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
+setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt SHARE_HISTORY
+
+# Turn off all beeps
+unsetopt BEEP
+
+# autocompletion using arrow keys (based on history)
+bindkey '\e[A' history-search-backward
+bindkey '\e[B' history-search-forward
+
+######## Alias ########
+
+alias ls='lsd -a --group-directories-first'
+alias ll='lsd -la --group-directories-first'
+alias update='pacman -Syu --noconfirm'
+
+# Prompt theme
+source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+
+# Plugins
+source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

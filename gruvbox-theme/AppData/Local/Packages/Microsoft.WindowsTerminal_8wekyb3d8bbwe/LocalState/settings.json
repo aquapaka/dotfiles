@@ -32,7 +32,7 @@
     "alwaysShowNotificationIcon": false,
     "copyFormatting": "none",
     "copyOnSelect": false,
-    "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+    "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
     "focusFollowMouse": true,
     "launchMode": "focus",
     "newTabMenu": 
@@ -64,6 +64,13 @@
         },
         "list": 
         [
+            {
+                "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
+                "experimental.retroTerminalEffect": false,
+                "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+                "icon": "C:/msys64/ucrt64.ico",
+                "name": "UCRT64 / MSYS2"
+            },
             {
                 "adjustIndistinguishableColors": "never",
                 "colorScheme": 
@@ -184,26 +191,26 @@
         },
         {
             "background": "#1D2021",
-            "black": "#928374",
-            "blue": "#458588",
-            "brightBlack": "#928374",
-            "brightBlue": "#83A598",
-            "brightCyan": "#8EC07C",
-            "brightGreen": "#B8BB26",
-            "brightPurple": "#D3869B",
-            "brightRed": "#FB4934",
-            "brightWhite": "#EBDBB2",
-            "brightYellow": "#FABD2F",
+            "black": "#665C51",
+            "blue": "#83A598",
+            "brightBlack": "#756D60",
+            "brightBlue": "#92B8A9",
+            "brightCyan": "#ACE896",
+            "brightGreen": "#DADE2D",
+            "brightPurple": "#F29AB2",
+            "brightRed": "#FF4A35",
+            "brightWhite": "#FFEEC1",
+            "brightYellow": "#FFC130",
             "cursorColor": "#FB4934",
-            "cyan": "#689D6A",
+            "cyan": "#8EC07C",
             "foreground": "#EBDBB2",
-            "green": "#98971A",
+            "green": "#B8BB26",
             "name": "Gruvbox",
-            "purple": "#B16286",
-            "red": "#CC241D",
-            "selectionBackground": "#A89984",
-            "white": "#A89984",
-            "yellow": "#D79921"
+            "purple": "#D3869B",
+            "red": "#FB4934",
+            "selectionBackground": "#262A2B",
+            "white": "#EBDBB2",
+            "yellow": "#FABD2F"
         },
         {
             "background": "#2D2A2E",

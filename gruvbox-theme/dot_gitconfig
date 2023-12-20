@@ -5,3 +5,4 @@
 	credentialStore = dpapi
 [safe]
 	directory = C:/Users/aquapaka/Development/makemeforget
+	directory = C:/Users/aquapaka/Development/tiemnghiemtuk-svelte
