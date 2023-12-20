@@ -12,9 +12,7 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
-# Prompt theme
-setopt PROMPT_SUBST
-PROMPT='%F{cyan}%f%b %F{cyan}%n@%m%f%b %F{yellow}%~ %(?.%F{green}.%F{red})%f%b %F{green} %f%b '
+# Setting
 
 setopt autocd              # change directory just by typing its name
 setopt promptsubst         # enable command substitution in prompt
@@ -35,7 +33,7 @@ bindkey '\e[B' history-search-forward
 
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
-alias update='pacman -Syu --noconfirm'
+alias update='winget upgrade --all && pacman -Syu --noconfirm'
 
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
