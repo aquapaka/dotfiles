@@ -52,9 +52,8 @@
     context                   # user@host
     dir                       # current directory
     vcs                       # git status
-    command_execution_time    # previous command duration
-    virtualenv                # python virtual environment
     time                      # current time
+    command_execution_time    # previous command duration
     prompt_char               # prompt symbol
   )
 
@@ -77,7 +76,7 @@
   typeset -g POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 
   # Magenta prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$magenta
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_FOREGROUND=$green
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=$red
   # Default prompt symbol.
@@ -89,13 +88,7 @@
   # Prompt symbol in overwrite vi mode is the same as in command mode.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_OVERWRITE_STATE=false
 
-  # Grey Python Virtual Environment.
-  typeset -g POWERLEVEL9K_VIRTUALENV_FOREGROUND=$grey
-  # Don't show Python version.
-  typeset -g POWERLEVEL9K_VIRTUALENV_SHOW_PYTHON_VERSION=false
-  typeset -g POWERLEVEL9K_VIRTUALENV_{LEFT,RIGHT}_DELIMITER=
-
-  # Blue current directory.
+  # current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=$yellow
 
   # Context format when root: user@host. The first part white, the rest grey.
@@ -115,7 +108,7 @@
   typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_FOREGROUND=$yellow
 
   # Grey Git prompt. This makes stale prompts indistinguishable from up-to-date ones.
-  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$blue
+  typeset -g POWERLEVEL9K_VCS_FOREGROUND=$white
 
   # Disable async loading indicator to make directories that aren't Git repositories
   # indistinguishable from large Git repositories without known state.
@@ -125,26 +118,28 @@
   # asynchronously when Git state changes.
   typeset -g POWERLEVEL9K_VCS_MAX_SYNC_LATENCY_SECONDS=0
 
-  # Cyan ahead/behind arrows.
-  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$cyan
   # Don't show remote branch, current tag or stashes.
   typeset -g POWERLEVEL9K_VCS_GIT_HOOKS=(vcs-detect-changes git-untracked git-aheadbehind)
   # Don't show the branch icon.
-  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=':'
+  typeset -g POWERLEVEL9K_VCS_BRANCH_ICON=' '
   # When in detached HEAD state, show @commit where branch normally goes.
-  typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='@'
-  # Don't show staged, unstaged, untracked indicators.
-  typeset -g POWERLEVEL9K_VCS_{STAGED,UNSTAGED,UNTRACKED}_ICON=
+  typeset -g POWERLEVEL9K_VCS_COMMIT_ICON='x???x'
+  # Show staged, unstaged, untracked indicators.
+  typeset -g POWERLEVEL9K_VCS_STAGED_ICON="%F{$red}+"
+  typeset -g POWERLEVEL9K_VCS_UNSTAGED_ICON="%F{$red}!"
+  typeset -g POWERLEVEL9K_VCS_UNTRACKED_ICON="%F{$red}?"
   # Show '*' when there are staged, unstaged or untracked files.
-  typeset -g POWERLEVEL9K_VCS_DIRTY_ICON=':!'
+  typeset -g POWERLEVEL9K_VCS_DIRTY_ICON=
   # Show '⇣' if local branch is behind remote.
-  typeset -g POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON=':⇣'
+  typeset -g POWERLEVEL9K_VCS_INCOMING_CHANGES_ICON="%F{$red}⇣"
   # Show '⇡' if local branch is ahead of remote.
-  typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON=':⇡'
+  typeset -g POWERLEVEL9K_VCS_OUTGOING_CHANGES_ICON="%F{$red}⇡"
+  # Cyan ahead/behind arrows.
+  typeset -g POWERLEVEL9K_VCS_{INCOMING,OUTGOING}_CHANGESFORMAT_FOREGROUND=$red
   # Don't show the number of commits next to the ahead/behind arrows.
   typeset -g POWERLEVEL9K_VCS_{COMMITS_AHEAD,COMMITS_BEHIND}_MAX_NUM=1
   # Remove space between '⇣' and '⇡' and all trailing spaces.
-  typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT/⇣* :⇡/⇣⇡}// }//:/ }'
+  # typeset -g POWERLEVEL9K_VCS_CONTENT_EXPANSION='${${${P9K_CONTENT/⇣* :⇡/⇣⇡}// }//:/ }'
 
   # Grey current time.
   typeset -g POWERLEVEL9K_TIME_FOREGROUND=$black
