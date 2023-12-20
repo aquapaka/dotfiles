@@ -13,7 +13,7 @@ My dotfiles for windows 11
 
 ## Themes
 
-### ❤️ Meimei
+### ❤️ Meimei (Current)
 
 <img src="screenshots/screenshot-gruvbox-0.png" />
 <img src="screenshots/screenshot-gruvbox-1.png" />
@@ -26,6 +26,22 @@ My dotfiles for windows 11
 ## Install packages
 
 Run **install-packages.ps1** script
+
+## Install Zsh
+
+```
+# Install ZSH
+pacman -S git zsh
+
+# Install Theme: Powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
+
+# Syntax Highlighting
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
+
+# Autosuggestions
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
+```
 
 ## Others
 
