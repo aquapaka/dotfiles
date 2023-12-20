@@ -3,7 +3,9 @@
 My dotfiles for windows 11
 
 - Terminal: Windows Terminal
-- Shell: PowerShell
+- Shell:
+  - Zsh inside MSYS2 (Primary)
+  - PowerShell (Secondary)
 - Prompt: Starship
 - WM/Bar: GlazeWM
 - Package manager: Winget

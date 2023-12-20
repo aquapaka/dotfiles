@@ -8,3 +8,4 @@ winget install -e --id -i BlenderFoundation.Blender;
 winget install -e --id Discord.Discord;
 winget install -e --id Google.Chrome;
 winget install -e --id Google.Drive;
+winget install -e --id MSYS2.MSYS2;
