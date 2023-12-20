@@ -31,6 +31,7 @@ bindkey '\e[B' history-search-forward
 
 ######## Alias ########
 
+cd() { builtin cd "$@" && lsd -a --group-directories-first; }
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'

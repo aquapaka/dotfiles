@@ -27,6 +27,14 @@ My dotfiles for windows 11
 
 Run **install-packages.ps1** script
 
+## Change MSYS2 home directory
+
+Edit /c/msys64/etc/nsswitch.conf
+
+```
+db_home: windows
+```
+
 ## Install Zsh
 
 ```
