@@ -35,6 +35,7 @@ cd() { builtin cd "$@" && lsd -a --group-directories-first; }
 alias ls='lsd -a --group-directories-first'
 alias ll='lsd -la --group-directories-first'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
+alias winfetch='powershell ~/.local/bin/winfetch.ps1'
 
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
