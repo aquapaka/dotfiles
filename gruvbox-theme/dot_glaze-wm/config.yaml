@@ -71,19 +71,19 @@ bar:
       label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
-      refresh_interval_ms: 500
+      refresh_interval_ms: 1000
 
     - type: "memory"
       label: "<attr fs='23' fg='#b8bb26'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
-      refresh_interval_ms: 500
+      refresh_interval_ms: 1000
 
     - type: "gpu"
       label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
-      refresh_interval_ms: 500
+      refresh_interval_ms: 1000
 
     - type: "volume"
       label_low: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
