@@ -69,7 +69,7 @@
                 "experimental.retroTerminalEffect": false,
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
                 "icon": "C:/msys64/ucrt64.ico",
-                "name": "UCRT64 / MSYS2"
+                "name": "Bash"
             },
             {
                 "adjustIndistinguishableColors": "never",

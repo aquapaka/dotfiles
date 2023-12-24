@@ -3,10 +3,7 @@
 My dotfiles for windows 11
 
 - Terminal: Windows Terminal
-- Shell:
-  - Zsh inside MSYS2 (Primary)
-  - PowerShell (Secondary)
-- Prompt: Starship
+- Shell: Zsh inside MSYS2
 - WM/Bar: GlazeWM
 - Package manager: Winget
 - Dotfiles managed using Chezmoi
@@ -18,7 +15,7 @@ My dotfiles for windows 11
 <img src="screenshots/screenshot-gruvbox-0.png" />
 <img src="screenshots/screenshot-gruvbox-1.png" />
 
-### 🕹️ Arcade
+### 🕹️ Arcade (archived)
 
 <img src="screenshots/desktop-arcade-1.png" />
 <img src="screenshots/desktop-arcade.png" />

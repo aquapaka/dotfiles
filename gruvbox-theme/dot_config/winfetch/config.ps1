@@ -91,7 +91,7 @@ $batterystyle = 'textbar'
     "custom_time"  # use custom info line
     "uptime"
     # "ps_pkgs"  # takes some time
-    "pwsh"
+    # "pwsh"
     "resolution"
     "terminal"
     # "theme"
