@@ -46,3 +46,5 @@ source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+~/.local/bin/colorscript -r

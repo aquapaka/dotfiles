@@ -33,6 +33,7 @@
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
+    "experimental.rendering.forceFullRepaint": false,
     "focusFollowMouse": true,
     "launchMode": "focus",
     "newTabMenu": 
