@@ -31,7 +31,7 @@
     ],
     "alwaysShowNotificationIcon": false,
     "copyFormatting": "none",
-    "copyOnSelect": false,
+    "copyOnSelect": true,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
     "focusFollowMouse": true,
     "launchMode": "focus",
@@ -66,10 +66,9 @@
         [
             {
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
-                "experimental.retroTerminalEffect": false,
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
                 "icon": "C:/msys64/ucrt64.ico",
-                "name": "Bash"
+                "name": "Terminal"
             },
             {
                 "adjustIndistinguishableColors": "never",
@@ -420,7 +419,7 @@
             "yellow": "#808000"
         }
     ],
-    "startOnUserLogin": false,
+    "startOnUserLogin": true,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
     "theme": "dark",

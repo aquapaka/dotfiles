@@ -45,7 +45,7 @@ bar:
   background: "#1d2021"
   foreground: "#ebdbb2"
   font_family: "CaskaydiaCove Nerd Font Mono"
-  font_size: "13px"
+  font_size: "12px"
   padding: "6px 8px"
   offset_x: "16px"
   offset_y: "16px"
@@ -56,9 +56,9 @@ bar:
     label: "  "
   components_left:
     - type: "workspaces"
-      margin: "0 8px"
+      margin: "0 6px"
       padding: "0"
-      font_size: "21"
+      font_size: "22"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
@@ -74,7 +74,7 @@ bar:
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "<attr fs='23' fg='#b8bb26'></attr> {percent_usage}%"
+      label: "<attr fs='22' fg='#b8bb26'></attr> {percent_usage}%"
       margin: "0 8px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
@@ -86,10 +86,10 @@ bar:
       refresh_interval_ms: 1000
 
     - type: "volume"
-      label_low: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
-      label_medium: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
-      label_high: "<attr fs='30' fg='#83a598'></attr> {volume_level}%"
-      label_mute: "<attr fs='30' fg='#83a598'>󰝟</attr>"
+      label_low: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
+      label_medium: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
+      label_high: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
+      label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>"
       margin: "0 8px"
 
     - type: "battery"
