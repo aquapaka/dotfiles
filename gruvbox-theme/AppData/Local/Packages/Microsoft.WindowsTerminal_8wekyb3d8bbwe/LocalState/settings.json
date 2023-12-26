@@ -34,6 +34,7 @@
     "copyOnSelect": true,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
     "experimental.rendering.forceFullRepaint": false,
+    "experimental.rendering.software": false,
     "focusFollowMouse": true,
     "launchMode": "focus",
     "newTabMenu": 
@@ -61,7 +62,7 @@
             "opacity": 95,
             "padding": "16",
             "scrollbarState": "hidden",
-            "useAtlasEngine": true
+            "useAtlasEngine": false
         },
         "list": 
         [
