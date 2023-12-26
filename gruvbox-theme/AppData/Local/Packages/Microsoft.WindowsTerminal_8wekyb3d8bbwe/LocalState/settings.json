@@ -47,7 +47,6 @@
     {
         "defaults": 
         {
-            "adjustIndistinguishableColors": "never",
             "antialiasingMode": "grayscale",
             "closeOnExit": "graceful",
             "colorScheme": "Gruvbox",
@@ -61,8 +60,7 @@
             "intenseTextStyle": "all",
             "opacity": 95,
             "padding": "16",
-            "scrollbarState": "hidden",
-            "useAtlasEngine": false
+            "scrollbarState": "hidden"
         },
         "list": 
         [
@@ -421,6 +419,7 @@
             "yellow": "#808000"
         }
     ],
+    "showTerminalTitleInTitlebar": true,
     "startOnUserLogin": true,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
