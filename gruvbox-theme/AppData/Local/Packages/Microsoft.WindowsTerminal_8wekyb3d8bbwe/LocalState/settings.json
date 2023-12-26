@@ -60,14 +60,14 @@
             "intenseTextStyle": "all",
             "opacity": 95,
             "padding": "16",
-            "scrollbarState": "hidden"
+            "scrollbarState": "hidden",
+            "useAtlasEngine": true
         },
         "list": 
         [
             {
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-                "icon": "C:/msys64/ucrt64.ico",
                 "name": "Terminal"
             },
             {
