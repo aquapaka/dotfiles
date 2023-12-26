@@ -36,7 +36,7 @@ db_home: windows
 
 ```
 # Install ZSH
-pacman -S git zsh
+pacman -S zsh
 
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k

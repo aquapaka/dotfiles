@@ -6,7 +6,6 @@ SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/c/Users/aquapaka/.zshrc'
 
 autoload -Uz compinit
 compinit
