@@ -39,13 +39,13 @@ focus_borders:
     color: "#ff0000"
 
 bar:
-  height: "38px"
+  height: "42px"
   position: "top"
   opacity: 1
   background: "#1d2021"
   foreground: "#ebdbb2"
   font_family: "CaskaydiaCove Nerd Font Mono"
-  font_size: "12px"
+  font_size: "13"
   padding: "6px 8px"
   offset_x: "16px"
   offset_y: "16px"
@@ -53,12 +53,12 @@ bar:
   border_width: "0px"
   border_color: "#0092FE"
   component_separator:
-    label: "  "
+    label: ""
   components_left:
     - type: "workspaces"
-      margin: "0 6px"
+      margin: "0 4px"
       padding: "0"
-      font_size: "22"
+      font_size: "23"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
@@ -69,19 +69,19 @@ bar:
   components_right:
     - type: "cpu"
       label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%"
-      margin: "0 8px"
+      margin: "0 14px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "memory"
       label: "<attr fs='22' fg='#b8bb26'></attr> {percent_usage}%"
-      margin: "0 8px"
+      margin: "0 14px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "gpu"
       label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%"
-      margin: "0 8px"
+      margin: "0 14px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
@@ -90,36 +90,46 @@ bar:
       label_medium: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
       label_high: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
       label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>"
-      margin: "0 8px"
+      margin: "0 14px"
+
+    # - type: "network"
+    #   label_no_internet: "NC"
+    #   label_ethernet: "Eth"
+    #   label_wifi_strength_0: "WiFi: 0%"
+    #   label_wifi_strength_25: "WiFi: 25%"
+    #   label_wifi_strength_50: "WiFi: 50%"
+    #   label_wifi_strength_75: "WiFi: 75%"
+    #   label_wifi_strength_100: "WiFi: 100%"
+    #   margin: "0 14px"
 
     - type: "battery"
       label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%"
       label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%"
       label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%"
-      margin: "0 8px"
+      margin: "0 14px"
 
     - type: "tiling direction"
-      label_horizontal: "<attr fs='15'>⮂</attr>"
-      label_vertical: "<attr fs='15'>⮁</attr>"
+      label_horizontal: "<attr fs='22'>󰹴</attr>"
+      label_vertical: "<attr fs='13'>󰹺</attr>"
       # background: "#ffffff33"
-      margin: "0 8px"
+      margin: "0 14px"
       # padding: "4px 4px"
 
     # - type: "system tray"
-    #   margin: "0 8px"
+    #   margin: "0 14px"
     #   padding: "3px 0"
     #   label_expand_text: ""
     #   label_collapse_text: ""
 
     # - type: "binding mode"
     #   background: "#ffffff33"
-    #   margin: "0 8px"
+    #   margin: "0 14px"
 
     - type: "clock"
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: " HH:mm dddd, dd/MM/yyyy"
-      margin: "0 8px"
+      margin: "0 6px 0 6px"
 
 workspaces:
   - name: "1"

@@ -10,7 +10,7 @@ My dotfiles for windows 11
 
 ## Themes
 
-### ❤️ Meimei (Current)
+### ❤️ Meimei
 
 <img src="screenshots/screenshot-gruvbox-0.png" />
 <img src="screenshots/screenshot-gruvbox-1.png" />

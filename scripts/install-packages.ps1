@@ -10,3 +10,4 @@ winget install -e --id Google.Chrome;
 winget install -e --id Google.Drive;
 winget install -e --id MSYS2.MSYS2;
 winget install btop4win;
+winget install GodotEngine.GodotEngine;

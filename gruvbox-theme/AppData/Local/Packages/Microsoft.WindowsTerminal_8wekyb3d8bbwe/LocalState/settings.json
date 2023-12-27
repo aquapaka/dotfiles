@@ -31,7 +31,7 @@
     ],
     "alwaysShowNotificationIcon": false,
     "copyFormatting": "none",
-    "copyOnSelect": true,
+    "copyOnSelect": false,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
     "experimental.rendering.forceFullRepaint": false,
     "experimental.rendering.software": false,
@@ -54,7 +54,8 @@
             "elevate": true,
             "font": 
             {
-                "face": "CaskaydiaCove Nerd Font Mono"
+                "face": "CaskaydiaCove Nerd Font Mono",
+                "size": 13.0
             },
             "historySize": 10000,
             "intenseTextStyle": "all",
@@ -68,7 +69,8 @@
             {
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-                "name": "Terminal"
+                "name": "Bash",
+                "tabTitle": "Terminal"
             },
             {
                 "adjustIndistinguishableColors": "never",
@@ -420,6 +422,7 @@
         }
     ],
     "showTerminalTitleInTitlebar": true,
+    "snapToGridOnResize": true,
     "startOnUserLogin": true,
     "tabSwitcherMode": "inOrder",
     "tabWidthMode": "equal",
