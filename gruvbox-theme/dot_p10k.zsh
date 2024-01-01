@@ -81,7 +81,7 @@
   typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="󰫢 %B%F{$cyan}%n%F{$black}@%F{$red}%m"
 
   # current directory.
-  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$white
+  typeset -g POWERLEVEL9K_DIR_FOREGROUND=$yellow
 
   # Grey Git prompt. This makes stale prompts indistinguishable from up-to-date ones.
   typeset -g POWERLEVEL9K_VCS_FOREGROUND=$cyan
