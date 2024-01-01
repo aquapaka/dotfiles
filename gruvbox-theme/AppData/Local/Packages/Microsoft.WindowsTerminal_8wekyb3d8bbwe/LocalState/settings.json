@@ -70,6 +70,7 @@
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
                 "name": "Bash",
+                "startingDirectory": "%USERPROFILE%",
                 "tabTitle": "Terminal"
             },
             {

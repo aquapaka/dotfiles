@@ -7,8 +7,8 @@
 	"generatedProfiles" : 
 	[
 		"{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-		"{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
 		"{2ece5bfe-50ed-5f3a-ab87-5cd4baafed2b}",
+		"{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
 		"{51855cb2-8cce-5362-8f54-464b92b32386}",
 		"{574e775e-4f2a-5b96-ac1e-a2962a402336}"
 	],
@@ -16,5 +16,5 @@
 	[
 		"focus mode"
 	],
-	"settingsHash" : "3fed2a7276f38a36-01da37e30f7ac893"
+	"settingsHash" : "7c107c202c21a368-01da3c6c282104d9"
 }

@@ -62,6 +62,9 @@ bar:
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
+      default_workspace_foreground: "#ebdbb2"
+      displayed_workspace_background: "#fb4934"
+      displayed_workspace_foreground: "#fb4934"
 
   components_center:
     - type: "window title"
