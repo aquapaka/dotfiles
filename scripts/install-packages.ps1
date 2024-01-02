@@ -13,3 +13,4 @@ winget install btop4win;
 winget install GodotEngine.GodotEngine;
 winget install Postman.Postman;
 winget install Valve.Steam;
+winget install "Lenovo Vantage";
