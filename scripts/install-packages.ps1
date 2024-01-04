@@ -14,3 +14,4 @@ winget install GodotEngine.GodotEngine;
 winget install Postman.Postman;
 winget install Valve.Steam;
 winget install "Lenovo Vantage";
+winget install 7zip.7zip;
