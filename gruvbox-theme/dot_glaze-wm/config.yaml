@@ -206,14 +206,11 @@ window_rules:
   # Discord workspace
   - commands: ["move to workspace 5"]
     match_process_name: "Discord"
+  - commands: ["move to workspace 5", "focus workspace 5"]
+    match_process_name: "Zalo"
 
   # Graphic design & video editing workspace
-  - commands:
-      [
-        "move to workspace 6",
-        "resize borders 0px -7px -7px -7px",
-        "focus workspace 6",
-      ]
+  - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Photoshop"
   - commands:
       [
@@ -264,7 +261,7 @@ window_rules:
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_title: "Settings"
   - commands: ["move to workspace 8", "focus workspace 8"]
-    match_process_name: "CommercialVantage"
+    match_process_name: "LenovoVantage"
 
   # Others workspace
   - commands: ["move to workspace 9"]
