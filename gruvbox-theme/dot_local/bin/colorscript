@@ -18,7 +18,7 @@ fi
 
 list_colorscripts="$($LS_CMD | xargs -I $ basename $ | cut -d ' ' -f 1 | nl)"
 length_colorscripts="$($LS_CMD | wc -l)"
-list_blacklist="$($LS_CMD_B 2>/dev/null | xargs -I $ basename $ | cut -d ' ' -f 1 | nl || "")" 
+list_blacklist="$($LS_CMD_B 2>/dev/null | xargs -I $ basename $ | cut -d ' ' -f 1 | nl || "")"
 length_blacklist="$($LS_CMD_B 2>/dev/null | wc -l || 0)"
 
 fmt_help="  %-20s\t%-54s\n"

@@ -66,6 +66,13 @@ bar:
       displayed_workspace_background: "#fb4934"
       displayed_workspace_foreground: "#fb4934"
 
+    # - type: "music"
+    #   label_not_playing: "no music"
+    #   label_paused: "{song_title} - {artist_name}"
+    #   label_playing: "{song_title} - {artist_name} ▶"
+    #   max_title_length: 20
+    #   max_artist_length: 20
+
   components_center:
     - type: "window title"
 
@@ -121,8 +128,8 @@ bar:
     # - type: "system tray"
     #   margin: "0 14px"
     #   padding: "3px 0"
-    #   label_expand_text: ""
-    #   label_collapse_text: ""
+    #   label_expand_text: "<"
+    #   label_collapse_text: ">"
 
     # - type: "binding mode"
     #   background: "#ffffff33"
@@ -212,12 +219,7 @@ window_rules:
   # Graphic design & video editing workspace
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Photoshop"
-  - commands:
-      [
-        "move to workspace 6",
-        "resize borders 0px -7px -7px -7px",
-        "focus workspace 6",
-      ]
+  - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Resolve"
