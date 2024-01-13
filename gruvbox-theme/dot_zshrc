@@ -23,9 +23,9 @@ setopt SHARE_HISTORY
 # Turn off all beeps
 unsetopt BEEP
 
-# autocompletion using arrow keys (based on history)
-bindkey '\e[A' history-search-backward
-bindkey '\e[B' history-search-forward
+# History substring search autocompletion using arrow keys (based on history)
+bindkey '\e[A' history-substring-search-up
+bindkey '\e[B' history-substring-search-down
 
 # Alias
 cd() {
@@ -50,3 +50,4 @@ export LC_ALL=en_US.UTF-8
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
