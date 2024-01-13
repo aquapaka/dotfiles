@@ -27,14 +27,14 @@ unsetopt BEEP
 bindkey '\e[A' history-substring-search-up
 bindkey '\e[B' history-substring-search-down
 
-# Alias
-cd() {
-    builtin cd "$@" && lsd -a --group-directories-first;
-}
-alias ls='lsd -a --group-directories-first'
-alias ll='lsd -la --group-directories-first'
+# Alias & functions
+alias ls='eza -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
+alias ll='eza -l -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias winfetch='powershell ~/.local/bin/winfetch.ps1'
+cd() {
+    builtin cd "$@" && ls;
+}
 
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
@@ -42,12 +42,12 @@ source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Print random art
-~/.local/bin/colorscript -r
-
 export LC_ALL=en_US.UTF-8
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+# Print random art
+~/.local/bin/colorscript -r

@@ -17,3 +17,4 @@ winget install "Lenovo Vantage";
 winget install 7zip.7zip;
 winget install Zalo;
 winget install OpenJS.NodeJS.LTS;
+winget install eza;
