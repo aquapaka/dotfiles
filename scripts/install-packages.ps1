@@ -9,7 +9,6 @@ winget install -e --id Discord.Discord;
 winget install -e --id Google.Chrome;
 winget install -e --id Google.GoogleDrive;
 winget install MSYS2.MSYS2;
-winget install btop4win;
 winget install GodotEngine.GodotEngine;
 winget install Postman.Postman;
 winget install Valve.Steam;

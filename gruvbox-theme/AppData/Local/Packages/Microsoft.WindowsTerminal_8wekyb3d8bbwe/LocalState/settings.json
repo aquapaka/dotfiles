@@ -33,7 +33,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-    "experimental.rendering.forceFullRepaint": false,
+    "experimental.rendering.forceFullRepaint": true,
     "experimental.rendering.software": false,
     "focusFollowMouse": true,
     "launchMode": "focus",
@@ -47,8 +47,6 @@
     {
         "defaults": 
         {
-            "antialiasingMode": "grayscale",
-            "closeOnExit": "graceful",
             "colorScheme": "Gruvbox",
             "cursorShape": "filledBox",
             "elevate": true,
@@ -57,7 +55,6 @@
                 "face": "CaskaydiaCove Nerd Font Mono",
                 "size": 13.0
             },
-            "historySize": 10000,
             "intenseTextStyle": "all",
             "opacity": 95,
             "padding": "16",
