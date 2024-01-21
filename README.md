@@ -15,10 +15,10 @@ My dotfiles for windows 11
 <img src="screenshots/screenshot-gruvbox-0.png" />
 <img src="screenshots/screenshot-gruvbox-1.png" />
 
-### 🕹️ Arcade (archived)
+<!-- ### 🕹️ Arcade (archived)
 
 <img src="screenshots/desktop-arcade-1.png" />
-<img src="screenshots/desktop-arcade.png" />
+<img src="screenshots/desktop-arcade.png" /> -->
 
 ## Install packages
 

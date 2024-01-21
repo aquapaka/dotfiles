@@ -32,17 +32,16 @@ alias ls='eza -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser
 alias ll='eza -l -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias winfetch='powershell ~/.local/bin/winfetch.ps1'
+alias btop='~/.local/bin/btop/btop4win.exe'
 cd() {
     builtin cd "$@" && ls;
 }
 
+
 # Prompt theme
+source ~/.p10k.zsh
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-export LC_ALL=en_US.UTF-8
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

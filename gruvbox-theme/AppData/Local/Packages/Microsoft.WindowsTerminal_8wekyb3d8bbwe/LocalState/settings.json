@@ -52,18 +52,18 @@
             "elevate": true,
             "font": 
             {
-                "face": "CaskaydiaCove Nerd Font Mono",
-                "size": 13.0
+                "face": "CaskaydiaCove Nerd Font Mono"
             },
             "intenseTextStyle": "all",
             "opacity": 95,
             "padding": "16",
             "scrollbarState": "hidden",
-            "useAtlasEngine": true
+            "useAtlasEngine": false
         },
         "list": 
         [
             {
+                "antialiasingMode": "grayscale",
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
                 "name": "Zsh",
