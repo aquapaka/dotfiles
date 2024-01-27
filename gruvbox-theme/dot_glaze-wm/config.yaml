@@ -3,7 +3,7 @@ general:
   focus_follows_cursor: false
 
   # Whether to jump the cursor between windows focused by the WM.
-  cursor_follow_focus: true
+  cursor_follows_focus: true
 
   # Whether to switch back and forth between the previously focused workspace
   # when focusing the current workspace.
@@ -15,10 +15,12 @@ general:
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
 
-  # *Strongly* recommended to set to 'false'. Whether to globally enable/disable
-  # window transition animations (on minimize, close, etc). Set to 'unchanged'
-  # to make no setting changes.
-  window_animations: "false"
+  # Whether to globally enable/disable window transition animations (on minimize, close,
+  # etc). Set to 'unchanged' to make no setting changes.
+  window_animations: false
+
+  # Whether to center new floating windows (default is true)
+  center_new_floating_windows: false
 
 gaps:
   # Gap between adjacent windows.
@@ -102,20 +104,21 @@ bar:
       label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>"
       margin: "0 14px"
 
-    # - type: "network"
-    #   label_no_internet: "NC"
-    #   label_ethernet: "Eth"
-    #   label_wifi_strength_0: "WiFi: 0%"
-    #   label_wifi_strength_25: "WiFi: 25%"
-    #   label_wifi_strength_50: "WiFi: 50%"
-    #   label_wifi_strength_75: "WiFi: 75%"
-    #   label_wifi_strength_100: "WiFi: 100%"
-    #   margin: "0 14px"
 
     - type: "battery"
       label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%"
       label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%"
       label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%"
+      margin: "0 14px"
+
+    - type: "network"
+      label_no_internet: "No Internet"
+      label_ethernet: "<attr fs='22'>󰈀</attr>"
+      label_wifi_strength_0: "WiFi: 0%"
+      label_wifi_strength_25: "WiFi: 25%"
+      label_wifi_strength_50: "WiFi: 50%"
+      label_wifi_strength_75: "WiFi: 75%"
+      label_wifi_strength_100: "WiFi: 100%"
       margin: "0 14px"
 
     - type: "tiling direction"
@@ -217,9 +220,9 @@ window_rules:
     match_process_name: "Zalo"
 
   # Graphic design & video editing workspace
-  - commands: ["move to workspace 6", "focus workspace 6"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6", "focus workspace 6"]
     match_process_name: "Photoshop"
-  - commands: ["move to workspace 6", "focus workspace 6"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6", "focus workspace 6"]
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Resolve"
