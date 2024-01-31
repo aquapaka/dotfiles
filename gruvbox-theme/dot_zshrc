@@ -31,7 +31,6 @@ bindkey '\e[B' history-substring-search-down
 alias ls='eza -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
 alias ll='eza -l -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
-alias winfetch='powershell ~/.local/bin/winfetch.ps1'
 alias btop='~/.local/bin/btop/btop4win.exe'
 cd() {
     builtin cd "$@" && ls;
@@ -49,4 +48,4 @@ source ~/.config/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source ~/.config/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # Print random art
-~/.local/bin/colorscript -r
+colorscript -r

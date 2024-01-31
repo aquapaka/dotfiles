@@ -20,11 +20,17 @@ My dotfiles for windows 11
 <img src="screenshots/desktop-arcade-1.png" />
 <img src="screenshots/desktop-arcade.png" /> -->
 
-## Install packages
+## Installation
 
-Run **install-packages.ps1** script
+### Install Font
 
-## Change MSYS2 home directory
+Font need to be download and install: <a href="https://www.nerdfonts.com/font-downloads">CaskaydiaCove Nerd Font</a>
+
+### Install packages
+
+Run **install-packages.ps1** script with powershell
+
+### Change MSYS2 home directory
 
 Edit /c/msys64/etc/nsswitch.conf
 
@@ -32,7 +38,7 @@ Edit /c/msys64/etc/nsswitch.conf
 db_home: windows
 ```
 
-## Install Zsh
+### Install Zsh
 
 ```
 # Install ZSH
@@ -41,17 +47,24 @@ pacman -S zsh
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
 
-# Syntax Highlighting
+# Install Syntax Highlighting Plugin
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
 
-# Autosuggestions
+# Install Autosuggestions Plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
 
-# History Substring Search
+# Install History Substring Search Plugin
 git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
 ```
 
-## Others
+### Add New Environment Variables
 
-- Font need to be download and install: <a href="https://www.nerdfonts.com/font-downloads">CaskaydiaCove Nerd Font</a>
+Add "C:\Users\aquapaka\.local\bin" to Path variables
+
+### Optional
+
 - Enable automatically hide the taskbar
+
+### Other
+
+- Food script by Xero: <https://github.com/xero/dotfiles>
