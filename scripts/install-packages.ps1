@@ -18,3 +18,4 @@ winget install Zalo;
 winget install OpenJS.NodeJS.LTS;
 winget install eza;
 winget install "Snipping Tool";
+winget install anydesk;
