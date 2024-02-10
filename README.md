@@ -61,6 +61,11 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 Add "C:\Users\aquapaka\.local\bin" to Path variables
 
+### VS Code Theme
+
+- Icons: <https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons>
+- Theme: <https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox>
+
 ### Optional
 
 - Enable automatically hide the taskbar

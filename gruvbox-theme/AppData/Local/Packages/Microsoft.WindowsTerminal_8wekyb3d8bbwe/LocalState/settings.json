@@ -33,7 +33,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-    "experimental.rendering.forceFullRepaint": true,
+    "experimental.rendering.forceFullRepaint": false,
     "experimental.rendering.software": false,
     "focusFollowMouse": true,
     "launchMode": "focus",
@@ -65,7 +65,6 @@
             {
                 "antialiasingMode": "grayscale",
                 "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
-                "experimental.retroTerminalEffect": false,
                 "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
                 "intenseTextStyle": "bold",
                 "name": "Zsh",
