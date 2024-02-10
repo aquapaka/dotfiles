@@ -30,6 +30,7 @@ bindkey '\e[B' history-substring-search-down
 # Alias & functions
 alias ls='eza -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
 alias ll='eza -l -a --icons --group-directories-first --ignore-glob="NTUSER*|ntuser*"'
+alias winfetch='powershell winfetch'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias btop='~/.local/bin/btop/btop4win.exe'
 cd() {
