@@ -55,7 +55,7 @@ bar:
   border_width: "0px"
   border_color: "#0092FE"
   component_separator:
-    label: ""
+    label: ""
   components_left:
     - type: "workspaces"
       margin: "0 4px"
@@ -79,60 +79,61 @@ bar:
     - type: "window title"
 
   components_right:
+    # - type: "system tray"
+    #   margin: "0 0px"
+    #   padding: "7px 0"
+    #   label_expand_text: " "
+    #   label_collapse_text: " "
+
     - type: "cpu"
-      label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%"
-      margin: "0 14px"
+      label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%  "
+      margin: "0 14px 0 0px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "<attr fs='22' fg='#b8bb26'></attr> {percent_usage}%"
-      margin: "0 14px"
+      label: "<attr fs='22' fg='#b8bb26'></attr> {percent_usage}%  "
+      margin: "0 4px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "gpu"
-      label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%"
-      margin: "0 14px"
+      label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%  "
+      margin: "0 13px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "volume"
-      label_low: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
-      label_medium: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
-      label_high: "<attr fs='28' fg='#83a598'></attr> {volume_level}%"
-      label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>"
-      margin: "0 14px"
+      label_low: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
+      label_medium: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
+      label_high: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
+      label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>  "
+      margin: "0 16px 0 2px"
 
 
     - type: "battery"
-      label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%"
-      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%"
-      label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%"
-      margin: "0 14px"
+      label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%  "
+      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%  "
+      label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%  "
+      margin: "0 84x 0 16px"
 
     - type: "network"
-      label_no_internet: "No Internet"
+      label_no_internet: "<attr fg='#fb4934' fs='25'></attr>"
       label_ethernet: "<attr fs='22'>󰈀</attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
       label_wifi_strength_75: "WiFi: 75%"
       label_wifi_strength_100: "WiFi: 100%"
-      margin: "0 14px"
+      margin: "0 12px 0 14px"
 
     - type: "tiling direction"
-      label_horizontal: "<attr fs='22'>󰹴</attr>"
-      label_vertical: "<attr fs='13'>󰹺</attr>"
+      label_horizontal: "<attr fs='22'>󰹴</attr>  "
+      label_vertical: "<attr fs='13'>󰹺</attr>  "
       # background: "#ffffff33"
-      margin: "0 14px"
+      margin: "0 px"
       # padding: "4px 4px"
 
-    # - type: "system tray"
-    #   margin: "0 14px"
-    #   padding: "3px 0"
-    #   label_expand_text: "<"
-    #   label_collapse_text: ">"
 
     # - type: "binding mode"
     #   background: "#ffffff33"

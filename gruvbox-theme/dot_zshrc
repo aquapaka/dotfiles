@@ -43,7 +43,7 @@ source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
 # # Print random art
-# colorscript -r
+colorscript -r
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
