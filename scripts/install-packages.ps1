@@ -1,7 +1,8 @@
+winget install Git.Git;
 winget install -e --id Microsoft.WindowsTerminal;
 winget install -e --id Microsoft.PowerShell;
 winget install -e --id twpayne.chezmoi;
-winget install -e --id lars-berger.GlazeWM;
+winget install glazewm;
 winget install -e --id Microsoft.PowerToys;
 winget install -e -i --id Microsoft.VisualStudioCode;
 winget install -e -i --id BlenderFoundation.Blender;
@@ -19,3 +20,4 @@ winget install OpenJS.NodeJS.LTS;
 winget install eza;
 winget install "Snipping Tool";
 winget install anydesk;
+winget install Xodo;

@@ -54,13 +54,11 @@
             {
                 "face": "CaskaydiaCove Nerd Font Mono"
             },
-            "historySize": 10000,
             "intenseTextStyle": "all",
             "opacity": 95,
             "padding": "16",
             "scrollbarState": "hidden",
-            "startingDirectory": "%USERPROFILE%",
-            "useAtlasEngine": false
+            "startingDirectory": "%USERPROFILE%"
         },
         "list": 
         [
