@@ -2,7 +2,7 @@
 
 My dotfiles for windows 11
 
-- Terminal: Windows Terminal
+- Terminal: Alacritty
 - Shell: Zsh inside MSYS2
 - WM/Bar: GlazeWM
 - Package manager: Winget
@@ -24,11 +24,12 @@ My dotfiles for windows 11
 
 ### Install Font
 
-Font need to be download and install: <a href="https://www.nerdfonts.com/font-downloads">CaskaydiaCove Nerd Font</a>
+Font need to be download and install: <a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaCode.zip">Download CaskaydiaCove Nerd Font</a>
 
 ### Install packages
 
-Run **install-packages.ps1** script with powershell
+- Edit **install-packages.ps1**, comment out packages that are not needed
+- Run **install-packages.ps1** script with powershell
 
 ### Change MSYS2 home directory
 
@@ -41,7 +42,7 @@ db_home: windows
 ### Install Zsh
 
 ```
-# Install ZSH
+# Open MSYS2 Ucrt64 and install ZSH
 pacman -S zsh
 
 # Install Theme: Powerlevel10k
