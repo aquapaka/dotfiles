@@ -1,8 +1,11 @@
+# # Print random art
+colorscript -r
+
 # Created by newuser for 5.9
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=9001
-SAVEHIST=9001
+HISTSIZE=10000
+SAVEHIST=10000
 bindkey -v
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
@@ -41,9 +44,6 @@ cd() {
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
-
-# # Print random art
-colorscript -r
 
 # Plugins
 source ~/.config/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh

@@ -76,9 +76,9 @@
   typeset -g POWERLEVEL9K_DISABLE_RPROMPT=true
 
   # Context format when root: user@host. The first part white, the rest grey.
-  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="󰫢 %B%F{$yellow}%n%F{$black}@%F{$red}%m"
+  typeset -g POWERLEVEL9K_CONTEXT_ROOT_TEMPLATE="󰫢%B%F{$yellow}%n%F{$black}@%F{$red}%m"
   # Context format when not root: user@host. The whole thing grey.
-  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="󰫢 %B%F{$cyan}%n%F{$black}@%F{$red}%m"
+  typeset -g POWERLEVEL9K_CONTEXT_TEMPLATE="󰫢%B%F{$cyan}%n%F{$black}@%F{$red}%m"
 
   # current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=$yellow

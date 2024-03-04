@@ -24,11 +24,11 @@ TERM = "alacritty"
 padding = { x = 16, y = 16 }
 #dynamic_padding       = true
 decorations = "None"
-opacity = 1.0
-blur = true
+opacity = 1
+blur = false
 #startup_mode          = "Windowed"
 title = "Alacritty"
-#dynamic_title         = true
+dynamic_title = true
 # class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
 #resize_increments     = false
@@ -175,26 +175,26 @@ mouse.enabled = true
 #regex                 = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
 
 [keyboard]
-bindings = [
-    { key = "V", mods = "Control|Shift", action = "Paste" },
-    { key = "C", mods = "Control|Shift", action = "Copy" },
-    { key = "Paste", action = "Paste" },
-    { key = "Copy", action = "Copy" },
-    { key = "Insert", mods = "Shift", action = "PasteSelection" },
-    { key = "F", mods = "Control|Shift", action = "SearchForward", mode = "~Search" },
-    { key = "B", mods = "Control|Shift", action = "SearchBackward", mode = "~Search" },
-    { key = "Key0", mods = "Control", action = "ResetFontSize" },
-    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
-    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
-    { key = "L", mods = "Control", action = "ClearLogNotice" },
-    { key = "L", mods = "Control", chars = "\f" },
-    { key = "PageUp", mods = "Shift", action = "ScrollPageUp", mode = "~Alt" },
-    { key = "PageDown", mods = "Shift", action = "ScrollPageDown", mode = "~Alt" },
-    { key = "Up", mods = "Shift", action = "ScrollLineUp", mode = "~Alt" },
-    { key = "Down", mods = "Shift", action = "ScrollLineDown", mode = "~Alt" },
-    { key = "Home", mods = "Shift", action = "ScrollToTop", mode = "~Alt" },
-    { key = "End", mods = "Shift", action = "ScrollToBottom", mode = "~Alt" },
-]
+# bindings = [
+#     { key = "V", mods = "Control|Shift", action = "Paste" },
+#     { key = "C", mods = "Control|Shift", action = "Copy" },
+#     { key = "Paste", action = "Paste" },
+#     { key = "Copy", action = "Copy" },
+#     { key = "Insert", mods = "Shift", action = "PasteSelection" },
+#     { key = "F", mods = "Control|Shift", action = "SearchForward", mode = "~Search" },
+#     { key = "B", mods = "Control|Shift", action = "SearchBackward", mode = "~Search" },
+#     { key = "Key0", mods = "Control", action = "ResetFontSize" },
+#     { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+#     { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+#     { key = "L", mods = "Control", action = "ClearLogNotice" },
+#     { key = "L", mods = "Control", chars = "\f" },
+#     { key = "PageUp", mods = "Shift", action = "ScrollPageUp", mode = "~Alt" },
+#     { key = "PageDown", mods = "Shift", action = "ScrollPageDown", mode = "~Alt" },
+#     { key = "Up", mods = "Shift", action = "ScrollLineUp", mode = "~Alt" },
+#     { key = "Down", mods = "Shift", action = "ScrollLineDown", mode = "~Alt" },
+#     { key = "Home", mods = "Shift", action = "ScrollToTop", mode = "~Alt" },
+#     { key = "End", mods = "Shift", action = "ScrollToBottom", mode = "~Alt" },
+# ]
 
 
 [debug]
