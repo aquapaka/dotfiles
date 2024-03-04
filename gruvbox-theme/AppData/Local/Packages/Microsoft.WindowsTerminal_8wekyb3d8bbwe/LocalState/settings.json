@@ -33,7 +33,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
-    "experimental.rendering.forceFullRepaint": false,
+    "experimental.rendering.forceFullRepaint": true,
     "experimental.rendering.software": false,
     "focusFollowMouse": true,
     "launchMode": "focus",

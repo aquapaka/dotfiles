@@ -1,0 +1,207 @@
+# alacritty.toml
+# commented lines are the defaults
+# man 5 alacritty (>0.13) for full config manual
+
+#import = [
+#"~/.config/alacritty/catpuccin-mocha.toml",
+#"~/.config/alacritty/keybindings.toml",
+#]
+
+[shell]
+program = "C:/msys64/msys2_shell.cmd"
+args = ["-defterm -here -no-start -ucrt64 -full-path -shell zsh"]
+
+#working_directory     = "None"
+#live_config_reload    = true
+#ipc_socket            = true
+
+[env]
+TERM = "alacritty"
+
+[window]
+# dimensions = { columns = 200, lines = 45 }
+# position = { x = 320, y = 50 }
+padding = { x = 16, y = 16 }
+#dynamic_padding       = true
+decorations = "None"
+opacity = 1.0
+blur = true
+#startup_mode          = "Windowed"
+title = "Alacritty"
+#dynamic_title         = true
+# class = { instance = "Alacritty", general = "Alacritty" }
+decorations_theme_variant = "None"
+#resize_increments     = false
+#option_as_alt         = "None"
+
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[font]
+normal = { family = "CaskaydiaCove Nerd Font Mono" }
+bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
+italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold Italic" }
+size = 12
+offset = { x = 1, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+
+[colors.primary]
+background = "#1D2021"
+foreground = "#EBDBB2"
+
+[colors.cursor]
+text = "#1D2021"
+cursor = "#FB4934"
+
+[colors.vi_mode_cursor]
+text = "#1D2021"
+cursor = "#F29AB2"
+
+[colors.search.matches]
+foreground = "#1D2021"
+background = "#FFC130"
+
+[colors.search.focused_match]
+foreground = "#1D2021"
+background = "#DADE2D"
+
+[colors.hints.start]
+foreground = "#1D2021"
+background = "#92B8A9"
+
+[colors.hints.end]
+foreground = "#1D2021"
+background = "#FFC130"
+
+[colors.line_indicator]
+#foreground            = "None"
+#background            = "None"
+
+[colors.footer_bar]
+foreground = "#1D2021"
+background = "#8EC07C"
+
+[colors.selection]
+text = "#1D2021"
+background = "#383E40"
+
+[colors.normal]
+black = "#665C51"
+red = "#FB4934"
+green = "#B8BB26"
+yellow = "#FABD2F"
+blue = "#83A598"
+magenta = "#D3869B"
+cyan = "#8EC07C"
+white = "#EBDBB2"
+
+[colors.bright]
+black = "#756D60"
+red = "#FF4A35"
+green = "#DADE2D"
+yellow = "#FFC130"
+blue = "#92B8A9"
+magenta = "#F29AB2"
+cyan = "#ACE896"
+white = "#FFEEC1"
+
+[colors.dim]
+black = "#665C51"
+red = "#FB4934"
+green = "#B8BB26"
+yellow = "#FABD2F"
+blue = "#83A598"
+magenta = "#D3869B"
+cyan = "#8EC07C"
+white = "#EBDBB2"
+
+[colors]
+indexed_colors = [
+    { index = 16, color = "#FAB387" },
+    { index = 17, color = "#F5E0DC" },
+]
+#transparent_background_colors = false
+draw_bold_text_with_bright_colors = true
+
+[bell]
+animation = "EaseOutExpo"
+duration = 3
+color = "#FABD2F"
+command = { program = "notify-send", args = ["alacritty", "bell"] }
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+[cursor.style]
+shape = "Block"
+blinking = "On"
+
+[cursor.vi_mode_style]
+shape = "Block"
+blinking = "Off"
+
+[cursor]
+blink_interval = 550
+blink_timeout = 0
+#unfocused_hollow      = true
+#thickness             = 0.15
+
+# osc52 = "Disabled" | "OnlyCopy" | "OnlyPaste" | "CopyPaste"
+[terminal]
+osc52 = "OnlyCopy"
+
+[mouse]
+hide_when_typing = true
+bindings = [{ mouse = "Middle", action = "PasteSelection" }]
+
+[hints]
+alphabet = "jfkdls;ahgurieowpq"
+
+[[hints.enabled]]
+command = "xdg-open"
+## command             = "open" # On macOS
+## command             = { program = "cmd", args = [ "/c", "start", "" ] } # On Windows
+hyperlinks = true
+post_processing = true
+#persist               = false
+mouse.enabled = true
+#binding               = { key = "U", mods = "Control|Shift" }
+#regex                 = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩‘]+"
+
+[keyboard]
+bindings = [
+    { key = "V", mods = "Control|Shift", action = "Paste" },
+    { key = "C", mods = "Control|Shift", action = "Copy" },
+    { key = "Paste", action = "Paste" },
+    { key = "Copy", action = "Copy" },
+    { key = "Insert", mods = "Shift", action = "PasteSelection" },
+    { key = "F", mods = "Control|Shift", action = "SearchForward", mode = "~Search" },
+    { key = "B", mods = "Control|Shift", action = "SearchBackward", mode = "~Search" },
+    { key = "Key0", mods = "Control", action = "ResetFontSize" },
+    { key = "Equals", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+    { key = "L", mods = "Control", action = "ClearLogNotice" },
+    { key = "L", mods = "Control", chars = "\f" },
+    { key = "PageUp", mods = "Shift", action = "ScrollPageUp", mode = "~Alt" },
+    { key = "PageDown", mods = "Shift", action = "ScrollPageDown", mode = "~Alt" },
+    { key = "Up", mods = "Shift", action = "ScrollLineUp", mode = "~Alt" },
+    { key = "Down", mods = "Shift", action = "ScrollLineDown", mode = "~Alt" },
+    { key = "Home", mods = "Shift", action = "ScrollToTop", mode = "~Alt" },
+    { key = "End", mods = "Shift", action = "ScrollToBottom", mode = "~Alt" },
+]
+
+
+[debug]
+#render_timer          = false
+#persistent_logging    = false
+#log_level             = "Warn"
+#renderer              = "None"
+#print_events          = false
+#highlight_damage      = false
+#prefer_egl            = false

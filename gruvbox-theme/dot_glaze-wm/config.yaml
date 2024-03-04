@@ -195,6 +195,8 @@ window_rules:
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]
     match_process_name: "WindowsTerminal"
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 1", "focus workspace 1"]
+    match_process_name: "alacritty"
 
   # Browser workspace
   # Command to run. Use `commands` to specify an array of commands to run in sequence.
@@ -363,7 +365,7 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec wt"
+  - command: "exec 'C:/Program Files/Alacritty/alacritty' --config-file 'C:/Users/aquapaka/.config/alacritty/alacritty.toml'"
     binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.

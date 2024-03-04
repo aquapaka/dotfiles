@@ -1,7 +1,6 @@
-winget install Git.Git;
-winget install -e --id Microsoft.WindowsTerminal;
-winget install -e --id Microsoft.PowerShell;
 winget install -e --id twpayne.chezmoi;
+winget install Git.Git;
+winget install Alacritty;
 winget install glazewm;
 winget install -e --id Microsoft.PowerToys;
 winget install -e -i --id Microsoft.VisualStudioCode;
