@@ -60,7 +60,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 ### Add New Environment Variables
 
-Add "C:\Users\aquapaka\.local\bin" to Path variables
+Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 ### VS Code Theme
 
