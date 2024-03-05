@@ -44,7 +44,7 @@ bar:
   height: "42px"
   position: "top"
   opacity: 1
-  background: "#1d2021"
+  background: "#1d2021E6"
   foreground: "#ebdbb2"
   font_family: "CaskaydiaCove Nerd Font Mono"
   font_size: "13"

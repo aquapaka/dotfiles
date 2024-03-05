@@ -24,7 +24,7 @@ TERM = "alacritty"
 padding = { x = 16, y = 16 }
 #dynamic_padding       = true
 decorations = "None"
-opacity = 1
+opacity = 0.9
 blur = false
 #startup_mode          = "Windowed"
 title = "Alacritty"
