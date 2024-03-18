@@ -336,8 +336,8 @@ keybindings:
     binding: "Alt+D"
 
   # Change focus between floating / tiling windows.
-  - command: "focus mode toggle"
-    binding: "Alt+Shift+F"
+  # - command: "focus mode toggle"
+  #   binding: "Alt+Shift+F"
 
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
