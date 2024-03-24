@@ -20,7 +20,7 @@ general:
   window_animations: false
 
   # Whether to center new floating windows (default is true)
-  center_new_floating_windows: false
+  center_new_floating_windows: true
 
 gaps:
   # Gap between adjacent windows.
@@ -238,7 +238,7 @@ window_rules:
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "eldenring"
   - commands: ["move to workspace 7", "focus workspace 7"]
-    match_process_name: "RiotClientUx"
+    match_process_name: "Riot Client"
   - commands: ["move to workspace 7", "focus workspace 7"]
     match_process_name: "LeagueClientUx"
   - commands: ["move to workspace 7", "focus workspace 7"]
@@ -270,6 +270,8 @@ window_rules:
     match_title: "Settings"
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "LenovoVantage"
+  - commands: ["move to workspace 8", "focus workspace 8"]
+    match_process_name: "nvcplui"
 
   # Others workspace
   - commands: ["move to workspace 9"]
