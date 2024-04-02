@@ -34,7 +34,7 @@ gaps:
 focus_borders:
   active:
     enabled: true
-    color: "#fb4934"
+    color: "#b8bb26"
 
   inactive:
     enabled: false
@@ -46,9 +46,9 @@ bar:
   opacity: 1
   background: "#1d2021E6"
   foreground: "#ebdbb2"
-  font_family: "CaskaydiaCove Nerd Font Mono"
-  font_size: "13"
-  padding: "6px 8px"
+  font_family: "Pixelcraft Nerd Font Regular"
+  font_size: "18"
+  padding: "0 8px 4px 8px"
   offset_x: "16px"
   offset_y: "16px"
   border_radius: "0px"
@@ -60,7 +60,7 @@ bar:
     - type: "workspaces"
       margin: "0 4px"
       padding: "0"
-      font_size: "23"
+      font_size: "18"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
@@ -86,50 +86,50 @@ bar:
     #   label_collapse_text: " "
 
     - type: "cpu"
-      label: "<attr fs='25' fg='#fb4934'></attr> {percent_usage}%  "
+      label: "<attr ff='CozetteVector Medium' fs='32' fg='#fb4934'></attr> {percent_usage}%"
       margin: "0 14px 0 0px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "memory"
-      label: "<attr fs='22' fg='#b8bb26'></attr> {percent_usage}%  "
+      label: "<attr ff='CozetteVector Medium' fs='26' fg='#b8bb26'></attr> {percent_usage}%"
       margin: "0 4px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "gpu"
-      label: "<attr fs='34' fg='#8ec07c'>󰾲</attr> {percent_usage}%  "
+      label: "<attr ff='CozetteVector Medium' fs='32' fg='#8ec07c'></attr> {percent_usage}%"
       margin: "0 13px"
       # How often this counter is refreshed.
       refresh_interval_ms: 1000
 
     - type: "volume"
-      label_low: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
-      label_medium: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
-      label_high: "<attr fs='28' fg='#83a598'></attr> {volume_level}%  "
-      label_mute: "<attr fs='28' fg='#83a598'>󰝟</attr>  "
+      label_low: "<attr ff='CozetteVector Medium' fs='32' fg='#83a598'>奔</attr> {volume_level}%"
+      label_medium: "<attr ff='CozetteVector Medium' fs='32' fg='#83a598'>墳</attr> {volume_level}%"
+      label_high: "<attr ff='CozetteVector Medium' fs='36' fg='#83a598'>墳</attr> {volume_level}%"
+      label_mute: "<attr ff='CozetteVector Medium' fs='28' fg='#fb4934'>婢</attr> <attr fg='#fb4934'> {volume_level}%</attr>"
       margin: "0 16px 0 2px"
 
 
     - type: "battery"
-      label_draining: "<attr fg='#fabd2f'>󰁽</attr> {battery_level}%  "
-      label_power_saver: "<attr fs='25' fg='#b8bb26'></attr> {battery_level}%  "
-      label_charging: "<attr fg='#fabd2f'>󱐋</attr> {battery_level}%  "
-      margin: "0 84x 0 16px"
+      label_draining: "<attr ff='CozetteVector Medium' fg='#fabd2f' fs='22'></attr> {battery_level}% "
+      label_power_saver: "<attr ff='CozetteVector Medium' fs='25' fg='#b8bb26'></attr> {battery_level}% "
+      label_charging: "<attr ff='CozetteVector Medium' fs='22' fg='#fabd2f'>💩</attr> {battery_level}% "
+      margin: "0 0 0 0px"
 
     - type: "network"
-      label_no_internet: "<attr fg='#fb4934' fs='25'></attr>"
-      label_ethernet: "<attr fs='22'>󰈀</attr>"
+      label_no_internet: "<attr ff='CozetteVector Medium' fg='#fb4934' fs='25'></attr>"
+      label_ethernet: "<attr ff='CozetteVector Medium' fs='22'></attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
       label_wifi_strength_75: "WiFi: 75%"
       label_wifi_strength_100: "WiFi: 100%"
-      margin: "0 12px 0 14px"
+      margin: "0 -12px 0 20px"
 
     - type: "tiling direction"
-      label_horizontal: "<attr fs='22'>󰹴</attr>  "
-      label_vertical: "<attr fs='13'>󰹺</attr>  "
+      label_horizontal: "<attr ff='CozetteVector Medium' fs='34'>  </attr>"
+      label_vertical: "<attr ff='CozetteVector Medium' fs='34'>  </attr>"
       # background: "#ffffff33"
       margin: "0 px"
       # padding: "4px 4px"
@@ -148,7 +148,8 @@ bar:
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
-    display_name: ""
+    # display_name: ""
+    display_name: "TERMINAL"
 
     # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
     # as shown in the Windows display settings (eg. 1, 2, 3...).
@@ -158,28 +159,36 @@ workspaces:
     # keep_alive: true
 
   - name: "2"
-    display_name: ""
+    # display_name: ""
+    display_name: "BROWSER"
     # keep_alive: true
   - name: "3"
-    display_name: "󱃖"
+    # display_name: "󱃖"
+    display_name: "DEVELOPMENT"
     # keep_alive: true
   - name: "4"
-    display_name: "󱧶"
+    # display_name: "󱧶"
+    display_name: "FILE"
     # keep_alive: true
   - name: "5"
-    display_name: "󰙯"
+    # display_name: "󰙯"
+    display_name: "COMMUNICATION"
     # keep_alive: true
   - name: "6"
-    display_name: ""
+    # display_name: ""
+    display_name: "DESIGN"
     # keep_alive: true
   - name: "7"
-    display_name: "󰊴"
+    # display_name: "󰊴"
+    display_name: "GAMING"
     # keep_alive: true
   - name: "8"
-    display_name: ""
+    # display_name: ""
+    display_name: "SETTING"
     # keep_alive: true
   - name: "9"
-    display_name: ""
+    # display_name: ""
+    display_name: "OTHER"
     # keep_alive: true
 
 window_rules:
@@ -229,6 +238,8 @@ window_rules:
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Resolve"
+  - commands: ["resize borders 0px 0px 0px 0px", "move to workspace 6", "focus workspace 6"]
+    match_process_name: "Notion"
 
   # Games workspace
   - commands: ["move to workspace 7", "focus workspace 7"]

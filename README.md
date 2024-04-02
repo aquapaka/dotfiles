@@ -12,8 +12,8 @@ My dotfiles for windows 11
 
 ### ❤️ Meimei
 
-<img src="screenshots/screenshot-gruvbox-0.png" />
-<img src="screenshots/screenshot-gruvbox-1.png" />
+<img src="screenshots/screenshot-gruvbox-3.png" />
+<img src="screenshots/screenshot-gruvbox-2.png" />
 
 <!-- ### 🕹️ Arcade (archived)
 
@@ -24,7 +24,10 @@ My dotfiles for windows 11
 
 ### Install Font
 
-Font need to be download and install: <a href="https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/CascadiaCode.zip">Download CaskaydiaCove Nerd Font</a>
+Font need to be download and install:
+
+- [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For most ui text
+- [CozetteVector](https://github.com/slavfox/Cozette/releases): For some additional pixel glyph icons
 
 ### Install packages
 

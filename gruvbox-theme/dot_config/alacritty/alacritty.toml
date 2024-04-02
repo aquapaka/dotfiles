@@ -28,10 +28,10 @@ opacity = 0.9
 blur = false
 #startup_mode          = "Windowed"
 title = "Alacritty"
-dynamic_title = true
+dynamic_title = false
 # class = { instance = "Alacritty", general = "Alacritty" }
 decorations_theme_variant = "None"
-#resize_increments     = false
+# resize_increments     = false
 #option_as_alt         = "None"
 
 
@@ -40,14 +40,14 @@ history = 10000
 multiplier = 3
 
 [font]
-normal = { family = "CaskaydiaCove Nerd Font Mono" }
-bold = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold" }
-italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "CaskaydiaCove Nerd Font Mono", style = "Bold Italic" }
-size = 12
-offset = { x = 1, y = 0 }
+normal = { family = "Pixelcraft Nerd Font" }
+bold = { family = "Pixelcraft Nerd Font", style = "Bold" }
+italic = { family = "Pixelcraft Nerd Font", style = "Italic" }
+bold_italic = { family = "Pixelcraft Nerd Font", style = "Bold Italic" }
+size = 14
+offset = { x = 1, y = -6 }
 glyph_offset = { x = 0, y = 0 }
-builtin_box_drawing = true
+builtin_box_drawing = false
 
 
 [colors.primary]
