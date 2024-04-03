@@ -24,7 +24,7 @@ Font need to be download and install:
 
 - [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For terminal, code and status bar UI text
 - [CozetteVector](https://github.com/slavfox/Cozette/releases): For some additional pixel glyph icons
-- [Scientifica](https://github.com/nerdypepper/scientifica/releases): For system UI font
+- [Scientifica](https://github.com/nerdypepper/scientifica/releases): For apps UI font (Vscode, Chrome, etc.)
 
 ### Install packages
 
@@ -67,11 +67,6 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 - Icons: [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
 - Theme: [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
 - Change UI Font: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
-
-### Change system font (Require restart)
-
-- Edit the last line in **scripts/ChangeSystemFont.reg** (Ex: "Segoe UI"="*Your-Font-Name*", default use Scientifica)
-- Open/Run **scripts/ChangeSystemFont.reg**
 
 ### Restore old context menu (Require restart)
 
