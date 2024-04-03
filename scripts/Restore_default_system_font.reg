@@ -1,0 +1,31 @@
+Windows Registry Editor Version 5.00
+
+; Created by: Shawn Brink
+; Created on: August 27, 2022
+; Tutorial: https://www.elevenforum.com/t/change-default-system-font-in-windows-11.8590/
+
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts]
+"Segoe MDL2 Assets (TrueType)"="segmdl2.ttf"
+"Segoe Print (TrueType)"="segoepr.ttf"
+"Segoe Print Bold (TrueType)"="segoeprb.ttf"
+"Segoe Script (TrueType)"="segoesc.ttf"
+"Segoe Script Bold (TrueType)"="segoescb.ttf"
+"Segoe UI (TrueType)"="segoeui.ttf"
+"Segoe UI Black (TrueType)"="seguibl.ttf"
+"Segoe UI Black Italic (TrueType)"="seguibli.ttf"
+"Segoe UI Bold (TrueType)"="segoeuib.ttf"
+"Segoe UI Bold Italic (TrueType)"="segoeuiz.ttf"
+"Segoe UI Emoji (TrueType)"="seguiemj.ttf"
+"Segoe UI Historic (TrueType)"="seguihis.ttf"
+"Segoe UI Italic (TrueType)"="segoeuii.ttf"
+"Segoe UI Light (TrueType)"="segoeuil.ttf"
+"Segoe UI Light Italic (TrueType)"="seguili.ttf"
+"Segoe UI Semibold (TrueType)"="seguisb.ttf"
+"Segoe UI Semibold Italic (TrueType)"="seguisbi.ttf"
+"Segoe UI Semilight (TrueType)"="segoeuisl.ttf"
+"Segoe UI Semilight Italic (TrueType)"="seguisli.ttf"
+"Segoe UI Symbol (TrueType)"="seguisym.ttf"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\FontSubstitutes]
+"Segoe UI"=-
