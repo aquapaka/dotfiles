@@ -1,24 +1,20 @@
 # Dotfiles
 
-My dotfiles for windows 11
+My dotfiles for Windows 11
 
-- Terminal: Alacritty
-- Shell: Zsh inside MSYS2
-- WM/Bar: GlazeWM
-- Package manager: Winget
-- Dotfiles managed using Chezmoi
+- Terminal: **Alacritty**
+- Shell: **Zsh** inside MSYS2
+- WM/Bar: **GlazeWM**
+- Package manager: **Winget**
+- Dotfiles management: **Chezmoi**
 
 ## Themes
 
-### ❤️ Meimei
+### ❤️ Meimei Gruvbox
 
 <img src="screenshots/screenshot-gruvbox-3.png" />
 <img src="screenshots/screenshot-gruvbox-2.png" />
 
-<!-- ### 🕹️ Arcade (archived)
-
-<img src="screenshots/desktop-arcade-1.png" />
-<img src="screenshots/desktop-arcade.png" /> -->
 
 ## Installation
 
@@ -26,8 +22,9 @@ My dotfiles for windows 11
 
 Font need to be download and install:
 
-- [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For most ui text
+- [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For terminal, code and status bar UI text
 - [CozetteVector](https://github.com/slavfox/Cozette/releases): For some additional pixel glyph icons
+- [Scientifica](https://github.com/nerdypepper/scientifica/releases): For system UI font
 
 ### Install packages
 
@@ -67,8 +64,18 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 ### VS Code Theme
 
-- Icons: <https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons>
-- Theme: <https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox>
+- Icons: [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+- Theme: [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
+- Change UI Font: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
+
+### Change system font (Require restart)
+
+- Edit the last line in **scripts/ChangeSystemFont.reg** (Ex: "Segoe UI"="*Your-Font-Name*", default use Scientifica)
+- Open/Run **scripts/ChangeSystemFont.reg**
+
+### Restore old context menu (Require restart)
+
+- Open/Run **script/Restore-old-context-menu.reg**
 
 ### Optional
 

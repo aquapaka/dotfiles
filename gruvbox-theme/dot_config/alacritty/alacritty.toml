@@ -6,14 +6,13 @@
 #"~/.config/alacritty/catpuccin-mocha.toml",
 #"~/.config/alacritty/keybindings.toml",
 #]
+#working_directory     = "None"
+live_config_reload = true
+#ipc_socket            = true
 
 [shell]
 program = "C:/msys64/msys2_shell.cmd"
 args = ["-defterm -here -no-start -ucrt64 -full-path -shell zsh"]
-
-#working_directory     = "None"
-#live_config_reload    = true
-#ipc_socket            = true
 
 [env]
 TERM = "alacritty"
@@ -22,7 +21,7 @@ TERM = "alacritty"
 # dimensions = { columns = 200, lines = 45 }
 # position = { x = 320, y = 50 }
 padding = { x = 16, y = 16 }
-#dynamic_padding       = true
+dynamic_padding = true
 decorations = "None"
 opacity = 0.9
 blur = false
@@ -46,7 +45,7 @@ italic = { family = "Pixelcraft Nerd Font", style = "Italic" }
 bold_italic = { family = "Pixelcraft Nerd Font", style = "Bold Italic" }
 size = 14
 offset = { x = 1, y = -6 }
-glyph_offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = -4 }
 builtin_box_drawing = false
 
 
