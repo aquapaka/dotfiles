@@ -118,7 +118,7 @@ bar:
       margin: "0 0 0 0px"
 
     - type: "network"
-      label_no_internet: "<attr fg='#fb4934' fs='25'></attr>"
+      label_no_internet: "<attr fg='#fb4934' fs='21'>✘</attr>"
       label_ethernet: "<attr fs='22'></attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
@@ -188,7 +188,11 @@ workspaces:
     # keep_alive: true
   - name: "9"
     # display_name: ""
-    display_name: "OTHER"
+    display_name: "UTILS"
+    # keep_alive: true
+  - name: "0"
+    # display_name: ""
+    display_name: "NOTION"
     # keep_alive: true
 
 window_rules:
@@ -238,8 +242,6 @@ window_rules:
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6", "focus workspace 6"]
     match_process_name: "Resolve"
-  - commands: ["resize borders 0px 0px 0px 0px", "move to workspace 6", "focus workspace 6"]
-    match_process_name: "Notion"
 
   # Games workspace
   - commands: ["move to workspace 7", "focus workspace 7"]
@@ -284,13 +286,17 @@ window_rules:
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "nvcplui"
 
-  # Others workspace
+  # Utils workspace
   - commands: ["move to workspace 9"]
     match_process_name: "GoogleDriveFS"
   - commands: ["move to workspace 9"]
     match_process_name: "vsthost"
   - commands: ["move to workspace 9"]
     match_process_name: "Mechvibes"
+
+  # Notion workspace
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 0", "focus workspace 0"]
+    match_process_name: "Notion"
 
 binding_modes:
   # - name: "resize"
@@ -410,6 +416,8 @@ keybindings:
     binding: "Alt+8"
   - command: "focus workspace 9"
     binding: "Alt+9"
+  - command: "focus workspace 0"
+    binding: "Alt+0"
 
   # Move focused workspace to a monitor in a given direction.
   # - command: "move workspace left"
