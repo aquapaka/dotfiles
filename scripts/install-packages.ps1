@@ -3,7 +3,7 @@ winget install -e --id twpayne.chezmoi;
 winget install Alacritty;
 winget install glazewm;
 winget install -e --id Microsoft.PowerToys;
-winget install -e -i --id Microsoft.VisualStudioCode;
+winget install Microsoft.VisualStudioCode --scope machine
 # winget install -e -i --id BlenderFoundation.Blender;
 winget install -e --id Discord.Discord;
 winget install -e --id Google.Chrome;
@@ -17,5 +17,5 @@ winget install 7zip.7zip;
 winget install Zalo;
 winget install OpenJS.NodeJS.LTS;
 winget install eza;
-winget install "Snipping Tool";
+# winget install "Snipping Tool";
 winget install anydesk;

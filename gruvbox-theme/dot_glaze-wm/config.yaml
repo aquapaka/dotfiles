@@ -188,11 +188,11 @@ workspaces:
     # keep_alive: true
   - name: "9"
     # display_name: ""
-    display_name: "UTILS"
+    display_name: "NOTION"
     # keep_alive: true
   - name: "0"
     # display_name: ""
-    display_name: "NOTION"
+    display_name: "OTHERS"
     # keep_alive: true
 
 window_rules:
@@ -286,17 +286,17 @@ window_rules:
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "nvcplui"
 
-  # Utils workspace
-  - commands: ["move to workspace 9"]
-    match_process_name: "GoogleDriveFS"
-  - commands: ["move to workspace 9"]
-    match_process_name: "vsthost"
-  - commands: ["move to workspace 9"]
-    match_process_name: "Mechvibes"
-
   # Notion workspace
-  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 0", "focus workspace 0"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 9", "focus workspace 9"]
     match_process_name: "Notion"
+
+  # Others workspace
+  - commands: ["move to workspace 0"]
+    match_process_name: "GoogleDriveFS"
+  - commands: ["move to workspace 0"]
+    match_process_name: "vsthost"
+  - commands: ["move to workspace 0"]
+    match_process_name: "Mechvibes"
 
 binding_modes:
   # - name: "resize"
