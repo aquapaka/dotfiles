@@ -384,7 +384,7 @@ keybindings:
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec 'C:/Program Files/Alacritty/alacritty' --config-file 'C:/Users/aquapaka/.config/alacritty/alacritty.toml'"
+  - command: "exec alacritty"
     binding: "Alt+Enter"
 
   # Focus the workspace that last had focus.
