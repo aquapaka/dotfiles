@@ -1,7 +1,7 @@
 {
 	"dismissedMessages" : 
 	[
-		"setAsDefault",
+		"deprecated",
 		"closeOnExitInfo"
 	],
 	"generatedProfiles" : 
@@ -11,6 +11,29 @@
 		"{a5a97cb8-8961-5535-816d-772efe0c6a3f}",
 		"{51855cb2-8cce-5362-8f54-464b92b32386}",
 		"{574e775e-4f2a-5b96-ac1e-a2962a402336}"
+	],
+	"persistedWindowLayouts" : 
+	[
+		{
+			"initialPosition" : "1289,74",
+			"initialSize" : 
+			{
+				"height" : 1508.0,
+				"width" : 1254.0
+			},
+			"launchMode" : "focus",
+			"tabLayout" : 
+			[
+				{
+					"action" : "newTab",
+					"commandline" : "\"C:\\Program Files\\PowerShell\\7\\pwsh.exe\" -WorkingDirectory ~",
+					"profile" : "PowerShell",
+					"startingDirectory" : "C:\\Users\\aquapaka",
+					"suppressApplicationTitle" : false,
+					"tabTitle" : "PowerShell 7 (x64)"
+				}
+			]
+		}
 	],
 	"recentCommands" : 
 	[

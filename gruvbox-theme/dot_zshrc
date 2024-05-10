@@ -39,7 +39,7 @@ alias btop='~/.local/bin/btop/btop4win.exe'
 cd() {
     builtin cd "$@" && ls;
 }
-
+alias idea='idea64'
 
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
