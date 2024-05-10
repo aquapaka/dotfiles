@@ -13,7 +13,7 @@ general:
   show_floating_on_top: true
 
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
-  floating_window_move_amount: "2%"
+  floating_window_move_amount: "5%"
 
   # Whether to globally enable/disable window transition animations (on minimize, close,
   # etc). Set to 'unchanged' to make no setting changes.
@@ -198,12 +198,12 @@ workspaces:
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
   # the WM as admin.
-  # - command: "ignore"
+  #  - command: "ignore"
   #   match_process_name: "/Taskmgr|ScreenClippingHost/"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
-    match_class_name: "#32770"
+    match_class_name: "/#32770|SunAwtDialog/"
 
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]
@@ -224,6 +224,8 @@ window_rules:
   # Code workspace
   - commands: ["move to workspace 3", "focus workspace 3"]
     match_process_name: "Code"
+  - commands: ["move to workspace 3", "focus workspace 3"]
+    match_process_name: "idea64"
 
   # Folder and files workspace
   - commands: ["move to workspace 4", "focus workspace 4"]
@@ -279,8 +281,9 @@ window_rules:
   # Settings workspace
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "Taskmgr"
-  - commands: ["move to workspace 8", "focus workspace 8"]
-    match_title: "Settings"
+#    Disabled due to conflicting with IntelliJ IDEA Settings
+#  - commands: ["move to workspace 8", "focus workspace 8"]
+#    match_title: "Settings"
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "LenovoVantage"
   - commands: ["move to workspace 8", "focus workspace 8"]
@@ -336,13 +339,13 @@ keybindings:
     bindings: ["Alt+Shift+J"]
 
   # Resize focused window by a percentage or pixel amount.
-  - command: "resize width -1%"
+  - command: "resize width -5%"
     binding: "Alt+U"
-  - command: "resize width +1%"
+  - command: "resize width +5%"
     binding: "Alt+P"
-  - command: "resize height +1%"
+  - command: "resize height +5%"
     binding: "Alt+O"
-  - command: "resize height -1%"
+  - command: "resize height -5%"
     binding: "Alt+I"
 
   # As an alternative to the resize keybindings above, resize mode enables resizing via
@@ -367,8 +370,8 @@ keybindings:
     binding: "Alt+M"
 
   # Minimize focused window.
-  # - command: "set minimized"
-  #   binding: "Alt+N"
+  - command: "set minimized"
+    binding: "Alt+N"
 
   # Close focused window.
   - command: "close"
@@ -378,9 +381,9 @@ keybindings:
   - command: "exit wm"
     binding: "Alt+Ctrl+Shift+W"
 
-  # Re-evaluate configuration file.
+  # Re-evaluate configuration file.s
   - command: "reload config"
-    binding: "Alt+Shift+R"
+    binding: "Alt+Ctrl+Shift+R"
 
   # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
