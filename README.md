@@ -12,8 +12,8 @@ My dotfiles for Windows 11
 
 ### ❤️ Meimei Gruvbox
 
-<img src="screenshots/screenshot-gruvbox-3.png" />
-<img src="screenshots/screenshot-gruvbox-2.png" />
+<img src="screenshots/screenshot-gruvbox-3.png" alt="theme screenshot 1" />
+<img src="screenshots/screenshot-gruvbox-2.png" alt="theme screenshot 2" />
 
 
 ## Installation
@@ -22,14 +22,19 @@ My dotfiles for Windows 11
 
 Font need to be download and install:
 
-- [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For terminal, code and status bar UI text
-- [CozetteVector](https://github.com/slavfox/Cozette/releases): For some additional pixel glyph icons
-- [Scientifica](https://github.com/nerdypepper/scientifica/releases): For apps UI font (Vscode, Chrome, etc.)
+- [Pixelcraft](https://github.com/aquapaka/Pixelcraft/releases): For terminal, code editor's font and status bar text
+- [Scientifica](https://github.com/nerdypepper/scientifica/releases): For some apps UI font (Vscode, IntelliJ, etc.)
+
+### Install chezmoi and apply dotfiles
+
+- Install chezmoi from Winget with: ```winget install chezmoi```
+- Initialize chezmoi and apply the dotfiles with: ```chezmoi init --apply aquapaka```
 
 ### Install packages
 
+- After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, **install-packages.ps1** file can be found inside **scripts** folder
 - Edit **install-packages.ps1**, comment out packages that are not needed
-- Run **install-packages.ps1** script with powershell
+- Run **install-packages.ps1** script with Powershell
 
 ### Change MSYS2 home directory
 
@@ -38,6 +43,8 @@ Edit /c/msys64/etc/nsswitch.conf
 ```
 db_home: windows
 ```
+
+This will set windows user folder as default home directory
 
 ### Install Zsh
 
@@ -60,7 +67,12 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 ### Add New Environment Variables
 
-Add "C:\Users\aquapaka\\.local\bin" to Path variables
+Add "C:\Users\aquapaka\.local\bin" to Path variables
+
+### IntelliJ Theme
+
+- Theme: [Gruvbox Theme](https://plugins.jetbrains.com/plugin/20558-gruvbox--theme)
+- Change UI and Editor Font: From IntelliJ Settings
 
 ### VS Code Theme
 
