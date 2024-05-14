@@ -1,1 +1,25 @@
-{}
+{
+	"persistedWindowLayouts" : 
+	[
+		{
+			"initialPosition" : "1289,74",
+			"initialSize" : 
+			{
+				"height" : 1508.0,
+				"width" : 1254.0
+			},
+			"launchMode" : "focus",
+			"tabLayout" : 
+			[
+				{
+					"action" : "newTab",
+					"commandline" : "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
+					"profile" : "Zsh",
+					"startingDirectory" : "C:\\Users\\aquapaka",
+					"suppressApplicationTitle" : false,
+					"tabTitle" : "Terminal"
+				}
+			]
+		}
+	]
+}

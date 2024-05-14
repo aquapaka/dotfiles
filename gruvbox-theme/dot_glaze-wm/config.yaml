@@ -204,6 +204,8 @@ window_rules:
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
   - command: "set floating"
     match_class_name: "/#32770|SunAwtDialog/"
+  - command: "set floating"
+    match_title: "Sign in - Google Accounts*"
 
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]

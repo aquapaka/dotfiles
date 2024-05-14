@@ -43,10 +43,10 @@ normal = { family = "Pixelcraft Nerd Font" }
 bold = { family = "Pixelcraft Nerd Font", style = "Bold" }
 italic = { family = "Pixelcraft Nerd Font", style = "Italic" }
 bold_italic = { family = "Pixelcraft Nerd Font", style = "Bold Italic" }
-size = 14
-offset = { x = 1, y = -6 }
-glyph_offset = { x = 0, y = -4 }
-builtin_box_drawing = false
+size = 13.6
+offset = { x = 0, y = -8 }
+glyph_offset = { x = 0, y = -2 }
+builtin_box_drawing = true
 
 
 [colors.primary]
@@ -131,7 +131,6 @@ draw_bold_text_with_bright_colors = true
 animation = "EaseOutExpo"
 duration = 3
 color = "#FABD2F"
-command = { program = "notify-send", args = ["alacritty", "bell"] }
 
 [selection]
 semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
