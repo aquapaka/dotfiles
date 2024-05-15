@@ -236,7 +236,7 @@ window_rules:
   # Discord workspace
   - commands: ["move to workspace 5"]
     match_process_name: "Discord"
-  - commands: ["move to workspace 5", "focus workspace 5"]
+  - commands: ["move to workspace 5"]
     match_process_name: "Zalo"
 
   # Graphic design & video editing workspace
@@ -265,14 +265,12 @@ window_rules:
       [
         "move to workspace 7",
         "resize borders 0px -7px -7px -7px",
-        "focus workspace 7",
       ]
     match_process_name: "steam"
   - commands:
       [
         "move to workspace 7",
-        "resize borders 0px -7px -7px -7px",
-        "focus workspace 7",
+        "resize borders 0px -7px -7px -7px"
       ]
     match_process_name: "steamwebhelper"
   - commands: ["move to workspace 7", "focus workspace 7"]
