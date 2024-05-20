@@ -20,7 +20,7 @@ general:
   window_animations: false
 
   # Whether to center new floating windows (default is true)
-  center_new_floating_windows: true
+  center_new_floating_windows: false
 
 gaps:
   # Gap between adjacent windows.
@@ -240,25 +240,25 @@ window_rules:
     match_process_name: "Zalo"
 
   # Graphic design & video editing workspace
-  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6", "focus workspace 6"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6"]
     match_process_name: "Photoshop"
-  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6", "focus workspace 6"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6"]
     match_process_name: "Illustrator"
-  - commands: ["move to workspace 6", "focus workspace 6"]
+  - commands: ["move to workspace 6"]
     match_process_name: "Resolve"
 
   # Games workspace
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "VALORANT"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "VALORANT-Win64-Shipping"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "eldenring"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "Riot Client"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "LeagueClientUx"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "League of Legend"
   # Some applications (eg. Steam) have borders that extend past the normal border size.
   - commands:
@@ -273,9 +273,9 @@ window_rules:
         "resize borders 0px -7px -7px -7px"
       ]
     match_process_name: "steamwebhelper"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "java"
-  - commands: ["move to workspace 7", "focus workspace 7"]
+  - commands: ["move to workspace 7"]
     match_process_name: "javaw"
 
   # Settings workspace
@@ -358,8 +358,8 @@ keybindings:
     binding: "Alt+D"
 
   # Change focus between floating / tiling windows.
-  # - command: "focus mode toggle"
-  #   binding: "Alt+Shift+F"
+  - command: "focus mode toggle"
+    binding: "Alt+Ctrl+F"
 
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
