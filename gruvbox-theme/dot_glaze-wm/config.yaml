@@ -35,13 +35,13 @@ focus_borders:
     enabled: false
     color: "#ff6188"
 bar:
-  height: "42px"
+  height: "46px"
   position: "top"
   opacity: 1
   background: "#221f22E6"
   foreground: "#fdf9f3"
-  font_family: "Cascadia Mono Nerd Font"
-  font_size: "16"
+  font_family: "CaskaydiaCove Nerd Font Regular"
+  font_size: "18"
   padding: "0 8px 4px 8px"
   offset_x: "0px"
   offset_y: "0px"
@@ -86,37 +86,37 @@ bar:
 
     #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='21' fg='#ff6188'></attr> {percent_usage}%"
-      margin: "0 14px 0 0px"
+      label: "<attr fs='18' fg='#ff6188'></attr>  {percent_usage}%"
+      margin: "0 25px 0 0px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='19' fg='#a9dc76'></attr> {percent_usage}%"
-      margin: "0 4px"
+      label: "<attr fs='18' fg='#a9dc76'></attr>  {percent_usage}%"
+      margin: "0 24px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='19' fg='#ab9df2'>⛨</attr> {percent_usage}%"
-      margin: "0 13px"
+      label: "<attr fs='28' fg='#ab9df2'>\U000F0FB2</attr>  {percent_usage}%"
+      margin: "0 20px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "volume"
-      label_low: "<attr fs='21' fg='#78dce8'>⏼</attr> {volume_level}%"
-      label_medium: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
-      label_high: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
-      label_mute: "<attr fs='21' fg='#ff6188'>⌀</attr><attr fg='#ff6188'> {volume_level}%</attr>"
-      margin: "0 16px 0 2px"
+      label_low: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
+      label_medium: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
+      label_high: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
+      label_mute: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {volume_level}%</attr>"
+      margin: "0 20px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#ffd866' fs='21'>⌛</attr> {battery_level}% "
-      label_power_saver: "<attr fs='21' fg='#ff6188'>☠</attr><attr fg='#ff6188'> {battery_level}%</attr>"
-      label_charging: "<attr fs='21' fg='#ffd866'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#ffd866' fs='18'></attr> {battery_level}% "
+      label_power_saver: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {battery_level}%</attr>"
+      label_charging: "<attr fs='17' fg='#ffd866'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
     - type: "network"
-      label_no_internet: "<attr fg='#ff6188' fs='21'>✘</attr>"
-      label_ethernet: "<attr fs='22'></attr>"
+      label_no_internet: "<attr fg='#ff6188' fs='18'>\U000F1616</attr>"
+      label_ethernet: "<attr fs='18'>\U000F0200</attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
