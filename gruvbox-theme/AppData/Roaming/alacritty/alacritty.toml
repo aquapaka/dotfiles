@@ -43,7 +43,7 @@ normal = { family = "Pixelcraft Nerd Font" }
 bold = { family = "Pixelcraft Nerd Font", style = "Bold" }
 italic = { family = "Pixelcraft Nerd Font", style = "Italic" }
 bold_italic = { family = "Pixelcraft Nerd Font", style = "Bold Italic" }
-size = 13.6
+size = 13.5
 offset = { x = 0, y = -8 }
 glyph_offset = { x = 0, y = -2 }
 builtin_box_drawing = true
