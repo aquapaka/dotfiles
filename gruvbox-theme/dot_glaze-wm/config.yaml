@@ -110,7 +110,7 @@ bar:
       label_mute: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {volume_level}%</attr>"
       margin: "0 20px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#ffd866' fs='18'></attr> {battery_level}% "
+      label_draining: "<attr fg='#ffd866' fs='18'></attr>  {battery_level}% "
       label_power_saver: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {battery_level}%</attr>"
       label_charging: "<attr fs='17' fg='#ffd866'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
@@ -371,8 +371,8 @@ keybindings:
   - command: "toggle maximized"
     binding: "Alt+M"
   # Minimize focused window.
-  - command: "set minimized"
-    binding: "Alt+N"
+  # - command: "set minimized"
+  #   binding: "Alt+N"
   # Close focused window.
   - command: "close"
     binding: "Alt+W"

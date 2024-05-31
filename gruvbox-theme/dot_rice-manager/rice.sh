@@ -20,17 +20,29 @@ Usage:
 
 # Set alacritty colorscheme
 set_alacritty_config() {
+  echo "Set alacritty config"
   cat ./rices/$theme/alacritty/rice-colors.toml > ~/AppData/Roaming/alacritty/rice-colors.toml
   cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
 }
 
 # Set glazewm configs
 set_glazewm_config() {
+  echo "Set glazewm config"
   MERGED_CONFIG=$(yq eval-all '. as $item ireduce ({}; . * $item )' ~/.glaze-wm/config.yaml ./rices/$theme/glaze-theme-config.yaml)
 
   printf '%s\n' "$MERGED_CONFIG" > ~/.glaze-wm/config.yaml
 
   glazewm command '"reload config"' >/dev/null
+}
+
+# Set desktop wallpaper
+set_desktop_wallpaper() {
+  powershell ./wackground.ps1 ./rices/$theme/wallpapers --set-random
+}
+
+set_vscode_theme() {
+  echo "Set vscode theme"
+  echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
 }
 
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
@@ -41,8 +53,10 @@ for theme in "${avaiableThemes[@]}"; do
     echo "Applying $theme theme"
 
     # # Apply configs
+    set_desktop_wallpaper
     set_alacritty_config
     set_glazewm_config
+    set_vscode_theme
 
     echo "Done!"
     exit 1
