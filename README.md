@@ -20,6 +20,14 @@ Easily switch themes on the fly with just one press. Keep your desktop fresh and
 
 Dive in, tweak to your heart's content, and transform your Windows environment into a beautifully riced masterpiece!
 
+## Core
+
+- Terminal: **Alacritty**
+- Shell: **Zsh** inside MSYS2
+- WM/Bar: **GlazeWM**
+- Package manager: **Winget**
+- Dotfiles management: **Chezmoi**
+
 ## 🎨 Themes
 
 | ❤️ Meimei |
