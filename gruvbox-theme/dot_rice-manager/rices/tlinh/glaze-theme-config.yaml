@@ -1,0 +1,120 @@
+gaps:
+  # Gap between adjacent windows.
+  inner_gap: "0px"
+  # Gap between windows and the screen edge.
+  outer_gap: "0px"
+# Highlight active/inactive windows with a colored border.
+
+# ** Exclusive to Windows 11 due to API limitations.
+focus_borders:
+  active:
+    enabled: true
+    color: "#ff6188"
+  inactive:
+    enabled: false
+    color: "#ff6188"
+bar:
+  height: "42px"
+  position: "top"
+  opacity: 1
+  background: "#221f22E6"
+  foreground: "#fdf9f3"
+  font_family: "Cascadia Mono Nerd Font"
+  font_size: "16"
+  padding: "0 8px 4px 8px"
+  offset_x: "0px"
+  offset_y: "0px"
+  border_radius: "0px"
+  border_width: "0px"
+  border_color: "#ff6188"
+  component_separator:
+    label: ""
+  components_left:
+    - type: "workspaces"
+      margin: "0 4px"
+      padding: "0"
+      font_size: "18"
+      focused_workspace_background: "transparent"
+      focused_workspace_foreground: "#ff6188"
+      default_workspace_background: "transparent"
+      default_workspace_foreground: "#fdf9f3"
+      displayed_workspace_background: "#ff6188"
+      displayed_workspace_foreground: "#ff6188"
+      # - type: "music"
+  #   label_not_playing: "no music"
+
+  #   label_paused: "{song_title} - {artist_name}"
+
+  #   label_playing: "{song_title} - {artist_name} ▶"
+
+  #   max_title_length: 20
+
+  #   max_artist_length: 20
+  components_center:
+    - type: "window title"
+  components_right:
+    # - type: "system tray"
+
+    #   margin: "0 0px"
+
+    #   padding: "7px 0"
+
+    #   label_expand_text: " "
+
+    #   label_collapse_text: " "
+    - type: "cpu"
+      label: "<attr fs='21' fg='#ff6188'></attr> {percent_usage}%"
+      margin: "0 14px 0 0px"
+      # How often this counter is refreshed.
+
+      refresh_interval_ms: 1000
+    - type: "memory"
+      label: "<attr fs='19' fg='#a9dc76'></attr> {percent_usage}%"
+      margin: "0 4px"
+      # How often this counter is refreshed.
+
+      refresh_interval_ms: 1000
+    - type: "gpu"
+      label: "<attr fs='19' fg='#ab9df2'>⛨</attr> {percent_usage}%"
+      margin: "0 13px"
+      # How often this counter is refreshed.
+
+      refresh_interval_ms: 1000
+    - type: "volume"
+      label_low: "<attr fs='21' fg='#78dce8'>⏼</attr> {volume_level}%"
+      label_medium: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
+      label_high: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
+      label_mute: "<attr fs='21' fg='#ff6188'>⌀</attr><attr fg='#ff6188'> {volume_level}%</attr>"
+      margin: "0 16px 0 2px"
+    - type: "battery"
+      label_draining: "<attr fg='#ffd866' fs='21'>⌛</attr> {battery_level}% "
+      label_power_saver: "<attr fs='21' fg='#ff6188'>☠</attr><attr fg='#ff6188'> {battery_level}%</attr>"
+      label_charging: "<attr fs='21' fg='#ffd866'>⚡</attr> {battery_level}% "
+      margin: "0 0 0 0px"
+    - type: "network"
+      label_no_internet: "<attr fg='#ff6188' fs='21'>✘</attr>"
+      label_ethernet: "<attr fs='22'></attr>"
+      label_wifi_strength_0: "WiFi: 0%"
+      label_wifi_strength_25: "WiFi: 25%"
+      label_wifi_strength_50: "WiFi: 50%"
+      label_wifi_strength_75: "WiFi: 75%"
+      label_wifi_strength_100: "WiFi: 100%"
+      margin: "0 0px 0 20px"
+    - type: "tiling direction"
+      label_horizontal: "<attr fs='21'> ⏵ </attr>"
+      label_vertical: "<attr fs='21'> ⏷ </attr>"
+      # background: "#ffffff33"
+
+      margin: "0 px"
+      # padding: "4px 4px"
+    #   margin: "0 14px"
+    - type: "clock"
+      # Documentation on formatting date/time string:
+
+      #   background: "#ffffff33"
+
+      # - type: "binding mode"
+
+      # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
+      time_formatting: " HH:mm dddd, dd/MM/yyyy"
+      margin: "0 6px 0 6px"

@@ -36,6 +36,7 @@ alias ll='eza -l -a --icons --group-directories-first --ignore-glob="NTUSER*|ntu
 alias winfetch='powershell winfetch'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias btop='~/.local/bin/btop/btop4win.exe'
+alias rice='~/.local/bin/rice-manager/rice.sh'
 alias ala='alacritty'
 cd() {
     builtin cd "$@" && ls;

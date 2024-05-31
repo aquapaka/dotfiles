@@ -1,59 +1,53 @@
 general:
   # Whether to automatically focus windows underneath the cursor.
   focus_follows_cursor: false
-
   # Whether to jump the cursor between windows focused by the WM.
   cursor_follows_focus: false
-
   # Whether to switch back and forth between the previously focused workspace
+
   # when focusing the current workspace.
   toggle_workspace_on_refocus: false
-
   # Whether to show floating windows as always on top.
   show_floating_on_top: true
-
   # Amount to move floating windows by (eg. when using `alt+<hjkl>` on a floating window)
   floating_window_move_amount: "5%"
-
   # Whether to globally enable/disable window transition animations (on minimize, close,
+
   # etc). Set to 'unchanged' to make no setting changes.
   window_animations: false
-
   # Whether to center new floating windows (default is true)
   center_new_floating_windows: false
-
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "16px"
+  inner_gap: "0px"
+  # Gap between windows and the screen edge.
 
   # Gap between windows and the screen edge.
-  outer_gap: "16px"
-
+  outer_gap: "0px"
 # Highlight active/inactive windows with a colored border.
+
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#b8bb26"
-
+    color: "#ff6188"
   inactive:
     enabled: false
-    color: "#ff0000"
-
+    color: "#ff6188"
 bar:
   height: "42px"
   position: "top"
   opacity: 1
-  background: "#1d2021E6"
-  foreground: "#ebdbb2"
-  font_family: "Pixelcraft Nerd Font Regular"
-  font_size: "18"
+  background: "#221f22E6"
+  foreground: "#fdf9f3"
+  font_family: "Cascadia Mono Nerd Font"
+  font_size: "16"
   padding: "0 8px 4px 8px"
-  offset_x: "16px"
-  offset_y: "16px"
+  offset_x: "0px"
+  offset_y: "0px"
   border_radius: "0px"
   border_width: "0px"
-  border_color: "#0092FE"
+  border_color: "#ff6188"
   component_separator:
     label: ""
   components_left:
@@ -62,63 +56,66 @@ bar:
       padding: "0"
       font_size: "18"
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#fb4934"
+      focused_workspace_foreground: "#ff6188"
       default_workspace_background: "transparent"
-      default_workspace_foreground: "#ebdbb2"
-      displayed_workspace_background: "#fb4934"
-      displayed_workspace_foreground: "#fb4934"
+      default_workspace_foreground: "#fdf9f3"
+      displayed_workspace_background: "#ff6188"
+      displayed_workspace_foreground: "#ff6188"
+      # - type: "music"
+  #   label_not_playing: "no music"
 
-    # - type: "music"
-    #   label_not_playing: "no music"
-    #   label_paused: "{song_title} - {artist_name}"
-    #   label_playing: "{song_title} - {artist_name} ▶"
-    #   max_title_length: 20
-    #   max_artist_length: 20
+  #   label_not_playing: "no music"
 
+  #   label_paused: "{song_title} - {artist_name}"
+
+  #   label_playing: "{song_title} - {artist_name} ▶"
+
+  #   max_title_length: 20
+
+  #   max_artist_length: 20
   components_center:
     - type: "window title"
-
   components_right:
     # - type: "system tray"
-    #   margin: "0 0px"
-    #   padding: "7px 0"
-    #   label_expand_text: " "
-    #   label_collapse_text: " "
 
+    #   margin: "0 0px"
+
+    #   padding: "7px 0"
+
+    #   label_expand_text: " "
+
+    #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='21' fg='#fb4934'>❤</attr> {percent_usage}%"
+      label: "<attr fs='21' fg='#ff6188'></attr> {percent_usage}%"
       margin: "0 14px 0 0px"
       # How often this counter is refreshed.
-      refresh_interval_ms: 1000
 
+      refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='19' fg='#b8bb26'>✂</attr> {percent_usage}%"
+      label: "<attr fs='19' fg='#a9dc76'></attr> {percent_usage}%"
       margin: "0 4px"
       # How often this counter is refreshed.
-      refresh_interval_ms: 1000
 
+      refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='19' fg='#8ec07c'>⛨</attr> {percent_usage}%"
+      label: "<attr fs='19' fg='#ab9df2'>⛨</attr> {percent_usage}%"
       margin: "0 13px"
       # How often this counter is refreshed.
+
       refresh_interval_ms: 1000
-
     - type: "volume"
-      label_low: "<attr fs='21' fg='#83a598'>⏼</attr> {volume_level}%"
-      label_medium: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
-      label_high: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
-      label_mute: "<attr fs='21' fg='#fb4934'>⌀</attr><attr fg='#fb4934'> {volume_level}%</attr>"
+      label_low: "<attr fs='21' fg='#78dce8'>⏼</attr> {volume_level}%"
+      label_medium: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
+      label_high: "<attr fs='21' fg='#78dce8'>◎</attr> {volume_level}%"
+      label_mute: "<attr fs='21' fg='#ff6188'>⌀</attr><attr fg='#ff6188'> {volume_level}%</attr>"
       margin: "0 16px 0 2px"
-
-
     - type: "battery"
-      label_draining: "<attr fg='#fabd2f' fs='21'>⌛</attr> {battery_level}% "
-      label_power_saver: "<attr fs='21' fg='#fb4934'>☠</attr><attr fg='#fb4934'> {battery_level}%</attr>"
-      label_charging: "<attr fs='21' fg='#fabd2f'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#ffd866' fs='21'>⌛</attr> {battery_level}% "
+      label_power_saver: "<attr fs='21' fg='#ff6188'>☠</attr><attr fg='#ff6188'> {battery_level}%</attr>"
+      label_charging: "<attr fs='21' fg='#ffd866'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
-
     - type: "network"
-      label_no_internet: "<attr fg='#fb4934' fs='21'>✘</attr>"
+      label_no_internet: "<attr fg='#ff6188' fs='21'>✘</attr>"
       label_ethernet: "<attr fs='22'></attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
@@ -126,79 +123,90 @@ bar:
       label_wifi_strength_75: "WiFi: 75%"
       label_wifi_strength_100: "WiFi: 100%"
       margin: "0 0px 0 20px"
-
     - type: "tiling direction"
       label_horizontal: "<attr fs='21'> ⏵ </attr>"
       label_vertical: "<attr fs='21'> ⏷ </attr>"
       # background: "#ffffff33"
+
       margin: "0 px"
       # padding: "4px 4px"
-
-
-    # - type: "binding mode"
-    #   background: "#ffffff33"
     #   margin: "0 14px"
-
     - type: "clock"
       # Documentation on formatting date/time string:
+
+      #   background: "#ffffff33"
+
+      # - type: "binding mode"
+
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: " HH:mm dddd, dd/MM/yyyy"
       margin: "0 6px 0 6px"
-
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
+
     # display_name: ""
     display_name: "TERMINAL"
-
     # Optionally force the workspace on a specific monitor if it exists. Use the monitor's number
+  - name: "2"
+    # display_name: ""
+
     # as shown in the Windows display settings (eg. 1, 2, 3...).
+
     # bind_to_monitor: 1
 
     # Optionally prevent workspace from being deactivated when empty.
-    # keep_alive: true
 
-  - name: "2"
-    # display_name: ""
+    # keep_alive: true
     display_name: "BROWSER"
     # keep_alive: true
   - name: "3"
     # display_name: "󱃖"
+
     display_name: "DEVELOPMENT"
     # keep_alive: true
   - name: "4"
     # display_name: "󱧶"
+
     display_name: "FILE"
     # keep_alive: true
   - name: "5"
     # display_name: "󰙯"
+
     display_name: "COMMUNICATION"
     # keep_alive: true
   - name: "6"
     # display_name: ""
+
     display_name: "DESIGN"
     # keep_alive: true
   - name: "7"
     # display_name: "󰊴"
+
     display_name: "GAMING"
     # keep_alive: true
   - name: "8"
     # display_name: ""
+
     display_name: "SETTING"
     # keep_alive: true
   - name: "9"
     # display_name: ""
+
     display_name: "NOTION"
     # keep_alive: true
   - name: "0"
     # display_name: ""
+
     display_name: "OTHERS"
     # keep_alive: true
-
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
+
   # the WM as admin.
+
   #  - command: "ignore"
+
   #   match_process_name: "/Taskmgr|ScreenClippingHost/"
 
   # Launches system dialogs as floating by default (eg. File Explorer save/open dialog).
@@ -206,39 +214,36 @@ window_rules:
     match_class_name: "/#32770|SunAwtDialog/"
   - command: "set floating"
     match_title: "Sign in - Google Accounts*"
-
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]
     match_process_name: "WindowsTerminal"
   - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 1", "focus workspace 1"]
     match_process_name: "alacritty"
-
-  # Browser workspace
   # Command to run. Use `commands` to specify an array of commands to run in sequence.
   - commands: ["move to workspace 2", "focus workspace 2"]
     # Process name to match exactly.
+
+    # Browser workspace
     match_process_name: "chrome"
     # Window title to match exactly.
-    # match_title: "/.*/"
-    # Class name to match exactly.
-    # match_class_name: "Chrome_WidgetWin_1"
-
   # Code workspace
   - commands: ["move to workspace 3", "focus workspace 3"]
+    # match_title: "/.*/"
+
+    # Class name to match exactly.
+
+    # match_class_name: "Chrome_WidgetWin_1"
     match_process_name: "Code"
   - commands: ["move to workspace 3", "focus workspace 3"]
     match_process_name: "idea64"
-
   # Folder and files workspace
   - commands: ["move to workspace 4", "focus workspace 4"]
     match_process_name: "explorer"
-
   # Discord workspace
   - commands: ["move to workspace 5"]
     match_process_name: "Discord"
   - commands: ["move to workspace 5"]
     match_process_name: "Zalo"
-
   # Graphic design & video editing workspace
   - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 6"]
     match_process_name: "Photoshop"
@@ -246,7 +251,6 @@ window_rules:
     match_process_name: "Illustrator"
   - commands: ["move to workspace 6"]
     match_process_name: "Resolve"
-
   # Games workspace
   - commands: ["move to workspace 7"]
     match_process_name: "VALORANT"
@@ -260,39 +264,30 @@ window_rules:
     match_process_name: "LeagueClientUx"
   - commands: ["move to workspace 7"]
     match_process_name: "League of Legend"
-  # Some applications (eg. Steam) have borders that extend past the normal border size.
-  - commands:
-      [
-        "move to workspace 7",
-        "resize borders 0px -7px -7px -7px",
-      ]
+  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px"]
+    # Some applications (eg. Steam) have borders that extend past the normal border size.
+
     match_process_name: "steam"
-  - commands:
-      [
-        "move to workspace 7",
-        "resize borders 0px -7px -7px -7px"
-      ]
+  - commands: ["move to workspace 7", "resize borders 0px -7px -7px -7px"]
     match_process_name: "steamwebhelper"
   - commands: ["move to workspace 7"]
     match_process_name: "java"
   - commands: ["move to workspace 7"]
     match_process_name: "javaw"
-
   # Settings workspace
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "Taskmgr"
-#    Disabled due to conflicting with IntelliJ IDEA Settings
-#  - commands: ["move to workspace 8", "focus workspace 8"]
-#    match_title: "Settings"
   - commands: ["move to workspace 8", "focus workspace 8"]
+    #    Disabled due to conflicting with IntelliJ IDEA Settings
+    #  - commands: ["move to workspace 8", "focus workspace 8"]
+
+    #    match_title: "Settings"
     match_process_name: "LenovoVantage"
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "nvcplui"
-
   # Notion workspace
   - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 9", "focus workspace 9"]
     match_process_name: "Notion"
-
   # Others workspace
   - commands: ["move to workspace 0"]
     match_process_name: "GoogleDriveFS"
@@ -300,23 +295,34 @@ window_rules:
     match_process_name: "vsthost"
   - commands: ["move to workspace 0"]
     match_process_name: "Mechvibes"
-
 binding_modes:
-  # - name: "resize"
-  #   keybindings:
-  # Resize focused window by a percentage or pixel amount.
-  # - command: "resize width -2%"
-  #   bindings: ["H", "Left"]
-  # - command: "resize width +2%"
-  #   bindings: ["L", "Right"]
-  # - command: "resize height +2%"
-  #   bindings: ["K", "Up"]
-  # - command: "resize height -2%"
-  #   bindings: ["J", "Down"]
-  # Press enter/escape to return to default keybindings.
-  # - command: "binding mode none"
-  #   bindings: ["Escape", "Enter"]
+# - name: "resize"
 
+#   keybindings:
+
+# Resize focused window by a percentage or pixel amount.
+
+# - command: "resize width -2%"
+
+#   bindings: ["H", "Left"]
+
+# - command: "resize width +2%"
+
+#   bindings: ["L", "Right"]
+
+# - command: "resize height +2%"
+
+#   bindings: ["K", "Up"]
+
+# - command: "resize height -2%"
+
+#   bindings: ["J", "Down"]
+
+# Press enter/escape to return to default keybindings.
+
+# - command: "binding mode none"
+
+#   bindings: ["Escape", "Enter"]
 keybindings:
   # Shift focus in a given direction.
   - command: "focus left"
@@ -327,7 +333,6 @@ keybindings:
     bindings: ["Alt+K"]
   - command: "focus down"
     bindings: ["Alt+J"]
-
   # Move focused window in a given direction.
   - command: "move left"
     bindings: ["Alt+Shift+H"]
@@ -337,7 +342,6 @@ keybindings:
     bindings: ["Alt+Shift+K"]
   - command: "move down"
     bindings: ["Alt+Shift+J"]
-
   # Resize focused window by a percentage or pixel amount.
   - command: "resize width -5%"
     binding: "Alt+U"
@@ -347,61 +351,59 @@ keybindings:
     binding: "Alt+O"
   - command: "resize height -5%"
     binding: "Alt+I"
-
-  # As an alternative to the resize keybindings above, resize mode enables resizing via
-  # HJKL or arrow keys. The binding mode is defined above with the name "resize".
-  # - command: "binding mode resize"
-  #   binding: "Alt+R"
-
   # Change tiling direction. This determines where new tiling windows will be inserted.
   - command: "tiling direction toggle"
-    binding: "Alt+D"
+    # As an alternative to the resize keybindings above, resize mode enables resizing via
 
+    #   binding: "Alt+R"
+
+    # - command: "binding mode resize"
+
+    # HJKL or arrow keys. The binding mode is defined above with the name "resize".
+    binding: "Alt+D"
   # Change focus between floating / tiling windows.
   - command: "focus mode toggle"
     binding: "Alt+Ctrl+F"
-
   # Change the focused window to be floating / tiling.
   - command: "toggle floating"
     binding: "Alt+F"
-
   # Change the focused window to be maximized / unmaximized.
   - command: "toggle maximized"
     binding: "Alt+M"
-
   # Minimize focused window.
   - command: "set minimized"
     binding: "Alt+N"
-
   # Close focused window.
   - command: "close"
     binding: "Alt+W"
-
   # Kill GlazeWM process safely.
   - command: "exit wm"
     binding: "Alt+Ctrl+Shift+W"
-
   # Re-evaluate configuration file.s
   - command: "reload config"
     binding: "Alt+Ctrl+Shift+R"
-
-  # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
   # to start Windows Terminal and Git Bash respectively.
   - command: "exec alacritty"
+    # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
+
     binding: "Alt+Enter"
-
-  # Focus the workspace that last had focus.
-  # - command: "focus workspace recent"
-  #   binding: "Alt+Y"
-
-  # Focus the next/previous workspace defined in `workspaces` config.
-  # - command: "focus workspace next"
-  #   binding: "Alt+T"
-  # - command: "focus workspace prev"
-  #   binding: "Alt+Shift+T"
-
   # Change focus to a workspace defined in `workspaces` config.
   - command: "focus workspace 1"
+    # Focus the workspace that last had focus.
+
+    #   binding: "Alt+Shift+T"
+
+    # - command: "focus workspace prev"
+
+    #   binding: "Alt+T"
+
+    # - command: "focus workspace next"
+
+    # Focus the next/previous workspace defined in `workspaces` config.
+
+    #   binding: "Alt+Y"
+
+    # - command: "focus workspace recent"
     binding: "Alt+1"
   - command: "focus workspace 2"
     binding: "Alt+2"
@@ -421,19 +423,25 @@ keybindings:
     binding: "Alt+9"
   - command: "focus workspace 0"
     binding: "Alt+0"
-
-  # Move focused workspace to a monitor in a given direction.
-  # - command: "move workspace left"
-  #   binding: "Alt+A"
-  # - command: "move workspace right"
-  #   binding: "Alt+F"
-  # - command: "move workspace up"
-  #   binding: "Alt+D"
-  # - command: "move workspace down"
-  #   binding: "Alt+S"
-
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move to workspace 1", "focus workspace 1"]
+    # Move focused workspace to a monitor in a given direction.
+
+    #   binding: "Alt+S"
+
+    # - command: "move workspace down"
+
+    #   binding: "Alt+D"
+
+    # - command: "move workspace up"
+
+    #   binding: "Alt+F"
+
+    # - command: "move workspace right"
+
+    #   binding: "Alt+A"
+
+    # - command: "move workspace left"
     binding: "Alt+Shift+1"
   - commands: ["move to workspace 2", "focus workspace 2"]
     binding: "Alt+Shift+2"
