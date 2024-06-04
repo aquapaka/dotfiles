@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "editor.fontFamily": "'Pixelcraft Nerd Font'",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 16,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#FB4934",
+    "terminalCursor.foreground": "#FB4934"
+  }
+}

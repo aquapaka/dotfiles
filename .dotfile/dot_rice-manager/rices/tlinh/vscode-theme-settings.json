@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Monokai Pro",
+  "workbench.iconTheme": "Monokai Pro Icons",
+  "editor.fontFamily": "'CaskaydiaCove Nerd Font'",
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 14,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ff6188",
+    "terminalCursor.foreground": "#ff6188"
+  }
+}

@@ -1,0 +1,9 @@
+[font]
+normal = { family = "CozetteVector" }
+bold = { family = "CozetteVector", style = "Bold" }
+italic = { family = "CozetteVector", style = "Italic" }
+bold_italic = { family = "CozetteVector", style = "Bold Italic" }
+size = 18
+offset = { x = 2, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true

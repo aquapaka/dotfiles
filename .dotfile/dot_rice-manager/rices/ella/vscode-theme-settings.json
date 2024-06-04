@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Neon City",
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "editor.fontFamily": "'CozetteVector'",
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 16,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#fb007a",
+    "terminalCursor.foreground": "#fb007a"
+  }
+}

@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("meimei" "tlinh")
+avaiableThemes=("meimei" "tlinh" "sylvia" "ella")
 
 usage() {
   printf "
@@ -15,6 +15,8 @@ Rice Script for Apply a rice theme
 Usage:
 `basename $0`\t[meimei] \t Nicest girl
 \t[tlinh] \t Who is this?
+\t[sylvia] \t Are you real?
+\t[ella] \t Truest gamer girl!!!
 "
 }
 

@@ -19,35 +19,35 @@ general:
   center_new_floating_windows: false
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "0px"
+  inner_gap: "16px"
   # Gap between windows and the screen edge.
 
   # Gap between windows and the screen edge.
-  outer_gap: "0px"
+  outer_gap: "16px"
 # Highlight active/inactive windows with a colored border.
 
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#ff6188"
+    color: "#b8bb26"
   inactive:
     enabled: false
-    color: "#ff6188"
+    color: "#ff0000"
 bar:
-  height: "46px"
+  height: "42px"
   position: "top"
   opacity: 1
-  background: "#221f22E6"
-  foreground: "#fdf9f3"
-  font_family: "CaskaydiaCove Nerd Font Regular"
+  background: "#1d2021E6"
+  foreground: "#ebdbb2"
+  font_family: "Pixelcraft Nerd Font Regular"
   font_size: "18"
   padding: "0 8px 4px 8px"
-  offset_x: "0px"
-  offset_y: "0px"
+  offset_x: "16px"
+  offset_y: "16px"
   border_radius: "0px"
   border_width: "0px"
-  border_color: "#ff6188"
+  border_color: "#0092FE"
   component_separator:
     label: ""
   components_left:
@@ -56,11 +56,11 @@ bar:
       padding: "0"
       font_size: "18"
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#ff6188"
+      focused_workspace_foreground: "#fb4934"
       default_workspace_background: "transparent"
-      default_workspace_foreground: "#fdf9f3"
-      displayed_workspace_background: "#ff6188"
-      displayed_workspace_foreground: "#ff6188"
+      default_workspace_foreground: "#ebdbb2"
+      displayed_workspace_background: "#fb4934"
+      displayed_workspace_foreground: "#fb4934"
       # - type: "music"
   #   label_not_playing: "no music"
 
@@ -86,37 +86,37 @@ bar:
 
     #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='18' fg='#ff6188'></attr>  {percent_usage}%"
-      margin: "0 25px 0 0px"
+      label: "<attr fs='21' fg='#fb4934'>❤</attr> {percent_usage}%"
+      margin: "0 14px 0 0px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='18' fg='#a9dc76'></attr>  {percent_usage}%"
-      margin: "0 24px 0 0"
+      label: "<attr fs='19' fg='#b8bb26'>✂</attr> {percent_usage}%"
+      margin: "0 4px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='28' fg='#ab9df2'>\U000F0FB2</attr>  {percent_usage}%"
-      margin: "0 20px 0 0"
+      label: "<attr fs='19' fg='#8ec07c'>⛨</attr> {percent_usage}%"
+      margin: "0 13px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "volume"
-      label_low: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
-      label_medium: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
-      label_high: "<attr fs='18' fg='#78dce8'></attr> {volume_level}%"
-      label_mute: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {volume_level}%</attr>"
-      margin: "0 20px 0 2px"
+      label_low: "<attr fs='21' fg='#83a598'>⏼</attr> {volume_level}%"
+      label_medium: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
+      label_high: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
+      label_mute: "<attr fs='21' fg='#fb4934'>⌀</attr><attr fg='#fb4934'> {volume_level}%</attr>"
+      margin: "0 16px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#ffd866' fs='18'></attr>  {battery_level}% "
-      label_power_saver: "<attr fs='18' fg='#ff6188'></attr><attr fg='#ff6188'> {battery_level}%</attr>"
-      label_charging: "<attr fs='17' fg='#ffd866'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#fabd2f' fs='21'>⌛</attr> {battery_level}% "
+      label_power_saver: "<attr fs='21' fg='#fb4934'>☠</attr><attr fg='#fb4934'> {battery_level}%</attr>"
+      label_charging: "<attr fs='21' fg='#fabd2f'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
     - type: "network"
-      label_no_internet: "<attr fg='#ff6188' fs='18'>\U000F1616</attr>"
-      label_ethernet: "<attr fs='18'>\U000F0200</attr>"
+      label_no_internet: "<attr fg='#fb4934' fs='21'>✘</attr>"
+      label_ethernet: "<attr fs='22'></attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
@@ -286,7 +286,7 @@ window_rules:
   - commands: ["move to workspace 8", "focus workspace 8"]
     match_process_name: "nvcplui"
   # Notion workspace
-  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 9", "focus workspace 9"]
+  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 9"]
     match_process_name: "Notion"
   # Others workspace
   - commands: ["move to workspace 0"]
