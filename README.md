@@ -26,7 +26,7 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 - Shell: **Zsh** inside MSYS2
 - WM/Bar: **GlazeWM**
 - Package manager: **Winget**
-- Dotfiles management: **Chezmoi**
+- Dotfiles manager: **Chezmoi**
 
 ## 🎨 Themes
 
@@ -83,7 +83,8 @@ Font need to be download and install manually:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
 - [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
-- [Scientifica](https://github.com/nerdypepper/scientifica/releases) (Optional)
+- [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip)
+- [Scientifica](https://github.com/nerdypepper/scientifica/releases)
 
 ### Install chezmoi and apply dotfiles
 
@@ -141,10 +142,14 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 ### Install VS Code Theme
 
-- Icons: [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+- Icons:
+  - [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+  - [Hotline](https://marketplace.visualstudio.com/items?itemName=jake-the-dev.hotline---icons)
 - Theme:
   - [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
   - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
+  - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
+  - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
 
 - To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
@@ -155,7 +160,8 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 ### Optional
 
 - Enable automatically hide the taskbar
-- Disable rounded corners using: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
+- Disable windows 11 rounded corners using: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
+
 ### Other
 
 - Food script by Xero: <https://github.com/xero/dotfiles>

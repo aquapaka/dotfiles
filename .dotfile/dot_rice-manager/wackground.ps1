@@ -1,7 +1,10 @@
 <#
 .SYNOPSIS
 Wackground
-This script used to set windows desktop background.
+#  Wackground
+#  Author  :  aquapaka
+#  Url     :  https://github.com/aquapaka/dotfiles
+#  About   :  This script used to set windows desktop background.
 
 .DESCRIPTION
 USAGE
