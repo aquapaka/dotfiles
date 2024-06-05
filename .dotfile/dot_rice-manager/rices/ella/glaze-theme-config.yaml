@@ -14,13 +14,13 @@ focus_borders:
     enabled: false
     color: "#ff0000"
 bar:
-  height: "50px"
+  height: "48px"
   position: "top"
   opacity: 1
   background: "#070219E6"
   foreground: "#27fbfe"
-  font_family: "CozetteVector"
-  font_size: "22"
+  font_family: "Scientifica"
+  font_size: "22px"
   padding: "0 8px 0px 8px"
   offset_x: "16px"
   offset_y: "16px"
@@ -35,11 +35,11 @@ bar:
       padding: "0"
       # font_size: "18"
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#fb4934"
+      focused_workspace_foreground: "#fb007a"
       default_workspace_background: "transparent"
       default_workspace_foreground: "#27fbfe"
-      displayed_workspace_background: "#fb4934"
-      displayed_workspace_foreground: "#fb4934"
+      displayed_workspace_background: "#fb007a"
+      displayed_workspace_foreground: "#fb007a"
       # - type: "music"
   #   label_not_playing: "no music"
 
@@ -63,37 +63,37 @@ bar:
 
     #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='21' fg='#fb007a'>❤</attr> {percent_usage}%"
-      margin: "0 14px 0 0px"
+      label: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>❤</attr> {percent_usage}%"
+      margin: "0 14px 0px 0px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='19' fg='#b8bb26' >✂</attr> {percent_usage}%"
+      label: "<attr fs='17' fg='#a6e22e' ff='Pixelcraft Nerd Font Regular'>✂</attr> {percent_usage}%"
       margin: "0 4px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='19' fg='#8ec07c'>⛨</attr> {percent_usage}%"
+      label: "<attr fs='18' fg='#6800d2' ff='Pixelcraft Nerd Font Regular'>⛨</attr> {percent_usage}%"
       margin: "0 13px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "volume"
-      label_low: "<attr fs='21' fg='#83a598'>⏼</attr> {volume_level}%"
-      label_medium: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
-      label_high: "<attr fs='21' fg='#83a598'>◎</attr> {volume_level}%"
-      label_mute: "<attr fs='21' fg='#fb4934'>⌀</attr><attr fg='#fb4934'> {volume_level}%</attr>"
+      label_low: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>⏼</attr> {volume_level}%"
+      label_medium: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>◎</attr> {volume_level}%"
+      label_high: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>◎</attr> {volume_level}%"
+      label_mute: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>⌀</attr><attr fg='#fb007a'> {volume_level}%</attr>"
       margin: "0 16px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#fabd2f' fs='21'>⌛</attr> {battery_level}% "
-      label_power_saver: "<attr fs='21' fg='#fb4934'>☠</attr><attr fg='#fb4934'> {battery_level}%</attr>"
-      label_charging: "<attr fs='21' fg='#fabd2f'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#f3e430' fs='20' ff='Pixelcraft Nerd Font Regular'>⌛</attr> {battery_level}% "
+      label_power_saver: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>☠</attr><attr fg='#fb007a'> {battery_level}%</attr>"
+      label_charging: "<attr fs='20' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
     - type: "network"
-      label_no_internet: "<attr fg='#fb4934' fs='21'>✘</attr>"
-      label_ethernet: "<attr fs='22'></attr>"
+      label_no_internet: "<attr fg='#fb007a' fs='21' ff='Pixelcraft Nerd Font Regular'>✘</attr>"
+      label_ethernet: "<attr fs='22' ff='Pixelcraft Nerd Font Regular'></attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
@@ -101,8 +101,8 @@ bar:
       label_wifi_strength_100: "WiFi: 100%"
       margin: "0 0px 0 20px"
     - type: "tiling direction"
-      label_horizontal: "<attr fs='21'> ⏵ </attr>"
-      label_vertical: "<attr fs='21'> ⏷ </attr>"
+      label_horizontal: "<attr fs='21' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'> ⏵</attr>"
+      label_vertical: "<attr fs='21' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'> ⏷</attr>"
       # background: "#ffffff33"
 
       margin: "0 px"
