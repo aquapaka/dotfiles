@@ -24,7 +24,7 @@ TERM = "alacritty"
 # position = { x = 320, y = 50 }
 padding = { x = 16, y = 16 }
 dynamic_padding = true
-decorations = "None"
+decorations = "full"
 opacity = 0.9
 blur = false
 #startup_mode          = "Windowed"
@@ -104,7 +104,7 @@ mouse.enabled = true
 
 
 [debug]
-#render_timer          = false
+# render_timer          = true
 #persistent_logging    = false
 #log_level             = "Warn"
 #renderer              = "None"

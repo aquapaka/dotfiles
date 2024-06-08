@@ -201,6 +201,11 @@ workspaces:
 
     display_name: "OTHERS"
     # keep_alive: true
+  - name: "z"
+    # display_name: ""
+
+    display_name: "DESKTOP"
+    # keep_alive: true
 window_rules:
   # Task Manager requires admin privileges to manage and should be ignored unless running
 
@@ -424,6 +429,8 @@ keybindings:
     binding: "Alt+9"
   - command: "focus workspace 0"
     binding: "Alt+0"
+  - command: "focus workspace z"
+    binding: "Alt+X"
   # Move focused window to a workspace defined in `workspaces` config.
   - commands: ["move to workspace 1", "focus workspace 1"]
     # Move focused workspace to a monitor in a given direction.
@@ -460,3 +467,7 @@ keybindings:
     binding: "Alt+Shift+8"
   - commands: ["move to workspace 9", "focus workspace 9"]
     bindings: ["Alt+Shift+9"]
+  - commands: ["move to workspace 0", "focus workspace 0"]
+    bindings: ["Alt+Shift+0"]
+  - commands: ["move to workspace z", "focus workspace z"]
+    bindings: ["Alt+Shift+X"]
