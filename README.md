@@ -22,9 +22,9 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Alacritty**
+- Terminal: **Alacritty** / **Wezterm** (*in experiment*)
 - Shell: **Zsh** inside MSYS2
-- WM/Bar: **GlazeWM**
+- Window Manager/Title Bar: **GlazeWM**
 - Package manager: **Winget**
 - Dotfiles manager: **Chezmoi**
 
@@ -62,24 +62,25 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 | Keys | Action |
 |:-|:-|
-|<kbd>alt</kbd> + <kbd>enter</kbd>| Open alacritty terminal|
+|<kbd>alt</kbd> + <kbd>enter</kbd>| Open terminal|
+|<kbd>alt</kbd> + <kbd>Space</kbd>| Open powertoy run |
 |<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| top \| bottom \| right|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| top \| bottom \| right|
 |<kbd>alt</kbd> + <kbd>w</kbd>| Close focusing window|
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
-|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move current window to workspace {n}|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
 |<kbd>alt</kbd> + <kbd>m</kbd>| Maximize/Unmaximize current window|
 |<kbd>alt</kbd> + <kbd>d</kbd>| Change direction where the next window open should be placed|
-|<kbd>alt</kbd> + <kbd>f</kbd>| Make focusing window float/unfloat|
+|<kbd>alt</kbd> + <kbd>f</kbd>| Make focusing window float/tiled|
 |<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>w</kbd>| Exit glazewm |
 
 Above is customized version of i3 keybindings due to some conflict with Powertoys. You can alway change them in your glaze config file.
 
 ## 📦 Step by Step Installation
 
-### Install Font
+### Install Fonts
 
-Font need to be download and install manually:
+Font need to be download and install manually *(Windows is planning to allows installing fonts from winget. Stay tune!)*:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
 - [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
@@ -144,8 +145,6 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 - Icons:
   - [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
-  - [Hotline](https://marketplace.visualstudio.com/items?itemName=jake-the-dev.hotline---icons)
-- Theme:
   - [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
   - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
   - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)

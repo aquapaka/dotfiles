@@ -37,11 +37,9 @@ alias winfetch='powershell winfetch'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias btop='~/.local/bin/btop/btop4win.exe'
 alias rice='~/.rice-manager/rice.sh'
-alias ala='alacritty'
 cd() {
     builtin cd "$@" && ls;
 }
-alias idea='idea64'
 
 # Prompt theme
 source ~/.config/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme

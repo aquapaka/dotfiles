@@ -46,7 +46,7 @@ function Show-Help { Get-Help $PSCommandPath }
 function Set-Random {
   $ChoosenWallpaper = Get-ChildItem "$PSScriptRoot/$FolderPath" | Get-Random -Count 1
   $ChoosenWallpaperPath = "$PSScriptRoot/$FolderPath/$ChoosenWallpaper"
-  Write-Output "Set $ChoosenWallpaperPath as desktop wallpaper"
+  Write-Output "Setting $ChoosenWallpaper as desktop wallpaper..."
   [Win32.Wallpaper]::SetWallpaper("$ChoosenWallpaperPath")
 }
 

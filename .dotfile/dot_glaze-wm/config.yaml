@@ -223,8 +223,10 @@ window_rules:
   # Terminal workspace
   - commands: ["move to workspace 1", "focus workspace 1"]
     match_process_name: "WindowsTerminal"
-  - commands: ["resize borders 0px -7px -7px -7px", "move to workspace 1", "focus workspace 1"]
+  - commands: ["move to workspace 1", "focus workspace 1"]
     match_process_name: "alacritty"
+  - commands: ["move to workspace 1", "focus workspace 1"]
+    match_process_name: "wezterm-gui"
   # Command to run. Use `commands` to specify an array of commands to run in sequence.
   - commands: ["move to workspace 2", "focus workspace 2"]
     # Process name to match exactly.
@@ -389,7 +391,7 @@ keybindings:
   - command: "reload config"
     binding: "Alt+Ctrl+Shift+R"
   # to start Windows Terminal and Git Bash respectively.
-  - command: "exec alacritty"
+  - command: "exec wezterm-gui"
     # Launch CMD terminal (alternatively `exec wt` or `exec %ProgramFiles%/Git/git-bash.exe`
 
     binding: "Alt+Enter"

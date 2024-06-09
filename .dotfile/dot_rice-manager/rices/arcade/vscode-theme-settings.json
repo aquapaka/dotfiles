@@ -1,6 +1,8 @@
 {
   "workbench.colorTheme": "Neon City",
-  "workbench.iconTheme": "hotline-wired",
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "gruvbox-material-icons.folders.color": "#e3ae5a",
+  "gruvbox-material-icons.folders.theme": "classic",
   "editor.fontFamily": "'Scientifica'",
   "editor.fontSize": 22,
   "terminal.integrated.fontSize": 22,

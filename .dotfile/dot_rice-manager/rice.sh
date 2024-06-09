@@ -27,6 +27,12 @@ set_alacritty_config() {
   cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
 }
 
+# Set wezterm theme
+set_wezterm_theme() {
+  echo "Setting wezterm theme..."
+  cat ./rices/$theme/wezterm/wezterm-theme.lua > ~/.config/wezterm/wezterm-theme.lua
+}
+
 # Set glazewm configs
 set_glazewm_config() {
   echo "Setting Glazewm config..."
@@ -57,9 +63,10 @@ for theme in "${avaiableThemes[@]}"; do
     echo "Applying $theme theme..."
 
     # # Apply configs
+    set_glazewm_config
     set_desktop_wallpaper
     set_alacritty_config
-    set_glazewm_config
+    set_wezterm_theme
     set_vscode_theme
 
     echo "Done!"
