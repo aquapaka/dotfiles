@@ -157,7 +157,7 @@ pacman -S zsh
 
 ### Add New Environment Variables
 
-Add "C:\Users\aquapaka\\.local\bin" to Path variables
+Add "C:\Users\%yourusername%\\.local\bin" to Path variables
 
 ### Install VS Code Theme
 
