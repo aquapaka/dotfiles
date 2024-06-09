@@ -84,7 +84,7 @@ Font need to be download and install manually *(Windows is planning to allows in
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
 - [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
-- [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip)
+- [Monaspace](https://github.com/githubnext/monaspace)
 - [Scientifica](https://github.com/nerdypepper/scientifica/releases)
 
 ### Install chezmoi and apply dotfiles

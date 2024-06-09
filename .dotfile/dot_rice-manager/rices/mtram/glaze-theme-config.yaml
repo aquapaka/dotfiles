@@ -1,8 +1,8 @@
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "8px"
+  inner_gap: "12px"
   # Gap between windows and the screen edge.
-  outer_gap: "8px"
+  outer_gap: "12px"
 # Highlight active/inactive windows with a colored border.
 
 # ** Exclusive to Windows 11 due to API limitations.
@@ -19,8 +19,8 @@ bar:
   opacity: 1
   background: "#273136E6"
   foreground: "#d1ded3"
-  font_family: "JetbrainsMono Nerd Font Medium"
-  font_size: "18"
+  font_family: "Monaspace Radon"
+  font_size: "16"
   padding: "4px 8px 4px 8px"
   offset_x: "0px"
   offset_y: "0px"
@@ -33,7 +33,7 @@ bar:
     - type: "workspaces"
       margin: "0 4px"
       padding: "0"
-      font_size: "18"
+      # font_size: "18"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#7eb08a"
       default_workspace_background: "transparent"
@@ -63,37 +63,37 @@ bar:
 
     #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='18' fg='#ff819f'></attr>  {percent_usage}%"
-      margin: "0 25px 0 0px"
+      label: "<attr fs='18' fg='#ff819f' ff='CaskaydiaCove Nerd Font Regular'></attr>  {percent_usage}%"
+      margin: "0 24px 0 0px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='18' fg='#7eb08a'></attr>  {percent_usage}%"
+      label: "<attr fs='18' fg='#7eb08a' ff='CaskaydiaCove Nerd Font Regular'></attr>  {percent_usage}%"
       margin: "0 24px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='28' fg='#ba8eaf'>󰾲</attr>  {percent_usage}%"
+      label: "<attr fs='28' fg='#ba8eaf' ff='CaskaydiaCove Nerd Font Regular'>󰾲</attr>  {percent_usage}%"
       margin: "0 20px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "volume"
-      label_low: "<attr fs='18' fg='#7ea4b0'></attr> {volume_level}%"
-      label_medium: "<attr fs='18' fg='#7ea4b0'></attr> {volume_level}%"
-      label_high: "<attr fs='18' fg='#7ea4b0'></attr> {volume_level}%"
-      label_mute: "<attr fs='18' fg='#ff819f'></attr><attr fg='#ff819f'> {volume_level}%</attr>"
+      label_low: "<attr fs='18' fg='#7ea4b0' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_medium: "<attr fs='18' fg='#7ea4b0' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_high: "<attr fs='18' fg='#7ea4b0' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_mute: "<attr fs='18' fg='#ff819f' ff='CaskaydiaCove Nerd Font Regular'></attr><attr fg='#ff819f'> {volume_level}%</attr>"
       margin: "0 20px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#d2b48c' fs='18'></attr>  {battery_level}% "
-      label_power_saver: "<attr fs='18' fg='#7eb08a'></attr><attr fg='#ff819f'> {battery_level}%</attr>"
-      label_charging: "<attr fs='17' fg='#d2b48c'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#d2b48c' fs='18' ff='CaskaydiaCove Nerd Font Regular'></attr>  {battery_level}% "
+      label_power_saver: "<attr fs='18' fg='#7eb08a' ff='CaskaydiaCove Nerd Font Regular'></attr><attr fg='#ff819f'> {battery_level}%</attr>"
+      label_charging: "<attr fs='17' fg='#d2b48c' ff='CaskaydiaCove Nerd Font Regular'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
     - type: "network"
-      label_no_internet: "<attr fg='#ff819f' fs='18'>󱘖</attr>"
-      label_ethernet: "<attr fs='18'>󰈀</attr>"
+      label_no_internet: "<attr fg='#ff819f' fs='18' ff='CaskaydiaCove Nerd Font Regular'>󱘖</attr>"
+      label_ethernet: "<attr fs='18' ff='CaskaydiaCove Nerd Font Regular'>󰈀</attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
@@ -101,8 +101,8 @@ bar:
       label_wifi_strength_100: "WiFi: 100%"
       margin: "0 0px 0 20px"
     - type: "tiling direction"
-      label_horizontal: "<attr fs='21'> ⏵ </attr>"
-      label_vertical: "<attr fs='21'> ⏷ </attr>"
+      label_horizontal: "<attr fs='21' ff='CaskaydiaCove Nerd Font Regular'> ⏵ </attr>"
+      label_vertical: "<attr fs='21' ff='CaskaydiaCove Nerd Font Regular'> ⏷ </attr>"
       # background: "#ffffff33"
 
       margin: "0 px"
@@ -117,4 +117,4 @@ bar:
 
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: " HH:mm dddd, dd/MM/yyyy"
-      margin: "0 6px 0 6px"
+      margin: "0 12px 0 6px"

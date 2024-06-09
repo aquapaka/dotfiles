@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("meimei" "tlinh" "jade" "arcade")
+avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "arcade")
 
 usage() {
   printf "
@@ -14,17 +14,11 @@ Rice Script for apply a rice theme
 
 Usage:
 `basename $0`\t[meimei] \t Warming and caring
-\t[tlinh] \t Someone I've never met
-\t[jade]  \t Greenish and refreshing
-\t[arcade] \t WARNING! Only For Truest Gamer!!!
+\t[tlinh] \t Only in my dreams
+\t[mtram]  \t Calming and peaceful
+\t[khanhoa] \t She can plays guitar
+\t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
 "
-}
-
-# Set alacritty colorscheme
-set_alacritty_config() {
-  echo "Setting alacritty config..."
-  cat ./rices/$theme/alacritty/rice-colors.toml > ~/AppData/Roaming/alacritty/rice-colors.toml
-  cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
 }
 
 # Set wezterm theme
@@ -37,9 +31,7 @@ set_wezterm_theme() {
 set_glazewm_config() {
   echo "Setting Glazewm config..."
   MERGED_CONFIG=$(yq eval-all '. as $item ireduce ({}; . * $item )' ~/.glaze-wm/config.yaml ./rices/$theme/glaze-theme-config.yaml)
-
   printf '%s\n' "$MERGED_CONFIG" > ~/.glaze-wm/config.yaml
-
   glazewm command '"reload config"' >/dev/null
 }
 
@@ -65,11 +57,10 @@ for theme in "${avaiableThemes[@]}"; do
     # # Apply configs
     set_glazewm_config
     set_desktop_wallpaper
-    set_alacritty_config
     set_wezterm_theme
     set_vscode_theme
 
-    echo "Done!"
+    echo "Completed!"
     exit 1
   fi
 done
