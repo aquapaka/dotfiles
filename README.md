@@ -181,4 +181,5 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 ### Other
 
+- Dotfiles inspired by gh0stzk dotfiles: <https://github.com/gh0stzk/dotfiles>
 - Food script by Xero: <https://github.com/xero/dotfiles>
