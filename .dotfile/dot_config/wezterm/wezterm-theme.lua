@@ -3,7 +3,12 @@ local wezterm = require 'wezterm'
 local module = {}
 
 function module.apply_to_config(config)
-  config.font = wezterm.font('scientifica', { weight = 'Medium' })
+  config.font = wezterm.font_with_fallback {
+    {
+      family = 'scientifica', weight = 'Medium'
+    },
+    { family = 'Pixelcraft Nerd Font', assume_emoji_presentation = true}
+  }
   config.font_size = 16.5
   config.cell_width = 1.1
   config.window_padding = {
