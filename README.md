@@ -22,7 +22,7 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Alacritty** / **Wezterm** (*in experiment*)
+- Terminal: **Wezterm**
 - Shell: **Zsh** inside MSYS2
 - Window Manager/Title Bar: **GlazeWM**
 - Package manager: **Winget**
@@ -30,15 +30,33 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## 🎨 Themes
 
-| ❤️ Meimei |
+| ❤️ meimei |
 | :---: |
-|![meimei-0](rice-previews/meimei/meimei-0.jpg)|
-|![meimei-1](rice-previews/meimei/meimei-1.jpg)|
+| Warming and caring |
+|![meimei-1](rice-previews/meimei-1.png)|
+|![meimei-2](rice-previews/meimei-2.png)|
+|![meimei-3](rice-previews/meimei-3.png)|
 
-| ❤️ Tlinh |
+| ❤️ tlinh |
 | :---: |
-|![tlinh-0](rice-previews/tlinh/tlinh-0.jpg)|
-|![tlinh-1](rice-previews/tlinh/tlinh-1.jpg)|
+| Only in my dreams |
+|![tlinh-1](rice-previews/tlinh-1.png)|
+|![tlinh-2](rice-previews/tlinh-2.png)|
+|![tlinh-3](rice-previews/tlinh-3.png)|
+
+| ❤️ mtram |
+| :---: |
+| Calming and peaceful |
+|![mtram-1](rice-previews/mtram-1.png)|
+|![mtram-2](rice-previews/mtram-2.png)|
+|![mtram-3](rice-previews/mtram-3.png)|
+
+| ❤️ arcade |
+| :---: |
+| ⚠️ WARNING! Only For Truest Gamer!! May hurt your eyes!!! |
+|![arcade-1](rice-previews/arcade-1.png)|
+|![arcade-2](rice-previews/arcade-2.png)|
+|![arcade-3](rice-previews/arcade-3.png)|
 
 ## ⚙️ Current Configurable Settings
 
@@ -84,7 +102,7 @@ Font need to be download and install manually *(Windows is planning to allows in
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
 - [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
-- [JetbrainsMono Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/JetBrainsMono.zip)
+- [Monaspace](https://github.com/githubnext/monaspace)
 - [Scientifica](https://github.com/nerdypepper/scientifica/releases)
 
 ### Install chezmoi and apply dotfiles
@@ -163,4 +181,5 @@ Add "C:\Users\aquapaka\\.local\bin" to Path variables
 
 ### Other
 
+- Dotfiles inspired by gh0stzk dotfiles: <https://github.com/gh0stzk/dotfiles>
 - Food script by Xero: <https://github.com/xero/dotfiles>

@@ -1,0 +1,11 @@
+{
+  "workbench.colorTheme": "Matchalk",
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "editor.fontFamily": "'Monaspace Radon'",
+  "editor.fontSize": 19,
+  "terminal.integrated.fontSize": 19,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#7eb08a",
+    "terminalCursor.foreground": "#7eb08a"
+  }
+}

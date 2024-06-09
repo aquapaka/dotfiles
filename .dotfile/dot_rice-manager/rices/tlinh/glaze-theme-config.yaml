@@ -33,7 +33,7 @@ bar:
     - type: "workspaces"
       margin: "0 4px"
       padding: "0"
-      font_size: "18"
+      # font_size: "18"
       focused_workspace_background: "transparent"
       focused_workspace_foreground: "#ff6188"
       default_workspace_background: "transparent"
@@ -117,4 +117,4 @@ bar:
 
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: " HH:mm dddd, dd/MM/yyyy"
-      margin: "0 6px 0 6px"
+      margin: "0 12px 0 6px"
