@@ -163,6 +163,7 @@ Add "C:\Users\\%yourusername%\\.local\bin" to Path variables
 
 - Icons:
   - [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
+- Themes:
   - [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
   - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
   - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
@@ -172,7 +173,7 @@ Add "C:\Users\\%yourusername%\\.local\bin" to Path variables
 
 ### Restore old context menu (Require restart)
 
-- Open/Run **script/Restore-old-context-menu.reg**
+- Open/Run **scripts/Restore-old-context-menu.reg**
 
 ### Optional
 
