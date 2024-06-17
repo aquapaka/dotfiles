@@ -7,5 +7,6 @@
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#7eb08a",
     "terminalCursor.foreground": "#7eb08a"
-  }
+  },
+  "fonted.font": "Monaspace Radon"
 }

@@ -9,5 +9,6 @@
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#fb007a",
     "terminalCursor.foreground": "#fb007a"
-  }
+  },
+  "fonted.font": "Scientifica"
 }
