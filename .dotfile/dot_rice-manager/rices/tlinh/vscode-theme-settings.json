@@ -7,5 +7,6 @@
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#ff6188",
     "terminalCursor.foreground": "#ff6188"
-  }
+  },
+  "fonted.font": "CaskaydiaCove Nerd Font"
 }

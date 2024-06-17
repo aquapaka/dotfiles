@@ -46,6 +46,13 @@ set_vscode_theme() {
   echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
 }
 
+# Toggle rounded corners
+toggle_rounded_corners() {
+  echo "Changing windows corners..."
+  option=$(<./rices/$theme/rounded-corners-flag)
+  win11-toggle-rounded-corners $option >/dev/null
+}
+
 # Goes to this script location first
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
@@ -59,6 +66,7 @@ for theme in "${avaiableThemes[@]}"; do
     set_desktop_wallpaper
     set_wezterm_theme
     set_vscode_theme
+    toggle_rounded_corners
 
     echo "Completed!"
     exit 1
