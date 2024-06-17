@@ -9,5 +9,6 @@
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#FB4934",
     "terminalCursor.foreground": "#FB4934"
-  }
+  },
+  "fonted.font": "Pixelcraft Nerd Font"
 }
