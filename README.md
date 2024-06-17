@@ -62,11 +62,13 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 You can customize each theme inside ~/.rice-manager/rices and re-apply it (see **Change theme** below)
 
-- ☑️ Alacritty theme
+- ☑️ Wezterm theme
 - ☑️ GlazeWM theme
-- ☑️ Random desktop wallpaper based on rice
+- ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
+- ☑️ Enable/Disable Rounded Cornors
 - ❓ Discord theme
+- 🚧 Btop theme
 - 🚧 *under construction*
 
 ## 📑 Basic usage
@@ -157,7 +159,10 @@ pacman -S zsh
 
 ### Add New Environment Variables
 
-Add "C:\Users\\%yourusername%\\.local\bin" to Path variables
+Add those to Path variables
+
+- "C:\Users\%yourusername%\\.local\bin"
+- "C:\Program Files\Win11 Toggle Rounded Corners" (if use with win11-toggle-rounded-corners - see **Optional** below)
 
 ### Install VS Code Theme
 
@@ -177,8 +182,9 @@ Add "C:\Users\\%yourusername%\\.local\bin" to Path variables
 
 ### Optional
 
+- Allow enable/disable rounded corners between themes
+  - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
-- Disable windows 11 rounded corners using: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 
 ### Other
 
