@@ -58,6 +58,13 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 |![arcade-2](rice-previews/arcade-2.png)|
 |![arcade-3](rice-previews/arcade-3.png)|
 
+| ❤️ khanhoa |
+| :---: |
+| ⚠️ She plays guitar |
+|![khanhoa-1](rice-previews/khanhoa-1.png)|
+|![khanhoa-2](rice-previews/khanhoa-2.png)|
+|![khanhoa-3](rice-previews/khanhoa-3.png)|
+
 ## ⚙️ Current Configurable Settings
 
 You can customize each theme inside ~/.rice-manager/rices and re-apply it (see **Change theme** below)
@@ -66,7 +73,8 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 - ☑️ GlazeWM theme
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
-- ☑️ Enable/Disable Rounded Cornors
+- ☑️ Enable/Disable Rounded Cornors (⚠️haven't work on startup yet)
+- ☑️ Windows light/dark mode based on rice
 - ❓ Discord theme
 - 🚧 Btop theme
 - 🚧 *under construction*
@@ -97,6 +105,10 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 Above is customized version of i3 keybindings due to some conflict with Powertoys. You can alway change them in your glaze config file.
 
 ## 📦 Step by Step Installation
+
+### Pre-install notices
+
+- If you have just fresh install windows 11, you need to go to Microsoft Store and update your "App Installer". Otherwise winget will not working.
 
 ### Install Fonts
 
@@ -173,12 +185,29 @@ Add those to Path variables
   - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
   - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
   - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
+  - [Paper](https://marketplace.visualstudio.com/items?itemName=a5hk.paper)
 
 - To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
 ### Restore old context menu (Require restart)
 
 - Open/Run **scripts/Restore-old-context-menu.reg**
+
+### Auto start GlazeWM at windows start
+
+- Open **Task scheduler**
+- Choose **Create Basic Task...**
+- Enter any name for GlazeWM task (example: "GlazeWM") then press **Next**
+- Trigger: choose *When I log on* then press **Next**
+- Program/script: paste in ```C:\Users\%username%\AppData\Local\Microsoft\WinGet\Links\glazewm.exe``` (replace %username% by your username - your user's folder name) then click **Next**
+- Tick *Open the Properties dialog for this task when I click Finish* then click **Finish**
+
+- Inside Properties window, set the following settings for each tab:
+  - **General**: enable *Run with highest privileges* (required for glazeWM could manages all windows)
+  - **Conditions**: disable/untick *everything* (including greyed out settings)
+  - **Settings**: disable/untick *Stop the task if it runs longer than:*
+- Click **Ok** to save everything and we're good to go
+
 
 ### Optional
 

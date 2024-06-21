@@ -16,8 +16,8 @@ Usage:
 `basename $0`\t[meimei] \t Warming and caring
 \t[tlinh] \t Only in my dreams
 \t[mtram]  \t Calming and peaceful
-\t[khanhoa] \t She can plays guitar
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
+\t[khanhoa] \t She plays guitar
 "
 }
 
@@ -53,6 +53,16 @@ toggle_rounded_corners() {
   win11-toggle-rounded-corners $option >/dev/null
 }
 
+# Change windows light/dark mode
+change_windows_lightdark_mode() {
+  echo "Applying windows color..."
+  option=$(<./rices/$theme/windows-color)
+  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value $option -Type Dword -Force | Out-Null"
+  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value $option -Type Dword -Force | Out-Null"
+  echo "Reloading explorer..."
+  powershell "taskkill /F /IM explorer.exe | Out-Null; start explorer"
+}
+
 # Goes to this script location first
 parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )
 cd "$parent_path"
@@ -67,6 +77,7 @@ for theme in "${avaiableThemes[@]}"; do
     set_wezterm_theme
     set_vscode_theme
     toggle_rounded_corners
+    change_windows_lightdark_mode
 
     echo "Completed!"
     exit 1

@@ -1,11 +1,12 @@
 {
-  "workbench.colorTheme": "Monokai Pro",
-  "workbench.iconTheme": "Monokai Pro Icons",
-  "editor.fontFamily": "'CaskaydiaCove Nerd Font'",
+  "workbench.colorTheme": "Paper",
+  "workbench.iconTheme": "gruvbox-material-icons",
+  "editor.fontFamily": "'Monaspace Xenon'",
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 18,
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#ff6188",
-    "terminalCursor.foreground": "#ff6188"
-  }
+    "editorCursor.foreground": "#000000",
+    "terminalCursor.foreground": "#000000"
+  },
+  "fonted.font": "Monaspace Xenon"
 }

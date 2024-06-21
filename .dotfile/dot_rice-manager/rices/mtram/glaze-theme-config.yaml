@@ -21,7 +21,7 @@ bar:
   foreground: "#d1ded3"
   font_family: "Monaspace Radon"
   font_size: "16"
-  padding: "4px 8px 4px 8px"
+  padding: "0px 8px 0px 8px"
   offset_x: "0px"
   offset_y: "0px"
   border_radius: "0px"

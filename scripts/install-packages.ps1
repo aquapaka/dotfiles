@@ -1,9 +1,9 @@
-# Required
+# Required packages (Needed for everything to work)
 winget install WezTerm -e;
 winget install GlazeWM -e;
 winget install --id eza-community.eza -e;
 winget install --id MikeFarah.yq;
-winget install --i jqlang.jq;
+winget install --id jqlang.jq;
 winget install --id MSYS2.MSYS2 -e;
 
 # Application (comment out things you don't need before running this script)
