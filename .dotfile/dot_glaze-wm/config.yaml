@@ -19,49 +19,49 @@ general:
   center_new_floating_windows: false
 gaps:
   # Gap between adjacent windows.
-  inner_gap: "16px"
+  inner_gap: "8px"
   # Gap between windows and the screen edge.
 
   # Gap between windows and the screen edge.
-  outer_gap: "16px"
+  outer_gap: "8px"
 # Highlight active/inactive windows with a colored border.
 
 # ** Exclusive to Windows 11 due to API limitations.
 focus_borders:
   active:
     enabled: true
-    color: "#0092FE"
+    color: "#000000"
   inactive:
     enabled: false
-    color: "#ff0000"
+    color: "#000000"
 bar:
-  height: "48px"
+  height: "38px"
   position: "top"
   opacity: 1
-  background: "#070219E6"
-  foreground: "#27fbfe"
-  font_family: "Scientifica"
-  font_size: "22px"
-  padding: "0 8px 0px 8px"
-  offset_x: "16px"
-  offset_y: "16px"
+  background: "#F2EEDEE6"
+  foreground: "#000000"
+  font_family: "Monaspace Xenon"
+  font_size: "16"
+  padding: "0px 8px 0px 8px"
+  offset_x: "8px"
+  offset_y: "8px"
   border_radius: "0px"
-  border_width: "1px"
-  border_color: "#0092FE"
+  border_width: "2px"
+  border_color: "#000000"
   component_separator:
     label: ""
   components_left:
     - type: "workspaces"
-      margin: "0 4px"
-      padding: "0"
+      margin: "0px"
+      padding: "0px"
       # font_size: "18"
 
       focused_workspace_background: "transparent"
-      focused_workspace_foreground: "#fb007a"
+      focused_workspace_foreground: "#216609"
       default_workspace_background: "transparent"
-      default_workspace_foreground: "#27fbfe"
-      displayed_workspace_background: "#fb007a"
-      displayed_workspace_foreground: "#fb007a"
+      default_workspace_foreground: "#000000"
+      displayed_workspace_background: "#000000"
+      displayed_workspace_foreground: "#000000"
       # - type: "music"
   #   label_not_playing: "no music"
 
@@ -87,37 +87,37 @@ bar:
 
     #   label_collapse_text: " "
     - type: "cpu"
-      label: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>❤</attr> {percent_usage}%"
-      margin: "0 14px 0px 0px"
+      label: "<attr fs='18' fg='#CC3E28' ff='CaskaydiaCove Nerd Font Regular'></attr>  {percent_usage}%"
+      margin: "0 24px 0 0px"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "memory"
-      label: "<attr fs='17' fg='#a6e22e' ff='Pixelcraft Nerd Font Regular'>✂</attr> {percent_usage}%"
-      margin: "0 4px"
+      label: "<attr fs='18' fg='#216609' ff='CaskaydiaCove Nerd Font Regular'></attr>  {percent_usage}%"
+      margin: "0 24px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "gpu"
-      label: "<attr fs='18' fg='#6800d2' ff='Pixelcraft Nerd Font Regular'>⛨</attr> {percent_usage}%"
-      margin: "0 13px"
+      label: "<attr fs='28' fg='#5C21A5' ff='CaskaydiaCove Nerd Font Regular'>\U000F0FB2</attr>  {percent_usage}%"
+      margin: "0 20px 0 0"
       # How often this counter is refreshed.
 
       refresh_interval_ms: 1000
     - type: "volume"
-      label_low: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>⏼</attr> {volume_level}%"
-      label_medium: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>◎</attr> {volume_level}%"
-      label_high: "<attr fs='20' fg='#19bffe' ff='Pixelcraft Nerd Font Regular'>◎</attr> {volume_level}%"
-      label_mute: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>⌀</attr><attr fg='#fb007a'> {volume_level}%</attr>"
-      margin: "0 16px 0 2px"
+      label_low: "<attr fs='18' fg='#1E6FCC' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_medium: "<attr fs='18' fg='#1E6FCC' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_high: "<attr fs='18' fg='#1E6FCC' ff='CaskaydiaCove Nerd Font Regular'></attr> {volume_level}%"
+      label_mute: "<attr fs='18' fg='#CC3E28' ff='CaskaydiaCove Nerd Font Regular'></attr><attr fg='#ff819f'> {volume_level}%</attr>"
+      margin: "0 20px 0 2px"
     - type: "battery"
-      label_draining: "<attr fg='#f3e430' fs='20' ff='Pixelcraft Nerd Font Regular'>⌛</attr> {battery_level}% "
-      label_power_saver: "<attr fs='20' fg='#fb007a' ff='Pixelcraft Nerd Font Regular'>☠</attr><attr fg='#fb007a'> {battery_level}%</attr>"
-      label_charging: "<attr fs='20' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'>⚡</attr> {battery_level}% "
+      label_draining: "<attr fg='#B58900' fs='18' ff='CaskaydiaCove Nerd Font Regular'></attr>  {battery_level}% "
+      label_power_saver: "<attr fs='18' fg='#216609' ff='CaskaydiaCove Nerd Font Regular'></attr><attr fg='#ff819f'> {battery_level}%</attr>"
+      label_charging: "<attr fs='17' fg='#B58900' ff='CaskaydiaCove Nerd Font Regular'>⚡</attr> {battery_level}% "
       margin: "0 0 0 0px"
     - type: "network"
-      label_no_internet: "<attr fg='#fb007a' fs='21' ff='Pixelcraft Nerd Font Regular'>✘</attr>"
-      label_ethernet: "<attr fs='22' ff='Pixelcraft Nerd Font Regular'></attr>"
+      label_no_internet: "<attr fg='#CC3E28' fs='18' ff='CaskaydiaCove Nerd Font Regular'>\U000F1616</attr>"
+      label_ethernet: "<attr fs='18' ff='CaskaydiaCove Nerd Font Regular'>\U000F0200</attr>"
       label_wifi_strength_0: "WiFi: 0%"
       label_wifi_strength_25: "WiFi: 25%"
       label_wifi_strength_50: "WiFi: 50%"
@@ -125,13 +125,12 @@ bar:
       label_wifi_strength_100: "WiFi: 100%"
       margin: "0 0px 0 20px"
     - type: "tiling direction"
-      label_horizontal: "<attr fs='21' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'> ⏵</attr>"
-      label_vertical: "<attr fs='21' fg='#f3e430' ff='Pixelcraft Nerd Font Regular'> ⏷</attr>"
+      label_horizontal: "<attr fs='21' ff='CaskaydiaCove Nerd Font Regular'> ⏵ </attr>"
+      label_vertical: "<attr fs='21' ff='CaskaydiaCove Nerd Font Regular'> ⏷ </attr>"
       # background: "#ffffff33"
 
       margin: "0 px"
       # padding: "4px 4px"
-    #   margin: "0 14px"
     - type: "clock"
       # Documentation on formatting date/time string:
 
@@ -141,7 +140,7 @@ bar:
 
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: " HH:mm dddd, dd/MM/yyyy"
-      margin: "0 6px 0 6px"
+      margin: "0 12px 0 6px"
 workspaces:
   - name: "1"
     # Optional override for the workspace label in the bar. Does not need to be unique.
