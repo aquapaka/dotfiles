@@ -60,7 +60,7 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 | ❤️ khanhoa |
 | :---: |
-| ⚠️ She plays guitar |
+| She plays guitar |
 |![khanhoa-1](rice-previews/khanhoa-1.png)|
 |![khanhoa-2](rice-previews/khanhoa-2.png)|
 |![khanhoa-3](rice-previews/khanhoa-3.png)|
