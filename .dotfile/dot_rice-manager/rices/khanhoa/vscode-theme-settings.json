@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Paper",
-  "workbench.iconTheme": "gruvbox-material-icons",
+  "workbench.iconTheme": "vs-minimal",
   "editor.fontFamily": "'Monaspace Xenon'",
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 18,
