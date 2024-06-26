@@ -27,6 +27,13 @@ set_wezterm_theme() {
   cat ./rices/$theme/wezterm/wezterm-theme.lua > ~/.config/wezterm/wezterm-theme.lua
 }
 
+# Set alacritty colorscheme
+set_alacritty_config() {
+  echo "Setting alacritty config..."
+  cat ./rices/$theme/alacritty/rice-colors.toml > ~/AppData/Roaming/alacritty/rice-colors.toml
+  cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
+}
+
 # Set glazewm configs
 set_glazewm_config() {
   echo "Setting Glazewm config..."
@@ -74,7 +81,8 @@ for theme in "${avaiableThemes[@]}"; do
     # # Apply configs
     set_glazewm_config
     set_desktop_wallpaper
-    set_wezterm_theme
+    # set_wezterm_theme
+    set_alacritty_config
     set_vscode_theme
     toggle_rounded_corners
     change_windows_lightdark_mode

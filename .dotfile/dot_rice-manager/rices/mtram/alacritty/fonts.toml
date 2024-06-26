@@ -1,0 +1,9 @@
+[font]
+normal = { family = "JetbrainsMono Nerd Font Mono",style = "Medium" }
+bold = { family = "JetbrainsMono Nerd Font Mono", style = "Bold" }
+italic = { family = "JetbrainsMono Nerd Font Mono", style = "Italic" }
+bold_italic = { family = "JetbrainsMono Nerd Font Mono", style = "Bold Italic" }
+size = 14
+offset = { x = 1, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true

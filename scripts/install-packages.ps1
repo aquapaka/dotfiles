@@ -1,8 +1,9 @@
 # Required packages (Needed for everything to work)
-winget install WezTerm -e;
+# winget install WezTerm -e;
+winget install Alacritty.Alacritty --silent
 # winget install GlazeWM -e;
-winget install LGUG2Z.komorebi
-winget install LGUG2Z.whkd
+winget install LGUG2Z.komorebi --silent
+winget install LGUG2Z.whkd --silent
 winget install --id eza-community.eza -e;
 winget install --id MikeFarah.yq;
 winget install --id jqlang.jq;

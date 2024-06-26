@@ -1,0 +1,9 @@
+[font]
+normal = { family = "Scientifica" }
+bold = { family = "Scientifica", style = "Bold" }
+italic = { family = "Scientifica", style = "Italic" }
+bold_italic = { family = "Scientifica", style = "Bold Italic" }
+size = 16.5
+offset = { x = 2, y = 2 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
