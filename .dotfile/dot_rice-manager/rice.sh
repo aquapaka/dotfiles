@@ -21,12 +21,6 @@ Usage:
 "
 }
 
-# Set wezterm theme
-set_wezterm_theme() {
-  echo "Setting wezterm theme..."
-  cat ./rices/$theme/wezterm/wezterm-theme.lua > ~/.config/wezterm/wezterm-theme.lua
-}
-
 # Set alacritty colorscheme
 set_alacritty_config() {
   echo "Setting alacritty config..."
