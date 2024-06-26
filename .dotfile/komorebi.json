@@ -1,0 +1,77 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.27/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "mouse_follows_focus": true,
+  "focus_follows_mouse": "Windows",
+  "default_workspace_padding": 8,
+  "default_container_padding": 8,
+  "border": true,
+  "border_width": 2,
+  "border_offset": -1,
+  "border_style": "Square",
+  "border_colours": {
+    "single": "#B8BB26",
+    "stack": "#83A598",
+    "monocle": "#FB4934",
+    "unfocused": "#1D2021"
+  },
+  "transparency": false,
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#B8BB26",
+      "unfocused_text": "#EBDBB2",
+      "background": "#1D2021"
+    }
+  },
+  "monitors": [
+    {
+      "workspaces": [
+        {
+          "name": "TERMINAL",
+          "layout": "Grid"
+        },
+        {
+          "name": "BROWSER",
+          "layout": "BSP"
+        },
+        {
+          "name": "DEVELOPMENT",
+          "layout": "BSP"
+        },
+        {
+          "name": "FILE",
+          "layout": "VerticalStack"
+        },
+        {
+          "name": "COMMUNICATION",
+          "layout": "BSP"
+        },
+        {
+          "name": "DESIGN",
+          "layout": "BSP"
+        },
+        {
+          "name": "GAMING",
+          "layout": "BSP"
+        },
+        {
+          "name": "NOTION",
+          "layout": "BSP"
+        },
+        {
+          "name": "OTHERS",
+          "layout": "BSP"
+        },
+        {
+          "name": "DESKTOP",
+          "layout": "BSP"
+        }
+      ]
+    }
+  ]
+}
