@@ -3,7 +3,7 @@
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
-  "mouse_follows_focus": true,
+  "mouse_follows_focus": false,
   "default_workspace_padding": 4,
   "default_container_padding": 4,
   "border": true,
@@ -32,6 +32,13 @@
     {
       "kind": "Class",
       "id": "SDL_app",
+      "matching_strategy": "Equals"
+    }
+  ],
+  "float_rules": [
+    {
+      "kind": "Exe",
+      "id": "Zebar.exe",
       "matching_strategy": "Equals"
     }
   ],
