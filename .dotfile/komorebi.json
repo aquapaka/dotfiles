@@ -28,28 +28,70 @@
       "background": "#1D2021"
     }
   },
+  "initial_workspace_rules": [],
+  "tray_and_multi_window_applications": [
+    {
+      "kind": "Class",
+      "id": "SDL_app",
+      "matching_strategy": "Equals"
+    }
+  ],
   "monitors": [
     {
+      "window_based_work_area_offset": {"top": 0, "bottom": 0, "left": 0, "right": 0},
       "workspaces": [
         {
           "name": "TERMINAL",
-          "layout": "Grid"
+          "layout": "Grid",
+          "initial_workspace_rules": [{
+            "kind": "Exe",
+            "id": "alacritty.exe",
+            "matching_strategy": "Equals"
+          }]
         },
         {
           "name": "BROWSER",
-          "layout": "BSP"
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "chrome.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "DEVELOPMENT",
-          "layout": "BSP"
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Code.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "FILE",
-          "layout": "VerticalStack"
+          "layout": "VerticalStack",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "explorer.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "COMMUNICATION",
-          "layout": "BSP"
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Discord.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "DESIGN",
@@ -61,11 +103,25 @@
         },
         {
           "name": "NOTION",
-          "layout": "BSP"
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Notion.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "OTHERS",
-          "layout": "BSP"
+          "layout": "BSP",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "vsthost.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "DESKTOP",
