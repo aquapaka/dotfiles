@@ -3,7 +3,7 @@
 # Reload whkd configuration
 # alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
 alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o         : komorebic reload-configuration
+alt + shift + o         : komorebic reload-configuration; taskkill /f /im Zebar.exe; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -NoNewWindow -FilePath "zebar" -ArgumentList "open bar --args $monitor" };
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -80,4 +80,4 @@ alt + shift + 9         : komorebic move-to-workspace 8
 alt + shift + 0         : komorebic move-to-workspace 9
 
 # Additional shortcuts
-alt + return						: cd ~; alacritty
+alt + return						: cd ~; start alacritty

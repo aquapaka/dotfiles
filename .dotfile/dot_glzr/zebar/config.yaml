@@ -44,7 +44,7 @@ window/bar:
     color: #EBDBB2;
     font-family: Pixelcraft Nerd Font;
     font-size: 13.5pt;
-    padding: 0px 24px;
+    padding: 0px 24px 2px;
     border-bottom: 1px solid #ffffff08;
     background: #1D2021E6;
   group/left:
@@ -92,6 +92,11 @@ window/bar:
     styles: |
       justify-self: center;
 
+    template/host:
+      providers: ["host"]
+      template: |
+        <span>{{host.hostname}}</span>
+
   group/right:
     styles: |
       justify-self: end;
@@ -129,7 +134,7 @@ window/bar:
       template: |
         <div class='memory'>✂</div>
         {{ ((usedBytes, totalBytes) => {
-            return `${Math.floor(usedBytes / (1024 * 1024))}/${Math.floor(totalBytes / (1024 * 1024))} MB`;
+            return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GB'}`;
         })(memory.usedMemory, memory.totalMemory) }}
 
     template/battery:
@@ -142,7 +147,7 @@ window/bar:
 
         .battery {
           padding-top: 4px;
-          font-size: 16pt;
+          font-size: 17pt;
           color: #fabd2f;
         }
 
@@ -151,14 +156,23 @@ window/bar:
         }
 
         .charging-icon {
+          color: #83A598;
           position: absolute;
-          font-size: 13pt;
-          left: 2px;
-          top: 2px;
+          font-size: 15pt;
+          left: 7px;
+          bottom: 0px;
+        }
+
+        .full {
+          color: #b8bb26;
+          font-size: 11pt;
+          left: 8px;
+          bottom: 4px;
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
-        @if (battery.isCharging) {<div class="charging-icon">⚡</div>}
+        @if (battery.state === 'charging') {<div class="charging-icon">⚡</div>}
+        @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->
         @if (battery.chargePercent > 94) {<div class='battery'> </div>}
@@ -209,4 +223,4 @@ window/bar:
           color: #D3869B;
         }
       template: |
-        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 'EEE	d MMM t') }}
+        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 't, EEEE, d MMM y') }}
