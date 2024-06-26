@@ -31,7 +31,7 @@ function module.apply_to_config(config)
     -- Specifies the border color of the cursor when the cursor style is set to Block,
     -- or the color of the vertical or horizontal bar when the cursor style is set to
     -- Bar or Underline.
-    cursor_border = '#CC3E28',
+    cursor_border = '#000000',
 
     -- the foreground color of selected text
     selection_fg = '#000000',
