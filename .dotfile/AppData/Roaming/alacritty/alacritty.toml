@@ -6,7 +6,7 @@
 #  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
 #	aquapaka - https://github.com/aquapaka/dotfiles
 
-import = ["~/AppData/Roaming/alacritty/rice-colors.toml", "~/AppData/Roaming/alacritty/fonts.toml"]
+import = ["~/AppData/Roaming/alacritty/colors.toml", "~/AppData/Roaming/alacritty/fonts.toml"]
 
 #working_directory     = "None"
 live_config_reload = true

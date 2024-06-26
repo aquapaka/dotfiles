@@ -24,16 +24,8 @@ Usage:
 # Set alacritty colorscheme
 set_alacritty_config() {
   echo "Setting alacritty config..."
-  cat ./rices/$theme/alacritty/rice-colors.toml > ~/AppData/Roaming/alacritty/rice-colors.toml
+  cat ./rices/$theme/alacritty/colors.toml > ~/AppData/Roaming/alacritty/colors.toml
   cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
-}
-
-# Set glazewm configs
-set_glazewm_config() {
-  echo "Setting Glazewm config..."
-  MERGED_CONFIG=$(yq eval-all '. as $item ireduce ({}; . * $item )' ~/.glaze-wm/config.yaml ./rices/$theme/glaze-theme-config.yaml)
-  printf '%s\n' "$MERGED_CONFIG" > ~/.glaze-wm/config.yaml
-  glazewm command '"reload config"' >/dev/null
 }
 
 # Set desktop wallpaper
@@ -73,9 +65,7 @@ for theme in "${avaiableThemes[@]}"; do
     echo "Applying $theme theme..."
 
     # # Apply configs
-    set_glazewm_config
     set_desktop_wallpaper
-    # set_wezterm_theme
     set_alacritty_config
     set_vscode_theme
     toggle_rounded_corners

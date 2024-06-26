@@ -26,17 +26,13 @@ background = "#92B8A9"
 foreground = "#1D2021"
 background = "#FFC130"
 
-[colors.line_indicator]
-#foreground            = "None"
-#background            = "None"
-
 [colors.footer_bar]
 foreground = "#1D2021"
 background = "#8EC07C"
 
 [colors.selection]
-text = "#1D2021"
-background = "#383E40"
+text = "#FFC130"
+background = "#665C51"
 
 [colors.normal]
 black = "#665C51"
@@ -69,14 +65,9 @@ cyan = "#8EC07C"
 white = "#EBDBB2"
 
 [colors]
-indexed_colors = [
-    { index = 16, color = "#FAB387" },
-    { index = 17, color = "#F5E0DC" },
-]
-#transparent_background_colors = false
 draw_bold_text_with_bright_colors = true
 
 [bell]
 animation = "EaseOutExpo"
 duration = 3
-color = "#FABD2F"
+color = "#FFC130"
