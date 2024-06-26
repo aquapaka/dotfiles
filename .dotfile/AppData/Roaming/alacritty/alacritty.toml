@@ -17,7 +17,7 @@ program = "C:/msys64/msys2_shell.cmd"
 args = ["-defterm -here -no-start -ucrt64 -full-path -shell zsh"]
 
 [env]
-TERM = "Alacritty"
+TERM = "alacritty"
 
 [window]
 # dimensions = { columns = 200, lines = 45 }
