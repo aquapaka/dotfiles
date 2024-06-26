@@ -22,9 +22,10 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Wezterm**
+- Terminal: **Alacritty**
 - Shell: **Zsh** inside MSYS2
-- Window Manager/Title Bar: **GlazeWM**
+- Tiling Window Manager: **Komorebi**
+- Bar: **Zebar**
 - Package manager: **Winget**
 - Dotfiles manager: **Chezmoi**
 
@@ -83,8 +84,8 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 ### Change theme
 
-- From Alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
-- Background is selected randomize
+- From alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
+- Background is selected randomize from rice's wallpaper folder
 
 ### Useful keybindings
 
@@ -193,7 +194,11 @@ Add those to Path variables
 
 - Open/Run **scripts/Restore-old-context-menu.reg**
 
-### Auto start GlazeWM at windows start
+### Auto start Komorebi at windows start
+
+Updating...
+
+<!-- ### Auto start GlazeWM at windows start
 
 - Open **Task scheduler**
 - Choose **Create Basic Task...**
@@ -206,8 +211,7 @@ Add those to Path variables
   - **General**: enable *Run with highest privileges* (required for glazeWM could manages all windows)
   - **Conditions**: disable/untick *everything* (including greyed out settings)
   - **Settings**: disable/untick *Stop the task if it runs longer than:*
-- Click **Ok** to save everything and we're good to go
-
+- Click **Ok** to save everything and we're good to go -->
 
 ### Optional
 
