@@ -1,17 +1,15 @@
 # Required packages (Needed for everything to work)
-# winget install WezTerm -e;
 winget install Alacritty.Alacritty --silent
-# winget install GlazeWM -e;
 winget install LGUG2Z.komorebi --silent
 winget install LGUG2Z.whkd --silent
-winget install --id eza-community.eza -e;
-winget install --id MikeFarah.yq;
-winget install --id jqlang.jq;
-winget install --id MSYS2.MSYS2 -e;
+winget install --id eza-community.eza -e --silent;
+winget install --id MikeFarah.yq --silent;
+winget install --id jqlang.jq --silent;
+winget install --id MSYS2.MSYS2 -e --silent;
+winget install --id Microsoft.PowerToys -e;
+winget install Git -e -i;
 
 # Application (comment out things you don't need before running this script)
-winget install Git -e -i;
-winget install --id Microsoft.PowerToys -e;
 winget install --id Discord.Discord -e;
 winget install --id Google.Chrome -e;
 winget install --id Google.GoogleDrive -e;
