@@ -44,7 +44,7 @@ window/bar:
     color: #EBDBB2;
     font-family: Pixelcraft Nerd Font;
     font-size: 13.5pt;
-    padding: 4px 24px;
+    padding: 0px 24px;
     border-bottom: 1px solid #ffffff08;
     background: #1D2021E6;
   group/left:
@@ -55,8 +55,12 @@ window/bar:
     template/logo:
       styles: |
         margin-right: 20px;
+
+        .os {
+          color: #FFC130;
+        }
       template: |
-        <i class="nf nf-fa-windows"></i>
+        <div class='os'>☠</div>
 
     template/workspaces:
       styles: |
@@ -88,16 +92,6 @@ window/bar:
     styles: |
       justify-self: center;
 
-    template/clock:
-      providers: ["date"]
-      # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-      styles: |
-        .clock {
-          color: #fabd2f;
-        }
-      template: |
-        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 'EEE	d MMM t') }}
-
   group/right:
     styles: |
       justify-self: end;
@@ -105,7 +99,7 @@ window/bar:
       display: flex;
 
       .template {
-        margin-left: 20px;
+        margin-left: 24px;
       }
 
     template/cpu:
@@ -206,3 +200,13 @@ window/bar:
           @case ('thunder_night') {<span class='rainy-day'>⛈ </span>}
         }
         {{ weather.celsiusTemp }}°C
+
+    template/clock:
+      providers: ["date"]
+      # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+      styles: |
+        .clock {
+          color: #D3869B;
+        }
+      template: |
+        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 'EEE	d MMM t') }}
