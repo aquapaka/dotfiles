@@ -4,9 +4,8 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "mouse_follows_focus": true,
-  "focus_follows_mouse": "Windows",
-  "default_workspace_padding": 8,
-  "default_container_padding": 8,
+  "default_workspace_padding": 4,
+  "default_container_padding": 4,
   "border": true,
   "border_width": 2,
   "border_offset": -1,
@@ -38,7 +37,7 @@
   ],
   "monitors": [
     {
-      "window_based_work_area_offset": {"top": 0, "bottom": 0, "left": 0, "right": 0},
+      "work_area_offset": {"top": 50, "bottom": 50, "left": 0, "right": 0},
       "workspaces": [
         {
           "name": "TERMINAL",

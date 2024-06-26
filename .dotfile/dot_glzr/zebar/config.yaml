@@ -1,0 +1,208 @@
+# Yaml is white-space sensitive (use 2 spaces to indent).
+
+###
+# Settings to apply to all windows.
+#
+# Docs regarding global: https://some-future-docs-link.com
+global:
+  # Whether to enable the browser devtools.
+  enable_devtools: true
+
+###
+# Define a new window with an id of 'bar'. This window can then be opened
+# via the Zebar cli by running 'zebar open bar'.
+#
+# Docs regarding window: https://some-future-docs-link.com
+window/bar:
+  providers: ["self"]
+  # Width of the window in physical pixels.
+  width: "{{ self.args.MONITOR_WIDTH - 16 }}"
+  # Height of the window in physical pixels.
+  height: "42"
+  # X-position of the window in physical pixels.
+  position_x: "{{ self.args.MONITOR_X + 8 }}"
+  # Y-position of the window in physical pixels.
+  position_y: "{{ self.args.MONITOR_Y + 8 }}"
+  # Whether to show the window above/below all others.
+  # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
+  z_order: "always_on_top"
+  # Whether the window should be shown in the taskbar.
+  show_in_taskbar: false
+  # Whether the window should have resize handles.
+  resizable: false
+  # Styles to apply globally within the window. For example, we can use
+  # this to import the Nerdfonts icon font. Ref https://www.nerdfonts.com/cheat-sheet
+  # for a cheatsheet of available Nerdfonts icons.
+  # global_styles: |
+  # @import "https://www.nerdfonts.com/assets/css/webfont.css";
+  # CSS/SCSS styles to apply to the root element within the window.
+  styles: |
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    height: 100%;
+    color: #EBDBB2;
+    font-family: Pixelcraft Nerd Font;
+    font-size: 13.5pt;
+    padding: 4px 24px;
+    border-bottom: 1px solid #ffffff08;
+    background: #1D2021E6;
+  group/left:
+    styles: |
+      display: flex;
+      align-items: center;
+
+    template/logo:
+      styles: |
+        margin-right: 20px;
+      template: |
+        <i class="nf nf-fa-windows"></i>
+
+    template/workspaces:
+      styles: |
+        display: flex;
+        align-items: center;
+
+        .workspace {
+          background: rgba(255, 255, 255, 0.05);
+          margin-right: 4px;
+          width: 30px;
+          height: 30px;
+          color: #ffffffe6;
+          border: none;
+          border-radius: 2px;
+
+          &.active {
+            background: rgba(255, 255, 255, 0.1);
+          }
+        }
+      providers: ["komorebi"]
+      template: |
+        @for (workspace of komorebi.currentWorkspaces) {
+          <button class="workspace {{ workspace === komorebi.focusedWorkspace && 'active' }}">
+            {{ workspace.name }}
+          </button>
+        }
+
+  group/center:
+    styles: |
+      justify-self: center;
+
+    template/clock:
+      providers: ["date"]
+      # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
+      styles: |
+        .clock {
+          color: #fabd2f;
+        }
+      template: |
+        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 'EEE	d MMM t') }}
+
+  group/right:
+    styles: |
+      justify-self: end;
+      align-items: center;
+      display: flex;
+
+      .template {
+        margin-left: 20px;
+      }
+
+    template/cpu:
+      providers:
+        - type: 'cpu'
+          refresh_interval: 1000
+      styles: |
+        .cpu {
+          color: #fb4934;
+        }
+      template: |
+        <span class='cpu'>❤ </span><span>{{ Math.round(cpu.usage) }}%</span>
+
+    template/memory:
+      providers:
+        - type: 'memory'
+          refresh_interval: 1000
+      styles: |
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        .memory {
+          padding-bottom: 2px;
+          color: #b8bb26;
+        }
+      template: |
+        <div class='memory'>✂</div>
+        {{ ((usedBytes, totalBytes) => {
+            return `${Math.floor(usedBytes / (1024 * 1024))}/${Math.floor(totalBytes / (1024 * 1024))} MB`;
+        })(memory.usedMemory, memory.totalMemory) }}
+
+    template/battery:
+      providers: ["battery"]
+      styles: |
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .battery {
+          padding-top: 4px;
+          font-size: 16pt;
+          color: #fabd2f;
+        }
+
+        .low-battery {
+          color: #FF4A35;
+        }
+
+        .charging-icon {
+          position: absolute;
+          font-size: 13pt;
+          left: 2px;
+          top: 2px;
+        }
+      template: |
+        <!-- Show icon for whether battery is charging. -->
+        @if (battery.isCharging) {<div class="charging-icon">⚡</div>}
+
+        <!-- Show icon for how much of the battery is charged. -->
+        @if (battery.chargePercent > 94) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 80) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 70) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 60) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 50) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 30) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 20) {<div class='battery'> </div>}
+        @else {<div class='battery'> </div>}
+
+        {{ Math.round(battery.chargePercent) }}%
+
+    template/weather:
+      providers: ["weather"]
+      styles: |
+        .clear-day {
+          color: #fabd2f;
+        }
+        .cloudy-day {
+          color: #8EC07C;
+        }
+        .rainy-day {
+          color: #83A598;
+        }
+      template: |
+        @switch (weather.status) {
+          @case ('clear_day') {<span class='clear-day'>☀ </span>}
+          @case ('clear_night') {<span class='clear-day'>☽ </span>}
+          @case ('cloudy_day') {<span class='cloudy-day'>☁ </span>}
+          @case ('cloudy_night') {<span class='cloudy-day'>☁ </span>}
+          @case ('light_rain_day') {<span class='rainy-day'>☂ </span>}
+          @case ('light_rain_night') {<span class='rainy-day'>☂ </span>}
+          @case ('heavy_rain_day') {<span class='rainy-day'>☔ </span>}
+          @case ('heavy_rain_night') {<span class='rainy-day'>☔ </span>}
+          @case ('snow_day') {<span class='cloudy-day'>☃ </span>}
+          @case ('snow_night') {<span class='cloudy-day'>☃ </span>}
+          @case ('thunder_day') {<span class='rainy-day'>⛈ </span>}
+          @case ('thunder_night') {<span class='rainy-day'>⛈ </span>}
+        }
+        {{ weather.celsiusTemp }}°C
