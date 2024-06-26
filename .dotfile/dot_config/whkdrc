@@ -80,4 +80,4 @@ alt + shift + 9         : komorebic move-to-workspace 8
 alt + shift + 0         : komorebic move-to-workspace 9
 
 # Additional shortcuts
-alt + return						: alacritty
+alt + return						: cd ~; alacritty
