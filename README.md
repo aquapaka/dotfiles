@@ -175,7 +175,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 Add those to Path variables
 
-- "C:\Users\%yourusername%\\.local\bin"
+- "%USERPROFILE%\.local\bin"
 - "C:\Program Files\Win11 Toggle Rounded Corners" (if use with win11-toggle-rounded-corners - see **Optional** below)
 
 ### Install VS Code Theme
