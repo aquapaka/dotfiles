@@ -18,6 +18,9 @@ jobs:
 
       # Required for cache pnpm to work
       - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
 
       - name: Setup Node.js 20
         uses: actions/setup-node@v4
