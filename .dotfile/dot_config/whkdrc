@@ -2,8 +2,8 @@
 
 # Reload whkd configuration
 # alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-alt + o                 : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-alt + shift + o         : komorebic reload-configuration; taskkill /f /im Zebar.exe; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -NoNewWindow -FilePath "zebar" -ArgumentList "open bar --args $monitor" };
+alt + shift + r         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+ctrl + alt + shift + r  : komorebic reload-configuration; taskkill /f /im Zebar.exe; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -NoNewWindow -FilePath "zebar" -ArgumentList "open bar --args $monitor" };
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -44,11 +44,11 @@ alt + shift + oem_plus  : komorebic resize-axis vertical increase
 alt + shift + oem_minus : komorebic resize-axis vertical decrease
 
 # Manipulate windows
-alt + t                 : komorebic toggle-float
+alt + f                 : komorebic toggle-float
 alt + m                 : komorebic toggle-monocle
 
 # Window manager options
-alt + shift + r         : komorebic retile
+alt + shift + t         : komorebic retile
 alt + p                 : komorebic toggle-pause
 
 # Layouts
