@@ -39,6 +39,21 @@ set_vscode_theme() {
   echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
 }
 
+# Set Zebar theme
+set_zebar_theme() {
+  echo "Setting zebar theme..."
+  cat ./rices/$theme/zebar-config.yaml > ~/.glzr/zebar/config.yaml
+  echo "Reload zebar..."
+  powershell 'taskkill /f /im Zebar.exe | Out-Null; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -WindowStyle Hidden -FilePath "zebar" -ArgumentList "open bar --args $monitor" };'
+}
+
+# Set komorebi theme
+set_komorebi_theme() {
+  echo "Setting komorebi theme..."
+  echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
+  komorebic reload-configuration
+}
+
 # Toggle rounded corners
 toggle_rounded_corners() {
   echo "Changing windows corners..."
@@ -76,11 +91,13 @@ for theme in "${avaiableThemes[@]}"; do
     set_desktop_wallpaper
     set_alacritty_config
     set_vscode_theme
+    set_zebar_theme
+    set_komorebi_theme
     toggle_rounded_corners
     change_windows_lightdark_mode
 
     echo "Completed!"
-    exit 1
+    exit 0
   fi
 done
 
