@@ -1,0 +1,15 @@
+{
+  "name": "aquapaka-dotfiles",
+  "version": "1.1.0",
+  "description": "A configurable ricing dotfile for Windows 11",
+  "scripts": {
+    "version-packages": "changeset version",
+    "release": "changeset publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@changesets/cli": "^2.27.6"
+  }
+}
