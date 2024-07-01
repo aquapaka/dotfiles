@@ -1,0 +1,24 @@
+{
+  "default_workspace_padding": 4,
+  "default_container_padding": 4,
+  "border": true,
+  "border_width": 2,
+  "border_style": "Square",
+  "border_colours": {
+    "single": "#000001",
+    "stack": "#2785f2",
+    "monocle": "#216609",
+    "unfocused": "#F2EEDE"
+  },
+  "transparency": false,
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#216609",
+      "unfocused_text": "#000000",
+      "background": "#F2EEDE"
+    }
+  }
+}
