@@ -8,7 +8,7 @@
 
 import = ["~/AppData/Roaming/alacritty/colors.toml", "~/AppData/Roaming/alacritty/fonts.toml"]
 
-#working_directory     = "None"
+# working_directory     = "C:/Users/aquapaka"
 live_config_reload = true
 #ipc_socket            = true
 
@@ -50,7 +50,7 @@ blinking = "On"
 
 [cursor.vi_mode_style]
 shape = "Block"
-blinking = "Off"
+blinking = "On"
 
 [cursor]
 blink_interval = 550
@@ -107,7 +107,7 @@ mouse.enabled = true
 # render_timer          = true
 #persistent_logging    = false
 #log_level             = "Warn"
-#renderer              = "None"
+# renderer              = "None"
 #print_events          = false
-#highlight_damage      = false
+# highlight_damage      = true
 #prefer_egl            = false

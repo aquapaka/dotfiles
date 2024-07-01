@@ -16,8 +16,8 @@ Usage:
 `basename $0`\t[meimei] \t Warming and caring
 \t[tlinh] \t Only in my dreams
 \t[mtram]  \t Calming and peaceful
+\t[khanhoa] \t One of my oldest memories
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
-\t[khanhoa] \t She plays guitar
 "
 }
 
@@ -48,10 +48,16 @@ toggle_rounded_corners() {
 
 # Change windows light/dark mode
 change_windows_lightdark_mode() {
-  echo "Applying windows color..."
-  option=$(<./rices/$theme/windows-color)
-  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value $option -Type Dword -Force | Out-Null"
-  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value $option -Type Dword -Force | Out-Null"
+  echo "Changing windows theme..."
+  option=$(<./rices/$theme/windows-theme)
+  if [ $option == dark ]
+    then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value 0 -Type Dword -Force | Out-Null"
+  elif [ $option == light ]
+    then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value 1 -Type Dword -Force | Out-Null"
+  else
+    echo "Error: windows-theme must be light or dark"
+    return 1
+  fi
   echo "Reloading explorer..."
   powershell "taskkill /F /IM explorer.exe | Out-Null; start explorer"
 }
