@@ -147,9 +147,18 @@ This will set windows user folder as default home directory
 
 ### Install Zsh
 
-Open **Powershell** and run those commands to install Zsh theme and plugins
+Open **MSYS2 UCRT64** and run below command to install zsh, zsh's themes and plugins
 
 ```
+# Update pacman
+pacman -Syu
+
+# Open MSYS2 Ucrt64 and install ZSH
+pacman -S zsh
+
+# Install git
+pacman -S git
+
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
 
@@ -163,18 +172,11 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins
 git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
 ```
 
-Open **MSYS2 UCRT64** and run below command to install zsh
-
-```
-# Open MSYS2 Ucrt64 and install ZSH
-pacman -S zsh
-```
-
 ### Add New Environment Variables
 
 Add those to Path variables
 
-- "C:\Users\%yourusername%\\.local\bin"
+- "%USERPROFILE%\.local\bin"
 - "C:\Program Files\Win11 Toggle Rounded Corners" (if use with win11-toggle-rounded-corners - see **Optional** below)
 
 ### Install VS Code Theme
