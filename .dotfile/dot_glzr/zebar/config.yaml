@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #000000;
-    font-family: 'Monaspace Xenon Medium', 'CaskaydiaMono Nerd Font Mono';
+    color: #EBDBB2;
+    font-family: Pixelcraft Nerd Font;
     font-size: 13.5pt;
-    padding: 3px 24px 0px;
-    border: 2px solid #000000;
-    background: #F2EEDEE6;
+    padding: 0px 24px 2px;
+    border-bottom: 1px solid #ffffff08;
+    background: #1D2021E6;
   group/left:
     styles: |
       display: flex;
@@ -57,11 +57,10 @@ window/bar:
         margin-right: 20px;
 
         .os {
-          font-size: 32px;
-          color: #000000;
+          color: #FFC130;
         }
       template: |
-        <div class='os'></div>
+        <div class='os'>☠</div>
 
     template/workspaces:
       styles: |
@@ -113,36 +112,27 @@ window/bar:
         - type: 'cpu'
           refresh_interval: 1000
       styles: |
-        position: relative;
-        margin-right: 32px;
-
         .cpu {
-          position: absolute;
-          left: -24px;
-          top: -8px;
-          font-size: 24pt;
-          color: #CC3E28;
+          color: #fb4934;
         }
       template: |
-        <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
+        <span class='cpu'>❤ </span><span>{{ Math.round(cpu.usage) }}%</span>
 
     template/memory:
       providers:
         - type: 'memory'
           refresh_interval: 1000
       styles: |
-        position: relative;
-        margin-right: 21px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
 
         .memory {
-          position: absolute;
-          left: -28px;
-          top: -10px;
-          font-size: 28pt;
-          color: #216609;
+          padding-bottom: 2px;
+          color: #b8bb26;
         }
       template: |
-        <div class='memory'></div>
+        <div class='memory'>✂</div>
         {{ ((usedBytes, totalBytes) => {
             return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GB'}`;
         })(memory.usedMemory, memory.totalMemory) }}
@@ -151,36 +141,33 @@ window/bar:
       providers: ["battery"]
       styles: |
         position: relative;
-        margin-right: 28px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
 
         .battery {
-          position: absolute;
-          left: -20px;
-          top: -3px;
-          font-size: 16pt;
-          color: #B58900;
+          padding-top: 4px;
+          font-size: 17pt;
+          color: #fabd2f;
         }
 
         .low-battery {
-          color: #CC3E28;
+          color: #FF4A35;
         }
 
         .charging-icon {
-          color: #1E6FCC;
+          color: #83A598;
           position: absolute;
-          z-index: 5;
           font-size: 15pt;
-          left: -14px;
+          left: 7px;
           bottom: 0px;
         }
 
         .full {
-          position: absolute;
-          z-index: 5;
-          color: #216609;
+          color: #b8bb26;
           font-size: 11pt;
-          left: -14px;
-          bottom: 0px;
+          left: 8px;
+          bottom: 4px;
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
@@ -188,37 +175,28 @@ window/bar:
         @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->
-        @if (battery.chargePercent > 94) {<div class='battery'>󰁹 </div>}
-        @else if (battery.chargePercent > 80) {<div class='battery'>󰂂 </div>}
-        @else if (battery.chargePercent > 70) {<div class='battery'>󰂁 </div>}
-        @else if (battery.chargePercent > 60) {<div class='battery'>󰂀 </div>}
-        @else if (battery.chargePercent > 50) {<div class='battery'>󰁿 </div>}
-        @else if (battery.chargePercent > 30) {<div class='battery'>󰁾 </div>}
-        @else if (battery.chargePercent > 20) {<div class='battery'>󰁽 </div>}
-        @else {<div class='battery'>󰁺 </div>}
+        @if (battery.chargePercent > 94) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 80) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 70) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 60) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 50) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 30) {<div class='battery'> </div>}
+        @else if (battery.chargePercent > 20) {<div class='battery'> </div>}
+        @else {<div class='battery'> </div>}
 
         {{ Math.round(battery.chargePercent) }}%
 
     template/weather:
       providers: ["weather"]
       styles: |
-        position: relative;
-        margin-right: 22px;
-
-        span {
-          position: absolute;
-          font-size: 21pt;
-          left: -30px;
-          top: -3px;
-        }
         .clear-day {
-          color: #B58900;
+          color: #fabd2f;
         }
         .cloudy-day {
-          color: #AAAAAA;
+          color: #8EC07C;
         }
         .rainy-day {
-          color: #1E6FCC;
+          color: #83A598;
         }
       template: |
         @switch (weather.status) {
@@ -241,14 +219,8 @@ window/bar:
       providers: ["date"]
       # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
       styles: |
-        position: relative;
-
         .clock {
-          color: #5C21A5;
-          position: absolute;
-          font-size: 21pt;
-          left: -23px;
-          top: -6px;
+          color: #D3869B;
         }
       template: |
-        <span class='clock'>󰥔</span>{{ date.toFormat(date.now, 't, EEEE, d MMM y') }}
+        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 't, EEEE, d MMM y') }}
