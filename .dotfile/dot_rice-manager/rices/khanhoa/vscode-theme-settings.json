@@ -1,7 +1,7 @@
 {
   "workbench.colorTheme": "Paper",
   "workbench.iconTheme": "vs-minimal",
-  "editor.fontFamily": "'Monaspace Xenon'",
+  "editor.fontFamily": "'Monaspace Xenon Var Medium', 'CaskaydiaMono Nerd Font Mono'",
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 18,
   "workbench.colorCustomizations": {

@@ -16,23 +16,16 @@ Usage:
 `basename $0`\t[meimei] \t Warming and caring
 \t[tlinh] \t Only in my dreams
 \t[mtram]  \t Calming and peaceful
+\t[khanhoa] \t One of my oldest memories
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
-\t[khanhoa] \t She plays guitar
 "
 }
 
-# Set wezterm theme
-set_wezterm_theme() {
-  echo "Setting wezterm theme..."
-  cat ./rices/$theme/wezterm/wezterm-theme.lua > ~/.config/wezterm/wezterm-theme.lua
-}
-
-# Set glazewm configs
-set_glazewm_config() {
-  echo "Setting Glazewm config..."
-  MERGED_CONFIG=$(yq eval-all '. as $item ireduce ({}; . * $item )' ~/.glaze-wm/config.yaml ./rices/$theme/glaze-theme-config.yaml)
-  printf '%s\n' "$MERGED_CONFIG" > ~/.glaze-wm/config.yaml
-  glazewm command '"reload config"' >/dev/null
+# Set alacritty colorscheme
+set_alacritty_config() {
+  echo "Setting alacritty config..."
+  cat ./rices/$theme/alacritty/colors.toml > ~/AppData/Roaming/alacritty/colors.toml
+  cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
 }
 
 # Set desktop wallpaper
@@ -46,6 +39,21 @@ set_vscode_theme() {
   echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
 }
 
+# Set Zebar theme
+set_zebar_theme() {
+  echo "Setting zebar theme..."
+  cat ./rices/$theme/zebar-config.yaml > ~/.glzr/zebar/config.yaml
+  echo "Reload zebar..."
+  powershell 'taskkill /f /im Zebar.exe | Out-Null; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -WindowStyle Hidden -FilePath "zebar" -ArgumentList "open bar --args $monitor" };'
+}
+
+# Set komorebi theme
+set_komorebi_theme() {
+  echo "Setting komorebi theme..."
+  echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
+  komorebic reload-configuration
+}
+
 # Toggle rounded corners
 toggle_rounded_corners() {
   echo "Changing windows corners..."
@@ -55,10 +63,18 @@ toggle_rounded_corners() {
 
 # Change windows light/dark mode
 change_windows_lightdark_mode() {
-  echo "Applying windows color..."
-  option=$(<./rices/$theme/windows-color)
-  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value $option -Type Dword -Force | Out-Null"
-  powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value $option -Type Dword -Force | Out-Null"
+  echo "Changing windows theme..."
+  option=$(<./rices/$theme/windows-theme)
+  if [ $option == dark ]
+    then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value '0' -Type Dword -Force | Out-Null";
+         powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value '0' -Type Dword -Force | Out-Null"
+  elif [ $option == light ]
+    then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value '1' -Type Dword -Force | Out-Null";
+         powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value '1' -Type Dword -Force | Out-Null"
+  else
+    echo "Error: windows-theme must be light or dark"
+    return 1
+  fi
   echo "Reloading explorer..."
   powershell "taskkill /F /IM explorer.exe | Out-Null; start explorer"
 }
@@ -72,15 +88,16 @@ for theme in "${avaiableThemes[@]}"; do
     echo "Applying $theme theme..."
 
     # # Apply configs
-    set_glazewm_config
     set_desktop_wallpaper
-    set_wezterm_theme
+    set_alacritty_config
     set_vscode_theme
+    set_zebar_theme
+    set_komorebi_theme
     toggle_rounded_corners
     change_windows_lightdark_mode
 
     echo "Completed!"
-    exit 1
+    exit 0
   fi
 done
 

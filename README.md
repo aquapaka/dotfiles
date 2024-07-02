@@ -2,6 +2,11 @@
 
 Yes it's **Windows**
 
+![GitHub Release](https://img.shields.io/github/v/release/aquapaka/dotfiles)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/aquapaka/dotfiles/changeset-versioning.yml)
+![GitHub License](https://img.shields.io/github/license/aquapaka/dotfiles)
+![Discord](https://img.shields.io/discord/1162030825290866698)
+
 ## Introduction
 
 ### ❤️ For the Ricing and Unixporn Enthusiasts
@@ -22,9 +27,10 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Wezterm**
+- Terminal: **Alacritty**
 - Shell: **Zsh** inside MSYS2
-- Window Manager/Title Bar: **GlazeWM**
+- Tiling Window Manager: **Komorebi**
+- Bar: **Zebar**
 - Package manager: **Winget**
 - Dotfiles manager: **Chezmoi**
 
@@ -83,8 +89,8 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 ### Change theme
 
-- From Alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
-- Background is selected randomize
+- From alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
+- Background is selected randomize from rice's wallpaper folder
 
 ### Useful keybindings
 
@@ -94,13 +100,13 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |<kbd>alt</kbd> + <kbd>Space</kbd>| Open powertoy run |
 |<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| top \| bottom \| right|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| top \| bottom \| right|
-|<kbd>alt</kbd> + <kbd>w</kbd>| Close focusing window|
+|<kbd>alt</kbd> + <kbd>q</kbd>| Close focusing window|
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
-|<kbd>alt</kbd> + <kbd>m</kbd>| Maximize/Unmaximize current window|
-|<kbd>alt</kbd> + <kbd>d</kbd>| Change direction where the next window open should be placed|
-|<kbd>alt</kbd> + <kbd>f</kbd>| Make focusing window float/tiled|
-|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>w</kbd>| Exit glazewm |
+|<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
+|<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
+|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and Zebar |
 
 Above is customized version of i3 keybindings due to some conflict with Powertoys. You can alway change them in your glaze config file.
 
@@ -155,9 +161,6 @@ pacman -Syu
 # Open MSYS2 Ucrt64 and install ZSH
 pacman -S zsh
 
-# Install git
-pacman -S git
-
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
 
@@ -195,7 +198,11 @@ Add those to Path variables
 
 - Open/Run **scripts/Restore-old-context-menu.reg**
 
-### Auto start GlazeWM at windows start
+### Auto start Komorebi at windows start
+
+Updating...
+
+<!-- ### Auto start GlazeWM at windows start
 
 - Open **Task scheduler**
 - Choose **Create Basic Task...**
@@ -208,8 +215,7 @@ Add those to Path variables
   - **General**: enable *Run with highest privileges* (required for glazeWM could manages all windows)
   - **Conditions**: disable/untick *everything* (including greyed out settings)
   - **Settings**: disable/untick *Stop the task if it runs longer than:*
-- Click **Ok** to save everything and we're good to go
-
+- Click **Ok** to save everything and we're good to go -->
 
 ### Optional
 
