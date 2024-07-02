@@ -27,7 +27,7 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Alacritty**
+- Terminal: **Wezterm**
 - Shell: **Zsh** inside MSYS2
 - Tiling Window Manager: **Komorebi**
 - Bar: **Zebar**
