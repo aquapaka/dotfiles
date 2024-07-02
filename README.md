@@ -198,6 +198,11 @@ Add those to Path variables
 
 - Open/Run **scripts/Restore-old-context-menu.reg**
 
+### Fix terminal cursor glitching while typing
+
+- Go to scripts folder, run **terminal-cursor-fix.sh**
+- Close then re-open terminal
+
 ### Auto start Komorebi at windows start
 
 Updating...
