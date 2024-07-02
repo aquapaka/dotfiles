@@ -110,4 +110,4 @@ mouse.enabled = true
 # renderer              = "None"
 #print_events          = false
 # highlight_damage      = true
-#prefer_egl            = false
+# prefer_egl            = false

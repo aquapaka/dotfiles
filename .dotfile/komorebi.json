@@ -7,14 +7,14 @@
   "default_workspace_padding": 4,
   "default_container_padding": 4,
   "border": true,
-  "border_width": 2,
+  "border_width": 1,
   "border_offset": 0,
   "border_style": "Square",
   "border_colours": {
-    "single": "#000001",
-    "stack": "#2785f2",
-    "monocle": "#216609",
-    "unfocused": "#F2EEDE"
+    "single": "#B8BB26",
+    "stack": "#83A598",
+    "monocle": "#FB4934",
+    "unfocused": "#1D2021"
   },
   "transparency": false,
   "stackbar": {
@@ -22,9 +22,9 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#216609",
-      "unfocused_text": "#000000",
-      "background": "#F2EEDE"
+      "focused_text": "#B8BB26",
+      "unfocused_text": "#EBDBB2",
+      "background": "#1D2021"
     }
   },
   "initial_workspace_rules": [],
@@ -32,13 +32,6 @@
     {
       "kind": "Class",
       "id": "SDL_app",
-      "matching_strategy": "Equals"
-    }
-  ],
-  "float_rules": [
-    {
-      "kind": "Exe",
-      "id": "Zebar.exe",
       "matching_strategy": "Equals"
     }
   ],
