@@ -46,7 +46,7 @@ window/bar:
     font-size: 13.5pt;
     padding: 0px 24px 0px;
     border: 0px solid #fdf9f3;
-    background: #221f22;
+    background: #221f22E6;
   group/left:
     styles: |
       display: flex;
@@ -170,8 +170,8 @@ window/bar:
           position: absolute;
           z-index: 5;
           font-size: 15pt;
-          left: -14px;
-          bottom: 0px;
+          left: -12px;
+          bottom: -8px;
         }
 
         .full {
@@ -184,7 +184,7 @@ window/bar:
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
-        @if (battery.state === 'charging') {<div class="charging-icon">⚡</div>}
+        @if (battery.state === 'charging') {<div class="charging-icon">󱐋</div>}
         @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->

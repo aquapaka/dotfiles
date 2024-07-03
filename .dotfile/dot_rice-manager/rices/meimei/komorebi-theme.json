@@ -1,6 +1,12 @@
 {
   "default_workspace_padding": 4,
   "default_container_padding": 4,
+  "global_work_area_offset": {
+    "top": 50,
+    "bottom": 50,
+    "left": 0,
+    "right": 0
+  },
   "border": true,
   "border_width": 1,
   "border_style": "Square",
