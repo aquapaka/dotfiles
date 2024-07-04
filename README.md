@@ -121,7 +121,7 @@ Above is customized version of i3 keybindings due to some conflict with Powertoy
 Font need to be download and install manually *(Windows is planning to allows installing fonts from winget. Stay tune!)*:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
-- [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
+- [CaskaydiaMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
 - [Monaspace](https://github.com/githubnext/monaspace)
 - [Scientifica](https://github.com/nerdypepper/scientifica/releases)
 

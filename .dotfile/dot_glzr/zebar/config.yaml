@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #fdf9f3;
-    font-family: 'CaskaydiaMono Nerd Font Mono';
-    font-size: 13.5pt;
+    color: #d1ded3;
+    font-family: 'Monaspace Radon Medium', 'CaskaydiaMono Nerd Font Mono';
+    font-size: 12pt;
     padding: 0px 24px 0px;
-    border: 0px solid #fdf9f3;
-    background: #221f22;
+    border: 0px solid #d1ded3;
+    background: #273136E6;
   group/left:
     styles: |
       display: flex;
@@ -54,11 +54,14 @@ window/bar:
 
     template/logo:
       styles: |
+        position: relative;
         margin-right: 20px;
 
         .os {
-          font-size: 32px;
-          color: #ff6188;
+          position: absolute;
+          top: -15px;
+          font-size: 30px;
+          color: #7eb08a;
         }
       template: |
         <div class='os'></div>
@@ -121,7 +124,7 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #ff6188;
+          color: #ff819f;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
@@ -139,7 +142,7 @@ window/bar:
           left: -30px;
           top: -11px;
           font-size: 28pt;
-          color: #a9dc76;
+          color: #7eb08a;
         }
       template: |
         <div class='memory'></div>
@@ -158,33 +161,33 @@ window/bar:
           left: -20px;
           top: -3px;
           font-size: 16pt;
-          color: #ffd866;
+          color: #d2b48c;
         }
 
         .low-battery {
-          color: #ff6188;
+          color: #ff819f;
         }
 
         .charging-icon {
-          color: #78dce8;
+          color: #82beb0;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
-          left: -14px;
-          bottom: 0px;
+          left: -12px;
+          bottom: -8px;
         }
 
         .full {
           position: absolute;
           z-index: 5;
-          color: #a9dc76;
+          color: #7eb08a;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
-        @if (battery.state === 'charging') {<div class="charging-icon">⚡</div>}
+        @if (battery.state === 'charging') {<div class="charging-icon">󱐋</div>}
         @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->
@@ -212,16 +215,16 @@ window/bar:
           top: -3px;
         }
         .clear-day {
-          color: #ffd866;
+          color: #d2b48c;
         }
         .cloudy-day {
-          color: #fdf9f3;
+          color: #d1ded3;
         }
         .rainy-day {
           font-size: 32pt;
           left: -28px;
           top: -16px;
-          color: #59c6ff;
+          color: #7ea4b0;
         }
       template: |
         @switch (weather.status) {
@@ -247,7 +250,7 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #ab9df2;
+          color: #ba8eaf;
           position: absolute;
           font-size: 21pt;
           left: -23px;
