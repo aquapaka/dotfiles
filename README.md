@@ -75,12 +75,13 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 You can customize each theme inside ~/.rice-manager/rices and re-apply it (see **Change theme** below)
 
-- ☑️ Wezterm theme
-- ☑️ GlazeWM theme
+- ☑️ Alacirtty theme
+- ☑️ Komorebi theme
+- ☑️ Zebar theme
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
-- ☑️ Enable/Disable Rounded Cornors (⚠️haven't work on startup yet)
 - ☑️ Windows light/dark mode based on rice
+- ✖️ Enable/Disable Rounded Cornors (⚠️Unstable)
 - ❓ Discord theme
 - 🚧 Btop theme
 - 🚧 *under construction*
@@ -98,17 +99,17 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |:-|:-|
 |<kbd>alt</kbd> + <kbd>enter</kbd>| Open terminal|
 |<kbd>alt</kbd> + <kbd>Space</kbd>| Open powertoy run |
-|<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| top \| bottom \| right|
-|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| top \| bottom \| right|
+|<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| bottom \| top \| right|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| bottom \| top \| right|
 |<kbd>alt</kbd> + <kbd>q</kbd>| Close focusing window|
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
 |<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
 |<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
-|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and Zebar |
+|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and zebar |
 
-Above is customized version of i3 keybindings due to some conflict with Powertoys. You can alway change them in your glaze config file.
+ℹ️ More keybinding can be found inside ```~/.config/whkdrc```
 
 ## 📦 Step by Step Installation
 
@@ -164,8 +165,8 @@ pacman -S zsh
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
 
-# Install Syntax Highlighting Plugin
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
+# Install Fast Syntax Highlighting Plugin
+git clone git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh/plugins/fast-syntax-highlighting
 
 # Install Autosuggestions Plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
