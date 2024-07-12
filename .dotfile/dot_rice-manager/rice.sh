@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "arcade")
+avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "khlinh" "arcade")
 
 usage() {
   printf "
@@ -14,9 +14,10 @@ Rice Script for apply a rice theme
 
 Usage:
 `basename $0`\t[meimei] \t Warming and caring
-\t[tlinh] \t Only in my dreams
-\t[mtram]  \t Calming and peaceful
-\t[khanhoa] \t One of my oldest memories
+\t[tlinh] \t Sweet and mysterious
+\t[mtram] \t Calming and peaceful
+\t[khanhoa] \t Joyful and adventurous
+\t[khlinh] \t Gentle and wise, truly exceptional
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
 "
 }
@@ -94,7 +95,7 @@ for theme in "${avaiableThemes[@]}"; do
     set_vscode_theme
     set_zebar_theme
     set_komorebi_theme
-    toggle_rounded_corners
+    # toggle_rounded_corners
     change_windows_lightdark_mode
 
     echo "Completed!"
