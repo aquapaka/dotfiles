@@ -1,14 +1,14 @@
 {
-  "default_workspace_padding": 4,
-  "default_container_padding": 4,
+  "default_workspace_padding": 8,
+  "default_container_padding": 8,
   "global_work_area_offset": {
-    "top": 50,
-    "bottom": 50,
+    "top": 58,
+    "bottom": 58,
     "left": 0,
     "right": 0
   },
   "border": true,
-  "border_width": 1,
+  "border_width": 2,
   "border_style": "Square",
   "border_colours": {
     "single": "#27fbfe",

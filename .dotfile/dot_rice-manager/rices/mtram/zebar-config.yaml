@@ -46,7 +46,7 @@ window/bar:
     font-size: 12pt;
     padding: 0px 24px 0px;
     border: 0px solid #d1ded3;
-    background: #273136E6;
+    background: #273136CC;
   group/left:
     styles: |
       display: flex;

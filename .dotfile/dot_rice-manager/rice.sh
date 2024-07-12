@@ -51,7 +51,8 @@ set_zebar_theme() {
 set_komorebi_theme() {
   echo "Setting komorebi theme..."
   echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
-  komorebic reload-configuration
+  komorebic stop
+  komorebic start >/dev/null
 }
 
 # Toggle rounded corners

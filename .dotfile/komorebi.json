@@ -4,17 +4,17 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "mouse_follows_focus": false,
-  "default_workspace_padding": 4,
-  "default_container_padding": 4,
+  "default_workspace_padding": 8,
+  "default_container_padding": 8,
   "border": true,
   "border_width": 2,
   "border_offset": -1,
   "border_style": "Square",
   "border_colours": {
-    "single": "#7eb08a",
-    "stack": "#ba8eaf",
-    "monocle": "#d2b48c",
-    "unfocused": "#273136"
+    "single": "#27fbfe",
+    "stack": "#19bffe",
+    "monocle": "#fb007a",
+    "unfocused": "#070219"
   },
   "transparency": false,
   "stackbar": {
@@ -22,12 +22,11 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#ff819f",
-      "unfocused_text": "#d2b48c",
-      "background": "#273136"
+      "focused_text": "#27fbfe",
+      "unfocused_text": "#6800d2",
+      "background": "#070219"
     }
   },
-  "initial_workspace_rules": [],
   "tray_and_multi_window_applications": [
     {
       "kind": "Class",
@@ -35,16 +34,9 @@
       "matching_strategy": "Equals"
     }
   ],
-  "float_rules": [
-    {
-      "kind": "Exe",
-      "id": "Zebar.exe",
-      "matching_strategy": "Equals"
-    }
-  ],
   "global_work_area_offset": {
-    "top": 42,
-    "bottom": 42,
+    "top": 58,
+    "bottom": 58,
     "left": 0,
     "right": 0
   },
@@ -52,93 +44,44 @@
     {
       "workspaces": [
         {
-          "name": "TERMINAL",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "alacritty.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "1",
+          "layout": "Grid"
         },
         {
-          "name": "BROWSER",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "chrome.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "2",
+          "layout": "Grid"
         },
         {
-          "name": "DEVELOPMENT",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Code.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "3",
+          "layout": "Grid"
         },
         {
-          "name": "FILE",
-          "layout": "VerticalStack",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "explorer.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "4",
+          "layout": "Grid"
         },
         {
-          "name": "COMMUNICATION",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Discord.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "5",
+          "layout": "Grid"
         },
         {
-          "name": "DESIGN",
-          "layout": "BSP"
+          "name": "6",
+          "layout": "Grid"
         },
         {
-          "name": "GAMING",
-          "layout": "BSP"
+          "name": "7",
+          "layout": "Grid"
         },
         {
-          "name": "NOTION",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Notion.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "8",
+          "layout": "Grid"
         },
         {
-          "name": "OTHERS",
-          "layout": "BSP",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "vsthost.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "name": "9",
+          "layout": "Grid"
         },
         {
-          "name": "DESKTOP",
-          "layout": "BSP"
+          "name": "0",
+          "layout": "Grid"
         }
       ]
     }

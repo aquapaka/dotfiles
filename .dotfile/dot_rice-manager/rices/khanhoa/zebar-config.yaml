@@ -25,7 +25,7 @@ window/bar:
   position_y: "{{ self.args.MONITOR_Y + 8 }}"
   # Whether to show the window above/below all others.
   # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
-  z_order: "always_on_top"
+  z_order: "always_on_bottom"
   # Whether the window should be shown in the taskbar.
   show_in_taskbar: false
   # Whether the window should have resize handles.
@@ -45,8 +45,8 @@ window/bar:
     font-family: 'Monaspace Xenon Medium', 'CaskaydiaMono Nerd Font Mono';
     font-size: 13.5pt;
     padding: 3px 24px 0px;
-    border: 2px solid #000000;
-    background: #F2EEDEE6;
+    border: 3px solid #000000;
+    background: #F2EEDECC;
   group/left:
     styles: |
       display: flex;

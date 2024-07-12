@@ -16,16 +16,16 @@ global:
 window/bar:
   providers: ["self"]
   # Width of the window in physical pixels.
-  width: "{{ self.args.MONITOR_WIDTH - 16 }}"
+  width: "{{ self.args.MONITOR_WIDTH - 24 }}"
   # Height of the window in physical pixels.
   height: "42"
   # X-position of the window in physical pixels.
-  position_x: "{{ self.args.MONITOR_X + 8 }}"
+  position_x: "{{ self.args.MONITOR_X + 12 }}"
   # Y-position of the window in physical pixels.
-  position_y: "{{ self.args.MONITOR_Y + 8 }}"
+  position_y: "{{ self.args.MONITOR_Y + 12 }}"
   # Whether to show the window above/below all others.
   # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
-  z_order: "always_on_top"
+  z_order: "always_on_bottom"
   # Whether the window should be shown in the taskbar.
   show_in_taskbar: false
   # Whether the window should have resize handles.
@@ -46,7 +46,7 @@ window/bar:
     font-size: 13.5pt;
     padding: 0px 24px 2px;
     border-bottom: 1px solid #ffffff08;
-    background: #1D2021E6;
+    background: #1D2021CC;
   group/left:
     styles: |
       display: flex;
