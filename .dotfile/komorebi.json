@@ -10,11 +10,12 @@
   "border_width": 2,
   "border_offset": -1,
   "border_style": "Square",
+  "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
-    "single": "#bc976c",
-    "stack": "#6c8fbc",
-    "monocle": "#d16757",
-    "unfocused": "#15130f"
+    "single": "#cc6666",
+    "stack": "#b5bd68",
+    "monocle": "#de935f",
+    "unfocused": "#15130f01"
   },
   "transparency": false,
   "stackbar": {
@@ -22,10 +23,16 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#bc976c",
-      "unfocused_text": "#5e656f",
-      "background": "#15130f"
+      "focused_text": "#b5bd68",
+      "unfocused_text": "#a3a8ae",
+      "background": "#161719"
     }
+  },
+  "global_work_area_offset": {
+    "top": 54,
+    "bottom": 54,
+    "left": 0,
+    "right": 0
   },
   "tray_and_multi_window_applications": [
     {
@@ -34,12 +41,13 @@
       "matching_strategy": "Equals"
     }
   ],
-  "global_work_area_offset": {
-    "top": 54,
-    "bottom": 54,
-    "left": 0,
-    "right": 0
-  },
+  "manage_rules": [
+    {
+      "kind": "Title",
+      "id": "Task Manager",
+      "matching_strategy": "Equals"
+    }
+  ],
   "monitors": [
     {
       "workspaces": [
@@ -61,7 +69,14 @@
         },
         {
           "name": "5",
-          "layout": "Grid"
+          "layout": "Grid",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Discord.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "6",
@@ -81,7 +96,14 @@
         },
         {
           "name": "0",
-          "layout": "Grid"
+          "layout": "Grid",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "vsthost.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         }
       ]
     }

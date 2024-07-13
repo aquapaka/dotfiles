@@ -1,12 +1,12 @@
 {
-  "workbench.colorTheme": "DawnBlush",
-  "workbench.iconTheme": "vs-minimal",
+  "workbench.colorTheme": "Base16 Tomorrow",
+  "workbench.iconTheme": "gruvbox-material-icons",
   "editor.fontFamily": "'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono'",
   "editor.fontSize": 22,
   "terminal.integrated.fontSize": 22,
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#a59481",
-    "terminalCursor.foreground": "#a59481"
+    "editorCursor.foreground": "#cc6666",
+    "terminalCursor.foreground": "#cc6666"
   },
   "fonted.font": "DM Mono"
 }

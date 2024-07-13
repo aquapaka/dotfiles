@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #a19a91;
-    font-family: 'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono';
+    color: #d9dbde;
+    font-family: 'DM Mono Regular', 'CaskaydiaMono Nerd Font Mono';
     font-size: 14pt;
     padding: 0px 24px 0px;
     border: 0px solid #000000;
-    background: #15130fCC;
+    background: #1d1f21CC;
   group/left:
     styles: |
       display: flex;
@@ -58,7 +58,7 @@ window/bar:
 
         .os {
           font-size: 32px;
-          color: #a59481;
+          color: #cc6666;
         }
       template: |
         <div class='os'></div>
@@ -121,7 +121,7 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #bc776c;
+          color: #cc6666;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
@@ -139,7 +139,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #96a682;
+          color: #b5bd68;
         }
       template: |
         <div class='memory'></div>
@@ -156,28 +156,33 @@ window/bar:
         .battery {
           position: absolute;
           left: -20px;
-          top: -3px;
-          font-size: 16pt;
-          color: #a59481;
+          top: -1px;
+          font-size: 14pt;
+          color: #f0c674;
         }
 
         .low-battery {
-          color: #bc776c;
+          color: #cc6666;
         }
 
         .charging-icon {
-          color: #6c8fbc;
+          color: #81a2be;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
           left: -14px;
           bottom: 0px;
+          filter:
+            drop-shadow( 1px  0px 0px #1d1f21)
+            drop-shadow(-1px  0px 0px #1d1f21)
+            drop-shadow( 0px  1px 0px #1d1f21)
+            drop-shadow( 0px -1px 0px #1d1f21);
         }
 
         .full {
           position: absolute;
           z-index: 5;
-          color: #98bc6c;
+          color: #b5bd68;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
@@ -212,13 +217,13 @@ window/bar:
           top: -3px;
         }
         .clear-day {
-          color: #a59481;
+          color: #f0c674;
         }
         .cloudy-day {
-          color: #a8b0b8;
+          color: #d9dbde;
         }
         .rainy-day {
-          color: #8292a7;
+          color: #81a2be;
         }
       template: |
         @switch (weather.status) {
@@ -228,8 +233,8 @@ window/bar:
           @case ('cloudy_night') {<span class='cloudy-day'>☁ </span>}
           @case ('light_rain_day') {<span class='rainy-day'>☂ </span>}
           @case ('light_rain_night') {<span class='rainy-day'>☂ </span>}
-          @case ('heavy_rain_day') {<span class='rainy-day'>☔ </span>}
-          @case ('heavy_rain_night') {<span class='rainy-day'>☔ </span>}
+          @case ('heavy_rain_day') {<span class='rainy-day'>☂ </span>}
+          @case ('heavy_rain_night') {<span class='rainy-day'>☂ </span>}
           @case ('snow_day') {<span class='cloudy-day'>☃ </span>}
           @case ('snow_night') {<span class='cloudy-day'>☃ </span>}
           @case ('thunder_day') {<span class='rainy-day'>⛈ </span>}
@@ -244,9 +249,9 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #9182a6;
+          color: #b294bb;
           position: absolute;
-          font-size: 21pt;
+          font-size: 22pt;
           left: -23px;
           top: -6px;
         }

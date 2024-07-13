@@ -11,10 +11,10 @@
   "border_width": 2,
   "border_style": "Square",
   "border_colours": {
-    "single": "#bc976c",
-    "stack": "#6c8fbc",
-    "monocle": "#d16757",
-    "unfocused": "#15130f"
+    "single": "#cc6666",
+    "stack": "#b5bd68",
+    "monocle": "#de935f",
+    "unfocused": "#15130f01"
   },
   "transparency": false,
   "stackbar": {
@@ -22,9 +22,9 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#bc976c",
-      "unfocused_text": "#5e656f",
-      "background": "#15130f"
+      "focused_text": "#b5bd68",
+      "unfocused_text": "#a3a8ae",
+      "background": "#161719"
     }
   }
 }
