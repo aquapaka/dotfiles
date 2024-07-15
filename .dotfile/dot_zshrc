@@ -20,8 +20,13 @@ setopt promptsubst         # enable command substitution in prompt
 setopt MENU_COMPLETE       # Automatically highlight first element of completion menu
 setopt AUTO_LIST           # Automatically list choices on ambiguous completion.
 setopt COMPLETE_IN_WORD    # Complete from both ends of a word.
-setopt HIST_EXPIRE_DUPS_FIRST
 setopt SHARE_HISTORY
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_IGNORE_SPACE
+setopt HIST_FIND_NO_DUPS
+setopt HIST_SAVE_NO_DUPS
 
 # Turn off all beeps
 unsetopt BEEP
@@ -37,6 +42,8 @@ alias winfetch='powershell winfetch'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias btop='~/.local/bin/btop/btop4win.exe'
 alias rice='~/.rice-manager/rice.sh'
+alias ala='alacritty --working-directory=$(pwd) & disown'
+alias cmsp='cd $(chezmoi source-path)/..'
 cd() {
     builtin cd "$@" && ls;
 }
