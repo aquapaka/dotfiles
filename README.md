@@ -232,6 +232,8 @@ Updating...
 - Disable windows 11 rounded corners:
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
+- Improve performance and reduce disk utilization for system with high amount of free RAM:
+  - Run ```scripts/high-ram-tuning.ps1``` with Powershell
 
 ### Other
 
