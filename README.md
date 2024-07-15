@@ -116,6 +116,9 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 ### Pre-install notices
 
 - If you have just fresh install windows 11, you need to go to Microsoft Store and update your "App Installer". Otherwise winget will not working.
+- For those who use another windows 11 version (like IOT Enterprise, which doesn't come with Microsoft Store):
+  - First download the latest version of winget: <https://aka.ms/getwinget>
+  - Then open Powershell and run: ```Add-AppxPackage -Path <path to downloaded .msixbundle>```
 
 ### Install Fonts
 
@@ -125,6 +128,7 @@ Font need to be download and install manually *(Windows is planning to allows in
 - [CaskaydiaMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
 - [Monaspace](https://github.com/githubnext/monaspace)
 - [Scientifica](https://github.com/nerdypepper/scientifica/releases)
+- [DM Mono](https://fonts.google.com/specimen/DM+Mono)
 
 ### Install chezmoi and apply dotfiles
 
@@ -180,7 +184,6 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 Add those to Path variables
 
 - "%USERPROFILE%\.local\bin"
-- "C:\Program Files\Win11 Toggle Rounded Corners" (if use with win11-toggle-rounded-corners - see **Optional** below)
 
 ### Install VS Code Theme
 
@@ -192,8 +195,9 @@ Add those to Path variables
   - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
   - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
   - [Paper](https://marketplace.visualstudio.com/items?itemName=a5hk.paper)
+  - [Base 16 Tomorrow](https://marketplace.visualstudio.com/items?itemName=o4x.base16-tomorrow)
 
-- To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
+- ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
 ### Restore old context menu (Require restart)
 
@@ -225,7 +229,7 @@ Updating...
 
 ### Optional
 
-- Allow enable/disable rounded corners between themes
+- Disable windows 11 rounded corners:
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
 
