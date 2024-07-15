@@ -189,7 +189,7 @@ window/bar:
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
-        @if (battery.state === 'charging') {<div class="charging-icon">⚡</div>}
+        @if (battery.state === 'charging') {<div class="charging-icon">󱐋</div>}
         @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->
@@ -212,9 +212,9 @@ window/bar:
 
         span {
           position: absolute;
-          font-size: 21pt;
-          left: -30px;
-          top: -3px;
+          font-size: 28pt;
+          left: -26px;
+          top: -10px;
         }
         .clear-day {
           color: #f0c674;
@@ -227,20 +227,20 @@ window/bar:
         }
       template: |
         @switch (weather.status) {
-          @case ('clear_day') {<span class='clear-day'>☀ </span>}
-          @case ('clear_night') {<span class='clear-day'>☽ </span>}
-          @case ('cloudy_day') {<span class='cloudy-day'>☁ </span>}
-          @case ('cloudy_night') {<span class='cloudy-day'>☁ </span>}
-          @case ('light_rain_day') {<span class='rainy-day'>☂ </span>}
-          @case ('light_rain_night') {<span class='rainy-day'>☂ </span>}
-          @case ('heavy_rain_day') {<span class='rainy-day'>☂ </span>}
-          @case ('heavy_rain_night') {<span class='rainy-day'>☂ </span>}
+          @case ('clear_day') {<span class='clear-day'> </span>}
+          @case ('clear_night') {<span class='clear-day'> </span>}
+          @case ('cloudy_day') {<span class='cloudy-day'> </span>}
+          @case ('cloudy_night') {<span class='cloudy-day'> </span>}
+          @case ('light_rain_day') {<span class='rainy-day'> </span>}
+          @case ('light_rain_night') {<span class='rainy-day'> </span>}
+          @case ('heavy_rain_day') {<span class='rainy-day'> </span>}
+          @case ('heavy_rain_night') {<span class='rainy-day'> </span>}
           @case ('snow_day') {<span class='cloudy-day'>☃ </span>}
           @case ('snow_night') {<span class='cloudy-day'>☃ </span>}
-          @case ('thunder_day') {<span class='rainy-day'>⛈ </span>}
-          @case ('thunder_night') {<span class='rainy-day'>⛈ </span>}
+          @case ('thunder_day') {<span class='rainy-day'> </span>}
+          @case ('thunder_night') {<span class='rainy-day'> </span>}
         }
-        {{ weather.celsiusTemp }}°C
+        {{ weather.celsiusTemp }}°c
 
     template/clock:
       providers: ["date"]
