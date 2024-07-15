@@ -1,6 +1,11 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.27/schema.json",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.28/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "animation": {
+    "enabled": true,
+    "style": "EaseInQuad",
+    "duration": 200
+  },
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "mouse_follows_focus": false,
