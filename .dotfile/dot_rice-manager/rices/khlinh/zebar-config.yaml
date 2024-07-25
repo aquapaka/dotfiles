@@ -144,7 +144,7 @@ window/bar:
       template: |
         <div class='memory'></div>
         {{ ((usedBytes, totalBytes) => {
-            return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GB'}`;
+            return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GiB'}`;
         })(memory.usedMemory, memory.totalMemory) }}
 
     template/battery:
@@ -171,7 +171,7 @@ window/bar:
           z-index: 5;
           font-size: 15pt;
           left: -14px;
-          bottom: 0px;
+          bottom: -2px;
           filter:
             drop-shadow( 1px  0px 0px #1d1f21)
             drop-shadow(-1px  0px 0px #1d1f21)

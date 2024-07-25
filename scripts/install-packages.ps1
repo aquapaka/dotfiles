@@ -19,3 +19,4 @@ winget install --id CoreyButler.NVMforWindows -e --silent;
 winget install -e --id Microsoft.VisualStudioCode -i;
 winget install Notion.Notion --silent;
 winget install --id pnpm.pnpm -e --silent;
+winget install Daum.PotPlayer --silent;

@@ -33,6 +33,13 @@
       "background": "#161719"
     }
   },
+  "float_rules": [
+    {
+      "kind": "Exe",
+      "id": "zebar.exe",
+      "matching_strategy": "Equals"
+    }
+  ],
   "global_work_area_offset": {
     "top": 54,
     "bottom": 54,
