@@ -1,0 +1,12 @@
+{
+  "workbench.colorTheme": "Shades of Purple",
+  "workbench.iconTheme": "xxx",
+  "editor.fontFamily": "'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono'",
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 22,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#FF628C",
+    "terminalCursor.foreground": "#FF628C"
+  },
+  "fonted.font": "DM Mono"
+}

@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #d9dbde;
+    color: #A599E9;
     font-family: 'DM Mono Regular', 'CaskaydiaMono Nerd Font Mono';
     font-size: 14pt;
     padding: 0px 24px 0px;
     border: 0px solid #000000;
-    background: #1d1f21CC;
+    background: #2D2B55CC;
   group/left:
     styles: |
       display: flex;
@@ -58,10 +58,23 @@ window/bar:
 
         .os {
           font-size: 32px;
-          color: #cc6666;
+          color: #6943FF;
         }
       template: |
         <div class='os'></div>
+
+    template/host:
+      providers:
+        - type: 'host'
+          refresh_interval: 60000
+      template: |
+        <span>{{host.hostname}}</span>
+        <span>-</span>
+        <span>{{`Running Smoothly For ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
+
+  group/center:
+    styles: |
+      justify-self: center;
 
     template/workspaces:
       styles: |
@@ -69,34 +82,34 @@ window/bar:
         align-items: center;
 
         .workspace {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(255, 255, 255, 0.00);
+
           margin-right: 4px;
-          width: 30px;
-          height: 30px;
-          color: #ffffffe6;
+          color: #A599E9;
           border: none;
           border-radius: 2px;
+          width: 32px;
+          font-size: 24px;
+          opacity: 30%;
+        }
 
-          &.active {
-            background: rgba(255, 255, 255, 0.1);
-          }
+        .have-windows {
+          font-size: 32px;
+          opacity: 100%;
+        }
+
+        .active {
+          font-size: 32px;
+          color: #FFEE80;
+          opacity: 100%;
         }
       providers: ["komorebi"]
       template: |
         @for (workspace of komorebi.currentWorkspaces) {
-          <button class="workspace {{ workspace === komorebi.focusedWorkspace && 'active' }}">
-            {{ workspace.name }}
+          <button class="workspace {{ workspace.tilingContainers.length && 'have-windows ' }} - {{ workspace === komorebi.focusedWorkspace && 'active ' }}">
+            {{ workspace === komorebi.focusedWorkspace ? '󰫢' : '' }}
           </button>
         }
-
-  group/center:
-    styles: |
-      justify-self: center;
-
-    template/host:
-      providers: ["host"]
-      template: |
-        <span>{{host.hostname}}</span>
 
   group/right:
     styles: |
@@ -110,7 +123,7 @@ window/bar:
 
     template/cpu:
       providers:
-        - type: 'cpu'
+        - type: "cpu"
           refresh_interval: 1000
       styles: |
         position: relative;
@@ -121,14 +134,14 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #cc6666;
+          color: #FF628C;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
 
     template/memory:
       providers:
-        - type: 'memory'
+        - type: "memory"
           refresh_interval: 1000
       styles: |
         position: relative;
@@ -139,7 +152,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #b5bd68;
+          color: #92fc79;
         }
       template: |
         <div class='memory'></div>
@@ -158,15 +171,15 @@ window/bar:
           left: -20px;
           top: -1px;
           font-size: 14pt;
-          color: #f0c674;
+          color: #FFEE80;
         }
 
         .low-battery {
-          color: #cc6666;
+          color: #FF628C;
         }
 
         .charging-icon {
-          color: #81a2be;
+          color: #9EFFFF;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
@@ -182,7 +195,7 @@ window/bar:
         .full {
           position: absolute;
           z-index: 5;
-          color: #b5bd68;
+          color: #92fc79;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
@@ -204,6 +217,11 @@ window/bar:
 
         {{ Math.round(battery.chargePercent) }}%
 
+    # template/network:
+    #   providers: ["komorebi"]
+    #   template: |
+    #     {{ JSON.stringify(komorebi.currentWorkspaces) }}
+
     template/weather:
       providers: ["weather"]
       styles: |
@@ -217,13 +235,13 @@ window/bar:
           top: -10px;
         }
         .clear-day {
-          color: #f0c674;
+          color: #FFEE80;
         }
         .cloudy-day {
-          color: #d9dbde;
+          color: #E1EFFF;
         }
         .rainy-day {
-          color: #81a2be;
+          color: #9EFFFF;
         }
       template: |
         @switch (weather.status) {
@@ -249,7 +267,7 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #b294bb;
+          color: #FB94FF;
           position: absolute;
           font-size: 22pt;
           left: -23px;
