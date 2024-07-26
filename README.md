@@ -196,6 +196,7 @@ Add those to Path variables
   - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
   - [Paper](https://marketplace.visualstudio.com/items?itemName=a5hk.paper)
   - [Base 16 Tomorrow](https://marketplace.visualstudio.com/items?itemName=o4x.base16-tomorrow)
+  - [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
 
 - ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
