@@ -1,0 +1,30 @@
+{
+  "default_workspace_padding": 6,
+  "default_container_padding": 6,
+  "global_work_area_offset": {
+    "top": 54,
+    "bottom": 54,
+    "left": 0,
+    "right": 0
+  },
+  "border": true,
+  "border_width": 2,
+  "border_style": "Square",
+  "border_colours": {
+    "single": "#6943FF",
+    "stack": "#92fc79",
+    "monocle": "#FF628C",
+    "unfocused": "#2D2B55"
+  },
+  "transparency": false,
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300,
+      "focused_text": "#6943FF",
+      "unfocused_text": "#000000",
+      "background": "#2D2B55"
+    }
+  }
+}

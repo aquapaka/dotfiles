@@ -2,6 +2,11 @@
 
 Yes it's **Windows**
 
+![GitHub Release](https://img.shields.io/github/v/release/aquapaka/dotfiles)
+![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/aquapaka/dotfiles/changeset-versioning.yml)
+![GitHub License](https://img.shields.io/github/license/aquapaka/dotfiles)
+![Discord](https://img.shields.io/discord/1162030825290866698)
+
 ## Introduction
 
 ### ❤️ For the Ricing and Unixporn Enthusiasts
@@ -22,9 +27,10 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Wezterm**
+- Terminal: **Alacritty**
 - Shell: **Zsh** inside MSYS2
-- Window Manager/Title Bar: **GlazeWM**
+- Tiling Window Manager: **Komorebi**
+- Bar: **Zebar**
 - Package manager: **Winget**
 - Dotfiles manager: **Chezmoi**
 
@@ -69,12 +75,13 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 You can customize each theme inside ~/.rice-manager/rices and re-apply it (see **Change theme** below)
 
-- ☑️ Wezterm theme
-- ☑️ GlazeWM theme
+- ☑️ Alacirtty theme
+- ☑️ Komorebi theme
+- ☑️ Zebar theme
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
-- ☑️ Enable/Disable Rounded Cornors (⚠️haven't work on startup yet)
 - ☑️ Windows light/dark mode based on rice
+- ✖️ Enable/Disable Rounded Cornors (⚠️Unstable)
 - ❓ Discord theme
 - 🚧 Btop theme
 - 🚧 *under construction*
@@ -83,8 +90,8 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 ### Change theme
 
-- From Alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
-- Background is selected randomize
+- From alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
+- Background is selected randomize from rice's wallpaper folder
 
 ### Useful keybindings
 
@@ -92,32 +99,36 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |:-|:-|
 |<kbd>alt</kbd> + <kbd>enter</kbd>| Open terminal|
 |<kbd>alt</kbd> + <kbd>Space</kbd>| Open powertoy run |
-|<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| top \| bottom \| right|
-|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| top \| bottom \| right|
-|<kbd>alt</kbd> + <kbd>w</kbd>| Close focusing window|
+|<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| bottom \| top \| right|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| bottom \| top \| right|
+|<kbd>alt</kbd> + <kbd>q</kbd>| Close focusing window|
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
-|<kbd>alt</kbd> + <kbd>m</kbd>| Maximize/Unmaximize current window|
-|<kbd>alt</kbd> + <kbd>d</kbd>| Change direction where the next window open should be placed|
-|<kbd>alt</kbd> + <kbd>f</kbd>| Make focusing window float/tiled|
-|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>w</kbd>| Exit glazewm |
+|<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
+|<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
+|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and zebar |
 
-Above is customized version of i3 keybindings due to some conflict with Powertoys. You can alway change them in your glaze config file.
+ℹ️ More keybinding can be found inside ```~/.config/whkdrc```
 
 ## 📦 Step by Step Installation
 
 ### Pre-install notices
 
 - If you have just fresh install windows 11, you need to go to Microsoft Store and update your "App Installer". Otherwise winget will not working.
+- For those who use another windows 11 version (like IOT Enterprise, which doesn't come with Microsoft Store):
+  - First download the latest version of winget: <https://aka.ms/getwinget>
+  - Then open Powershell and run: ```Add-AppxPackage -Path <path to downloaded .msixbundle>```
 
 ### Install Fonts
 
 Font need to be download and install manually *(Windows is planning to allows installing fonts from winget. Stay tune!)*:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
-- [CaskaydiaCove Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
+- [CaskaydiaMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
 - [Monaspace](https://github.com/githubnext/monaspace)
 - [Scientifica](https://github.com/nerdypepper/scientifica/releases)
+- [DM Mono](https://fonts.google.com/specimen/DM+Mono)
 
 ### Install chezmoi and apply dotfiles
 
@@ -155,14 +166,11 @@ pacman -Syu
 # Open MSYS2 Ucrt64 and install ZSH
 pacman -S zsh
 
-# Install git
-pacman -S git
-
 # Install Theme: Powerlevel10k
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
 
-# Install Syntax Highlighting Plugin
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.config/zsh/plugins/zsh-syntax-highlighting
+# Install Fast Syntax Highlighting Plugin
+git clone git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh/plugins/fast-syntax-highlighting
 
 # Install Autosuggestions Plugin
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
@@ -176,7 +184,6 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 Add those to Path variables
 
 - "%USERPROFILE%\.local\bin"
-- "C:\Program Files\Win11 Toggle Rounded Corners" (if use with win11-toggle-rounded-corners - see **Optional** below)
 
 ### Install VS Code Theme
 
@@ -188,34 +195,31 @@ Add those to Path variables
   - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
   - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
   - [Paper](https://marketplace.visualstudio.com/items?itemName=a5hk.paper)
+  - [Base 16 Tomorrow](https://marketplace.visualstudio.com/items?itemName=o4x.base16-tomorrow)
+  - [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
 
-- To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
+- ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
 ### Restore old context menu (Require restart)
 
 - Open/Run **scripts/Restore-old-context-menu.reg**
 
-### Auto start GlazeWM at windows start
+### Fix terminal cursor glitching while typing
 
-- Open **Task scheduler**
-- Choose **Create Basic Task...**
-- Enter any name for GlazeWM task (example: "GlazeWM") then press **Next**
-- Trigger: choose *When I log on* then press **Next**
-- Program/script: paste in ```C:\Users\%username%\AppData\Local\Microsoft\WinGet\Links\glazewm.exe``` (replace %username% by your username - your user's folder name) then click **Next**
-- Tick *Open the Properties dialog for this task when I click Finish* then click **Finish**
+- Go to scripts folder, run **terminal-cursor-fix.sh**
+- Close then re-open terminal
 
-- Inside Properties window, set the following settings for each tab:
-  - **General**: enable *Run with highest privileges* (required for glazeWM could manages all windows)
-  - **Conditions**: disable/untick *everything* (including greyed out settings)
-  - **Settings**: disable/untick *Stop the task if it runs longer than:*
-- Click **Ok** to save everything and we're good to go
+### Auto start Komorebi and Zebar at windows start
 
+<https://github.com/glzr-io/zebar/releases>
 
 ### Optional
 
-- Allow enable/disable rounded corners between themes
+- Disable windows 11 rounded corners:
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
+- Improve performance and reduce disk utilization for system with high amount of free RAM:
+  - Run ```scripts/high-ram-tuning.ps1``` with Powershell
 
 ### Other
 
