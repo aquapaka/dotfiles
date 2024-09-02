@@ -1,8 +1,9 @@
 # Required packages (Needed for everything to work)
 winget install Git -e -i;
 winget install Alacritty.Alacritty --silent
-winget install LGUG2Z.komorebi --silent
-winget install LGUG2Z.whkd --silent
+# winget install LGUG2Z.komorebi --silent
+# winget install LGUG2Z.whkd --silent
+winget install GlazeWM --silent
 winget install --id eza-community.eza -e --silent;
 winget install --id MikeFarah.yq --silent;
 winget install --id jqlang.jq --silent;
