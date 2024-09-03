@@ -81,7 +81,7 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
 - ☑️ Windows light/dark mode based on rice
-- ✖️ Enable/Disable Rounded Cornors (⚠️Unstable)
+- ❓ Windows color based on rice
 - ❓ Discord theme
 - 🚧 Btop theme
 - 🚧 *under construction*
@@ -137,9 +137,9 @@ Font need to be download and install manually *(Windows is planning to allows in
 
 ### Install packages
 
-- After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, **install-packages.ps1** file can be found inside **scripts** folder
-- Edit **install-packages.ps1**, comment out packages/apps that are not needed
-- Run **install-packages.ps1** script with Powershell to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
+- After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, ```install-packages.ps1``` file can be found inside ```scripts``` folder
+- Edit ```install-packages.ps1```, comment out packages/apps that are not needed
+- Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
 
 ----------------------------
 
@@ -183,7 +183,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 Add those to Path variables
 
-- "%USERPROFILE%\.local\bin"
+- ```%USERPROFILE%\.local\bin```
 
 ### Install VS Code Theme
 
@@ -200,39 +200,30 @@ Add those to Path variables
 
 - ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
-### Restore old context menu (Require restart)
-
-- Open/Run **scripts/Restore-old-context-menu.reg**
-
-### Fix terminal cursor glitching while typing
-
-- Go to scripts folder, run **terminal-cursor-fix.sh**
-- Close then re-open terminal
-
 ### Auto start Komorebi at windows start
 
-- Open Task scheduler
-- Choose Create Basic Task...
-- Enter any name for Komorebi task (example: "Komorebi") then press Next
-- Trigger: choose "When I log on" then press Next
-- Action: "Start a program" then press Next
-  - Program/script: paste in **C:\Program Files\komorebi\bin\komorebic.exe**
-  - Add arguments: **start --whkd**
-  - Press Next
+- Open **Task scheduler**
+- Choose **Create Basic Task...**
+- Enter any name for Komorebi task (example: "Komorebi") then press **Next**
+- Trigger: choose **When I log on** then press **Next**
+- Action: **Start a program** then press **Next**
+  - Program/script: paste in ```C:\Program Files\komorebi\bin\komorebic.exe```
+  - Add arguments: ```start --whkd```
+  - Press **Next**
 
   ![arcade-1](rice-previews/komorebi-task-scheduler.png)
-- Tick Open the Properties dialog for this task when I click Finish then click Finish
+- Tick **Open the Properties dialog for this task when I click Finish** then click **Finish**
 - Inside Properties window, set the following settings for each tab:
-  - General: enable Run with highest privileges (required for glazeWM could manages all windows)
-  - Conditions: disable/untick everything (including greyed out settings)
-  - Settings: disable/untick Stop the task if it runs longer than:
-  - Click Ok to save everything and we're good to go
+  - General: enable **Run with highest privileges** (required for Komorebi could manages all windows)
+  - Conditions: disable/untick **everything** (including greyed out settings)
+  - Settings: disable/untick **Stop the task if it runs longer than**
+  - Click **OK** to save and we're good to go
 
 ### Auto start Zebar at windows start
 
-- Copy start-zebar.bat from scripts folder
-- Press Window + R to open Run prompt and type in shell:startup and press OK, a startup folder will be opened
-- Paste start-zebar.bat in this startup folder
+- Copy ```start-zebar.bat``` from ```scripts``` folder
+- Press **Window + R** to open Run prompt and type in ```shell:startup``` and press **OK**, a startup folder will be opened
+- Paste ```start-zebar.bat``` in this startup folder
 
 ### Optional
 
@@ -240,9 +231,14 @@ Add those to Path variables
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
 - Improve performance and reduce disk utilization for system with high amount of free RAM:
-  - Run ```scripts/high-ram-tuning.ps1``` with Powershell
+  - Run ```scripts/high-ram-tuning.ps1``` with **Powershell**
+- Restore old context menu (Require restart):
+  - Open/Run ```scripts/Restore-old-context-menu.reg```
+- Fix terminal cursor glitching while typing:
+  - Run ```scripts/terminal-cursor-fix.sh```
+  - Close then re-open terminal
 
-### Other
+### Other information
 
 - Dotfiles inspired by gh0stzk dotfiles: <https://github.com/gh0stzk/dotfiles>
 - Food script by Xero: <https://github.com/xero/dotfiles>
