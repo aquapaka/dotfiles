@@ -1,9 +1,9 @@
 [font]
-normal = { family = "CaskaydiaMono Nerd Font Mono", style = 'SemiBold' }
-bold = { family = "CaskaydiaMono Nerd Font Mono", style = "Bold" }
-italic = { family = "CaskaydiaMono Nerd Font Mono", style = "Italic" }
-bold_italic = { family = "CaskaydiaMono Nerd Font Mono", style = "Bold Italic" }
-size = 14.5
+normal = { family = "Monaspace Radon", style = 'Medium' }
+bold = { family = "Monaspace Radon", style = "Bold" }
+italic = { family = "Monaspace Radon", style = "Italic" }
+bold_italic = { family = "Monaspace Radon", style = "Bold Italic" }
+size = 14
 offset = { x = 0, y = 0 }
 glyph_offset = { x = 0, y = 0 }
 builtin_box_drawing = true

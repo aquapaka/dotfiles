@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #fdf9f3;
-    font-family: 'CaskaydiaMono Nerd Font Mono';
-    font-size: 13.5pt;
+    color: #d1ded3;
+    font-family: 'Monaspace Radon Medium', 'CaskaydiaMono Nerd Font Mono';
+    font-size: 12pt;
     padding: 0px 24px 0px;
-    border: 0px solid #fdf9f3;
-    background: #221f22CC;
+    border: 0px solid #d1ded3;
+    background: #273136CC;
   group/left:
     styles: |
       display: flex;
@@ -57,8 +57,8 @@ window/bar:
         margin-right: 20px;
 
         .os {
-          font-size: 32px;
-          color: #ff6188;
+          font-size: 30px;
+          color: #7eb08a;
         }
       template: |
         <div class='os'></div>
@@ -85,11 +85,11 @@ window/bar:
           background: rgba(255, 255, 255, 0.00);
 
           margin-right: 4px;
-          color: #fdf9f3;
+          color: #d1ded3;
           border: none;
           border-radius: 2px;
           width: 32px;
-          font-size: 32px;
+          font-size: 24px;
           opacity: 30%;
         }
 
@@ -100,7 +100,7 @@ window/bar:
 
         .active {
           font-size: 32px;
-          color: #ffd866;
+          color: #7eb08a;
           opacity: 100%;
         }
       providers: ["komorebi"]
@@ -110,7 +110,6 @@ window/bar:
             {{ workspace === komorebi.focusedWorkspace ? '󰫢' : '' }}
           </button>
         }
-
 
   group/right:
     styles: |
@@ -135,7 +134,7 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #ff6188;
+          color: #ff819f;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
@@ -153,7 +152,7 @@ window/bar:
           left: -30px;
           top: -11px;
           font-size: 28pt;
-          color: #a9dc76;
+          color: #7eb08a;
         }
       template: |
         <div class='memory'></div>
@@ -170,22 +169,22 @@ window/bar:
         .battery {
           position: absolute;
           left: -20px;
-          top: -1px;
-          font-size: 14pt;
-          color: #ffd866;
+          top: -2px;
+          font-size: 15pt;
+          color: #d2b48c;
         }
 
         .low-battery {
-          color: #ff6188;
+          color: #ff819f;
         }
 
         .charging-icon {
-          color: #78dce8;
+          color: #82beb0;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
           left: -12px;
-          bottom: -4px;
+          bottom: -2px;
           filter:
             drop-shadow( 1px  0px 0px #1d1f21)
             drop-shadow(-1px  0px 0px #1d1f21)
@@ -196,10 +195,10 @@ window/bar:
         .full {
           position: absolute;
           z-index: 5;
-          color: #a9dc76;
+          color: #7eb08a;
           font-size: 11pt;
           left: -14px;
-          bottom: 0px;
+          bottom: -4px;
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
@@ -231,16 +230,16 @@ window/bar:
           top: -3px;
         }
         .clear-day {
-          color: #ffd866;
+          color: #d2b48c;
         }
         .cloudy-day {
-          color: #fdf9f3;
+          color: #d1ded3;
         }
         .rainy-day {
           font-size: 32pt;
           left: -28px;
           top: -16px;
-          color: #59c6ff;
+          color: #7ea4b0;
         }
       template: |
         @switch (weather.status) {
@@ -257,7 +256,7 @@ window/bar:
           @case ('thunder_day') {<span class='rainy-day'> </span>}
           @case ('thunder_night') {<span class='rainy-day'> </span>}
         }
-        {{ weather.celsiusTemp }}°C
+        {{ weather.celsiusTemp }}°c
 
     template/clock:
       providers: ["date"]
@@ -266,7 +265,7 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #ab9df2;
+          color: #ba8eaf;
           position: absolute;
           font-size: 21pt;
           left: -23px;
