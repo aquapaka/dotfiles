@@ -16,13 +16,13 @@ global:
 window/bar:
   providers: ["self"]
   # Width of the window in physical pixels.
-  width: "{{ self.args.MONITOR_WIDTH - 24 }}"
+  width: "{{ self.args.MONITOR_WIDTH - 16 }}"
   # Height of the window in physical pixels.
   height: "42"
   # X-position of the window in physical pixels.
-  position_x: "{{ self.args.MONITOR_X + 12 }}"
+  position_x: "{{ self.args.MONITOR_X + 8 }}"
   # Y-position of the window in physical pixels.
-  position_y: "{{ self.args.MONITOR_Y + 12 }}"
+  position_y: "{{ self.args.MONITOR_Y + 8 }}"
   # Whether to show the window above/below all others.
   # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
   z_order: "always_on_bottom"
@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #d9dbde;
-    font-family: 'DM Mono Regular', 'CaskaydiaMono Nerd Font Mono';
-    font-size: 14pt;
+    color: #000005;
+    font-family: 'Monaspace Xenon Medium', 'CaskaydiaMono Nerd Font Mono';
+    font-size: 13.5pt;
     padding: 0px 24px 0px;
-    border: 0px solid #000000;
-    background: #1d1f21CC;
+    border: 3px solid #000005;
+    background: #F2EEDECC;
   group/left:
     styles: |
       display: flex;
@@ -58,7 +58,7 @@ window/bar:
 
         .os {
           font-size: 32px;
-          color: #cc6666;
+          color: #000005;
         }
       template: |
         <div class='os'></div>
@@ -85,7 +85,7 @@ window/bar:
           background: rgba(255, 255, 255, 0.00);
 
           margin-right: 4px;
-          color: #d9dbde;
+          color: #000005;
           border: none;
           border-radius: 2px;
           width: 32px;
@@ -100,7 +100,7 @@ window/bar:
 
         .active {
           font-size: 32px;
-          color: #f0c674;
+          color: #216609;
           opacity: 100%;
         }
       providers: ["komorebi"]
@@ -123,7 +123,7 @@ window/bar:
 
     template/cpu:
       providers:
-        - type: "cpu"
+        - type: 'cpu'
           refresh_interval: 1000
       styles: |
         position: relative;
@@ -134,14 +134,14 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #cc6666;
+          color: #CC3E28;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
 
     template/memory:
       providers:
-        - type: "memory"
+        - type: 'memory'
           refresh_interval: 1000
       styles: |
         position: relative;
@@ -152,7 +152,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #b5bd68;
+          color: #216609;
         }
       template: |
         <div class='memory'></div>
@@ -169,33 +169,28 @@ window/bar:
         .battery {
           position: absolute;
           left: -20px;
-          top: -1px;
-          font-size: 14pt;
-          color: #f0c674;
+          top: -3px;
+          font-size: 16pt;
+          color: #B58900;
         }
 
         .low-battery {
-          color: #cc6666;
+          color: #CC3E28;
         }
 
         .charging-icon {
-          color: #81a2be;
+          color: #1E6FCC;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
           left: -14px;
-          bottom: -2px;
-          filter:
-            drop-shadow( 1px  0px 0px #1d1f21)
-            drop-shadow(-1px  0px 0px #1d1f21)
-            drop-shadow( 0px  1px 0px #1d1f21)
-            drop-shadow( 0px -1px 0px #1d1f21);
+          bottom: 0px;
         }
 
         .full {
           position: absolute;
           z-index: 5;
-          color: #b5bd68;
+          color: #216609;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
@@ -217,11 +212,6 @@ window/bar:
 
         {{ Math.round(battery.chargePercent) }}%
 
-    # template/network:
-    #   providers: ["komorebi"]
-    #   template: |
-    #     {{ JSON.stringify(komorebi.currentWorkspaces) }}
-
     template/weather:
       providers: ["weather"]
       styles: |
@@ -230,33 +220,33 @@ window/bar:
 
         span {
           position: absolute;
-          font-size: 28pt;
-          left: -26px;
-          top: -10px;
+          font-size: 21pt;
+          left: -30px;
+          top: -3px;
         }
         .clear-day {
-          color: #f0c674;
+          color: #B58900;
         }
         .cloudy-day {
-          color: #d9dbde;
+          color: #AAAAAA;
         }
         .rainy-day {
-          color: #81a2be;
+          color: #1E6FCC;
         }
       template: |
         @switch (weather.status) {
-          @case ('clear_day') {<span class='clear-day'> </span>}
-          @case ('clear_night') {<span class='clear-day'> </span>}
-          @case ('cloudy_day') {<span class='cloudy-day'> </span>}
-          @case ('cloudy_night') {<span class='cloudy-day'> </span>}
-          @case ('light_rain_day') {<span class='rainy-day'> </span>}
-          @case ('light_rain_night') {<span class='rainy-day'> </span>}
-          @case ('heavy_rain_day') {<span class='rainy-day'> </span>}
-          @case ('heavy_rain_night') {<span class='rainy-day'> </span>}
+          @case ('clear_day') {<span class='clear-day'>☀ </span>}
+          @case ('clear_night') {<span class='clear-day'>☽ </span>}
+          @case ('cloudy_day') {<span class='cloudy-day'>☁ </span>}
+          @case ('cloudy_night') {<span class='cloudy-day'>☁ </span>}
+          @case ('light_rain_day') {<span class='rainy-day'>☂ </span>}
+          @case ('light_rain_night') {<span class='rainy-day'>☂ </span>}
+          @case ('heavy_rain_day') {<span class='rainy-day'>☔ </span>}
+          @case ('heavy_rain_night') {<span class='rainy-day'>☔ </span>}
           @case ('snow_day') {<span class='cloudy-day'>☃ </span>}
           @case ('snow_night') {<span class='cloudy-day'>☃ </span>}
-          @case ('thunder_day') {<span class='rainy-day'> </span>}
-          @case ('thunder_night') {<span class='rainy-day'> </span>}
+          @case ('thunder_day') {<span class='rainy-day'>⛈ </span>}
+          @case ('thunder_night') {<span class='rainy-day'>⛈ </span>}
         }
         {{ weather.celsiusTemp }}°c
 
@@ -267,9 +257,9 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #b294bb;
+          color: #5C21A5;
           position: absolute;
-          font-size: 22pt;
+          font-size: 21pt;
           left: -23px;
           top: -6px;
         }

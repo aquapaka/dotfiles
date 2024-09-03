@@ -1,9 +1,9 @@
 [font]
-normal = { family = "DM Mono", style = "Regular" }
-bold = { family = "DM Mono", style = "Bold" }
-italic = { family = "DM Mono", style = "Italic" }
-bold_italic = { family = "DM Mono", style = "Bold Italic" }
-size = 16
-offset = { x = 0, y = -2 }
+normal = { family = "Monaspace Xenon" }
+bold = { family = "Monaspace Xenon", style = "Bold" }
+italic = { family = "Monaspace Xenon", style = "Italic" }
+bold_italic = { family = "Monaspace Xenon", style = "Bold Italic" }
+size = 13.5
+offset = { x = 0, y = 0 }
 glyph_offset = { x = 0, y = 0 }
 builtin_box_drawing = true
