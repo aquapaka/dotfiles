@@ -70,7 +70,7 @@ window/bar:
       template: |
         <span>{{host.hostname}}</span>
         <span>-</span>
-        <span>{{`Running Smoothly For ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
+        <span>{{`Uptime ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
 
   group/center:
     styles: |

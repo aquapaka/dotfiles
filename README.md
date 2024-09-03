@@ -36,40 +36,47 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## 🎨 Themes
 
-| ❤️ meimei |
+| ✨ meimei |
 | :---: |
 | Warming and caring |
 |![meimei-1](rice-previews/meimei-1.png)|
 |![meimei-2](rice-previews/meimei-2.png)|
-|![meimei-3](rice-previews/meimei-3.png)|
 
-| ❤️ tlinh |
+| ✨ tlinh |
 | :---: |
-| Only in my dreams |
+| Sweet and mysterious |
 |![tlinh-1](rice-previews/tlinh-1.png)|
 |![tlinh-2](rice-previews/tlinh-2.png)|
-|![tlinh-3](rice-previews/tlinh-3.png)|
 
-| ❤️ mtram |
+| ✨ mtram |
 | :---: |
 | Calming and peaceful |
 |![mtram-1](rice-previews/mtram-1.png)|
 |![mtram-2](rice-previews/mtram-2.png)|
-|![mtram-3](rice-previews/mtram-3.png)|
 
-| ❤️ arcade |
+| 🕹️ arcade |
 | :---: |
 | ⚠️ WARNING! Only For Truest Gamer!! May hurt your eyes!!! |
 |![arcade-1](rice-previews/arcade-1.png)|
 |![arcade-2](rice-previews/arcade-2.png)|
-|![arcade-3](rice-previews/arcade-3.png)|
 
-| ❤️ khanhoa |
+| ✨ khanhoa |
 | :---: |
-| She plays guitar |
+| Joyful and adventurous |
 |![khanhoa-1](rice-previews/khanhoa-1.png)|
 |![khanhoa-2](rice-previews/khanhoa-2.png)|
-|![khanhoa-3](rice-previews/khanhoa-3.png)|
+
+| ✨ khlinh |
+| :---: |
+| Gentle and wise, truly exceptional |
+|![khlinh-1](rice-previews/khlinh-1.png)|
+|![khlinh-2](rice-previews/khlinh-2.png)|
+
+| 💜 shuri |
+| :---: |
+| Radiant love for purple, deeply cherished soul, mah lovely queen 👑 |
+|![shuri-1](rice-previews/shuri-1.png)|
+|![shuri-2](rice-previews/shuri-2.png)|
 
 ## ⚙️ Current Configurable Settings
 
@@ -81,7 +88,7 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
 - ☑️ Windows light/dark mode based on rice
-- ✖️ Enable/Disable Rounded Cornors (⚠️Unstable)
+- ❓ Windows color based on rice
 - ❓ Discord theme
 - 🚧 Btop theme
 - 🚧 *under construction*
@@ -106,6 +113,9 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
 |<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
 |<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
+|<kbd>alt</kbd> + <kbd>x</kbd>| Flip layout horizontal |
+|<kbd>alt</kbd> + <kbd>y</kbd>| Flip layout vertical |
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>t</kbd>| Retile |
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
 |<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and zebar |
 
@@ -137,9 +147,9 @@ Font need to be download and install manually *(Windows is planning to allows in
 
 ### Install packages
 
-- After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, **install-packages.ps1** file can be found inside **scripts** folder
-- Edit **install-packages.ps1**, comment out packages/apps that are not needed
-- Run **install-packages.ps1** script with Powershell to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
+- After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, ```install-packages.ps1``` file can be found inside ```scripts``` folder
+- Edit ```install-packages.ps1```, comment out packages/apps that are not needed
+- Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
 
 ----------------------------
 
@@ -183,7 +193,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zs
 
 Add those to Path variables
 
-- "%USERPROFILE%\.local\bin"
+- ```%USERPROFILE%\.local\bin```
 
 ### Install VS Code Theme
 
@@ -200,18 +210,30 @@ Add those to Path variables
 
 - ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
-### Restore old context menu (Require restart)
+### Auto start Komorebi at windows start
 
-- Open/Run **scripts/Restore-old-context-menu.reg**
+- Open **Task scheduler**
+- Choose **Create Basic Task...**
+- Enter any name for Komorebi task (example: "Komorebi") then press **Next**
+- Trigger: choose **When I log on** then press **Next**
+- Action: **Start a program** then press **Next**
+  - Program/script: paste in ```C:\Program Files\komorebi\bin\komorebic.exe```
+  - Add arguments: ```start --whkd```
+  - Press **Next**
 
-### Fix terminal cursor glitching while typing
+  ![komorebi-task-scheduler](rice-previews/komorebi-task-scheduler.png)
+- Tick **Open the Properties dialog for this task when I click Finish** then click **Finish**
+- Inside Properties window, set the following settings for each tab:
+  - General: enable **Run with highest privileges** (required for Komorebi could manages all windows)
+  - Conditions: disable/untick **everything** (including greyed out settings)
+  - Settings: disable/untick **Stop the task if it runs longer than**
+  - Click **OK** to save and we're good to go
 
-- Go to scripts folder, run **terminal-cursor-fix.sh**
-- Close then re-open terminal
+### Auto start Zebar at windows start
 
-### Auto start Komorebi and Zebar at windows start
-
-<https://github.com/glzr-io/zebar/releases>
+- Copy ```start-zebar.bat``` from ```scripts``` folder
+- Press **Window + R** to open Run prompt and type in ```shell:startup``` and press **OK**, a startup folder will be opened
+- Paste ```start-zebar.bat``` in this startup folder
 
 ### Optional
 
@@ -219,9 +241,14 @@ Add those to Path variables
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
 - Enable automatically hide the taskbar
 - Improve performance and reduce disk utilization for system with high amount of free RAM:
-  - Run ```scripts/high-ram-tuning.ps1``` with Powershell
+  - Run ```scripts/high-ram-tuning.ps1``` with **Powershell**
+- Restore old context menu (Require restart):
+  - Open/Run ```scripts/Restore-old-context-menu.reg```
+- Fix terminal cursor glitching while typing:
+  - Run ```scripts/terminal-cursor-fix.sh```
+  - Close then re-open terminal
 
-### Other
+### Other information
 
 - Dotfiles inspired by gh0stzk dotfiles: <https://github.com/gh0stzk/dotfiles>
 - Food script by Xero: <https://github.com/xero/dotfiles>

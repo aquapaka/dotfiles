@@ -46,7 +46,7 @@ window/bar:
     font-size: 14pt;
     padding: 0px 24px 0px;
     border: 0px solid #000000;
-    background: #2D2B55CC;
+    background: #1E1E3FCC;
   group/left:
     styles: |
       display: flex;
@@ -58,7 +58,7 @@ window/bar:
 
         .os {
           font-size: 32px;
-          color: #6943FF;
+          color: #4D21FC;
         }
       template: |
         <div class='os'></div>
@@ -70,7 +70,7 @@ window/bar:
       template: |
         <span>{{host.hostname}}</span>
         <span>-</span>
-        <span>{{`Running Smoothly For ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
+        <span>{{`Uptime ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
 
   group/center:
     styles: |
@@ -152,7 +152,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #92fc79;
+          color: #A5FF90;
         }
       template: |
         <div class='memory'></div>
@@ -195,7 +195,7 @@ window/bar:
         .full {
           position: absolute;
           z-index: 5;
-          color: #92fc79;
+          color: #A5FF90;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
@@ -267,7 +267,7 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #FB94FF;
+          color: #B362FF;
           position: absolute;
           font-size: 22pt;
           left: -23px;

@@ -46,7 +46,8 @@ set_zebar_theme() {
   echo "Setting zebar theme..."
   cat ./rices/$theme/zebar-config.yaml > ~/.glzr/zebar/config.yaml
   echo "Reload zebar..."
-  powershell 'taskkill /f /im Zebar.exe | Out-Null; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -WindowStyle Hidden -FilePath "zebar" -ArgumentList "open bar --args $monitor" };'
+  powershell 'taskkill /f /im Zebar.exe | Out-Null;'
+  powershell '$monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -WindowStyle Hidden -FilePath "zebar" -ArgumentList "open bar --args $monitor" };'
 }
 
 # Set komorebi theme

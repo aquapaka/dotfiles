@@ -11,8 +11,8 @@
   "border_width": 2,
   "border_style": "Square",
   "border_colours": {
-    "single": "#6943FF",
-    "stack": "#92fc79",
+    "single": "#A599E9",
+    "stack": "#A5FF90",
     "monocle": "#FF628C",
     "unfocused": "#2D2B55"
   },
@@ -22,7 +22,7 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#6943FF",
+      "focused_text": "#A599E9",
       "unfocused_text": "#000000",
       "background": "#2D2B55"
     }
