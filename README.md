@@ -36,40 +36,47 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## 🎨 Themes
 
-| ❤️ meimei |
+| ✨ meimei |
 | :---: |
 | Warming and caring |
 |![meimei-1](rice-previews/meimei-1.png)|
 |![meimei-2](rice-previews/meimei-2.png)|
-|![meimei-3](rice-previews/meimei-3.png)|
 
-| ❤️ tlinh |
+| ✨ tlinh |
 | :---: |
-| Only in my dreams |
+| Sweet and mysterious |
 |![tlinh-1](rice-previews/tlinh-1.png)|
 |![tlinh-2](rice-previews/tlinh-2.png)|
-|![tlinh-3](rice-previews/tlinh-3.png)|
 
-| ❤️ mtram |
+| ✨ mtram |
 | :---: |
 | Calming and peaceful |
 |![mtram-1](rice-previews/mtram-1.png)|
 |![mtram-2](rice-previews/mtram-2.png)|
-|![mtram-3](rice-previews/mtram-3.png)|
 
-| ❤️ arcade |
+| 🕹️ arcade |
 | :---: |
 | ⚠️ WARNING! Only For Truest Gamer!! May hurt your eyes!!! |
 |![arcade-1](rice-previews/arcade-1.png)|
 |![arcade-2](rice-previews/arcade-2.png)|
-|![arcade-3](rice-previews/arcade-3.png)|
 
-| ❤️ khanhoa |
+| ✨ khanhoa |
 | :---: |
-| She plays guitar |
+| Joyful and adventurous |
 |![khanhoa-1](rice-previews/khanhoa-1.png)|
 |![khanhoa-2](rice-previews/khanhoa-2.png)|
-|![khanhoa-3](rice-previews/khanhoa-3.png)|
+
+| ✨ khlinh |
+| :---: |
+| Gentle and wise, truly exceptional |
+|![khlinh-1](rice-previews/khlinh-1.png)|
+|![khlinh-2](rice-previews/khlinh-2.png)|
+
+| 💜 shuri |
+| :---: |
+| Radiant love for purple, deeply cherished soul, mah lovely queen 👑 |
+|![shuri-1](rice-previews/shuri-1.png)|
+|![shuri-2](rice-previews/shuri-2.png)|
 
 ## ⚙️ Current Configurable Settings
 
@@ -214,7 +221,7 @@ Add those to Path variables
   - Add arguments: ```start --whkd```
   - Press **Next**
 
-  ![arcade-1](rice-previews/komorebi-task-scheduler.png)
+  ![komorebi-task-scheduler](rice-previews/komorebi-task-scheduler.png)
 - Tick **Open the Properties dialog for this task when I click Finish** then click **Finish**
 - Inside Properties window, set the following settings for each tab:
   - General: enable **Run with highest privileges** (required for Komorebi could manages all windows)
