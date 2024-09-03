@@ -209,7 +209,24 @@ Add those to Path variables
 - Go to scripts folder, run **terminal-cursor-fix.sh**
 - Close then re-open terminal
 
-### Auto start Komorebi and Zebar at windows start
+### Auto start Komorebi at windows start
+
+- Open Task scheduler
+- Choose Create Basic Task...
+- Enter any name for Komorebi task (example: "Komorebi") then press Next
+- Trigger: choose "When I log on" then press Next
+- Action: "Start a program" then press Next
+  - Program/script: paste in **C:\Program Files\komorebi\bin\komorebic.exe**
+  - Add arguments: **start --whkd**
+  - Press Next
+
+  ![arcade-1](rice-previews/komorebi-task-scheduler.png)
+- Tick Open the Properties dialog for this task when I click Finish then click Finish
+- Inside Properties window, set the following settings for each tab:
+  - General: enable Run with highest privileges (required for glazeWM could manages all windows)
+  - Conditions: disable/untick everything (including greyed out settings)
+  - Settings: disable/untick Stop the task if it runs longer than:
+  - Click Ok to save everything and we're good to go
 
 <https://github.com/glzr-io/zebar/releases>
 
