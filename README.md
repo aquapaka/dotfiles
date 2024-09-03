@@ -106,6 +106,9 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
 |<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
 |<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
+|<kbd>alt</kbd> + <kbd>x</kbd>| Flip layout horizontal |
+|<kbd>alt</kbd> + <kbd>y</kbd>| Flip layout vertical |
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>t</kbd>| Retile |
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
 |<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and zebar |
 
