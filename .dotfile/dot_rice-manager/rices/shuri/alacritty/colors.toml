@@ -1,45 +1,45 @@
 [colors.primary]
-background = "#2D2B55"
+background = "#1E1E3F"
 foreground = "#A599E9"
 dim_foreground = "#A599E9"
 bright_foreground = "#A599E9"
 
 [colors.cursor]
-text = "#2D2B55"
+text = "#1E1E3F"
 cursor = "#FF628C"
 
 [colors.vi_mode_cursor]
-text = "#2D2B55"
-cursor = "#92fc79"
+text = "#1E1E3F"
+cursor = "#A5FF90"
 
 [colors.search.matches]
-foreground = "#2D2B55"
+foreground = "#1E1E3F"
 background = "#E1EFFF"
 
 [colors.search.focused_match]
-foreground = "#2D2B55"
-background = "#92fc79"
+foreground = "#1E1E3F"
+background = "#A5FF90"
 
 [colors.footer_bar]
-foreground = "#2D2B55"
+foreground = "#1E1E3F"
 background = "#E1EFFF"
 
 [colors.hints.start]
-foreground = "#2D2B55"
+foreground = "#1E1E3F"
 background = "#FFEE80"
 
 [colors.hints.end]
-foreground = "#2D2B55"
+foreground = "#1E1E3F"
 background = "#E1EFFF"
 
 [colors.selection]
-text = "#2D2B55"
+text = "#1E1E3F"
 background = "#B362FF"
 
 [colors.normal]
 black = "#A599E9"
 red = "#FF628C"
-green = "#92fc79"
+green = "#A5FF90"
 yellow = "#FFEE80"
 blue = "#6943FF"
 magenta = "#FB94FF"
@@ -49,7 +49,7 @@ white = "#E1EFFF"
 [colors.bright]
 black = "#A599E9"
 red = "#F16E6B"
-green = "#8efa00"
+green = "#3AD900"
 yellow = "#FAD000"
 blue = "#4D21FC"
 magenta = "#B362FF"
@@ -59,7 +59,7 @@ white = "#FFFFFF"
 [colors.dim]
 black = "#000000"
 red = "#FF628C"
-green = "#92fc79"
+green = "#A5FF90"
 yellow = "#FFEE80"
 blue = "#6943FF"
 magenta = "#FB94FF"
