@@ -69,6 +69,8 @@ window/bar:
           refresh_interval: 60000
       template: |
         <span>{{host.hostname}}</span>
+        <span>-</span>
+        <span>{{`Uptime ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
 
   group/center:
     styles: |
