@@ -1,9 +1,9 @@
 [font]
-normal = { family = "Monaspace Xenon" }
-bold = { family = "Monaspace Xenon", style = "Bold" }
-italic = { family = "Monaspace Xenon", style = "Italic" }
-bold_italic = { family = "Monaspace Xenon", style = "Bold Italic" }
+normal = { family = "Pixelcraft Nerd Font" }
+bold = { family = "Pixelcraft Nerd Font", style = "Bold" }
+italic = { family = "Pixelcraft Nerd Font", style = "Italic" }
+bold_italic = { family = "Pixelcraft Nerd Font", style = "Bold Italic" }
 size = 13.5
-offset = { x = 0, y = 0 }
-glyph_offset = { x = 0, y = 0 }
+offset = { x = 0, y = -8 }
+glyph_offset = { x = 0, y = -2 }
 builtin_box_drawing = true
