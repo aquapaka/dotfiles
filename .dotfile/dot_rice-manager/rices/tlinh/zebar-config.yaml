@@ -63,40 +63,54 @@ window/bar:
       template: |
         <div class='os'></div>
 
+    template/host:
+      providers:
+        - type: 'host'
+          refresh_interval: 60000
+      template: |
+        <span>{{host.hostname}}</span>
+        <span>-</span>
+        <span>{{`Uptime ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
+
+  group/center:
+    styles: |
+      justify-self: center;
+
     template/workspaces:
       styles: |
         display: flex;
         align-items: center;
 
         .workspace {
-          background: rgba(255, 255, 255, 0.05);
+          background: rgba(255, 255, 255, 0.00);
+
           margin-right: 4px;
-          width: 30px;
-          height: 30px;
-          color: #ffffffe6;
+          color: #fdf9f3;
           border: none;
           border-radius: 2px;
+          width: 32px;
+          font-size: 32px;
+          opacity: 30%;
+        }
 
-          &.active {
-            background: rgba(255, 255, 255, 0.1);
-          }
+        .have-windows {
+          font-size: 32px;
+          opacity: 100%;
+        }
+
+        .active {
+          font-size: 32px;
+          color: #ffd866;
+          opacity: 100%;
         }
       providers: ["komorebi"]
       template: |
         @for (workspace of komorebi.currentWorkspaces) {
-          <button class="workspace {{ workspace === komorebi.focusedWorkspace && 'active' }}">
-            {{ workspace.name }}
+          <button class="workspace {{ workspace.tilingContainers.length && 'have-windows ' }} - {{ workspace === komorebi.focusedWorkspace && 'active ' }}">
+            {{ workspace === komorebi.focusedWorkspace ? '󰫢' : '' }}
           </button>
         }
 
-  group/center:
-    styles: |
-      justify-self: center;
-
-    template/host:
-      providers: ["host"]
-      template: |
-        <span>{{host.hostname}}</span>
 
   group/right:
     styles: |
@@ -144,7 +158,7 @@ window/bar:
       template: |
         <div class='memory'></div>
         {{ ((usedBytes, totalBytes) => {
-            return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GB'}`;
+            return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GiB'}`;
         })(memory.usedMemory, memory.totalMemory) }}
 
     template/battery:
@@ -156,8 +170,8 @@ window/bar:
         .battery {
           position: absolute;
           left: -20px;
-          top: -3px;
-          font-size: 16pt;
+          top: -1px;
+          font-size: 14pt;
           color: #ffd866;
         }
 
@@ -171,7 +185,12 @@ window/bar:
           z-index: 5;
           font-size: 15pt;
           left: -12px;
-          bottom: -8px;
+          bottom: -4px;
+          filter:
+            drop-shadow( 1px  0px 0px #1d1f21)
+            drop-shadow(-1px  0px 0px #1d1f21)
+            drop-shadow( 0px  1px 0px #1d1f21)
+            drop-shadow( 0px -1px 0px #1d1f21);
         }
 
         .full {

@@ -16,13 +16,13 @@ global:
 window/bar:
   providers: ["self"]
   # Width of the window in physical pixels.
-  width: "{{ self.args.MONITOR_WIDTH - 24 }}"
+  width: "{{ self.args.MONITOR_WIDTH }}"
   # Height of the window in physical pixels.
   height: "42"
   # X-position of the window in physical pixels.
-  position_x: "{{ self.args.MONITOR_X + 12 }}"
+  position_x: "{{ self.args.MONITOR_X }}"
   # Y-position of the window in physical pixels.
-  position_y: "{{ self.args.MONITOR_Y + 12 }}"
+  position_y: "{{ self.args.MONITOR_Y }}"
   # Whether to show the window above/below all others.
   # Allowed values: 'always_on_top', 'always_on_bottom', 'normal'.
   z_order: "always_on_bottom"
@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #EBDBB2;
-    font-family: Pixelcraft Nerd Font;
+    color: #fdf9f3;
+    font-family: 'CaskaydiaMono Nerd Font Mono';
     font-size: 13.5pt;
-    padding: 0px 24px 3px;
-    border-bottom: 1px solid #ffffff08;
-    background: #1D2021CC;
+    padding: 0px 24px 0px;
+    border: 0px solid #fdf9f3;
+    background: #221f22CC;
   group/left:
     styles: |
       display: flex;
@@ -57,10 +57,11 @@ window/bar:
         margin-right: 20px;
 
         .os {
-          color: #FFC130;
+          font-size: 32px;
+          color: #ff6188;
         }
       template: |
-        <div class='os'>☠</div>
+        <div class='os'></div>
 
     template/host:
       providers:
@@ -70,7 +71,6 @@ window/bar:
         <span>{{host.hostname}}</span>
         <span>-</span>
         <span>{{`Uptime ${Math.floor(host.uptime / 3600000)} hours and ${Math.floor((host.uptime % 3600000) / 60000)} minutes`}}</span>
-
 
   group/center:
     styles: |
@@ -85,32 +85,32 @@ window/bar:
           background: rgba(255, 255, 255, 0.00);
 
           margin-right: 4px;
-          padding-bottom: 5px;
-          color: #EBDBB2;
+          color: #fdf9f3;
           border: none;
           border-radius: 2px;
           width: 32px;
-          font-size: 20px;
+          font-size: 32px;
           opacity: 30%;
         }
 
         .have-windows {
-          font-size: 20px;
+          font-size: 32px;
           opacity: 100%;
         }
 
         .active {
-          font-size: 20px;
-          color: #FFC130;
+          font-size: 32px;
+          color: #ffd866;
           opacity: 100%;
         }
       providers: ["komorebi"]
       template: |
         @for (workspace of komorebi.currentWorkspaces) {
           <button class="workspace {{ workspace.tilingContainers.length && 'have-windows ' }} - {{ workspace === komorebi.focusedWorkspace && 'active ' }}">
-            {{ workspace === komorebi.focusedWorkspace ? '⭐' : '●' }}
+            {{ workspace === komorebi.focusedWorkspace ? '󰫢' : '' }}
           </button>
         }
+
 
   group/right:
     styles: |
@@ -127,27 +127,36 @@ window/bar:
         - type: 'cpu'
           refresh_interval: 1000
       styles: |
+        position: relative;
+        margin-right: 32px;
+
         .cpu {
-          color: #fb4934;
+          position: absolute;
+          left: -24px;
+          top: -8px;
+          font-size: 24pt;
+          color: #ff6188;
         }
       template: |
-        <span class='cpu'>❤ </span><span>{{ Math.round(cpu.usage) }}%</span>
+        <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
 
     template/memory:
       providers:
         - type: 'memory'
           refresh_interval: 1000
       styles: |
-        display: flex;
-        align-items: center;
-        gap: 12px;
+        position: relative;
+        margin-right: 21px;
 
         .memory {
-          padding-bottom: 2px;
-          color: #b8bb26;
+          position: absolute;
+          left: -30px;
+          top: -11px;
+          font-size: 28pt;
+          color: #a9dc76;
         }
       template: |
-        <div class='memory'>✂</div>
+        <div class='memory'></div>
         {{ ((usedBytes, totalBytes) => {
             return `${(usedBytes / (1024 * 1024 * 1024)).toFixed(2).toLocaleString() + ' GiB'}`;
         })(memory.usedMemory, memory.totalMemory) }}
@@ -156,26 +165,27 @@ window/bar:
       providers: ["battery"]
       styles: |
         position: relative;
-        display: flex;
-        align-items: center;
-        gap: 8px;
+        margin-right: 28px;
 
         .battery {
-          padding-top: 4px;
-          font-size: 17pt;
-          color: #fabd2f;
+          position: absolute;
+          left: -20px;
+          top: -1px;
+          font-size: 14pt;
+          color: #ffd866;
         }
 
         .low-battery {
-          color: #FF4A35;
+          color: #ff6188;
         }
 
         .charging-icon {
-          color: #83A598;
+          color: #78dce8;
           position: absolute;
+          z-index: 5;
           font-size: 15pt;
-          left: 7px;
-          bottom: 0px;
+          left: -12px;
+          bottom: -4px;
           filter:
             drop-shadow( 1px  0px 0px #1d1f21)
             drop-shadow(-1px  0px 0px #1d1f21)
@@ -184,63 +194,83 @@ window/bar:
         }
 
         .full {
-          color: #b8bb26;
+          position: absolute;
+          z-index: 5;
+          color: #a9dc76;
           font-size: 11pt;
-          left: 8px;
-          bottom: 4px;
+          left: -14px;
+          bottom: 0px;
         }
       template: |
         <!-- Show icon for whether battery is charging. -->
-        @if (battery.state === 'charging') {<div class="charging-icon">⚡</div>}
+        @if (battery.state === 'charging') {<div class="charging-icon">󱐋</div>}
         @else if (battery.state === 'full') {<div class="charging-icon full">✔</div>}
 
         <!-- Show icon for how much of the battery is charged. -->
-        @if (battery.chargePercent > 94) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 80) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 70) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 60) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 50) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 30) {<div class='battery'> </div>}
-        @else if (battery.chargePercent > 20) {<div class='battery'> </div>}
-        @else {<div class='battery'> </div>}
+        @if (battery.chargePercent > 94) {<div class='battery'>󰁹 </div>}
+        @else if (battery.chargePercent > 80) {<div class='battery'>󰂂 </div>}
+        @else if (battery.chargePercent > 70) {<div class='battery'>󰂁 </div>}
+        @else if (battery.chargePercent > 60) {<div class='battery'>󰂀 </div>}
+        @else if (battery.chargePercent > 50) {<div class='battery'>󰁿 </div>}
+        @else if (battery.chargePercent > 30) {<div class='battery'>󰁾 </div>}
+        @else if (battery.chargePercent > 20) {<div class='battery'>󰁽 </div>}
+        @else {<div class='battery'>󰁺 </div>}
 
         {{ Math.round(battery.chargePercent) }}%
 
     template/weather:
       providers: ["weather"]
       styles: |
+        position: relative;
+        margin-right: 22px;
+
+        span {
+          position: absolute;
+          font-size: 21pt;
+          left: -30px;
+          top: -3px;
+        }
         .clear-day {
-          color: #fabd2f;
+          color: #ffd866;
         }
         .cloudy-day {
-          color: #8EC07C;
+          color: #fdf9f3;
         }
         .rainy-day {
-          color: #83A598;
+          font-size: 32pt;
+          left: -28px;
+          top: -16px;
+          color: #59c6ff;
         }
       template: |
         @switch (weather.status) {
           @case ('clear_day') {<span class='clear-day'>☀ </span>}
-          @case ('clear_night') {<span class='clear-day'>☽ </span>}
+          @case ('clear_night') {<span class='clear-day'> </span>}
           @case ('cloudy_day') {<span class='cloudy-day'>☁ </span>}
           @case ('cloudy_night') {<span class='cloudy-day'>☁ </span>}
-          @case ('light_rain_day') {<span class='rainy-day'>☂ </span>}
-          @case ('light_rain_night') {<span class='rainy-day'>☂ </span>}
-          @case ('heavy_rain_day') {<span class='rainy-day'>☔ </span>}
-          @case ('heavy_rain_night') {<span class='rainy-day'>☔ </span>}
-          @case ('snow_day') {<span class='cloudy-day'>☃ </span>}
-          @case ('snow_night') {<span class='cloudy-day'>☃ </span>}
-          @case ('thunder_day') {<span class='rainy-day'>⛈ </span>}
-          @case ('thunder_night') {<span class='rainy-day'>⛈ </span>}
+          @case ('light_rain_day') {<span class='rainy-day'> </span>}
+          @case ('light_rain_night') {<span class='rainy-day'> </span>}
+          @case ('heavy_rain_day') {<span class='rainy-day'> </span>}
+          @case ('heavy_rain_night') {<span class='rainy-day'> </span>}
+          @case ('snow_day') {<span class='cloudy-day'> </span>}
+          @case ('snow_night') {<span class='cloudy-day'> </span>}
+          @case ('thunder_day') {<span class='rainy-day'> </span>}
+          @case ('thunder_night') {<span class='rainy-day'> </span>}
         }
-        {{ weather.celsiusTemp }}°c
+        {{ weather.celsiusTemp }}°C
 
     template/clock:
       providers: ["date"]
       # Available date tokens: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
       styles: |
+        position: relative;
+
         .clock {
-          color: #D3869B;
+          color: #ab9df2;
+          position: absolute;
+          font-size: 21pt;
+          left: -23px;
+          top: -6px;
         }
       template: |
-        <span class='clock'>⌚ </span>{{ date.toFormat(date.now, 't, EEEE, d MMM y') }}
+        <span class='clock'>󰥔</span>{{ date.toFormat(date.now, 't, EEEE, d MMM y') }}
