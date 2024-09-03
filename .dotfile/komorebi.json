@@ -9,18 +9,18 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Insert",
   "mouse_follows_focus": false,
-  "default_workspace_padding": 4,
-  "default_container_padding": 4,
+  "default_workspace_padding": 6,
+  "default_container_padding": 6,
   "border": true,
   "border_width": 2,
   "border_offset": -1,
   "border_style": "Square",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
-    "single": "#7eb08a",
-    "stack": "#ba8eaf",
-    "monocle": "#d2b48c",
-    "unfocused": "#273136"
+    "single": "#A599E9",
+    "stack": "#A5FF90",
+    "monocle": "#FF628C",
+    "unfocused": "#2D2B55"
   },
   "transparency": false,
   "stackbar": {
@@ -28,9 +28,9 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#ff819f",
-      "unfocused_text": "#d2b48c",
-      "background": "#273136"
+      "focused_text": "#A599E9",
+      "unfocused_text": "#000000",
+      "background": "#2D2B55"
     }
   },
   "float_rules": [
@@ -41,8 +41,8 @@
     }
   ],
   "global_work_area_offset": {
-    "top": 42,
-    "bottom": 42,
+    "top": 54,
+    "bottom": 54,
     "left": 0,
     "right": 0
   },
