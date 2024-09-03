@@ -1,5 +1,24 @@
 # aquapaka-dotfiles
 
+## 2.0.0
+
+### Major Changes
+
+- a711826: docs: update rice previews
+
+### Minor Changes
+
+- b56d576: feat: improve meimei theme
+- 114b17f: feat: improve mtram theme
+- 3f01b72: feat: improve tlinh theme
+- 6f8830e: feat: improve shuri theme
+- 0a1eed3: feat: improve khanhoa theme
+
+### Patch Changes
+
+- 52eadf4: docs: add auto start zebar section
+- b21bad0: docs: add auto start komorebi section
+
 ## 1.2.0
 
 ### Minor Changes
