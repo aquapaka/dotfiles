@@ -228,7 +228,11 @@ Add those to Path variables
   - Settings: disable/untick Stop the task if it runs longer than:
   - Click Ok to save everything and we're good to go
 
-<https://github.com/glzr-io/zebar/releases>
+### Auto start Zebar at windows start
+
+- Copy start-zebar.bat from scripts folder
+- Press Window + R to open Run prompt and type in shell:startup and press OK, a startup folder will be opened
+- Paste start-zebar.bat in this startup folder
 
 ### Optional
 
