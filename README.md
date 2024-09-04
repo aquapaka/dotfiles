@@ -235,7 +235,7 @@ Add those to Path variables
 - Press **Window + R** to open Run prompt and type in ```shell:startup``` and press **OK**, a startup folder will be opened
 - Paste ```start-zebar.bat``` in this startup folder
 
-### Optional
+### Optional Tweaks
 
 - Disable windows 11 rounded corners:
   - Install windows 11 rounded corners setup: [win11-toggle-rounded-corners](https://github.com/oberrich/win11-toggle-rounded-corners)
@@ -247,6 +247,8 @@ Add those to Path variables
 - Fix terminal cursor glitching while typing:
   - Run ```scripts/terminal-cursor-fix.sh```
   - Close then re-open terminal
+- Show 'Max cpu freq' in power plan setting, allow changing maximum cpu freqency to attempt lower temperature:
+  - Run ```scripts/show-cpu-frequency-power-plan-setting.ps1``` with **Powershell**
 
 ### Other information
 
