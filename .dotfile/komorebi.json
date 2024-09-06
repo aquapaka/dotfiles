@@ -58,6 +58,16 @@
       "kind": "Title",
       "id": "Task Manager",
       "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Zalo.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "Code.exe",
+      "matching_strategy": "Equals"
     }
   ],
   "monitors": [
@@ -87,7 +97,14 @@
         },
         {
           "name": "3",
-          "layout": "Grid"
+          "layout": "Grid",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Code.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "4",
@@ -100,6 +117,11 @@
             {
               "kind": "Exe",
               "id": "Discord.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Exe",
+              "id": "Zalo.exe",
               "matching_strategy": "Equals"
             }
           ]
@@ -118,7 +140,14 @@
         },
         {
           "name": "9",
-          "layout": "Grid"
+          "layout": "Grid",
+          "initial_workspace_rules": [
+            {
+              "kind": "Exe",
+              "id": "Notion.exe",
+              "matching_strategy": "Equals"
+            }
+          ]
         },
         {
           "name": "0",
@@ -127,6 +156,11 @@
             {
               "kind": "Exe",
               "id": "vsthost.exe",
+              "matching_strategy": "Equals"
+            },
+            {
+              "kind": "Title",
+              "id": "Task Manager",
               "matching_strategy": "Equals"
             }
           ]
