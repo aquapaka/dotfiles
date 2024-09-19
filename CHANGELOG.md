@@ -1,5 +1,12 @@
 # aquapaka-dotfiles
 
+## 2.1.0
+
+### Minor Changes
+
+- a823041: feat: add zebar to winget install script
+- 4a886af: feat: add script to show cpu freq setting in power plan
+
 ## 2.0.0
 
 ### Major Changes
