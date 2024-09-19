@@ -151,8 +151,6 @@ Font need to be download and install manually *(Windows is planning to allows in
 - Edit ```install-packages.ps1```, comment out packages/apps that are not needed
 - Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
 
-- **Zebar** not available through Winget and need to be download and install manually from <https://github.com/glzr-io/zebar/releases>
-
 ----------------------------
 
  *🚩 Continue below after MSYS2 has been installed through install-packages.ps1*
