@@ -14,13 +14,14 @@
   "border": true,
   "border_width": 2,
   "border_offset": -1,
+  "border_implementation": "Windows",
   "border_style": "Square",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
-    "single": "#A599E9",
-    "stack": "#A5FF90",
-    "monocle": "#FF628C",
-    "unfocused": "#2D2B55"
+    "single": "#cc6666",
+    "stack": "#b5bd68",
+    "monocle": "#de935f",
+    "unfocused": "#15130f01"
   },
   "transparency": false,
   "stackbar": {
@@ -28,15 +29,20 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#A599E9",
-      "unfocused_text": "#000000",
-      "background": "#2D2B55"
+      "focused_text": "#b5bd68",
+      "unfocused_text": "#a3a8ae",
+      "background": "#161719"
     }
   },
   "float_rules": [
     {
       "kind": "Exe",
       "id": "zebar.exe",
+      "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "vsthost.exe",
       "matching_strategy": "Equals"
     }
   ],
@@ -75,36 +81,15 @@
       "workspaces": [
         {
           "name": "1",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "alacritty.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         },
         {
           "name": "2",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "chrome.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         },
         {
           "name": "3",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Code.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         },
         {
           "name": "4",
@@ -112,19 +97,7 @@
         },
         {
           "name": "5",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Discord.exe",
-              "matching_strategy": "Equals"
-            },
-            {
-              "kind": "Exe",
-              "id": "Zalo.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         },
         {
           "name": "6",
@@ -140,30 +113,11 @@
         },
         {
           "name": "9",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "Notion.exe",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         },
         {
           "name": "0",
-          "layout": "Grid",
-          "initial_workspace_rules": [
-            {
-              "kind": "Exe",
-              "id": "vsthost.exe",
-              "matching_strategy": "Equals"
-            },
-            {
-              "kind": "Title",
-              "id": "Task Manager",
-              "matching_strategy": "Equals"
-            }
-          ]
+          "layout": "Grid"
         }
       ]
     }

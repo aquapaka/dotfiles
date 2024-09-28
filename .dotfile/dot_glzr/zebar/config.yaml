@@ -41,12 +41,12 @@ window/bar:
     grid-template-columns: 1fr 1fr 1fr;
     align-items: center;
     height: 100%;
-    color: #A599E9;
+    color: #d9dbde;
     font-family: 'DM Mono Regular', 'CaskaydiaMono Nerd Font Mono';
     font-size: 14pt;
     padding: 0px 24px 0px;
     border: 0px solid #000000;
-    background: #1E1E3FCC;
+    background: #1d1f21CC;
   group/left:
     styles: |
       display: flex;
@@ -58,7 +58,7 @@ window/bar:
 
         .os {
           font-size: 32px;
-          color: #4D21FC;
+          color: #cc6666;
         }
       template: |
         <div class='os'></div>
@@ -85,7 +85,7 @@ window/bar:
           background: rgba(255, 255, 255, 0.00);
 
           margin-right: 4px;
-          color: #A599E9;
+          color: #d9dbde;
           border: none;
           border-radius: 2px;
           width: 32px;
@@ -100,7 +100,7 @@ window/bar:
 
         .active {
           font-size: 32px;
-          color: #FFEE80;
+          color: #f0c674;
           opacity: 100%;
         }
       providers: ["komorebi"]
@@ -134,7 +134,7 @@ window/bar:
           left: -24px;
           top: -8px;
           font-size: 24pt;
-          color: #FF628C;
+          color: #cc6666;
         }
       template: |
         <span class='cpu'></span><span>{{ Math.round(cpu.usage) }}%</span>
@@ -152,7 +152,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #A5FF90;
+          color: #b5bd68;
         }
       template: |
         <div class='memory'></div>
@@ -171,15 +171,15 @@ window/bar:
           left: -20px;
           top: -1px;
           font-size: 14pt;
-          color: #FFEE80;
+          color: #f0c674;
         }
 
         .low-battery {
-          color: #FF628C;
+          color: #cc6666;
         }
 
         .charging-icon {
-          color: #9EFFFF;
+          color: #81a2be;
           position: absolute;
           z-index: 5;
           font-size: 15pt;
@@ -195,7 +195,7 @@ window/bar:
         .full {
           position: absolute;
           z-index: 5;
-          color: #A5FF90;
+          color: #b5bd68;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
@@ -235,13 +235,13 @@ window/bar:
           top: -10px;
         }
         .clear-day {
-          color: #FFEE80;
+          color: #f0c674;
         }
         .cloudy-day {
-          color: #E1EFFF;
+          color: #d9dbde;
         }
         .rainy-day {
-          color: #9EFFFF;
+          color: #81a2be;
         }
       template: |
         @switch (weather.status) {
@@ -267,7 +267,7 @@ window/bar:
         position: relative;
 
         .clock {
-          color: #B362FF;
+          color: #b294bb;
           position: absolute;
           font-size: 22pt;
           left: -23px;

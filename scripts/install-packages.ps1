@@ -11,13 +11,13 @@ winget install --id Microsoft.PowerToys -e --silent;
 winget install --id MSYS2.MSYS2 -e --silent;
 
 # Application (comment out things you don't need before running this script)
-winget install --id Discord.Discord -e --silent;
-winget install --id Google.Chrome -e -i;
-winget install --id Google.GoogleDrive -e --silent;
-winget install "Lenovo Vantage" --silent;
-winget install --id 7zip.7zip -e --silent;
-winget install --id CoreyButler.NVMforWindows -e --silent;
-winget install -e --id Microsoft.VisualStudioCode -i;
-winget install Notion.Notion --silent;
-winget install --id pnpm.pnpm -e --silent;
-winget install Daum.PotPlayer --silent;
+#winget install --id Discord.Discord -e --silent;
+#winget install --id Google.Chrome -e -i;
+#winget install --id Google.GoogleDrive -e --silent;
+#winget install "Lenovo Vantage" --silent;
+#winget install --id 7zip.7zip -e --silent;
+#winget install --id CoreyButler.NVMforWindows -e --silent;
+#winget install -e --id Microsoft.VisualStudioCode -i;
+#winget install Notion.Notion --silent;
+#winget install --id pnpm.pnpm -e --silent;
+#winget install Daum.PotPlayer --silent;
