@@ -19,7 +19,7 @@
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
     "single": "#53bdfa",
-    "stack": "#7fd962",
+    "stack": "#aad94c",
     "monocle": "#ffb454",
     "unfocused": "#0d1017"
   },
@@ -29,7 +29,7 @@
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#7fd962",
+      "focused_text": "#aad94c",
       "unfocused_text": "#bfbdb6",
       "background": "#0d1017"
     }

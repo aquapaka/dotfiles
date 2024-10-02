@@ -152,7 +152,7 @@ window/bar:
           left: -28px;
           top: -10px;
           font-size: 28pt;
-          color: #7fd962;
+          color: #aad94c;
         }
       template: |
         <div class='memory'></div>
@@ -195,7 +195,7 @@ window/bar:
         .full {
           position: absolute;
           z-index: 5;
-          color: #7fd962;
+          color: #aad94c;
           font-size: 11pt;
           left: -14px;
           bottom: 0px;
