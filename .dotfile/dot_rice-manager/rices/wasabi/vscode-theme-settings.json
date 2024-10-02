@@ -1,0 +1,12 @@
+{
+  "workbench.colorTheme": "Ayu Dark Bordered",
+  "workbench.iconTheme": "ayu",
+  "editor.fontFamily": "'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono'",
+  "editor.fontSize": 22,
+  "terminal.integrated.fontSize": 22,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#53bdfa",
+    "terminalCursor.foreground": "#53bdfa"
+  },
+  "fonted.font": "DM Mono"
+}

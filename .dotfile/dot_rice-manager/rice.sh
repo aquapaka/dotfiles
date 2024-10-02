@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "khlinh" "shuri" "arcade")
+avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "khlinh" "shuri" "wasabi" "arcade")
 
 usage() {
   printf "
@@ -19,6 +19,7 @@ Usage:
 \t[khanhoa] \t Joyful and adventurous
 \t[khlinh] \t Gentle and wise, truly exceptional
 \t[shuri] \t Radiant love for purple, deeply cherished soul
+\t[wasabi] \t Losing myself
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
 "
 }
