@@ -151,9 +151,19 @@ Font need to be download and install manually *(Windows is planning to allows in
 - Edit ```install-packages.ps1```, comment out packages/apps that are not needed
 - Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
 
+### Add New Environment Variables
+
+Add those to Path variables
+
+- ```%USERPROFILE%\.local\bin```
+
+### Restart
+
+- After everything above are done, restart the PC one time to make sure all new program paths are registered.
+
 ----------------------------
 
- *🚩 Continue below after MSYS2 has been installed through install-packages.ps1*
+ *🚩 Continue below after MSYS2 has been installed through install-packages.ps1 and you have restarted the pc*
 
 ### Change MSYS2 home directory
 
@@ -167,7 +177,7 @@ This will set windows user folder as default home directory
 
 ### Install Zsh
 
-Open **MSYS2 UCRT64** and run below command to install zsh, zsh's themes and plugins
+Open **MSYS2 UCRT64** and run below command to install zsh
 
 ```
 # Update pacman
@@ -176,24 +186,31 @@ pacman -Syu
 # Open MSYS2 Ucrt64 and install ZSH
 pacman -S zsh
 
-# Install Theme: Powerlevel10k
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.config/zsh/themes/powerlevel10k
+Open **MSYS2 UCRT64** and run below command to install zsh
 
-# Install Fast Syntax Highlighting Plugin
-git clone git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ~/.config/zsh/plugins/fast-syntax-highlighting
-
-# Install Autosuggestions Plugin
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.config/zsh/plugins/zsh-autosuggestions
-
-# Install History Substring Search Plugin
-git clone https://github.com/zsh-users/zsh-history-substring-search ~/.config/zsh/plugins/zsh-history-substring-search
 ```
 
-### Add New Environment Variables
+Open **Powershell**, from your user folder (Example: ```C:\Users\wasabi>```), run below command to install zsh themes and configs
 
-Add those to Path variables
+```
+# Install Theme: Powerlevel10k
 
-- ```%USERPROFILE%\.local\bin```
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ./.config/zsh/themes/powerlevel10k
+
+# Install Fast Syntax Highlighting Plugin
+
+git clone git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ./.config/zsh/plugins/fast-syntax-highlighting
+
+# Install Autosuggestions Plugin
+
+git clone https://github.com/zsh-users/zsh-autosuggestions ./.config/zsh/plugins/zsh-autosuggestions
+
+# Install History Substring Search Plugin
+
+git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zsh/plugins/zsh-history-substring-searchpacman -S zsh
+```
+
+**Troubleshoot:** If git is not recognizable, try close and reopen powershell or check whether git is installed through running ``````install-packages.ps1``` or not.
 
 ### Install VS Code Theme
 
