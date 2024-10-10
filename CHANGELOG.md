@@ -1,5 +1,17 @@
 # aquapaka-dotfiles
 
+## 2.2.0
+
+### Minor Changes
+
+- 96d0e39: feat: new theme - wasabi
+
+### Patch Changes
+
+- f6ea1f5: docs: correct installation steps
+- 91efe0f: chore: change current theme, use windows accent border for komorebi
+- 6c17d07: fix: correct show cpu freq script key basename
+
 ## 2.1.0
 
 ### Minor Changes
