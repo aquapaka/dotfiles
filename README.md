@@ -125,10 +125,16 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 ### Pre-install notices
 
+- Those installation steps are not fully verified and you might stuck at any step, if you're having problem, feel free to message me on my discord.
+- This dotfiles and it's previews are in 2560x1600 resolution, everything might look bigger on lower resolution.
+- Those installation steps won't break your windows, in case things didn't go well, all you need to do are:
+  - ```winget uninstall ...``` all packages you have installed through ```install-packages.ps1```
+  - Remove added task scheduler tasks
+  - Remove added config files in ```~/.config```
 - If you have just fresh install windows 11, you need to go to Microsoft Store and update your "App Installer". Otherwise winget will not working.
 - For those who use another windows 11 version (like IOT Enterprise, which doesn't come with Microsoft Store):
   - First download the latest version of winget: <https://aka.ms/getwinget>
-  - Then open Powershell and run: ```Add-AppxPackage -Path <path to downloaded .msixbundle>```
+  - Then open Powershell and run: ```Add-AppxPackage -Path <path to downloaded .msixbundle>``` to install winget
 
 ### Install Fonts
 
@@ -143,7 +149,7 @@ Font need to be download and install manually *(Windows is planning to allows in
 ### Install chezmoi and apply dotfiles
 
 - Install chezmoi from Winget with: ```winget install chezmoi```
-- Initialize chezmoi and apply the dotfiles with: ```chezmoi init --apply aquapaka```
+- Initialize chezmoi and apply the dotfiles with: ```chezmoi init --apply aquapaka``` (Might need close and reopen powershell, or restart the pc for chezmoi command to be recognizable)
 
 ### Install packages
 
