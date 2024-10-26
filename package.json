@@ -1,6 +1,6 @@
 {
   "name": "aquapaka-dotfiles",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "A configurable ricing dotfile for Windows 11",
   "scripts": {
     "version-packages": "changeset version",
