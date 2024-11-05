@@ -19,7 +19,7 @@ Usage:
 \t[khanhoa] \t Joyful and adventurous
 \t[khlinh] \t Gentle and wise, truly exceptional
 \t[shuri] \t Radiant love for purple, deeply cherished soul
-\t[wasabi] \t Losing myself
+\t[wasabi] \t Ayyo~
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
 "
 }
@@ -42,28 +42,12 @@ set_vscode_theme() {
   echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
 }
 
-# Set Zebar theme
-set_zebar_theme() {
-  echo "Setting zebar theme..."
-  cat ./rices/$theme/zebar-config.yaml > ~/.glzr/zebar/config.yaml
-  echo "Reload zebar..."
-  powershell 'taskkill /f /im Zebar.exe | Out-Null;'
-  powershell '$monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -WindowStyle Hidden -FilePath "zebar" -ArgumentList "open bar --args $monitor" };'
-}
-
 # Set komorebi theme
 set_komorebi_theme() {
   echo "Setting komorebi theme..."
   echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
   komorebic stop
   komorebic start >/dev/null
-}
-
-# Toggle rounded corners
-toggle_rounded_corners() {
-  echo "Changing windows corners..."
-  option=$(<./rices/$theme/rounded-corners-flag)
-  win11-toggle-rounded-corners $option >/dev/null
 }
 
 # Change windows light/dark mode
@@ -96,9 +80,7 @@ for theme in "${avaiableThemes[@]}"; do
     set_desktop_wallpaper
     set_alacritty_config
     set_vscode_theme
-    set_zebar_theme
     set_komorebi_theme
-    # toggle_rounded_corners
     change_windows_lightdark_mode
 
     echo "Completed!"

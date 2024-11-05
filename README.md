@@ -241,7 +241,7 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zs
 - Trigger: choose **When I log on** then press **Next**
 - Action: **Start a program** then press **Next**
   - Program/script: paste in ```C:\Program Files\komorebi\bin\komorebic.exe```
-  - Add arguments: ```start --whkd```
+  - Add arguments: ```start --whkd --bar```
   - Press **Next**
 
   ![komorebi-task-scheduler](rice-previews/komorebi-task-scheduler.png)
