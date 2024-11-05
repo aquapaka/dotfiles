@@ -6,16 +6,16 @@
 #  ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝╚═╝   ╚═╝      ╚═╝      ╚═╝
 #	aquapaka - https://github.com/aquapaka/dotfiles
 
+[general]
+# working_directory     = "C:/Users/aquapaka"
+live_config_reload = true
 import = [
   "~/AppData/Roaming/alacritty/colors.toml",
   "~/AppData/Roaming/alacritty/fonts.toml",
 ]
-
-# working_directory     = "C:/Users/aquapaka"
-live_config_reload = true
 #ipc_socket            = true
 
-[shell]
+[terminal.shell]
 program = "C:/msys64/msys2_shell.cmd"
 args = ["-defterm -here -no-start -ucrt64 -full-path -shell zsh"]
 
@@ -108,6 +108,7 @@ bindings = [
 
 
 [debug]
+
 # render_timer          = true
 #persistent_logging    = false
 #log_level             = "Warn"
