@@ -1,9 +1,9 @@
 {
-  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.28/schema.json",
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
   "animation": {
     "enabled": true,
-    "style": "EaseInQuad",
+    "style": "EaseOutQuad",
     "duration": 200
   },
   "window_hiding_behaviour": "Cloak",
@@ -15,7 +15,7 @@
   "border_width": 2,
   "border_offset": -1,
   "border_implementation": "Windows",
-  "border_style": "Square",
+  "border_style": "System",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
     "single": "#53bdfa",
@@ -37,11 +37,6 @@
   "float_rules": [
     {
       "kind": "Exe",
-      "id": "zebar.exe",
-      "matching_strategy": "Equals"
-    },
-    {
-      "kind": "Exe",
       "id": "vsthost.exe",
       "matching_strategy": "Equals"
     },
@@ -51,12 +46,6 @@
       "matching_strategy": "Equals"
     }
   ],
-  "global_work_area_offset": {
-    "top": 52,
-    "bottom": 52,
-    "left": 0,
-    "right": 0
-  },
   "tray_and_multi_window_applications": [
     {
       "kind": "Class",

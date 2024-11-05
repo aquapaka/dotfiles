@@ -1,9 +1,9 @@
 .shell powershell
 
 # Reload whkd configuration
-# alt + o                 : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
+# alt + shift + r       : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
 alt + shift + r         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-ctrl + alt + shift + r  : komorebic reload-configuration; taskkill /f /im Zebar.exe; $monitors = zebar monitors;  foreach ($monitor in $monitors) { Start-Process -NoNewWindow -FilePath "zebar" -ArgumentList "open bar --args $monitor" };
+ctrl + alt + shift + r  : komorebic reload-configuration
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
