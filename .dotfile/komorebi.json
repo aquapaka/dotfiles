@@ -44,6 +44,11 @@
       "kind": "Exe",
       "id": "vsthost.exe",
       "matching_strategy": "Equals"
+    },
+    {
+      "kind": "Exe",
+      "id": "javaw.exe",
+      "matching_strategy": "Equals"
     }
   ],
   "global_work_area_offset": {
