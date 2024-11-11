@@ -19,7 +19,7 @@ Usage:
 \t[khanhoa] \t Joyful and adventurous
 \t[khlinh] \t Gentle and wise, truly exceptional
 \t[shuri] \t Radiant love for purple, deeply cherished soul
-\t[wasabi] \t Ayyo~
+\t[wasabi] \t Wasabi chill zone~
 \t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
 "
 }
