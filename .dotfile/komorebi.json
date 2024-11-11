@@ -1,29 +1,38 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.json",
   "app_specific_configuration_path": "$Env:USERPROFILE/applications.yaml",
+  "bar_configurations": [
+    "$Env:USERPROFILE/komorebi.bar.monitor1.json",
+    "$Env:USERPROFILE/komorebi.bar.monitor2.json"
+  ],
   "animation": {
     "enabled": true,
-    "style": "EaseOutQuad",
-    "duration": 200
+    "style": "EaseOutQuint",
+    "duration": 300,
+    "fps": 180
   },
   "window_hiding_behaviour": "Cloak",
-  "cross_monitor_move_behaviour": "Insert",
+  "cross_monitor_move_behaviour": "Swap",
   "mouse_follows_focus": false,
+  "focus_follows_mouse": "Windows",
   "default_workspace_padding": 4,
   "default_container_padding": 4,
   "border": true,
   "border_width": 2,
   "border_offset": -1,
   "border_implementation": "Windows",
-  "border_style": "System",
+  "border_style": "Rounded",
+  "border_z_order": "TopMost",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
     "single": "#53bdfa",
     "stack": "#aad94c",
     "monocle": "#ffb454",
-    "unfocused": "#0d1017"
+    "unfocused": "#0d1017",
+    "floating": "#aad94c"
   },
-  "transparency": false,
+  "transparency": true,
+  "transparency_alpha": 230,
   "stackbar": {
     "height": 40,
     "mode": "OnStack",

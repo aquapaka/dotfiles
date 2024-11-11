@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/v0.1.30/schema.bar.json",
   "monitor": {
-    "index": 0,
+    "index": 1,
     "work_area_offset": {
       "left": 0,
       "top": 50,
@@ -76,7 +76,7 @@
     {
       "Time": {
         "enable": true,
-        "format": "TwentyFourHour"
+        "format": "TwelveHour"
       }
     },
     {
