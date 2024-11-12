@@ -32,13 +32,13 @@ set_desktop_wallpaper() {
 # Set VSCode theme
 set_vscode_theme() {
   echo "Setting vscode theme..."
-  echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > ~/AppData/Roaming/Code/User/settings.json
+  echo "$(jq -s '.[0] * .[1]' ~/AppData/Roaming/Code/User/settings.json ./rices/$theme/vscode-theme-settings.json)" > tmp.json && mv tmp.json ~/AppData/Roaming/Code/User/settings.json
 }
 
 # Set komorebi theme
 set_komorebi_theme() {
   echo "Setting komorebi theme..."
-  echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
+  echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > tmp.json && mv tmp.json ~/komorebi.json
 }
 
 # Set windows terminal theme
