@@ -7,16 +7,13 @@
     "left": 0,
     "right": 0
   },
-  "border": true,
-  "border_width": 2,
-  "border_style": "Square",
   "border_colours": {
-    "single": "#53bdfa",
-    "stack": "#aad94c",
-    "monocle": "#ffb454",
-    "unfocused": "#0d1017"
+    "single": "#59C2FF",
+    "stack": "#B8CC52",
+    "monocle": "#FFB454",
+    "unfocused": "#0F1419",
+    "floating": "#B8CC52"
   },
-  "transparency": false,
   "stackbar": {
     "height": 40,
     "mode": "OnStack",

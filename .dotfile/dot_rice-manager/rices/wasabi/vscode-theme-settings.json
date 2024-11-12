@@ -1,12 +1,14 @@
 {
-  "workbench.colorTheme": "Ayu Dark Bordered",
-  "workbench.iconTheme": "ayu",
-  "editor.fontFamily": "'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono'",
-  "editor.fontSize": 22,
-  "terminal.integrated.fontSize": 22,
+  "workbench.colorTheme": "base16-ayu-dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#FFB454",
+  "material-icon-theme.files.color": "#B8CC52",
+  "editor.fontFamily": "'Pixelcraft Nerd Font'",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#53bdfa",
-    "terminalCursor.foreground": "#53bdfa"
+    "editorCursor.foreground": "#c6a0f6",
+    "terminalCursor.foreground": "#c6a0f6"
   },
-  "fonted.font": "DM Mono"
+  "fonted.font": "Pixelcraft Nerd Font"
 }
