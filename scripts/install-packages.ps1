@@ -1,6 +1,6 @@
 # Required packages (Needed for everything to work)
 winget install Git -e -i;
-winget install Alacritty.Alacritty --silent
+winget install Microsoft.WindowsTerminal --silent
 winget install LGUG2Z.komorebi --silent
 winget install LGUG2Z.whkd --silent
 winget install --id eza-community.eza -e --silent;
