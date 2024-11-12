@@ -9,12 +9,12 @@
       "bottom": 50
     }
   },
-  "font_family": "DM Mono Medium",
-  "font_size": 17,
+  "font_family": "Pixelcraft Nerd Font",
+  "font_size": 18,
   "max_label_width": 500,
   "theme": {
     "palette": "Base16",
-    "name": "AyuMirage",
+    "name": "AyuDark",
     "accent": "Base0D"
   },
   "left_widgets": [
