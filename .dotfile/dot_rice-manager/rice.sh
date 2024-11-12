@@ -24,13 +24,6 @@ Usage:
 "
 }
 
-# Set alacritty colorscheme
-set_alacritty_config() {
-  echo "Setting alacritty config..."
-  cat ./rices/$theme/alacritty/colors.toml > ~/AppData/Roaming/alacritty/colors.toml
-  cat ./rices/$theme/alacritty/fonts.toml > ~/AppData/Roaming/alacritty/fonts.toml
-}
-
 # Set desktop wallpaper
 set_desktop_wallpaper() {
   powershell ./wackground.ps1 ./rices/$theme/wallpapers --set-random
@@ -46,18 +39,24 @@ set_vscode_theme() {
 set_komorebi_theme() {
   echo "Setting komorebi theme..."
   echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > ~/komorebi.json
-  komorebic stop
-  komorebic start >/dev/null
+}
+
+# Set windows terminal theme
+set_windows_terminal_theme() {
+  echo "Setting windows terminal theme..."
+  SETTING_FILE_PATH=$USERPROFILE\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json
+  WINDOWS_TERMINAL_THEME=$(jq -r '.windowsTerminalTheme' ./rices/$theme/settings.json)
+  jq ".profiles.defaults.colorScheme = \"$WINDOWS_TERMINAL_THEME\"" $SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
 }
 
 # Change windows light/dark mode
 change_windows_lightdark_mode() {
   echo "Changing windows theme..."
-  option=$(<./rices/$theme/windows-theme)
-  if [ $option == dark ]
+  WINDOWS_THEME=$(jq -r '.windowsTheme' ./rices/$theme/settings.json)
+  if [ $WINDOWS_THEME == dark ]
     then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value '0' -Type Dword -Force | Out-Null";
          powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value '0' -Type Dword -Force | Out-Null"
-  elif [ $option == light ]
+  elif [ $WINDOWS_THEME == light ]
     then powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name SystemUsesLightTheme -Value '1' -Type Dword -Force | Out-Null";
          powershell "New-ItemProperty -Path HKCU:\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Themes\\Personalize -Name AppsUseLightTheme -Value '1' -Type Dword -Force | Out-Null"
   else
@@ -78,9 +77,9 @@ for theme in "${avaiableThemes[@]}"; do
 
     # # Apply configs
     set_desktop_wallpaper
-    set_alacritty_config
     set_vscode_theme
     set_komorebi_theme
+    set_windows_terminal_theme
     change_windows_lightdark_mode
 
     echo "Completed!"
