@@ -14,7 +14,6 @@
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Swap",
   "mouse_follows_focus": false,
-  "focus_follows_mouse": "Windows",
   "default_workspace_padding": 4,
   "default_container_padding": 4,
   "border": true,
@@ -32,7 +31,7 @@
     "floating": "#aad94c"
   },
   "transparency": true,
-  "transparency_alpha": 230,
+  "transparency_alpha": 250,
   "stackbar": {
     "height": 40,
     "mode": "OnStack",

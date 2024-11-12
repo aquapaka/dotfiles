@@ -2,8 +2,8 @@
 
 # Reload whkd configuration
 # alt + shift + r       : taskkill /f /im whkd.exe && start /b whkd # if shell is cmd
-alt + shift + r         : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
-ctrl + alt + shift + r  : komorebic reload-configuration
+ctrl + alt + shift + w  : taskkill /f /im whkd.exe; Start-Process whkd -WindowStyle hidden # if shell is pwsh / powershell
+ctrl + alt + shift + k  : komorebic reload-configuration
 
 # App shortcuts - these require shell to be pwsh / powershell
 # The apps will be focused if open, or launched if not open
@@ -80,4 +80,4 @@ alt + shift + 9         : komorebic move-to-workspace 8
 alt + shift + 0         : komorebic move-to-workspace 9
 
 # Additional shortcuts
-alt + return						: cd ~; start alacritty
+alt + return						: start wt
