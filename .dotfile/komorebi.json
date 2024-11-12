@@ -11,6 +11,12 @@
     "duration": 300,
     "fps": 180
   },
+  "global_work_area_offset": {
+    "top": 52,
+    "bottom": 52,
+    "left": 0,
+    "right": 0
+  },
   "window_hiding_behaviour": "Cloak",
   "cross_monitor_move_behaviour": "Swap",
   "mouse_follows_focus": false,
@@ -24,11 +30,11 @@
   "border_z_order": "TopMost",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
-    "single": "#53bdfa",
-    "stack": "#aad94c",
-    "monocle": "#ffb454",
-    "unfocused": "#0d1017",
-    "floating": "#aad94c"
+    "single": "#59C2FF",
+    "stack": "#B8CC52",
+    "monocle": "#FFB454",
+    "unfocused": "#0F1419",
+    "floating": "#B8CC52"
   },
   "stackbar": {
     "height": 40,
