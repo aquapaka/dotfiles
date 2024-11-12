@@ -30,8 +30,6 @@
     "unfocused": "#0d1017",
     "floating": "#aad94c"
   },
-  "transparency": true,
-  "transparency_alpha": 250,
   "stackbar": {
     "height": 40,
     "mode": "OnStack",
