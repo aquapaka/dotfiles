@@ -6,15 +6,15 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("wasabi" "julia")
+avaiableThemes=("aqua" "julia")
 
 usage() {
   printf "
 Rice Script for apply a rice theme
 
 Usage:
-`basename $0`\t[wasabi] \t Wasabi chillzone
-\t[julia] \t Sweet and mysterious
+`basename $0`\t[aqua]  \t A playful, mysterious girl with eyes like shimmering aqua, her movements graceful and quick, full of curiosity and charm
+\t[julia] \t Mysterious and alluring, with eyes like deep ocean blue and an aura of aqua fire, she exudes both danger and enchantment
 "
 }
 
