@@ -1,4 +1,5 @@
 {
   "windowsTheme": "dark",
-  "windowsTerminalTheme": "Ayu Dark"
+  "windowsTerminalTheme": "Ayu Dark",
+  "windowsTerminalFontface": "Pixelcraft Nerd Font"
 }

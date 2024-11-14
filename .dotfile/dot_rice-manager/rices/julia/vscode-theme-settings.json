@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "base16-horizon-dark",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#E93C58",
+  "material-icon-theme.files.color": "#EFB993",
+  "editor.fontFamily": "'JuliaMono'",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#E93C58",
+    "terminalCursor.foreground": "#E93C58"
+  },
+  "fonted.font": "JuliaMono"
+}

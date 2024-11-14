@@ -1,0 +1,10 @@
+{
+  "font_family": "JuliaMono",
+  "font_size": 16,
+  "max_label_width": 500,
+  "theme": {
+    "palette": "Base16",
+    "name": "HorizonDark",
+    "accent": "Base08"
+  }
+}

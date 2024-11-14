@@ -30,20 +30,20 @@
   "border_z_order": "TopMost",
   "unmanaged_window_operation_behaviour": "NoOp",
   "border_colours": {
-    "single": "#59C2FF",
-    "stack": "#B8CC52",
-    "monocle": "#FFB454",
-    "unfocused": "#0F1419",
-    "floating": "#B8CC52"
+    "single": "#E93C58",
+    "stack": "#24A8B4",
+    "monocle": "#EFAF8E",
+    "unfocused": "#1C1E26",
+    "floating": "#24A8B4"
   },
   "stackbar": {
     "height": 40,
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#aad94c",
-      "unfocused_text": "#bfbdb6",
-      "background": "#0d1017"
+      "focused_text": "#24A8B4",
+      "unfocused_text": "#6F6F70",
+      "background": "#1C1E26"
     }
   },
   "float_rules": [

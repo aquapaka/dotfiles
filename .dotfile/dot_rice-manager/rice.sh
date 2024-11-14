@@ -6,21 +6,15 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("meimei" "tlinh" "mtram" "khanhoa" "khlinh" "shuri" "wasabi" "arcade")
+avaiableThemes=("wasabi" "julia")
 
 usage() {
   printf "
 Rice Script for apply a rice theme
 
 Usage:
-`basename $0`\t[meimei] \t Warming and caring
-\t[tlinh] \t Sweet and mysterious
-\t[mtram] \t Calming and peaceful
-\t[khanhoa] \t Joyful and adventurous
-\t[khlinh] \t Gentle and wise, truly exceptional
-\t[shuri] \t Radiant love for purple, deeply cherished soul
-\t[wasabi] \t Wasabi chill zone~
-\t[arcade] \t WARNING! Only For Truest Gamer!! May hurt your eyes!!!
+`basename $0`\t[wasabi] \t Wasabi chillzone
+\t[julia] \t Sweet and mysterious
 "
 }
 
@@ -48,7 +42,9 @@ set_windows_terminal_theme() {
   echo "Setting windows terminal theme..."
   SETTING_FILE_PATH=$USERPROFILE\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json
   WINDOWS_TERMINAL_THEME=$(jq -r '.windowsTerminalTheme' ./rices/$theme/settings.json)
+  WINDOWS_TERMINAL_FONTFACE=$(jq -r '.windowsTerminalFontface' ./rices/$theme/settings.json)
   jq ".profiles.defaults.colorScheme = \"$WINDOWS_TERMINAL_THEME\"" $SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
+  jq ".profiles.defaults.font.face = \"$WINDOWS_TERMINAL_FONTFACE\"" $SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
 }
 
 # Change windows light/dark mode
