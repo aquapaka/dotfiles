@@ -1,12 +1,14 @@
 {
-  "workbench.colorTheme": "Shades of Purple",
-  "workbench.iconTheme": "xxx",
-  "editor.fontFamily": "'DM Mono Medium', 'CaskaydiaMono Nerd Font Mono'",
+  "workbench.colorTheme": "base16-stella",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#c594ff",
+  "material-icon-theme.files.color": "#acc79b",
+  "editor.fontFamily": "'Monofur Nerd Font Mono'",
   "editor.fontSize": 22,
   "terminal.integrated.fontSize": 22,
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#FF628C",
-    "terminalCursor.foreground": "#FF628C"
+    "editorCursor.foreground": "#c594ff",
+    "terminalCursor.foreground": "#c594ff"
   },
-  "fonted.font": "DM Mono"
+  "fonted.font": "Monofur Nerd Font Mono"
 }

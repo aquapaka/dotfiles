@@ -1,5 +1,9 @@
 {
   "windowsTheme": "dark",
   "windowsTerminalTheme": "Ayu Dark",
-  "windowsTerminalFontface": "Pixelcraft Nerd Font"
+  "windowsTerminalFont": {
+    "cellHeight": "1.2",
+    "face": "Pixelcraft Nerd Font",
+    "size": 13.5
+  }
 }

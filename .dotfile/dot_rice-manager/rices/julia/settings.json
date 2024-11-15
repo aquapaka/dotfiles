@@ -1,5 +1,9 @@
 {
   "windowsTheme": "dark",
   "windowsTerminalTheme": "Horizon Dark",
-  "windowsTerminalFontface": "JuliaMono"
+  "windowsTerminalFont": {
+    "cellHeight": "1.2",
+    "face": "JuliaMono",
+    "size": 13.5
+  }
 }

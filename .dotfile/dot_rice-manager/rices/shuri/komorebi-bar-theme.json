@@ -1,0 +1,10 @@
+{
+  "font_family": "Monofur Nerd Font Mono",
+  "font_size": 22,
+  "max_label_width": 500,
+  "theme": {
+    "palette": "Base16",
+    "name": "Stella",
+    "accent": "Base0B"
+  }
+}

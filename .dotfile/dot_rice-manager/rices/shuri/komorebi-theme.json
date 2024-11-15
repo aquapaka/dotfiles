@@ -1,30 +1,27 @@
 {
-  "default_workspace_padding": 6,
-  "default_container_padding": 6,
+  "default_workspace_padding": 4,
+  "default_container_padding": 4,
   "global_work_area_offset": {
-    "top": 54,
-    "bottom": 54,
+    "top": 52,
+    "bottom": 52,
     "left": 0,
     "right": 0
   },
-  "border": true,
-  "border_width": 2,
-  "border_style": "Square",
   "border_colours": {
-    "single": "#A599E9",
-    "stack": "#A5FF90",
-    "monocle": "#FF628C",
-    "unfocused": "#2D2B55"
+    "single": "#c594ff",
+    "stack": "#acc79b",
+    "monocle": "#c79987",
+    "unfocused": "#2b213c",
+    "floating": "#acc79b"
   },
-  "transparency": false,
   "stackbar": {
     "height": 40,
     "mode": "OnStack",
     "tabs": {
       "width": 300,
-      "focused_text": "#A599E9",
-      "unfocused_text": "#000000",
-      "background": "#2D2B55"
+      "focused_text": "#acc79b",
+      "unfocused_text": "#998bad",
+      "background": "#2b213c"
     }
   }
 }

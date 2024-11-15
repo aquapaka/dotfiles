@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("aqua" "julia")
+avaiableThemes=("aqua" "shuri" "julia")
 
 usage() {
   printf "
@@ -14,6 +14,7 @@ Rice Script for apply a rice theme
 
 Usage:
 `basename $0`\t[aqua]  \t A playful, mysterious girl with eyes like shimmering aqua, her movements graceful and quick, full of curiosity and charm
+\t[shuri] \t A gentle presence in shades of purple, like twilight’s soft embrace—quietly comforting, effortlessly lovely
 \t[julia] \t Mysterious and alluring, with eyes like deep ocean blue and an aura of aqua fire, she exudes both danger and enchantment
 "
 }
@@ -41,10 +42,9 @@ set_komorebi_theme() {
 set_windows_terminal_theme() {
   echo "Setting windows terminal theme..."
   SETTING_FILE_PATH=$USERPROFILE\\AppData\\Local\\Packages\\Microsoft.WindowsTerminal_8wekyb3d8bbwe\\LocalState\\settings.json
-  WINDOWS_TERMINAL_THEME=$(jq -r '.windowsTerminalTheme' ./rices/$theme/settings.json)
-  WINDOWS_TERMINAL_FONTFACE=$(jq -r '.windowsTerminalFontface' ./rices/$theme/settings.json)
-  jq ".profiles.defaults.colorScheme = \"$WINDOWS_TERMINAL_THEME\"" $SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
-  jq ".profiles.defaults.font.face = \"$WINDOWS_TERMINAL_FONTFACE\"" $SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
+  RICE_SETTING_FILE_PATH=./rices/$theme/settings.json
+  jq ".profiles.defaults.colorScheme = input.windowsTerminalTheme" $SETTING_FILE_PATH $RICE_SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
+  jq ".profiles.defaults.font += input.windowsTerminalFont" $SETTING_FILE_PATH $RICE_SETTING_FILE_PATH > tmp.json && mv tmp.json $SETTING_FILE_PATH
 }
 
 # Change windows light/dark mode

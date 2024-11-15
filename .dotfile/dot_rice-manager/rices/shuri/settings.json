@@ -1,0 +1,9 @@
+{
+  "windowsTheme": "dark",
+  "windowsTerminalTheme": "Stella",
+  "windowsTerminalFont": {
+    "cellHeight": "1.1",
+    "face": "Monofur Nerd Font Mono",
+    "size": 17
+  }
+}
