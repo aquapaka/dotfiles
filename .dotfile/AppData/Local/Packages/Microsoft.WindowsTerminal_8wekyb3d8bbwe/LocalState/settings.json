@@ -43,13 +43,13 @@
   "profiles": {
     "defaults": {
       "adjustIndistinguishableColors": "indexed",
-      "colorScheme": "Horizon Dark",
+      "colorScheme": "Stella",
       "cursorShape": "vintage",
       "elevate": true,
       "font": {
-        "cellHeight": "1.2",
-        "face": "JuliaMono",
-        "size": 13.5
+        "cellHeight": "1.1",
+        "face": "Monofur Nerd Font Mono",
+        "size": 17
       },
       "opacity": 90,
       "padding": "16",

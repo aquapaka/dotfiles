@@ -3,13 +3,13 @@
   "monitor": {
     "index": 1
   },
-  "font_family": "JuliaMono",
-  "font_size": 16,
+  "font_family": "Monofur Nerd Font Mono",
+  "font_size": 22,
   "max_label_width": 500,
   "theme": {
     "palette": "Base16",
-    "name": "HorizonDark",
-    "accent": "Base08"
+    "name": "Stella",
+    "accent": "Base0B"
   },
   "left_widgets": [
     {

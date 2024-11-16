@@ -42,6 +42,7 @@ alias winfetch='powershell winfetch'
 alias update='winget upgrade --all && pacman -Syu --noconfirm'
 alias btop='~/.local/bin/btop/btop4win.exe'
 alias rice='~/.rice-manager/rice.sh'
+alias wallpaper='~/.rice-manager/wallpaper.sh'
 alias ala='alacritty --working-directory=$(pwd) & disown'
 alias cmsp='cd $(chezmoi source-path)/..'
 cd() {
