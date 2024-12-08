@@ -97,8 +97,14 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 
 ### Change theme
 
-- From alacritty terminal use command: ```rice <theme-name>``` (example: ```rice meimei```)
-- Background is selected randomize from rice's wallpaper folder
+- From terminal use command: ```rice <theme-name>``` (example: ```rice aqua```)
+- Wallpaper is selected randomize from rice's wallpaper folder.
+
+### Change wallpaper
+
+- From terminal use command: ```wallpaper <theme-name>``` (example: ```wallpaper aqua```)
+- This will change the wallpaper only, allow you to use wallpaper from other themes.
+- Wallpaper is selected randomize from selected rice's wallpaper folder.
 
 ### Useful keybindings
 
@@ -108,18 +114,12 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |<kbd>alt</kbd> + <kbd>Space</kbd>| Open powertoy run |
 |<kbd>alt</kbd> + <kbd>h\|j\|k\|l</kbd>| Focus window left \| bottom \| top \| right|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>h\|j\|k\|l</kbd>| Move focusing window left \| bottom \| top \| right|
-|<kbd>alt</kbd> + <kbd>q</kbd>| Close focusing window|
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>q</kbd>| Close focusing window|
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
-|<kbd>alt</kbd> + <kbd>f</kbd>| Toggle float|
-|<kbd>alt</kbd> + <kbd>m</kbd>| Toggle monocide|
-|<kbd>alt</kbd> + <kbd>x</kbd>| Flip layout horizontal |
-|<kbd>alt</kbd> + <kbd>y</kbd>| Flip layout vertical |
-|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>t</kbd>| Retile |
-|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload whkd |
-|<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload komorebi and zebar |
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload glazewm config |
 
-ℹ️ More keybinding can be found inside ```~/.config/whkdrc```
+ℹ️ More keybinding can be found [here](https://github.com/glzr-io/glazewm/blob/main/resources/assets/cheatsheet.png)
 
 ## 📦 Step by Step Installation
 
@@ -132,7 +132,7 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
   - Remove added task scheduler tasks
   - Remove added config files in ```~/.config```
 - If you have just fresh install windows 11, you need to go to Microsoft Store and update your "App Installer". Otherwise winget will not working.
-- For those who use another windows 11 version (like IOT Enterprise, which doesn't come with Microsoft Store):
+- For those who use another windows 11 version (like IOT Enterprise LTSC, which doesn't come with Microsoft Store):
   - First download the latest version of winget: <https://aka.ms/getwinget>
   - Then open Powershell and run: ```Add-AppxPackage -Path <path to downloaded .msixbundle>``` to install winget
 
@@ -141,31 +141,30 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 Font need to be download and install manually *(Windows is planning to allows installing fonts from winget. Stay tune!)*:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
-- [CaskaydiaMono Nerd Font Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/CascadiaMono.zip)
-- [Monaspace](https://github.com/githubnext/monaspace)
-- [Scientifica](https://github.com/nerdypepper/scientifica/releases)
-- [DM Mono](https://fonts.google.com/specimen/DM+Mono)
+- [Monofur Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Monofur.zip)
+- [JuliaMono](https://github.com/cormullion/juliamono)
 
 ### Install chezmoi and apply dotfiles
 
 - Install chezmoi from Winget with: ```winget install chezmoi```
-- Initialize chezmoi and apply the dotfiles with: ```chezmoi init --apply aquapaka``` (Might need close and reopen powershell, or restart the pc for chezmoi command to be recognizable)
+- Initialize chezmoi and apply the dotfiles with: ```chezmoi init --apply aquapaka``` (Might need close and reopen powershell for chezmoi command to be recognizable after installed)
 
 ### Install packages
 
 - After chezmoi apply the dotfiles, the chezmoi source folder could be found in ```%userprofile%/.local/share/chezmoi```, ```install-packages.ps1``` file can be found inside ```scripts``` folder
-- Edit ```install-packages.ps1```, comment out packages/apps that are not needed
-- Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, keep re-run the script until all packages has been installed)
+- Edit ```install-packages.ps1```, comment out packages/apps that are not needed (All non-required packages are commented by default)
+- Run ```install-packages.ps1``` script with **Powershell** to install nessesary packages (⚠️ Note: sometime installation could fail, re-run the script to ensure all packages has been installed)
 
 ### Add New Environment Variables
 
-Add those to Path variables
-
-- ```%USERPROFILE%\.local\bin```
+- Press Windows + S to open Search
+- Find and open "edit environment variables for your account"
+- Choose variable "Path" then click Edit
+- Click New to add ```%USERPROFILE%\.local\bin```
 
 ### Restart
 
-- After everything above are done, restart the PC one time to make sure all new program paths are registered.
+- After everything above are done, restart the PC one time to make sure all new program paths and fonts are registered.
 
 ----------------------------
 
@@ -173,17 +172,17 @@ Add those to Path variables
 
 ### Change MSYS2 home directory
 
-Edit /c/msys64/etc/nsswitch.conf
+Edit the "db_home"'s value to "windows" of file /c/msys64/etc/nsswitch.conf (file nsswitch.conf inside C:\msys64\etc)
 
 ```
 db_home: windows
 ```
 
-This will set windows user folder as default home directory
+This will set windows user folder as default home directory. Otherwise zsh won't see it config file from user's directory.
 
 ### Install Zsh
 
-Open **MSYS2 UCRT64** and run below command to install zsh
+Open **MSYS2 UCRT64** and run below command to install zsh (Tips: command can be pasted using middle mouse button)
 
 ```
 # Update pacman
@@ -192,11 +191,9 @@ pacman -Syu
 # Open MSYS2 Ucrt64 and install ZSH
 pacman -S zsh
 
-Open **MSYS2 UCRT64** and run below command to install zsh
-
 ```
 
-Open **Powershell**, from your user folder (Example: ```C:\Users\wasabi>```), run below command to install zsh themes and configs
+Open **Powershell**, from your user folder (Example: ```C:\Users\aquapaka>```), run below command to install zsh themes and configs
 
 ```
 # Install Theme: Powerlevel10k
@@ -205,7 +202,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ./.config/zsh/t
 
 # Install Fast Syntax Highlighting Plugin
 
-git clone git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ./.config/zsh/plugins/fast-syntax-highlighting
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting ./.config/zsh/plugins/fast-syntax-highlighting
 
 # Install Autosuggestions Plugin
 
@@ -213,24 +210,15 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ./.config/zsh/plugins
 
 # Install History Substring Search Plugin
 
-git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zsh/plugins/zsh-history-substring-searchpacman -S zsh
+git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zsh/plugins/zsh-history-substring-search
 ```
 
-**Troubleshoot:** If git is not recognizable, try close and reopen powershell or check whether git is installed through running ``````install-packages.ps1``` or not.
+**Troubleshoot:** If git is not recognizable, try close and reopen powershell or check whether git is installed through running ```install-packages.ps1``` or not.
 
-### Install VS Code Theme
+### Install VS Code Extensions for Theming
 
-- Icons:
-  - [Gruvbox Material Icons](https://marketplace.visualstudio.com/items?itemName=navernoedenis.gruvbox-material-icons)
-- Themes:
-  - [Gruvbox](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
-  - [Monokai Pro](https://marketplace.visualstudio.com/items?itemName=monokai.theme-monokai-pro-vscode)
-  - [Matchalk](https://marketplace.visualstudio.com/items?itemName=lucafalasco.matchalk)
-  - [Neon City](https://marketplace.visualstudio.com/items?itemName=lakshits11.neon-city)
-  - [Paper](https://marketplace.visualstudio.com/items?itemName=a5hk.paper)
-  - [Base 16 Tomorrow](https://marketplace.visualstudio.com/items?itemName=o4x.base16-tomorrow)
-  - [Shades of Purple](https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple)
-
+- Icons: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
+- Themes: [Tinted VSCode](https://marketplace.visualstudio.com/items?itemName=TintedTheming.base16-tinted-themes)
 - ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
 ### Auto start Komorebi at windows start

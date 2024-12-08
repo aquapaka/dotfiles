@@ -31,12 +31,12 @@ set_vscode_theme() {
 }
 
 # Set komorebi theme
-set_komorebi_theme() {
-  echo "Setting komorebi theme..."
-  echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > tmp.json && mv tmp.json ~/komorebi.json
-  echo "$(jq -s '.[0] * .[1]' ~/komorebi.bar.monitor1.json ./rices/$theme/komorebi-bar-theme.json)" > tmp.json && mv tmp.json ~/komorebi.bar.monitor1.json
-  echo "$(jq -s '.[0] * .[1]' ~/komorebi.bar.monitor2.json ./rices/$theme/komorebi-bar-theme.json)" > tmp.json && mv tmp.json ~/komorebi.bar.monitor2.json
-}
+# set_komorebi_theme() {
+#   echo "Setting komorebi theme..."
+#   echo "$(jq -s '.[0] * .[1]' ~/komorebi.json ./rices/$theme/komorebi-theme.json)" > tmp.json && mv tmp.json ~/komorebi.json
+#   echo "$(jq -s '.[0] * .[1]' ~/komorebi.bar.monitor1.json ./rices/$theme/komorebi-bar-theme.json)" > tmp.json && mv tmp.json ~/komorebi.bar.monitor1.json
+#   echo "$(jq -s '.[0] * .[1]' ~/komorebi.bar.monitor2.json ./rices/$theme/komorebi-bar-theme.json)" > tmp.json && mv tmp.json ~/komorebi.bar.monitor2.json
+# }
 
 # Set windows terminal theme
 set_windows_terminal_theme() {
@@ -76,7 +76,6 @@ for theme in "${avaiableThemes[@]}"; do
     # # Apply configs
     set_desktop_wallpaper
     set_vscode_theme
-    set_komorebi_theme
     set_windows_terminal_theme
     change_windows_lightdark_mode
 

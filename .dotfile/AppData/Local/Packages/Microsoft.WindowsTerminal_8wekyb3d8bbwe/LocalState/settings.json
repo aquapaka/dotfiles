@@ -43,13 +43,13 @@
   "profiles": {
     "defaults": {
       "adjustIndistinguishableColors": "indexed",
-      "colorScheme": "Stella",
+      "colorScheme": "Ayu Dark",
       "cursorShape": "vintage",
       "elevate": true,
       "font": {
-        "cellHeight": "1.1",
-        "face": "Monofur Nerd Font Mono",
-        "size": 17
+        "cellHeight": "1.2",
+        "face": "Pixelcraft Nerd Font",
+        "size": 13.5
       },
       "opacity": 90,
       "padding": "16",
@@ -63,8 +63,7 @@
         "commandline": "C:/msys64/msys2_shell.cmd -defterm -here -no-start -ucrt64 -full-path -shell zsh",
         "guid": "{17da3cac-b318-431e-8a3e-7fcdefe6d114}",
         "icon": "C:/msys64/ucrt64.ico",
-        "name": "UCRT64 / MSYS2",
-        "startingDirectory": "C:\\Users\\wasabi"
+        "name": "UCRT64 / MSYS2"
       },
       {
         "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
@@ -117,29 +116,6 @@
       "yellow": "#FFB454"
     },
     {
-      "background": "#2b213c",
-      "black": "#2b213c",
-      "blue": "#a5aad4",
-      "brightBlack": "#655978",
-      "brightBlue": "#a5aad4",
-      "brightCyan": "#9bc7bf",
-      "brightGreen": "#acc79b",
-      "brightPurple": "#c594ff",
-      "brightRed": "#c79987",
-      "brightWhite": "#ebdcff",
-      "brightYellow": "#c7c691",
-      "cursorColor": "#C6A0F6",
-      "cyan": "#9bc7bf",
-      "foreground": "#998bad",
-      "green": "#acc79b",
-      "name": "Stella",
-      "purple": "#c594ff",
-      "red": "#c79987",
-      "selectionBackground": "#4d4160",
-      "white": "#998bad",
-      "yellow": "#c7c691"
-    },
-    {
       "background": "#24273A",
       "black": "#51576D",
       "blue": "#8AADF4",
@@ -184,6 +160,29 @@
       "selectionBackground": "#2E303E",
       "white": "#CBCED0",
       "yellow": "#EFB993"
+    },
+    {
+      "background": "#2B213C",
+      "black": "#2B213C",
+      "blue": "#A5AAD4",
+      "brightBlack": "#655978",
+      "brightBlue": "#A5AAD4",
+      "brightCyan": "#9BC7BF",
+      "brightGreen": "#ACC79B",
+      "brightPurple": "#C594FF",
+      "brightRed": "#C79987",
+      "brightWhite": "#EBDCFF",
+      "brightYellow": "#C7C691",
+      "cursorColor": "#C6A0F6",
+      "cyan": "#9BC7BF",
+      "foreground": "#998BAD",
+      "green": "#ACC79B",
+      "name": "Stella",
+      "purple": "#C594FF",
+      "red": "#C79987",
+      "selectionBackground": "#4D4160",
+      "white": "#998BAD",
+      "yellow": "#C7C691"
     }
   ],
   "showTabsInTitlebar": true,
