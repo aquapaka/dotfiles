@@ -106,14 +106,23 @@ window_behavior:
 
 workspaces:
   - name: '1'
+    keep_alive: true
   - name: '2'
+    keep_alive: true
   - name: '3'
+    keep_alive: true
   - name: '4'
+    keep_alive: true
   - name: '5'
+    keep_alive: true
   - name: '6'
+    keep_alive: true
   - name: '7'
+    keep_alive: true
   - name: '8'
+    keep_alive: true
   - name: '9'
+    keep_alive: true
 
 window_rules:
   - commands: ['ignore']

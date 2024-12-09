@@ -216,7 +216,7 @@
                     <button
                       className={`workspace ${
                         workspace.hasFocus && "focused"
-                      } ${workspace.isDisplayed && "displayed"}`}
+                      } ${workspace.children.length && "has-child"}`}
                       onClick={() =>
                         output.glazewm.runCommand(
                           `focus --workspace ${workspace.name}`
@@ -224,7 +224,11 @@
                       }
                       key={workspace.name}
                     >
-                      {workspace.displayName ?? workspace.name}
+                      {workspace.hasFocus
+                        ? "❤"
+                        : workspace.children.length
+                        ? "⏺"
+                        : "●"}
                     </button>
                   ))}
                 </div>

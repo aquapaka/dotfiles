@@ -187,19 +187,20 @@ body {
 }
 
 .workspace {
+  background: none;
   margin-right: 4px;
   padding: 4px 8px;
-  color: rgb(255 255 255 / 90%);
+  color: #3e4b59;
   border: none;
   border-radius: 2px;
   cursor: pointer;
 
-  &.displayed {
-    color:
+  &.has-child {
+    color: #F3F4F5;
   }
 
   &.focused,
   &:hover {
-    color: #59c2ff;
+    color: #f07178;
   }
 }
