@@ -1,7 +1,7 @@
 # Required packages (Needed for everything to work)
 winget install Git.Git -e -i;
 winget install Microsoft.WindowsTerminal --silent
-winget install GlazeWM --silent
+winget install --id glzr-io.glazewm --exact --version 3.7.0 --no-upgrade --silent
 winget install --id eza-community.eza -e --silent;
 winget install --id MikeFarah.yq --silent;
 winget install --id jqlang.jq --silent;
