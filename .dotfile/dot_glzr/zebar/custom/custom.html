@@ -32,10 +32,10 @@
         host: { type: "host" },
         network: { type: "network" },
         glazewm: { type: "glazewm" },
-        cpu: { type: "cpu" },
+        cpu: { type: "cpu", refreshInterval: 1000 },
         date: { type: "date", formatting: "EEE d MMM t" },
         battery: { type: "battery" },
-        memory: { type: "memory" },
+        memory: { type: "memory", refreshInterval: 1000 },
         weather: { type: "weather" },
       });
 
@@ -201,12 +201,20 @@
         return (
           <div className="app">
             <div className="left">
-              <div className="uptime">
-                <span className="icon uptime-icon">⌛</span>
-                <span className="info">
-                  {formatUptime(output.host?.uptime)}
-                </span>
-              </div>
+              {output.host && (
+                <>
+                  <div className="os">
+                    <span className="icon os-icon">⭐</span>
+                    <span className="info">{output.host.hostname}</span>
+                  </div>
+                  <div className="uptime">
+                    <span className="icon uptime-icon">⌛</span>
+                    <span className="info">
+                      {formatUptime(output.host.uptime)}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="center">
