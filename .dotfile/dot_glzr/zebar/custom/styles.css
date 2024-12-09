@@ -2,19 +2,6 @@
  * Import the Nerdfonts icon font.
  * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
  */
-@import 'https://www.nerdfonts.com/assets/css/webfont.css';
-
-i {
-  color: rgb(115 130 175 / 95%);
-  margin-right: 7px;
-}
-
-body {
-  color: rgb(255 255 255 / 90%);
-  font-family: ui-monospace, monospace;
-  font-size: 12px;
-  overflow: hidden;
-}
 
 html,
 body,
@@ -22,9 +9,17 @@ body,
   height: 100%;
 }
 
+body {
+  color: rgb(255 255 255 / 90%);
+  font-family: "Pixelcraft Nerd Font", ui-monospace, monospace;
+  font-size: 13.5pt;
+  overflow: hidden;
+}
+
 #root {
-  border-bottom: 1px solid rgb(255 255 255 / 5%);
-  background: linear-gradient(rgb(0 0 0 / 90%), rgb(5 2 20 / 85%));
+  border: 1px solid #59c2ff;
+  border-radius: 10px;
+  background: rgb(15 20 25 / 90%);
 }
 
 .app {
@@ -32,7 +27,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   height: 100%;
-  padding: 4px 1.5vw;
+  padding: 0px 16px 0px 8px;
 }
 
 .left,
@@ -40,6 +35,15 @@ body,
 .right {
   display: flex;
   align-items: center;
+  padding-bottom: 4px;
+}
+
+.left {
+  justify-self: left;
+}
+
+.left > div {
+  margin-right: 16px;
 }
 
 .center {
@@ -50,14 +54,131 @@ body,
   justify-self: end;
 }
 
-.logo,
-.binding-mode,
-.tiling-direction,
-.network,
-.memory,
-.cpu,
+.right > div {
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+}
+
+.info {
+  display: inline-block;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.os-icon {
+  color: #c6a0f6;
+}
+
+.uptime-icon {
+  color: #ffb454;
+}
+
+.tiling-direction-icon {
+  color: #ffb454;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transform: translate(0px, 1px);
+}
+
+.ethernet-icon {
+  padding-left: 12px;
+  font-size: 1.4rem;
+  color: #b8cc52;
+  transform: translate(4px, 2px);
+}
+
+.wifi-icon {
+  padding-left: 12px;
+  font-size: 1.6rem;
+  color: #b8cc52;
+  transform: translate(6px, 3px);
+}
+
+.cpu-icon {
+  padding-left: 16px;
+  color: #f07178;
+  transform: translate(0px, -1px);
+}
+
+.memory-icon {
+  padding-left: 10px;
+  font-size: 1.5rem;
+  color: #b8cc52;
+  transform: translate(6px, 0px);
+}
+
+.battery-icon {
+  padding-left: 5px;
+  font-size: 1.4rem;
+  color: #ffb454;
+  transform: translate(6px, 2px);
+}
+
 .battery {
-  margin-right: 20px;
+  position: relative;
+}
+
+.charging-icon {
+  color: #59c2ff;
+  z-index: 100;
+  position: absolute;
+  right: 26px;
+  bottom: -2px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+}
+
+.full-icon {
+  color: #b8cc52;
+  font-size: 0.9rem;
+  z-index: 100;
+  position: absolute;
+  right: 29px;
+  bottom: 0px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+}
+
+.weather-icon {
+  padding-left: 15px;
+  color: #95e6cb;
+  transform: translate(-1px, -1px);
+}
+
+.date-icon {
+  padding-left: 12px;
+  color: #c6a0f6;
+}
+
+.red {
+  color: #f07178;
+}
+
+.blue {
+  color: #59c2ff;
+}
+
+.green {
+  color: #b8cc52;
+}
+
+.yellow {
+  color: #ffb454;
+}
+
+.black {
+  color: #3e4b59;
+}
+
+.cyan {
+  color: #95E6CB;
+}
+
+.white {
+  color: #F3F4F5
 }
 
 .workspaces {
@@ -66,7 +187,6 @@ body,
 }
 
 .workspace {
-  background: rgb(255 255 255 / 5%);
   margin-right: 4px;
   padding: 4px 8px;
   color: rgb(255 255 255 / 90%);
@@ -75,41 +195,11 @@ body,
   cursor: pointer;
 
   &.displayed {
-    background: rgb(255 255 255 / 15%);
+    color:
   }
 
   &.focused,
   &:hover {
-    background: rgb(75 115 255 / 50%);
+    color: #59c2ff;
   }
-}
-
-.binding-mode,
-.tiling-direction {
-  background: rgb(255 255 255 / 15%);
-  color: rgb(255 255 255 / 90%);
-  border-radius: 2px;
-  line-height: 1;
-  padding: 4px 8px;
-  border: 0;
-  cursor: pointer;
-}
-
-.binding-mode {
-  margin-right: 4px;
-}
-
-.cpu .high-usage {
-  color: #900029;
-}
-
-.battery {
-  position: relative;
-}
-
-.battery .charging-icon {
-  position: absolute;
-  font-size: 7px;
-  left: -8px;
-  top: 3px;
 }
