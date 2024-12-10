@@ -33,10 +33,12 @@
         network: { type: "network" },
         glazewm: { type: "glazewm" },
         cpu: { type: "cpu", refreshInterval: 1000 },
-        date: { type: "date", formatting: "EEE d MMM t" },
+        date: { type: "date", formatting: "EEE d MMM yyyy, t" },
         battery: { type: "battery" },
         memory: { type: "memory", refreshInterval: 1000 },
         weather: { type: "weather" },
+        media: { type: "media" },
+        audio: { type: "audio" },
       });
 
       createRoot(document.getElementById("root")).render(<App />);
@@ -124,6 +126,18 @@
         //     return <i className="nf nf-fa-battery_1"></i>;
         //   return <i className="nf nf-fa-battery_0"></i>;
         // }
+
+        function getAudioIcon(volume) {
+          if (volume > 30) {
+            return <span className="icon audio-icon cyan">墳</span>;
+          } else if (volume > 15) {
+            return <span className="icon audio-icon cyan">奔</span>;
+          } else if (volume > 0) {
+            return <span className="icon audio-icon cyan">奄</span>;
+          } else {
+            return <span className="icon audio-icon red">婢</span>;
+          }
+        }
 
         // Get icon to show for current weather status.
         function getWeatherIcon(weatherOutput) {
@@ -215,6 +229,17 @@
                   </div>
                 </>
               )}
+
+              {output.media?.currentSession && (
+                <>
+                  <div className="media">
+                    <span className="icon media-icon cyan">♫</span>
+                    <span className="info">
+                      {output.media.currentSession.title}
+                    </span>
+                  </div>
+                </>
+              )}
             </div>
 
             <div className="center">
@@ -299,6 +324,17 @@
                   </span>
                   <span className="info">
                     {Math.round(output.battery.chargePercent)}%
+                  </span>
+                </div>
+              )}
+
+              {output.audio && (
+                <div className="audio">
+                  <span className="icon audio-icon">
+                    {getAudioIcon(output.audio.defaultPlaybackDevice.volume)}
+                  </span>
+                  <span className="info">
+                    {Math.round(output.audio.defaultPlaybackDevice.volume)}%
                   </span>
                 </div>
               )}

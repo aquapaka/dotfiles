@@ -2,6 +2,7 @@
 winget install Git.Git -e -i;
 winget install Microsoft.WindowsTerminal --silent
 winget install --id glzr-io.glazewm --exact --version 3.7.0 --no-upgrade --silent
+winget install --id glzr-io.zebar --exact --version 2.6.1 --no-upgrade --silent
 winget install --id eza-community.eza -e --silent;
 winget install --id MikeFarah.yq --silent;
 winget install --id jqlang.jq --silent;
@@ -18,4 +19,4 @@ winget install --id MSYS2.MSYS2 -e --silent;
 #winget install -e --id Microsoft.VisualStudioCode -i;
 #winget install Notion.Notion --silent;
 #winget install --id pnpm.pnpm -e --silent;
-#winget install Daum.PotPlayer --silent;
+winget install Daum.PotPlayer --silent;

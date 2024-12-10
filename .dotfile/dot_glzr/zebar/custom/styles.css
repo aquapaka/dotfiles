@@ -24,7 +24,7 @@ body {
 
 .app {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 2fr;
   align-items: center;
   height: 100%;
   padding: 0px 16px 0px 8px;
@@ -43,7 +43,7 @@ body {
 }
 
 .left > div {
-  margin-right: 16px;
+  margin-right: 14px;
 }
 
 .center {
@@ -62,6 +62,12 @@ body {
 
 .info {
   display: inline-block;
+  /* Max width for EACH info text */
+  max-width: 430px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
 }
 
 .icon {
@@ -174,11 +180,11 @@ body {
 }
 
 .cyan {
-  color: #95E6CB;
+  color: #95e6cb;
 }
 
 .white {
-  color: #F3F4F5
+  color: #f3f4f5;
 }
 
 .workspaces {
@@ -196,7 +202,7 @@ body {
   cursor: pointer;
 
   &.has-child {
-    color: #F3F4F5;
+    color: #f3f4f5;
   }
 
   &.focused,
