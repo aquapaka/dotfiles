@@ -142,6 +142,9 @@ window_rules:
       - window_process: { equals: "Lively" }
         window_class: { regex: "HwndWrapper" }
 
+      # Ignores photoshop panels and Davinci Resolve windows.
+      - window_title: { regex: "New Document|Color" }
+
   - commands: ["move --workspace 1", "focus --workspace 1"]
     match:
       - window_process: { regex: "WindowsTerminal" }

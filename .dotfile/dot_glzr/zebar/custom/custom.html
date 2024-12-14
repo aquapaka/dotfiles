@@ -328,7 +328,7 @@
                 </div>
               )}
 
-              {output.audio && (
+              {output.audio?.defaultPlaybackDevice && (
                 <div className="audio">
                   <span className="icon audio-icon">
                     {getAudioIcon(output.audio.defaultPlaybackDevice.volume)}
