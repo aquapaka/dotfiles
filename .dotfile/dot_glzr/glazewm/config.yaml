@@ -105,6 +105,10 @@ window_behavior:
       shown_on_top: true
 
 workspaces:
+  # Empty workspace for leftmost screen to prevent error
+  - name: "Empty"
+    keep_alive: false
+    bind_to_monitor: 0
   - name: "1"
     keep_alive: true
     bind_to_monitor: 1
@@ -169,6 +173,12 @@ window_rules:
     match:
       - window_process: { regex: "Code|Resolve" }
 
+  # [4] Folder and files workspaces
+  - commands: ["move --workspace 4", "focus --workspace 4"]
+    match:
+      - window_process: { regex: "" }
+        window_title: { regex: ".*? - File Explorer" }
+
   - commands: ["move --workspace 5"]
     match:
       - window_process: { regex: "Discord" }
@@ -180,7 +190,7 @@ window_rules:
   # [9] Stream Workspace
   - commands: ["move --workspace 9", "focus --workspace 9"]
     match:
-      - window_process: { regex: "Streamlabs OBS|" }
+      - window_process: { regex: "Streamlabs OBS" }
 
   # [0] Settings Workspace
   - commands: ["move --workspace 0", "focus --workspace 0"]
