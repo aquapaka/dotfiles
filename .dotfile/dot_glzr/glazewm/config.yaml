@@ -107,22 +107,34 @@ window_behavior:
 workspaces:
   - name: "1"
     keep_alive: true
+    bind_to_monitor: 0
   - name: "2"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "3"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "4"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "5"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "6"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "7"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "8"
     keep_alive: true
+    bind_to_monitor: 1
   - name: "9"
     keep_alive: true
+    bind_to_monitor: 0
+  - name: "0"
+    keep_alive: true
+    bind_to_monitor: 0
 
 window_rules:
   - commands: ["ignore"]
@@ -155,15 +167,25 @@ window_rules:
 
   - commands: ["move --workspace 3", "focus --workspace 3"]
     match:
-      - window_process: { regex: "Code" }
+      - window_process: { regex: "Code|Resolve" }
 
   - commands: ["move --workspace 5"]
     match:
       - window_process: { regex: "Discord" }
 
+  - commands: ["move --workspace 7"]
+    match:
+      - window_process: { regex: "VALORANT-Win64-Shipping|Riot Client|League of Legends" }
+
+  # [9] Stream Workspace
   - commands: ["move --workspace 9", "focus --workspace 9"]
     match:
-      - window_process: { regex: "Taskmgr" }
+      - window_process: { regex: "Streamlabs OBS|" }
+
+  # [0] Settings Workspace
+  - commands: ["move --workspace 0", "focus --workspace 0"]
+    match:
+      - window_process: { regex: "Taskmgr|vsthost" }
 
 binding_modes:
   # When enabled, the focused window can be resized via arrow keys or HJKL.
@@ -305,6 +327,8 @@ keybindings:
     bindings: ["alt+8"]
   - commands: ["focus --workspace 9"]
     bindings: ["alt+9"]
+  - commands: ["focus --workspace 0"]
+    bindings: ["alt+0"]
 
   # Move the focused window's parent workspace to a monitor in a given
   # direction.
@@ -336,3 +360,5 @@ keybindings:
     bindings: ["alt+shift+8"]
   - commands: ["move --workspace 9", "focus --workspace 9"]
     bindings: ["alt+shift+9"]
+  - commands: ["move --workspace 0", "focus --workspace 0"]
+    bindings: ["alt+shift+0"]
