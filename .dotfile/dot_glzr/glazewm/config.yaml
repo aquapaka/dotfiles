@@ -107,7 +107,7 @@ window_behavior:
 workspaces:
   - name: "1"
     keep_alive: true
-    bind_to_monitor: 0
+    bind_to_monitor: 1
   - name: "2"
     keep_alive: true
     bind_to_monitor: 1
@@ -131,10 +131,10 @@ workspaces:
     bind_to_monitor: 1
   - name: "9"
     keep_alive: true
-    bind_to_monitor: 0
+    bind_to_monitor: 1
   - name: "0"
     keep_alive: true
-    bind_to_monitor: 0
+    bind_to_monitor: 1
 
 window_rules:
   - commands: ["ignore"]
