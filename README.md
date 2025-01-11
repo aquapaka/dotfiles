@@ -27,10 +27,10 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 ## Core
 
-- Terminal: **Alacritty**
+- Terminal: **Windows Terminal**
 - Shell: **Zsh** inside MSYS2
-- Tiling Window Manager: **Komorebi**
-- Bar: **Komorebi Bar**
+- Tiling Window Manager: **GlazeWM 3**
+- Bar: **Zebar 2**
 - Package manager: **Winget**
 - Dotfiles manager: **Chezmoi**
 
