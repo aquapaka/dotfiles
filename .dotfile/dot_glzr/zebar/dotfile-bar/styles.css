@@ -3,6 +3,38 @@
  * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
  */
 
+.red {
+  color: #f07178;
+}
+
+.blue {
+  color: #59c2ff;
+}
+
+.green {
+  color: #b8cc52;
+}
+
+.yellow {
+  color: #ffb454;
+}
+
+.black {
+  color: #3e4b59;
+}
+
+.cyan {
+  color: #95e6cb;
+}
+
+.magenta {
+  color: #c6a0f6;
+}
+
+.white {
+  color: #f3f4f5;
+}
+
 html,
 body,
 #root {
@@ -76,21 +108,17 @@ body {
 }
 
 .os-icon {
-  color: #ffb454;
 }
 
 .uptime-icon {
   padding-left: 20px;
-  color: #c6a0f6;
 }
 
 .media-icon {
   padding-left: 20px;
-  color: #95e6cb;
 }
 
 .tiling-direction-icon {
-  color: #ffb454;
   background: none;
   border: 0;
   cursor: pointer;
@@ -100,34 +128,29 @@ body {
 .ethernet-icon {
   padding-left: 12px;
   font-size: 1.4rem;
-  color: #b8cc52;
   transform: translate(4px, 2px);
 }
 
 .wifi-icon {
   padding-left: 12px;
   font-size: 1.6rem;
-  color: #b8cc52;
   transform: translate(6px, 3px);
 }
 
 .cpu-icon {
   padding-left: 24px;
-  color: #f07178;
   transform: translate(0px, -1px);
 }
 
 .memory-icon {
   padding-left: 17px;
   font-size: 1.5rem;
-  color: #b8cc52;
   transform: translate(6px, 0px);
 }
 
 .battery-icon {
   padding-left: 5px;
   font-size: 1.4rem;
-  color: #ffb454;
   transform: translate(6px, 2px);
 }
 
@@ -137,7 +160,6 @@ body {
 }
 
 .charging-icon {
-  color: #59c2ff;
   z-index: 100;
   position: absolute;
   right: 26px;
@@ -146,7 +168,6 @@ body {
 }
 
 .full-icon {
-  color: #b8cc52;
   font-size: 0.9rem;
   z-index: 100;
   position: absolute;
@@ -163,42 +184,12 @@ body {
 
 .weather-icon {
   padding-left: 20px;
-  color: #95e6cb;
   transform: translate(1px, -1px);
 }
 
 .date-icon {
   padding-left: 16px;
-  color: #c6a0f6;
   transform: translate(2px, 0px);
-}
-
-.red {
-  color: #f07178;
-}
-
-.blue {
-  color: #59c2ff;
-}
-
-.green {
-  color: #b8cc52;
-}
-
-.yellow {
-  color: #ffb454;
-}
-
-.black {
-  color: #3e4b59;
-}
-
-.cyan {
-  color: #95e6cb;
-}
-
-.white {
-  color: #f3f4f5;
 }
 
 .workspaces {

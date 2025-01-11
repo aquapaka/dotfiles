@@ -218,11 +218,11 @@
               {output.host && (
                 <>
                   <div className="os">
-                    <span className="icon os-icon">⭐</span>
+                    <span className="icon os-icon yellow">⭐</span>
                     <span className="info">{output.host.hostname}</span>
                   </div>
                   <div className="uptime">
-                    <span className="icon uptime-icon">⌛</span>
+                    <span className="icon uptime-icon magenta">⌛</span>
                     <span className="info">
                       {formatUptime(output.host.uptime)}
                     </span>
@@ -278,7 +278,7 @@
                   ))}
 
                   <button
-                    className={`tiling-direction-icon`}
+                    className={`tiling-direction-icon yellow`}
                     onClick={() =>
                       output.glazewm.runCommand("toggle-tiling-direction")
                     }
@@ -296,14 +296,14 @@
 
               {output.cpu && (
                 <div className="cpu">
-                  <span className="icon cpu-icon">✂</span>
+                  <span className="icon cpu-icon red">✂</span>
                   <span className="info">{Math.round(output.cpu.usage)}%</span>
                 </div>
               )}
 
               {output.memory && (
                 <div className="memory">
-                  <span className="icon memory-icon">☷</span>
+                  <span className="icon memory-icon green">☷</span>
                   <span className="info">
                     {bytesToGigabytes(output.memory.usedMemory)} GBs
                   </span>
@@ -313,13 +313,13 @@
               {output.battery && (
                 <div className="battery">
                   {output.battery.state === "full" ? (
-                    <span className="icon full-icon">✔</span>
+                    <span className="icon full-icon green">✔</span>
                   ) : output.battery.state === "charging" ? (
-                    <span className="icon charging-icon">⚡</span>
+                    <span className="icon charging-icon blue">⚡</span>
                   ) : (
                     ""
                   )}
-                  <span className="icon battery-icon">
+                  <span className="icon battery-icon yellow">
                     {getBatteryIcon(output.battery)}
                   </span>
                   <span className="info">
@@ -350,7 +350,7 @@
 
               {output.date && (
                 <div className="date">
-                  <span className="icon date-icon">⌚</span>
+                  <span className="icon date-icon magenta">⌚</span>
                   <span className="info">{output.date?.formatted}</span>
                 </div>
               )}

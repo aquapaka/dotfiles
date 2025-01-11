@@ -185,7 +185,7 @@ window_rules:
 
   - commands: ["move --workspace 7"]
     match:
-      - window_process: { regex: "VALORANT-Win64-Shipping|Riot Client|League of Legends" }
+      - window_process: { regex: "VALORANT-Win64-Shipping|Riot Client|League of Legends|LeagueClientUx|steamwebhelper" }
 
   # [9] Stream Workspace
   - commands: ["move --workspace 9", "focus --workspace 9"]
