@@ -2,7 +2,7 @@
   "$schema": "https://github.com/glzr-io/zebar/raw/v2.4.0/resources/settings-schema.json",
   "startupConfigs": [
     {
-      "path": "dotfile-bar/dotfile-bar.zebar.json",
+      "path": "dotfile-bar/config.zebar.json",
       "preset": "default"
     }
   ]

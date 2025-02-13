@@ -34,6 +34,8 @@ general:
   # but has stability issues with some apps.
   hide_method: "cloak"
 
+  show_all_in_taskbar: true
+
 gaps:
   # Whether to scale the gaps with the DPI of the monitor.
   scale_with_dpi: true
@@ -161,6 +163,9 @@ window_rules:
       # Ignores photoshop panels and Davinci Resolve windows.
       - window_title: { regex: "New Document|Color" }
 
+      # Ignore fullscreen games.
+      - window_process: { regex: "VALORANT-Win64-Shipping|League of Legends" }
+
   - commands: ["move --workspace 1", "focus --workspace 1"]
     match:
       - window_process: { regex: "WindowsTerminal" }
@@ -185,7 +190,7 @@ window_rules:
 
   - commands: ["move --workspace 7"]
     match:
-      - window_process: { regex: "VALORANT-Win64-Shipping|Riot Client|League of Legends|LeagueClientUx|steamwebhelper" }
+      - window_process: { regex: "Riot Client|LeagueClientUx|steamwebhelper" }
 
   # [9] Stream Workspace
   - commands: ["move --workspace 9", "focus --workspace 9"]
