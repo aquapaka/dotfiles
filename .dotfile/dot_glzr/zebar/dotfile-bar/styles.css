@@ -4,35 +4,35 @@
  */
 
 .red {
-  color: #f07178;
+  color: #FB4934;
 }
 
 .blue {
-  color: #59c2ff;
+  color: #83A598;
 }
 
 .green {
-  color: #b8cc52;
+  color: #B8BB26;
 }
 
 .yellow {
-  color: #ffb454;
+  color: #FABD2F;
 }
 
 .black {
-  color: #3e4b59;
+  color: #928374;
 }
 
 .cyan {
-  color: #95e6cb;
+  color: #8EC07C;
 }
 
 .magenta {
-  color: #c6a0f6;
+  color: #D3869B;
 }
 
 .white {
-  color: #f3f4f5;
+  color: #EBDBB2;
 }
 
 html,
@@ -43,15 +43,15 @@ body,
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: "Pixelcraft Nerd Font", ui-monospace, monospace;
+  font-family: "Pixel Code","Pixelcraft Nerd Font", ui-monospace, monospace;
   font-size: 13.5pt;
   overflow: hidden;
 }
 
 #root {
-  border: 1px solid #59c2ff;
+  border: 1px solid #B8BB26;
   border-radius: 10px;
-  background: rgb(15 20 25 / 90%);
+  background: rgb(40 40 40 / 90%);
 }
 
 .app {
@@ -194,24 +194,29 @@ body {
 
 .workspaces {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .workspace {
   background: none;
   margin-right: 4px;
-  padding: 4px 8px;
-  color: #3e4b59;
+  padding: 5px 8px;
+  color: #928374;
   border: none;
   border-radius: 2px;
   cursor: pointer;
 
   &.has-child {
-    color: #f3f4f5;
+    color: #EBDBB2;
+  }
+
+  &.focused {
+    padding: 4px 8px;
+    font-size: 24px;
   }
 
   &.focused,
   &:hover {
-    color: #f07178;
+    color: #FB4934;
   }
 }

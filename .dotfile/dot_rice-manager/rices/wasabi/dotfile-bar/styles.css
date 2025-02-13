@@ -43,7 +43,7 @@ body,
 
 body {
   color: rgb(255 255 255 / 90%);
-  font-family: "Pixelcraft Nerd Font", ui-monospace, monospace;
+  font-family: "Pixel Code","Pixelcraft Nerd Font", ui-monospace, monospace;
   font-size: 13.5pt;
   overflow: hidden;
 }
@@ -194,13 +194,13 @@ body {
 
 .workspaces {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .workspace {
   background: none;
   margin-right: 4px;
-  padding: 4px 8px;
+  padding: 5px 8px;
   color: #928374;
   border: none;
   border-radius: 2px;
@@ -208,6 +208,11 @@ body {
 
   &.has-child {
     color: #EBDBB2;
+  }
+
+  &.focused {
+    padding: 4px 8px;
+    font-size: 24px;
   }
 
   &.focused,

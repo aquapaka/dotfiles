@@ -82,15 +82,14 @@ Dive in, tweak to your heart's content, and transform your Windows environment i
 
 You can customize each theme inside ~/.rice-manager/rices and re-apply it (see **Change theme** below)
 
-- ☑️ Alacirtty theme
-- ☑️ Komorebi theme
+- ☑️ Windows Terminal theme
+- ☑️ GlazeWM border theme
 - ☑️ Zebar theme
 - ☑️ Desktop wallpaper based on rice
 - ☑️ Vscode theme
 - ☑️ Windows light/dark mode based on rice
 - ❓ Windows color based on rice
 - ❓ Discord theme
-- 🚧 Btop theme
 - 🚧 *under construction*
 
 ## 📑 Basic usage
@@ -118,6 +117,7 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 |<kbd>alt</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Focus workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>1\|2\|3\|4\|5\|6\|7\|8\|9\|0</kbd>| Move focusing window to workspace {n}|
 |<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>r</kbd>| Reload glazewm config |
+|<kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>e</kbd>| Exit glazewm |
 
 ℹ️ More keybinding can be found [here](https://github.com/glzr-io/glazewm/blob/main/resources/assets/cheatsheet.png)
 
@@ -141,8 +141,8 @@ You can customize each theme inside ~/.rice-manager/rices and re-apply it (see *
 Font need to be download and install manually *(Windows is planning to allows installing fonts from winget. Stay tune!)*:
 
 - [Pixelcraft Nerd Font](https://github.com/aquapaka/Pixelcraft/releases) (please download and use Nerd Font version)
+- [Pixel Code](https://qwerasd205.github.io/PixelCode/)
 - [Monofur Nerd Font](https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Monofur.zip)
-- [JuliaMono](https://github.com/cormullion/juliamono)
 
 ### Install chezmoi and apply dotfiles
 
