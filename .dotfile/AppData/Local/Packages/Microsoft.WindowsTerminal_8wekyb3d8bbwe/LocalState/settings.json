@@ -43,12 +43,12 @@
   "profiles": {
     "defaults": {
       "adjustIndistinguishableColors": "indexed",
-      "colorScheme": "Ayu Dark",
+      "colorScheme": "Gruvbox Dark Medium",
       "cursorShape": "vintage",
       "elevate": true,
       "font": {
         "cellHeight": "1.2",
-        "face": "Pixelcraft Nerd Font",
+        "face": "Pixel Code",
         "size": 13.5
       },
       "opacity": 90,
@@ -137,6 +137,29 @@
       "selectionBackground": "#F2D5CF",
       "white": "#CAD3F5",
       "yellow": "#F5A97F"
+    },
+    {
+      "background": "#282828",
+      "black": "#3C3836",
+      "blue": "#458588",
+      "brightBlack": "#928374",
+      "brightBlue": "#83A598",
+      "brightCyan": "#8EC07C",
+      "brightGreen": "#B8BB26",
+      "brightPurple": "#D3869B",
+      "brightRed": "#FB4934",
+      "brightWhite": "#EBDBB2",
+      "brightYellow": "#FABD2F",
+      "cursorColor": "#FB4934",
+      "cyan": "#689D6A",
+      "foreground": "#EBDBB2",
+      "green": "#98971A",
+      "name": "Gruvbox Dark Medium",
+      "purple": "#B16286",
+      "red": "#CC241D",
+      "selectionBackground": "#689D6A",
+      "white": "#A89984",
+      "yellow": "#D79921"
     },
     {
       "background": "#1C1E26",

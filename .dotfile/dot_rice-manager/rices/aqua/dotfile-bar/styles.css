@@ -1,0 +1,217 @@
+/**
+ * Import the Nerdfonts icon font.
+ * Ref https://www.nerdfonts.com/cheat-sheet for a cheatsheet of available Nerdfonts icons.
+ */
+
+.red {
+  color: #f07178;
+}
+
+.blue {
+  color: #59c2ff;
+}
+
+.green {
+  color: #b8cc52;
+}
+
+.yellow {
+  color: #ffb454;
+}
+
+.black {
+  color: #3e4b59;
+}
+
+.cyan {
+  color: #95e6cb;
+}
+
+.magenta {
+  color: #c6a0f6;
+}
+
+.white {
+  color: #f3f4f5;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  color: rgb(255 255 255 / 90%);
+  font-family: "Pixelcraft Nerd Font", ui-monospace, monospace;
+  font-size: 13.5pt;
+  overflow: hidden;
+}
+
+#root {
+  border: 1px solid #59c2ff;
+  border-radius: 10px;
+  background: rgb(15 20 25 / 90%);
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  align-items: center;
+  height: 100%;
+  padding: 0px 16px;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.left {
+  justify-self: left;
+}
+
+.left > div {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+.right > div {
+  display: flex;
+  align-items: center;
+}
+
+.info {
+  display: inline-block;
+  /* Max width for EACH info text */
+  max-width: 430px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
+.icon {
+  display: inline-block;
+  margin-right: 12px;
+}
+
+.os-icon {
+}
+
+.uptime-icon {
+  padding-left: 20px;
+}
+
+.media-icon {
+  padding-left: 20px;
+}
+
+.tiling-direction-icon {
+  background: none;
+  border: 0;
+  cursor: pointer;
+  transform: translate(0px, 1px);
+}
+
+.ethernet-icon {
+  padding-left: 12px;
+  font-size: 1.4rem;
+  transform: translate(4px, 2px);
+}
+
+.wifi-icon {
+  padding-left: 12px;
+  font-size: 1.6rem;
+  transform: translate(6px, 3px);
+}
+
+.cpu-icon {
+  padding-left: 24px;
+  transform: translate(0px, -1px);
+}
+
+.memory-icon {
+  padding-left: 17px;
+  font-size: 1.5rem;
+  transform: translate(6px, 0px);
+}
+
+.battery-icon {
+  padding-left: 5px;
+  font-size: 1.4rem;
+  transform: translate(6px, 2px);
+}
+
+.battery {
+  padding-left: 8px;
+  position: relative;
+}
+
+.charging-icon {
+  z-index: 100;
+  position: absolute;
+  right: 26px;
+  bottom: -2px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+}
+
+.full-icon {
+  font-size: 0.9rem;
+  z-index: 100;
+  position: absolute;
+  right: 29px;
+  bottom: 0px;
+  filter: drop-shadow(0px 0px 1px rgba(0, 0, 0, 1));
+}
+
+.audio-icon {
+  padding-left: 0px;
+  font-size: 1.6rem;
+  transform: translate(9px, 1.5px);
+}
+
+.weather-icon {
+  padding-left: 20px;
+  transform: translate(1px, -1px);
+}
+
+.date-icon {
+  padding-left: 16px;
+  transform: translate(2px, 0px);
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  background: none;
+  margin-right: 4px;
+  padding: 4px 8px;
+  color: #3e4b59;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+
+  &.has-child {
+    color: #f3f4f5;
+  }
+
+  &.focused,
+  &:hover {
+    color: #f07178;
+  }
+}

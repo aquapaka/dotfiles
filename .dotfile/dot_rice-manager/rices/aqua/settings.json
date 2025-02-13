@@ -5,5 +5,9 @@
     "cellHeight": "1.2",
     "face": "Pixelcraft Nerd Font",
     "size": 13.5
+  },
+  "glazewmConfig": {
+    "focusedWindowsColor": "#59C2FF",
+    "otherWindowsColor": "#0F1419"
   }
 }

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Base styles for better consistency across platforms (aka. CSS reset). -->
+    <link rel="stylesheet" type="text/css" href="../normalize.css" />
+
+    <!-- Custom styles. -->
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+
+    <!-- Add empty favicon to suppress not found errors. -->
+    <link rel="icon" href="data:;" />
+
+    <!-- Allows React to be run buildless via "text/babel" script below. -->
+    <script
+      src="https://unpkg.com/@babel/standalone@7.25.6/babel.min.js"
+      integrity="sha256-aS0B0wnsaDByLfE16h4MDCP1fQFccysd1YWOcV+gbBo="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel" data-type="module">
+      import React, { useState, useEffect } from "https://esm.sh/react@18?dev";
+      import { createRoot } from "https://esm.sh/react-dom@18/client?dev";
+      import * as zebar from "https://esm.sh/zebar@2";
+
+      const providers = zebar.createProviderGroup({
+        host: { type: "host" },
+        network: { type: "network" },
+        glazewm: { type: "glazewm" },
+        cpu: { type: "cpu", refreshInterval: 1000 },
+        date: { type: "date", formatting: "EEE d MMM yyyy, t" },
+        battery: { type: "battery" },
+        memory: { type: "memory", refreshInterval: 1000 },
+        weather: { type: "weather" },
+        media: { type: "media" },
+        audio: { type: "audio" },
+      });
+
+      createRoot(document.getElementById("root")).render(<App />);
+
+      function App() {
+        const [output, setOutput] = useState(providers.outputMap);
+
+        useEffect(() => {
+          providers.onOutput(() => setOutput(providers.outputMap));
+        }, []);
+
+        // Get icon to show for current network status.
+        function getNetworkIcon(networkOutput) {
+          switch (networkOutput.defaultInterface?.type) {
+            case "ethernet":
+              return (
+                <>
+                  <span className="icon ethernet-icon green"></span>
+                  <span className="green">Connected</span>
+                </>
+              );
+            case "wifi":
+              if (networkOutput.defaultGateway?.signalStrength >= 80) {
+                return (
+                  <>
+                    <span className="icon wifi-icon green"></span>
+                    <span className="green">◦◦◦◦</span>
+                  </>
+                );
+              } else if (networkOutput.defaultGateway?.signalStrength >= 65) {
+                return (
+                  <>
+                    <span className="icon wifi-icon yellow"></span>
+                    <span className="yellow">◦◦◦</span>
+                    <span className="black">◦</span>
+                  </>
+                );
+              } else if (networkOutput.defaultGateway?.signalStrength >= 40) {
+                return (
+                  <>
+                    <span className="icon wifi-icon yellow"></span>
+                    <span className="yellow">◦◦</span>
+                    <span className="black">◦◦</span>
+                  </>
+                );
+              } else if (networkOutput.defaultGateway?.signalStrength >= 25) {
+                return (
+                  <>
+                    <span className="icon wifi-icon red"></span>
+                    <span className="red">◦</span>
+                    <span className="black">◦◦◦</span>
+                  </>
+                );
+              } else {
+                return (
+                  <>
+                    <span className="icon wifi-icon red"></span>
+                    <span className="red"></span>
+                    <span className="black">◦◦◦◦</span>
+                  </>
+                );
+              }
+            default:
+              return <span className="red">⌀ No internet</span>;
+          }
+        }
+
+        // Get icon to show for how much of the battery is charged.
+        function getBatteryIcon(batteryOutput) {
+          if (batteryOutput.chargePercent > 80) return "";
+          if (batteryOutput.chargePercent > 60) return "";
+          if (batteryOutput.chargePercent > 50) return "";
+          if (batteryOutput.chargePercent > 40) return "";
+          if (batteryOutput.chargePercent > 20) return "";
+          return "";
+        }
+        // function getBatteryIcon(batteryOutput) {
+        //   if (batteryOutput.chargePercent > 90)
+        //     return <i className="nf nf-fa-battery_4"></i>;
+        //   if (batteryOutput.chargePercent > 70)
+        //     return <i className="nf nf-fa-battery_3"></i>;
+        //   if (batteryOutput.chargePercent > 40)
+        //     return <i className="nf nf-fa-battery_2"></i>;
+        //   if (batteryOutput.chargePercent > 20)
+        //     return <i className="nf nf-fa-battery_1"></i>;
+        //   return <i className="nf nf-fa-battery_0"></i>;
+        // }
+
+        function getAudioIcon(volume) {
+          if (volume > 20) {
+            return <span className="icon audio-icon cyan">墳</span>;
+          } else if (volume > 10) {
+            return <span className="icon audio-icon cyan">奔</span>;
+          } else if (volume > 0) {
+            return <span className="icon audio-icon cyan">奄</span>;
+          } else {
+            return <span className="icon audio-icon red">婢</span>;
+          }
+        }
+
+        // Get icon to show for current weather status.
+        function getWeatherIcon(weatherOutput) {
+          switch (weatherOutput.status) {
+            case "clear_day":
+              return <span className="icon weather-icon yellow">☀</span>;
+            case "clear_night":
+              return <span className="icon weather-icon yellow">☽</span>;
+            case "cloudy_day":
+              return <span className="icon weather-icon white">☁</span>;
+            case "cloudy_night":
+              return <span className="icon weather-icon white">☁</span>;
+            case "light_rain_day":
+              return <span className="icon weather-icon blue">☂</span>;
+            case "light_rain_night":
+              return <span className="icon weather-icon blue">☂</span>;
+            case "heavy_rain_day":
+              return <span className="icon weather-icon blue">☔</span>;
+            case "heavy_rain_night":
+              return <span className="icon weather-icon blue">☔</span>;
+            case "snow_day":
+              return <span className="icon weather-icon white">☃</span>;
+            case "snow_night":
+              return <span className="icon weather-icon white">☃</span>;
+            case "thunder_day":
+              return <span className="icon weather-icon cyan">⚡</span>;
+            case "thunder_night":
+              return <span className="icon weather-icon cyan">⚡</span>;
+          }
+        }
+
+        // function getWeatherIcon(weatherOutput) {
+        //   switch (weatherOutput.status) {
+        //     case 'clear_day':
+        //       return <i className="nf nf-weather-day_sunny"></i>;
+        //     case 'clear_night':
+        //       return <i className="nf nf-weather-night_clear"></i>;
+        //     case 'cloudy_day':
+        //       return <i className="nf nf-weather-day_cloudy"></i>;
+        //     case 'cloudy_night':
+        //       return <i className="nf nf-weather-night_alt_cloudy"></i>;
+        //     case 'light_rain_day':
+        //       return <i className="nf nf-weather-day_sprinkle"></i>;
+        //     case 'light_rain_night':
+        //       return <i className="nf nf-weather-night_alt_sprinkle"></i>;
+        //     case 'heavy_rain_day':
+        //       return <i className="nf nf-weather-day_rain"></i>;
+        //     case 'heavy_rain_night':
+        //       return <i className="nf nf-weather-night_alt_rain"></i>;
+        //     case 'snow_day':
+        //       return <i className="nf nf-weather-day_snow"></i>;
+        //     case 'snow_night':
+        //       return <i className="nf nf-weather-night_alt_snow"></i>;
+        //     case 'thunder_day':
+        //       return <i className="nf nf-weather-day_lightning"></i>;
+        //     case 'thunder_night':
+        //       return <i className="nf nf-weather-night_alt_lightning"></i>;
+        //   }
+        // }
+
+        function formatUptime(ms) {
+          const totalMinutes = Math.floor(ms / (1000 * 60));
+          const hours = Math.floor(totalMinutes / 60);
+          const minutes = totalMinutes % 60;
+
+          return `${hours} hour${hours !== 1 ? "s" : ""} and ${minutes} minute${
+            minutes !== 1 ? "s" : ""
+          }`;
+        }
+
+        function bytesToGigabytes(bytes) {
+          return (bytes / (1024 * 1024 * 1024)).toFixed(1); // Return with 1 decimal places
+        }
+
+        return (
+          <div className="app">
+            <div className="left">
+              {output.host && (
+                <>
+                  <div className="os">
+                    <span className="icon os-icon yellow">⭐</span>
+                    <span className="info">{output.host.hostname}</span>
+                  </div>
+                  <div className="uptime">
+                    <span className="icon uptime-icon magenta">⌛</span>
+                    <span className="info">
+                      {formatUptime(output.host.uptime)}
+                    </span>
+                  </div>
+                </>
+              )}
+
+              {output.media?.currentSession && (
+                <>
+                  <div className="media">
+                    <span className="icon media-icon cyan">♫</span>
+                    <span className="info">
+                      {output.media.currentSession.title}
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
+
+            <div className="center">
+              {output.glazewm && (
+                <div className="workspaces">
+                  {output.glazewm.currentWorkspaces.map((workspace) => (
+                    <button
+                      className={`workspace ${
+                        workspace.hasFocus && "focused"
+                      } ${workspace.children.length && "has-child"}`}
+                      onClick={() =>
+                        output.glazewm.runCommand(
+                          `focus --workspace ${workspace.name}`
+                        )
+                      }
+                      key={workspace.name}
+                    >
+                      {workspace.hasFocus
+                        ? "❤"
+                        : workspace.children.length
+                        ? "⏺"
+                        : "●"}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <div className="right">
+              {output.glazewm && (
+                <>
+                  {output.glazewm.bindingModes.map((bindingMode) => (
+                    <button className="binding-mode" key={bindingMode.name}>
+                      {bindingMode.displayName ?? bindingMode.name}
+                    </button>
+                  ))}
+
+                  <button
+                    className={`tiling-direction-icon yellow`}
+                    onClick={() =>
+                      output.glazewm.runCommand("toggle-tiling-direction")
+                    }
+                  >
+                    {output.glazewm.tilingDirection === "horizontal"
+                      ? "⇄"
+                      : "⇵"}
+                  </button>
+                </>
+              )}
+
+              {output.network && (
+                <div className="network">{getNetworkIcon(output.network)}</div>
+              )}
+
+              {output.cpu && (
+                <div className="cpu">
+                  <span className="icon cpu-icon red">✂</span>
+                  <span className="info">{Math.round(output.cpu.usage)}%</span>
+                </div>
+              )}
+
+              {output.memory && (
+                <div className="memory">
+                  <span className="icon memory-icon green">☷</span>
+                  <span className="info">
+                    {bytesToGigabytes(output.memory.usedMemory)} GBs
+                  </span>
+                </div>
+              )}
+
+              {output.battery && (
+                <div className="battery">
+                  {output.battery.state === "full" ? (
+                    <span className="icon full-icon green">✔</span>
+                  ) : output.battery.state === "charging" ? (
+                    <span className="icon charging-icon blue">⚡</span>
+                  ) : (
+                    ""
+                  )}
+                  <span className="icon battery-icon yellow">
+                    {getBatteryIcon(output.battery)}
+                  </span>
+                  <span className="info">
+                    {Math.round(output.battery.chargePercent)}%
+                  </span>
+                </div>
+              )}
+
+              {output.audio?.defaultPlaybackDevice && (
+                <div className="audio">
+                  <span className="icon audio-icon">
+                    {getAudioIcon(output.audio.defaultPlaybackDevice.volume)}
+                  </span>
+                  <span className="info">
+                    {Math.round(output.audio.defaultPlaybackDevice.volume)}%
+                  </span>
+                </div>
+              )}
+
+              {output.weather && (
+                <div className="weather">
+                  {getWeatherIcon(output.weather)}
+                  <span className="info">
+                    {Math.round(output.weather.celsiusTemp)}°C
+                  </span>
+                </div>
+              )}
+
+              {output.date && (
+                <div className="date">
+                  <span className="icon date-icon magenta">⌚</span>
+                  <span className="info">{output.date?.formatted}</span>
+                </div>
+              )}
+            </div>
+          </div>
+        );
+      }
+    </script>
+  </body>
+</html>

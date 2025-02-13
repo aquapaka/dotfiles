@@ -1,0 +1,14 @@
+{
+  "workbench.colorTheme": "Gruvbox Dark Medium",
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#fabd2f",
+  "material-icon-theme.files.color": "#b8bb26",
+  "editor.fontFamily": "'Pixel Code', 'Pixelcraft Nerd Font'",
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#fb4934",
+    "terminalCursor.foreground": "#fb4934"
+  },
+  "fonted.font": "Pixel Code"
+}

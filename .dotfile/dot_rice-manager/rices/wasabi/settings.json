@@ -1,0 +1,13 @@
+{
+  "windowsTheme": "dark",
+  "windowsTerminalTheme": "Gruvbox Dark Medium",
+  "windowsTerminalFont": {
+    "cellHeight": "1.2",
+    "face": "Pixel Code",
+    "size": 13.5
+  },
+  "glazewmConfig": {
+    "focusedWindowsColor": "#b8bb26",
+    "otherWindowsColor": "#282828"
+  }
+}
