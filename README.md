@@ -218,33 +218,17 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zs
 ### Install VS Code Extensions for Theming
 
 - Icons: [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
-- Themes: [Tinted VSCode](https://marketplace.visualstudio.com/items?itemName=TintedTheming.base16-tinted-themes)
+- Themes:
+  - [Tinted VSCode](https://marketplace.visualstudio.com/items?itemName=TintedTheming.base16-tinted-themes)
+  - [Gruvbox Theme](https://marketplace.visualstudio.com/items?itemName=jdinhlife.gruvbox)
 - ADDITIONAL: To change vscode UI Font, use this extension: [Fonted](https://marketplace.visualstudio.com/items?itemName=degreat.fonted)
 
-### Auto start Komorebi at windows start
+### Auto start GlazeWM & Zebar at windows start
 
-- Open **Task scheduler**
-- Choose **Create Basic Task...**
-- Enter any name for Komorebi task (example: "Komorebi") then press **Next**
-- Trigger: choose **When I log on** then press **Next**
-- Action: **Start a program** then press **Next**
-  - Program/script: paste in ```C:\Program Files\komorebi\bin\komorebic.exe```
-  - Add arguments: ```start --whkd --bar```
-  - Press **Next**
-
-  ![komorebi-task-scheduler](rice-previews/komorebi-task-scheduler.png)
-- Tick **Open the Properties dialog for this task when I click Finish** then click **Finish**
-- Inside Properties window, set the following settings for each tab:
-  - General: enable **Run with highest privileges** (required for Komorebi could manages all windows)
-  - Conditions: disable/untick **everything** (including greyed out settings)
-  - Settings: disable/untick **Stop the task if it runs longer than**
-  - Click **OK** to save and we're good to go
-
-### Auto start Zebar at windows start
-
-- Copy ```start-zebar.bat``` from ```scripts``` folder
-- Press **Window + R** to open Run prompt and type in ```shell:startup``` and press **OK**, a startup folder will be opened
-- Paste ```start-zebar.bat``` in this startup folder
+- Just need to copy GlazeWM shortcut
+- Open Start Up folder by pressing **Windows + R** and type in ```shell:startup```
+- Paste the shortcut in here and we are done
+- Zebar is open and close with GlazeWM
 
 ### Optional Tweaks
 
@@ -255,11 +239,12 @@ git clone https://github.com/zsh-users/zsh-history-substring-search ./.config/zs
   - Run ```scripts/high-ram-tuning.ps1``` with **Powershell**
 - Restore old context menu (Require restart):
   - Open/Run ```scripts/Restore-old-context-menu.reg```
-- Fix terminal cursor glitching while typing:
+- Fix terminal cursor glitching while typing: (This is only working with Alacritty, current version using Windows Terminal)
   - Run ```scripts/terminal-cursor-fix.sh```
   - Close then re-open terminal
-- Show 'Max cpu freq' in power plan setting, allow changing maximum cpu freqency to attempt lower temperature:
+- Show 'Max cpu freq' in power plan setting, allow changing maximum cpu freqency to attempt lower temperature and more stable machine **(Very useful, highly recommend for laptop)**:
   - Run ```scripts/show-cpu-frequency-power-plan-setting.ps1``` with **Powershell**
+  - Search for **"Edit Power Plan" > Change Plan Settings > Change advanced power settings > Processor power management > Maximum processor frequency** (Showing after running the script, change this to preferred frequency)
 
 ### Other information
 
