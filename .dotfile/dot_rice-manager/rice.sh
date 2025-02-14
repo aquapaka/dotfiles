@@ -39,7 +39,7 @@ set_glazewm_config() {
   RICE_SETTING_FILE_PATH=./rices/$theme/settings.json
   yq ".window_effects.focused_window.border.color = \"$(jq -r '.glazewmConfig.focusedWindowsColor' $RICE_SETTING_FILE_PATH)\" | .window_effects.other_windows.border.color = \"$(jq -r '.glazewmConfig.otherWindowsColor' $RICE_SETTING_FILE_PATH)\"" $SETTING_FILE_PATH > tmp.yaml && mv tmp.yaml $SETTING_FILE_PATH
   # Restart glazewm
-  glazewm command wm-exit
+  glazewm command wm-exit > /dev/null
   glazewm > /dev/null 2>&1 &
 }
 
