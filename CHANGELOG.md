@@ -1,5 +1,11 @@
 # aquapaka-dotfiles
 
+## 2.2.1
+
+### Patch Changes
+
+- 7fe06ff: docs: add additional pre-install intstallation notices
+
 ## 2.2.0
 
 ### Minor Changes
