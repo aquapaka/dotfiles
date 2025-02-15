@@ -159,9 +159,11 @@ Font need to be download and install manually *(Windows is planning to allows in
 
 ### Add New Environment Variables
 
-Add those to Path variables
-
-- ```%USERPROFILE%\.local\bin```
+- Add ```%USERPROFILE%\.local\bin``` to **Path** variable (This is needed for some utilities like btop, colorscript and winfetch to be regconize):
+  - ![image](https://github.com/user-attachments/assets/dd3884e0-47f0-4699-85c4-bd5f5114cd94)
+  - ![image](https://github.com/user-attachments/assets/3ebc5056-5350-4f5f-b36e-144808a6a1e4)
+  - ![image](https://github.com/user-attachments/assets/4ec1d277-7f2c-4592-846a-620770236620)
+  - ![image](https://github.com/user-attachments/assets/41e70542-485c-4035-9169-bc0e6a8a9afb)
 
 ### Restart
 
