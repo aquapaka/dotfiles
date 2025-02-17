@@ -156,7 +156,8 @@ window_rules:
       # Ignores photoshop panels and Davinci Resolve windows.
       - window_title: {regex: "New Document|Color"}
       # Ignore fullscreen games.
-      - window_process: {regex: "VALORANT-Win64-Shipping|League of Legends"}
+      - window_process: {regex: "VALORANT-Win64-Shipping|League of Legends|FPSAimTrainer-Win64-Shipping|csgo"}
+        window_class: {regex: ".*?"}
   - commands: ["move --workspace 1", "focus --workspace 1"]
     match:
       - window_process: {regex: "WindowsTerminal"}
