@@ -6,7 +6,7 @@
 #  About   :  This file will configure and launch the rice.
 #
 
-avaiableThemes=("aqua" "shuri" "julia")
+avaiableThemes=("wasabi" "shuri" "julia")
 
 usage() {
   printf "
