@@ -42,7 +42,7 @@ body,
 }
 
 body {
-  color: rgb(255 255 255 / 90%);
+  color: #EBDBB2;
   font-family: "Pixel Code","Pixelcraft Nerd Font", ui-monospace, monospace;
   font-size: 13.5pt;
   overflow: hidden;
